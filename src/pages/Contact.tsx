@@ -105,7 +105,7 @@ const Contact = () => {
                       Téléphone
                     </h3>
                     <p className="text-muted-foreground font-body text-sm">
-                      +33 1 23 45 67 89
+                      06.26.50.08.80
                     </p>
                   </div>
                 </div>
@@ -131,9 +131,10 @@ const Contact = () => {
                   Horaires d'ouverture
                 </h3>
                 <div className="space-y-2 text-sm font-body text-background/80">
-                  <p>Lundi - Vendredi: 9h - 19h</p>
-                  <p>Samedi: 10h - 16h</p>
-                  <p>Dimanche: Fermé</p>
+                  <p>Lundi: 19h - 23h</p>
+                  <p>Mercredi: 12h - 15h</p>
+                  <p>Vendredi: 19h - 23h</p>
+                  <p>Autres jours: Fermé</p>
                 </div>
               </div>
             </div>
