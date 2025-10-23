@@ -91,7 +91,7 @@ const Contact = () => {
                       Email
                     </h3>
                     <p className="text-muted-foreground font-body text-sm">
-                      contact@makilclub.com
+                      richard@makilbusinessclub.com
                     </p>
                   </div>
                 </div>
