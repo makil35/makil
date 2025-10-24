@@ -104,10 +104,26 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary/20 mt-8 pt-8 text-center">
-          <p className="text-sm font-body text-background/60">
-            &copy; {new Date().getFullYear()} Makil Business Club. Tous droits réservés.
-          </p>
+        <div className="border-t border-primary/20 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm font-body text-background/60">
+              &copy; {new Date().getFullYear()} Makil Business Club. Tous droits réservés.
+            </p>
+            <div className="flex gap-6 text-sm font-body">
+              <Link
+                to="/mentions-legales"
+                className="text-background/60 hover:text-primary transition-smooth"
+              >
+                Mentions Légales
+              </Link>
+              <Link
+                to="/politique-confidentialite"
+                className="text-background/60 hover:text-primary transition-smooth"
+              >
+                Politique de Confidentialité
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
