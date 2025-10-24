@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
-import logoMBC from "@/assets/logo-mbc.png";
 
 const Footer = () => {
   return (
@@ -9,11 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <img 
-              src={logoMBC} 
-              alt="Makil Business Club" 
-              className="h-16 w-auto"
-            />
+            <div className="text-3xl font-display font-bold text-gradient-gold">
+              MAKIL
+            </div>
             <p className="text-sm font-body text-background/70 leading-relaxed">
               Le premier club business exclusif pour les Ultra High Net Worth Individuals.
             </p>
