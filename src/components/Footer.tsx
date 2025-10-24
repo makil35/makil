@@ -12,7 +12,7 @@ const Footer = () => {
               MAKIL
             </div>
             <p className="text-sm font-body text-background/70 leading-relaxed">
-              Le premier club business exclusif pour les Ultra High Net Worth Individuals.
+              Premier club business exclusif pour Ultra High Net Worth Individuals (UHNWI). Réseau d'élite, networking luxe, événements VIP pour entrepreneurs fortunés et investisseurs.
             </p>
           </div>
 

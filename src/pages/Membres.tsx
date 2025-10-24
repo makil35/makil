@@ -8,14 +8,14 @@ import membershipCard from "@/assets/membership-card.jpg";
 
 const Membres = () => {
   const benefits = [
-    "Accès illimité à tous les événements exclusifs",
-    "Service concierge personnel 24/7",
-    "Espaces de coworking premium dans 10 villes",
-    "Introductions qualifiées avec d'autres membres",
-    "Accès aux opportunités d'investissement privées",
-    "Invitations aux voyages et retreats internationaux",
-    "Réductions partenaires luxe (hôtels, restaurants, aviation)",
-    "Participation aux deals clubs et syndicats d'investissement",
+    "Accès illimité événements business VIP exclusifs et networking luxe UHNWI",
+    "Service concierge premium personnel 24/7 pour entrepreneurs fortunés",
+    "Espaces coworking luxe premium dans 10 villes internationales",
+    "Introductions qualifiées networking avec entrepreneurs et investisseurs d'élite",
+    "Accès opportunités investissement privées et deals exclusifs UHNWI",
+    "Invitations voyages business luxe et retreats internationaux premium",
+    "Réductions partenaires luxe exclusives (hôtels 5*, restaurants gastronomiques, aviation privée)",
+    "Participation deals clubs premium et syndicats investissement UHNWI",
   ];
 
   const tiers = [
@@ -73,11 +73,11 @@ const Membres = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-display font-bold text-background mb-6">
-              Membres <span className="text-primary">Premium</span>
+              Adhésion Club Business <span className="text-primary">UHNWI Premium</span>
             </h1>
             <p className="text-xl font-body text-background/80 leading-relaxed">
-              Rejoignez un cercle exclusif d'entrepreneurs et d'investisseurs
-              d'exception. L'adhésion est sur invitation uniquement.
+              Rejoignez un cercle exclusif d'entrepreneurs fortunés, investisseurs UHNWI et leaders business d'exception.
+              Adhésion sur invitation uniquement - Networking luxe international pour l'élite des affaires.
             </p>
           </div>
         </div>
@@ -89,12 +89,12 @@ const Membres = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-display font-bold text-foreground mb-6">
-                Les <span className="text-gradient-gold">Avantages</span> Membres
+                Avantages <span className="text-gradient-gold">Club Business Exclusif</span>
               </h2>
               <p className="text-lg font-body text-muted-foreground mb-8 leading-relaxed">
-                Être membre du Makil Business Club, c'est accéder à un écosystème
-                complet conçu pour accélérer votre croissance professionnelle et
-                personnelle.
+                Être membre du Makil Business Club UHNWI, c'est accéder à un écosystème premium exclusif
+                de networking luxe conçu pour accélérer votre croissance professionnelle, vos investissements
+                et développer votre réseau d'élite international d'entrepreneurs fortunés.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -110,7 +110,7 @@ const Membres = () => {
             <div className="relative">
               <img
                 src={membersLounge}
-                alt="Members Lounge"
+                alt="Members Lounge - Espace networking luxe exclusif pour entrepreneurs UHNWI et investisseurs fortunés club business premium"
                 className="rounded-lg shadow-elegant"
               />
               <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-primary/10 rounded-lg -z-10" />
@@ -124,10 +124,10 @@ const Membres = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-display font-bold text-foreground mb-4">
-              Choisissez Votre <span className="text-gradient-gold">Niveau</span>
+              Adhésion Club Business Premium <span className="text-gradient-gold">UHNWI</span>
             </h2>
             <p className="text-lg font-body text-muted-foreground">
-              Des formules adaptées à vos ambitions
+              Formules d'adhésion exclusives adaptées aux entrepreneurs fortunés et investisseurs UHNWI
             </p>
           </div>
 
@@ -200,23 +200,23 @@ const Membres = () => {
             <div className="order-2 lg:order-1 relative">
               <img
                 src={membershipCard}
-                alt="Membership Card"
+                alt="Carte membre premium club business exclusif UHNWI - Accès VIP networking luxe entrepreneurs et investisseurs fortunés"
                 className="rounded-lg shadow-elegant"
               />
               <div className="absolute -top-8 -left-8 w-64 h-64 bg-secondary/10 rounded-lg -z-10" />
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl font-display font-bold text-foreground mb-6">
-                Votre Carte <span className="text-gradient-gold">Premium</span>
+                Carte Membre <span className="text-gradient-gold">UHNWI Premium</span>
               </h2>
               <p className="text-lg font-body text-muted-foreground mb-6 leading-relaxed">
-                Chaque membre reçoit une carte exclusive en métal gravé, symbole de
-                votre appartenance à l'élite du business international.
+                Chaque membre UHNWI reçoit une carte exclusive en métal gravé premium, symbole de
+                votre appartenance au réseau d'élite des entrepreneurs fortunés et investisseurs du club business international.
               </p>
               <p className="text-lg font-body text-muted-foreground leading-relaxed">
-                Cette carte vous ouvre les portes de nos espaces privés et vous
-                identifie instantanément comme membre du cercle le plus prestigieux
-                d'entrepreneurs au monde.
+                Cette carte membre premium vous ouvre les portes de nos espaces privés de networking luxe et vous
+                identifie instantanément comme membre du cercle le plus prestigieux et exclusif
+                d'entrepreneurs UHNWI et investisseurs fortunés au monde.
               </p>
             </div>
           </div>
@@ -228,11 +228,11 @@ const Membres = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-4xl font-display font-bold text-background">
-              Prêt à Rejoindre l'<span className="text-primary">Élite</span> ?
+              Rejoindre le Réseau <span className="text-primary">UHNWI d'Élite</span>
             </h2>
             <p className="text-lg font-body text-background/80 leading-relaxed">
-              Le processus de sélection est rigoureux et l'adhésion est limitée.
-              Soumettez votre candidature dès aujourd'hui.
+              Processus de sélection rigoureux pour entrepreneurs fortunés et investisseurs UHNWI. Adhésion club business exclusif limitée.
+              Soumettez votre candidature pour intégrer le réseau d'élite du networking luxe international.
             </p>
             <Button
               asChild

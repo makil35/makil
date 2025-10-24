@@ -11,11 +11,11 @@ const Galerie = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-display font-bold text-background mb-6">
-              Galerie <span className="text-primary">Médias</span>
+              Galerie <span className="text-primary">Club Business Exclusif</span>
             </h1>
             <p className="text-xl font-body text-background/80 leading-relaxed">
-              Découvrez l'univers exclusif du Makil Business Club à travers nos photos
-              et vidéos d'événements prestigieux.
+              Découvrez l'univers exclusif du Makil Business Club UHNWI à travers nos photos et vidéos 
+              d'événements de networking luxe, galas VIP et rencontres premium entre entrepreneurs fortunés et investisseurs.
             </p>
           </div>
         </div>
@@ -26,11 +26,11 @@ const Galerie = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl font-display font-bold text-foreground mb-6">
-              Photos et Vidéos <span className="text-gradient-gold">à Venir</span>
+              Galerie Événements Business VIP <span className="text-gradient-gold">UHNWI</span>
             </h2>
             <p className="text-lg font-body text-muted-foreground">
-              Notre galerie de photos et vidéos exclusives sera bientôt disponible.
-              Revenez prochainement pour découvrir l'univers du club.
+              Notre galerie de photos et vidéos exclusives des événements de networking luxe et rencontres premium 
+              entre entrepreneurs et investisseurs sera bientôt disponible. Découvrez l'univers du club business d'élite international.
             </p>
           </div>
         </div>

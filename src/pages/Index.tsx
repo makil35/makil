@@ -24,12 +24,12 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             <h1 className="text-5xl md:text-7xl font-display font-bold text-background leading-tight">
-              Le Premier Club Business des{" "}
+              Le Premier Club Business Exclusif des{" "}
               <span className="text-gradient-gold">UHNWI</span>
             </h1>
             <p className="text-xl md:text-2xl font-body text-background/90 leading-relaxed">
-              Un réseau exclusif d'entrepreneurs et d'investisseurs d'exception.
-              Rejoignez l'élite du business international.
+              Réseau d'élite exclusif d'entrepreneurs fortunés et investisseurs UHNWI (Ultra High Net Worth Individuals).
+              Networking luxe, événements VIP et opportunités business premium internationales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button
@@ -59,10 +59,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-              Une Expérience <span className="text-gradient-gold">Unique</span>
+              Club Business Premium : Une Expérience <span className="text-gradient-gold">Unique</span>
             </h2>
             <p className="text-lg font-body text-muted-foreground max-w-2xl mx-auto">
-              Makil Business Club offre bien plus qu'un simple réseau professionnel
+              Makil Business Club offre bien plus qu'un simple réseau professionnel : networking luxe pour entrepreneurs UHNWI et investisseurs fortunés
             </p>
           </div>
 
@@ -70,23 +70,23 @@ const Index = () => {
             {[
               {
                 icon: Users,
-                title: "Réseau d'Élite",
-                description: "Connectez-vous avec des entrepreneurs et investisseurs triés sur le volet",
+                title: "Réseau d'Élite UHNWI",
+                description: "Networking exclusif avec entrepreneurs fortunés, investisseurs et leaders d'affaires internationaux triés sur le volet",
               },
               {
                 icon: Calendar,
-                title: "Événements Exclusifs",
-                description: "Accédez à des événements privés dans les lieux les plus prestigieux",
+                title: "Événements Business VIP",
+                description: "Accédez à des événements exclusifs de networking luxe dans les lieux les plus prestigieux du monde",
               },
               {
                 icon: Award,
-                title: "Opportunités Premium",
-                description: "Découvrez des opportunités d'investissement et de collaboration uniques",
+                title: "Opportunités Business Premium",
+                description: "Découvrez des opportunités d'investissement exclusives, deals privés et collaborations stratégiques uniques",
               },
               {
                 icon: Sparkles,
-                title: "Service Concierge",
-                description: "Bénéficiez d'un service personnalisé et sur-mesure",
+                title: "Service Concierge Luxe",
+                description: "Bénéficiez d'un service concierge premium personnalisé 24/7 pour entrepreneurs et investisseurs",
               },
             ].map((feature, index) => (
               <div
@@ -113,10 +113,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-background mb-4">
-              Événements <span className="text-primary">À Venir</span>
+              Événements Business VIP <span className="text-primary">Exclusifs</span>
             </h2>
             <p className="text-lg font-body text-background/80 max-w-2xl mx-auto">
-              Découvrez nos prochains événements exclusifs
+              Découvrez nos prochains événements de networking luxe pour entrepreneurs UHNWI et investisseurs fortunés
             </p>
           </div>
 
@@ -141,7 +141,7 @@ const Index = () => {
               >
                 <img
                   src={event.image}
-                  alt={event.title}
+                  alt={`${event.title} - Événement networking luxe club business exclusif UHNWI ${event.location}`}
                   className="w-full h-80 object-cover group-hover:scale-110 transition-elegant duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/50 to-transparent" />
@@ -178,11 +178,11 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-background">
-              Prêt à Rejoindre l'<span className="text-gradient-gold">Élite</span> ?
+              Rejoindre le Club Business Exclusif <span className="text-gradient-gold">UHNWI</span>
             </h2>
             <p className="text-xl font-body text-background/80 leading-relaxed">
-              L'adhésion est strictement sur invitation et après validation de votre profil.
-              Faites le premier pas vers l'excellence.
+              Adhésion strictement sur invitation pour entrepreneurs fortunés et investisseurs UHNWI.
+              Intégrez le réseau d'élite du networking business international premium.
             </p>
             <Button
               asChild

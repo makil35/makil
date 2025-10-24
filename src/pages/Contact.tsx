@@ -55,11 +55,11 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-display font-bold text-background mb-6">
-              Nous <span className="text-primary">Contacter</span>
+              Contact Club Business <span className="text-primary">UHNWI</span>
             </h1>
             <p className="text-xl font-body text-background/80 leading-relaxed">
-              Rejoignez le cercle le plus exclusif d'entrepreneurs et d'investisseurs.
-              Soumettez votre candidature aujourd'hui.
+              Rejoignez le cercle le plus exclusif d'entrepreneurs fortunés UHNWI et investisseurs premium.
+              Soumettez votre candidature pour accéder au réseau d'élite du networking luxe international.
             </p>
           </div>
         </div>
@@ -73,11 +73,11 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                  Informations de <span className="text-gradient-gold">Contact</span>
+                  Contact Club Business <span className="text-gradient-gold">Exclusif UHNWI</span>
                 </h2>
                 <p className="text-muted-foreground font-body leading-relaxed mb-8">
-                  Notre équipe est à votre disposition pour répondre à toutes vos
-                  questions concernant l'adhésion au club.
+                  Notre équipe dédiée au réseau d'élite est à votre disposition pour répondre à toutes vos
+                  questions concernant l'adhésion au club business premium UHNWI et les opportunités de networking luxe.
                 </p>
               </div>
 
@@ -143,7 +143,7 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <div className="bg-card border border-border rounded-lg p-8 shadow-elegant">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                  Formulaire de <span className="text-gradient-gold">Candidature</span>
+                  Candidature Membres <span className="text-gradient-gold">UHNWI Premium</span>
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
