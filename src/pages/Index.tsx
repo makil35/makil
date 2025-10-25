@@ -3,6 +3,7 @@ import { ArrowRight, Users, Calendar, Award, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import heroImage from "@/assets/hero-image.jpg";
 import event1 from "@/assets/event-1.jpg";
 import event2 from "@/assets/event-2.jpg";
@@ -198,6 +199,7 @@ const Index = () => {
       </section>
 
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
