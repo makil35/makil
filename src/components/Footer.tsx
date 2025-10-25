@@ -83,22 +83,24 @@ const Footer = () => {
             <h3 className="text-primary font-display text-lg font-semibold mb-4">
               Suivez-nous
             </h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4" role="list" aria-label="Réseaux sociaux">
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Suivez Makil Business Club sur LinkedIn"
                 className="bg-primary/10 hover:bg-primary/20 text-primary p-3 rounded-full transition-smooth"
               >
-                <Linkedin size={20} />
+                <Linkedin size={20} aria-hidden="true" />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Suivez Makil Business Club sur Instagram"
                 className="bg-primary/10 hover:bg-primary/20 text-primary p-3 rounded-full transition-smooth"
               >
-                <Instagram size={20} />
+                <Instagram size={20} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -121,6 +123,18 @@ const Footer = () => {
                 className="text-background/60 hover:text-primary transition-smooth"
               >
                 Politique de Confidentialité
+              </Link>
+              <Link
+                to="/cgu"
+                className="text-background/60 hover:text-primary transition-smooth"
+              >
+                CGU
+              </Link>
+              <Link
+                to="/accessibilite"
+                className="text-background/60 hover:text-primary transition-smooth"
+              >
+                Accessibilité
               </Link>
             </div>
           </div>

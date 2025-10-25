@@ -37,12 +37,28 @@ const CookieConsent = () => {
               Makil Business Club utilise des cookies et collecte des données pour améliorer votre expérience de navigation, 
               analyser le trafic du site et personnaliser le contenu. Vos données sont traitées conformément au RGPD. 
               En cliquant sur "Accepter", vous consentez à l'utilisation de ces technologies.{" "}
+              Consultez notre{" "}
               <Link
                 to="/politique-confidentialite"
                 className="text-primary hover:text-primary/80 underline transition-colors"
               >
-                En savoir plus sur notre politique de confidentialité
+                politique de confidentialité
               </Link>
+              , nos{" "}
+              <Link
+                to="/cgu"
+                className="text-primary hover:text-primary/80 underline transition-colors"
+              >
+                CGU
+              </Link>
+              {" "}et nos{" "}
+              <Link
+                to="/mentions-legales"
+                className="text-primary hover:text-primary/80 underline transition-colors"
+              >
+                mentions légales
+              </Link>
+              .
             </p>
           </div>
           
