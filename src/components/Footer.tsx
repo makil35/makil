@@ -85,7 +85,7 @@ const Footer = () => {
             </h3>
             <div className="flex space-x-4" role="list" aria-label="Réseaux sociaux">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/makil-business-club"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Suivez Makil Business Club sur LinkedIn"
@@ -129,6 +129,12 @@ const Footer = () => {
                 className="text-background/60 hover:text-primary transition-smooth"
               >
                 CGU
+              </Link>
+              <Link
+                to="/cgv"
+                className="text-background/60 hover:text-primary transition-smooth"
+              >
+                CGV
               </Link>
               <Link
                 to="/accessibilite"
