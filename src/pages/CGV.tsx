@@ -68,13 +68,15 @@ const CGV = () => {
               3.2 Modalités de paiement
             </h3>
             <p className="text-foreground/80 leading-relaxed">
-              Le paiement s'effectue :
+              Le paiement s'effectue uniquement :
             </p>
             <ul className="list-disc pl-6 text-foreground/80 leading-relaxed">
               <li>Par virement bancaire</li>
               <li>Par carte bancaire</li>
-              <li>Par chèque (sous réserve d'acceptation)</li>
             </ul>
+            <p className="text-foreground/80 leading-relaxed mt-4">
+              <strong>Note :</strong> Les paiements par chèque ne sont pas acceptés.
+            </p>
             <p className="text-foreground/80 leading-relaxed mt-4">
               Le paiement de la cotisation annuelle est exigible à la date anniversaire de l'adhésion.
             </p>
