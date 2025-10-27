@@ -22,7 +22,7 @@ const Index = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="https://videos.pexels.com/video-files/8293928/8293928-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2022/05/31/119043-715327836_large.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/90" />
 
