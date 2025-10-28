@@ -51,13 +51,13 @@ const Contact = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-foreground to-secondary">
-        <div className="container mx-auto px-4">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 bg-gradient-to-b from-foreground to-secondary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-background mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background mb-4 sm:mb-6">
               Contact Club Business <span className="text-primary">UHNWI</span>
             </h1>
-            <p className="text-xl font-body text-background/80 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl font-body text-background/80 leading-relaxed px-4">
               Rejoignez le cercle le plus exclusif d'entrepreneurs fortunés UHNWI et investisseurs premium.
               Soumettez votre candidature pour accéder au réseau d'élite du networking luxe international.
             </p>
@@ -66,22 +66,22 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+      <section className="py-12 sm:py-14 md:py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 max-w-6xl mx-auto">
             {/* Contact Info */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div>
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4 sm:mb-6">
                   Contact Club Business <span className="text-gradient-gold">Exclusif UHNWI</span>
                 </h2>
-                <p className="text-muted-foreground font-body leading-relaxed mb-8">
+                <p className="text-sm sm:text-base text-muted-foreground font-body leading-relaxed mb-6 sm:mb-8">
                   Notre équipe dédiée au réseau d'élite est à votre disposition pour répondre à toutes vos
                   questions concernant l'adhésion au club business premium UHNWI et les opportunités de networking luxe.
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail size={20} />
@@ -141,13 +141,13 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-card border border-border rounded-lg p-8 shadow-elegant">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+              <div className="bg-card border border-border rounded-lg p-6 sm:p-8 shadow-elegant">
+                <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4 sm:mb-6">
                   Candidature Membres <span className="text-gradient-gold">UHNWI Premium</span>
                 </h2>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-sm font-body font-medium text-foreground mb-2">
                         Prénom *

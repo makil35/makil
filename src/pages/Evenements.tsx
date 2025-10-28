@@ -12,13 +12,13 @@ const Evenements = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-foreground to-secondary">
-        <div className="container mx-auto px-4">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 bg-gradient-to-b from-foreground to-secondary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-background mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background mb-4 sm:mb-6">
               Événements Business VIP <span className="text-primary">Exclusifs</span>
             </h1>
-            <p className="text-xl font-body text-background/80 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl font-body text-background/80 leading-relaxed px-4">
               Événements de networking luxe et expériences premium uniques pour entrepreneurs UHNWI et investisseurs fortunés.
               Créez des connexions stratégiques avec les membres les plus influents du club business international.
             </p>
@@ -27,13 +27,13 @@ const Evenements = () => {
       </section>
 
       {/* Coming Soon Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-4xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-4 sm:mb-6 px-4">
               Prochains Événements de Networking Luxe <span className="text-gradient-gold">UHNWI</span>
             </h2>
-            <p className="text-lg font-body text-muted-foreground">
+            <p className="text-base sm:text-lg font-body text-muted-foreground px-4">
               Nos prochains événements business VIP exclusifs pour entrepreneurs fortunés et investisseurs seront bientôt annoncés.
               Restez connectés au réseau d'élite pour ne rien manquer des opportunités de networking premium.
             </p>

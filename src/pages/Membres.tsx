@@ -69,13 +69,13 @@ const Membres = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-foreground to-secondary">
-        <div className="container mx-auto px-4">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 bg-gradient-to-b from-foreground to-secondary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-background mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background mb-4 sm:mb-6">
               Adhésion Club Business <span className="text-primary">UHNWI Premium</span>
             </h1>
-            <p className="text-xl font-body text-background/80 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl font-body text-background/80 leading-relaxed px-4">
               Rejoignez un cercle exclusif d'entrepreneurs fortunés, investisseurs UHNWI et leaders business d'exception.
               Adhésion sur invitation uniquement - Networking luxe international pour l'élite des affaires.
             </p>
@@ -84,69 +84,69 @@ const Membres = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-12 sm:py-14 md:py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-display font-bold text-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-4 sm:mb-6">
                 Avantages <span className="text-gradient-gold">Club Business Exclusif</span>
               </h2>
-              <p className="text-lg font-body text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg font-body text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 Être membre du Makil Business Club UHNWI, c'est accéder à un écosystème premium exclusif
                 de networking luxe conçu pour accélérer votre croissance professionnelle, vos investissements
                 et développer votre réseau d'élite international d'entrepreneurs fortunés.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="bg-primary/10 text-primary rounded-full p-1 mt-1">
-                      <Check size={16} />
+                  <div key={index} className="flex items-start space-x-2 sm:space-x-3">
+                    <div className="bg-primary/10 text-primary rounded-full p-1 mt-0.5 sm:mt-1 flex-shrink-0">
+                      <Check size={14} className="sm:w-4 sm:h-4" />
                     </div>
-                    <span className="font-body text-foreground">{benefit}</span>
+                    <span className="font-body text-sm sm:text-base text-foreground">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <img
                 src={membersLounge}
                 alt="Members Lounge - Espace networking luxe exclusif pour entrepreneurs UHNWI et investisseurs fortunés club business premium"
                 className="rounded-lg shadow-elegant"
               />
-              <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-primary/10 rounded-lg -z-10" />
+              <div className="hidden sm:block absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 w-48 h-48 md:w-64 md:h-64 bg-primary/10 rounded-lg -z-10" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Membership Tiers */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-display font-bold text-foreground mb-4">
+      <section className="py-12 sm:py-14 md:py-16 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-3 sm:mb-4 px-4">
               Adhésion Club Business Premium <span className="text-gradient-gold">UHNWI</span>
             </h2>
-            <p className="text-lg font-body text-muted-foreground">
+            <p className="text-base sm:text-lg font-body text-muted-foreground px-4">
               Formules d'adhésion exclusives adaptées aux entrepreneurs fortunés et investisseurs UHNWI
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {tiers.map((tier, index) => (
               <div
                 key={index}
                 className={`bg-card rounded-lg overflow-hidden transition-elegant ${
                   tier.popular
-                    ? "shadow-gold border-2 border-primary transform scale-105"
+                    ? "shadow-gold border-2 border-primary md:transform md:scale-105"
                     : "shadow-elegant border border-border"
                 }`}
               >
                 {tier.popular && (
-                  <div className="bg-primary text-foreground text-center py-2 font-body font-semibold text-sm">
+                  <div className="bg-primary text-foreground text-center py-2 font-body font-semibold text-xs sm:text-sm">
                     LE PLUS POPULAIRE
                   </div>
                 )}
-                <div className="p-8">
+                <div className="p-6 sm:p-8">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center">
                       <tier.icon size={24} />
@@ -194,26 +194,26 @@ const Membres = () => {
       </section>
 
       {/* Membership Card Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-12 sm:py-14 md:py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div className="order-2 lg:order-1 relative">
               <img
                 src={membershipCard}
                 alt="Carte membre premium club business exclusif UHNWI - Accès VIP networking luxe entrepreneurs et investisseurs fortunés"
                 className="rounded-lg shadow-elegant"
               />
-              <div className="absolute -top-8 -left-8 w-64 h-64 bg-secondary/10 rounded-lg -z-10" />
+              <div className="hidden sm:block absolute -top-6 -left-6 md:-top-8 md:-left-8 w-48 h-48 md:w-64 md:h-64 bg-secondary/10 rounded-lg -z-10" />
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl font-display font-bold text-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-4 sm:mb-6">
                 Carte Membre <span className="text-gradient-gold">UHNWI Premium</span>
               </h2>
-              <p className="text-lg font-body text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg font-body text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 Chaque membre UHNWI reçoit une carte exclusive en métal gravé premium, symbole de
                 votre appartenance au réseau d'élite des entrepreneurs fortunés et investisseurs du club business international.
               </p>
-              <p className="text-lg font-body text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg font-body text-muted-foreground leading-relaxed">
                 Cette carte membre premium vous ouvre les portes de nos espaces privés de networking luxe et vous
                 identifie instantanément comme membre du cercle le plus prestigieux et exclusif
                 d'entrepreneurs UHNWI et investisseurs fortunés au monde.
@@ -224,20 +224,20 @@ const Membres = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl font-display font-bold text-background">
+      <section className="py-12 sm:py-14 md:py-16 bg-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-background px-4">
               Rejoindre le Réseau <span className="text-primary">UHNWI d'Élite</span>
             </h2>
-            <p className="text-lg font-body text-background/80 leading-relaxed">
+            <p className="text-base sm:text-lg font-body text-background/80 leading-relaxed px-4">
               Processus de sélection rigoureux pour entrepreneurs fortunés et investisseurs UHNWI. Adhésion club business exclusif limitée.
               Soumettez votre candidature pour intégrer le réseau d'élite du networking luxe international.
             </p>
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-lg px-12 py-6 shadow-glow transition-elegant"
+              className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 shadow-glow transition-elegant"
             >
               <Link to="/contact">Soumettre ma Candidature</Link>
             </Button>
