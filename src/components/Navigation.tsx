@@ -2,17 +2,20 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const navLinks = [
-    { name: "Accueil", path: "/" },
-    { name: "Événements", path: "/evenements" },
-    { name: "Galerie", path: "/galerie" },
-    { name: "Membres Premium", path: "/membres" },
-    { name: "Contact", path: "/contact" },
+    { name: t("nav.home"), path: "/" },
+    { name: t("nav.events"), path: "/evenements" },
+    { name: t("nav.gallery"), path: "/galerie" },
+    { name: t("nav.members"), path: "/membres" },
+    { name: t("nav.contact"), path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -48,6 +51,7 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
+            <LanguageSelector />
           </div>
 
           {/* CTA Button Desktop */}
@@ -56,15 +60,20 @@ const Navigation = () => {
               asChild
               className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold shadow-gold transition-smooth"
             >
-              <Link to="/contact">Devenir Membre</Link>
+              <Link to="/contact">{t("nav.becomeMember")}</Link>
             </Button>
+          </div>
+
+          {/* Language Selector Mobile */}
+          <div className="lg:hidden">
+            <LanguageSelector />
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden text-primary hover:text-primary/80 transition-smooth"
-            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={isOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
           >
@@ -98,7 +107,7 @@ const Navigation = () => {
                   className="w-full bg-primary hover:bg-primary/90 text-foreground font-body font-semibold"
                 >
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
-                    Devenir Membre
+                    {t("nav.becomeMember")}
                   </Link>
                 </Button>
               </div>

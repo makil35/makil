@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { X, Settings } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface CookiePreferences {
   essential: boolean;
@@ -10,6 +11,7 @@ interface CookiePreferences {
 }
 
 const CookieConsent = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>({
@@ -54,12 +56,10 @@ const CookieConsent = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="flex-1 space-y-2">
               <h3 className="text-lg font-display font-semibold text-foreground">
-                🍪 Gestion des Cookies - RGPD
+                🍪 {t("cookie.title")}
               </h3>
               <p className="text-sm font-body text-muted-foreground leading-relaxed">
-                Nous respectons votre vie privée. Ce site utilise des cookies essentiels pour son fonctionnement. 
-                Avec votre consentement, nous utilisons également des cookies d'analyse et de marketing pour améliorer votre expérience. 
-                Vous pouvez accepter, refuser ou personnaliser vos choix à tout moment.{" "}
+                {t("cookie.description")}{" "}
                 <Link
                   to="/politique-confidentialite"
                   className="text-primary hover:text-primary/80 underline transition-colors"
@@ -76,20 +76,20 @@ const CookieConsent = () => {
                 className="font-body"
               >
                 <Settings className="mr-2 h-4 w-4" />
-                Personnaliser
+                {t("cookie.customize")}
               </Button>
               <Button
                 onClick={handleRejectAll}
                 variant="outline"
                 className="font-body"
               >
-                Refuser tout
+                {t("cookie.rejectAll")}
               </Button>
               <Button
                 onClick={handleAcceptAll}
                 className="bg-primary hover:bg-primary/90 text-foreground font-body shadow-gold transition-elegant"
               >
-                Accepter tout
+                {t("cookie.acceptAll")}
               </Button>
             </div>
           </div>
@@ -97,12 +97,12 @@ const CookieConsent = () => {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-display font-semibold text-foreground">
-                Personnaliser les cookies
+                {t("cookie.customize")}
               </h3>
               <button
                 onClick={() => setShowPreferences(false)}
                 className="p-2 hover:bg-muted rounded-full transition-colors"
-                aria-label="Retour"
+                aria-label={t("cookie.back")}
               >
                 <X size={20} className="text-muted-foreground" />
               </button>
@@ -112,9 +112,9 @@ const CookieConsent = () => {
               <div className="space-y-2 p-4 bg-muted/50 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <h4 className="font-display font-semibold text-foreground">Cookies essentiels</h4>
+                    <h4 className="font-display font-semibold text-foreground">{t("cookie.essential")}</h4>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Nécessaires au fonctionnement du site. Ils ne peuvent pas être désactivés.
+                      {t("cookie.essentialDesc")}
                     </p>
                   </div>
                   <div className="ml-4 px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-semibold">
@@ -126,9 +126,9 @@ const CookieConsent = () => {
               <div className="space-y-2 p-4 bg-muted/50 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <h4 className="font-display font-semibold text-foreground">Cookies analytiques</h4>
+                    <h4 className="font-display font-semibold text-foreground">{t("cookie.analytics")}</h4>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Nous permettent de mesurer l'audience et améliorer le site.
+                      {t("cookie.analyticsDesc")}
                     </p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer ml-4">
@@ -146,9 +146,9 @@ const CookieConsent = () => {
               <div className="space-y-2 p-4 bg-muted/50 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <h4 className="font-display font-semibold text-foreground">Cookies marketing</h4>
+                    <h4 className="font-display font-semibold text-foreground">{t("cookie.marketing")}</h4>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Utilisés pour personnaliser les publicités et mesurer leur efficacité.
+                      {t("cookie.marketingDesc")}
                     </p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer ml-4">
@@ -177,13 +177,13 @@ const CookieConsent = () => {
                   variant="outline"
                   className="font-body"
                 >
-                  Refuser tout
+                  {t("cookie.rejectAll")}
                 </Button>
                 <Button
                   onClick={handleSavePreferences}
                   className="bg-primary hover:bg-primary/90 text-foreground font-body shadow-gold transition-elegant"
                 >
-                  Enregistrer mes choix
+                  {t("cookie.savePreferences")}
                 </Button>
               </div>
             </div>

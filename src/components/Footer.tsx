@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-foreground text-background border-t border-primary/20">
       <div className="container mx-auto px-4 py-12">
@@ -27,7 +30,7 @@ const Footer = () => {
                   to="/"
                   className="text-background/70 hover:text-primary transition-smooth"
                 >
-                  Accueil
+                  {t("nav.home")}
                 </Link>
               </li>
               <li>
@@ -35,7 +38,7 @@ const Footer = () => {
                   to="/evenements"
                   className="text-background/70 hover:text-primary transition-smooth"
                 >
-                  Événements
+                  {t("nav.events")}
                 </Link>
               </li>
               <li>
@@ -43,7 +46,7 @@ const Footer = () => {
                   to="/galerie"
                   className="text-background/70 hover:text-primary transition-smooth"
                 >
-                  Galerie
+                  {t("nav.gallery")}
                 </Link>
               </li>
               <li>
@@ -51,7 +54,7 @@ const Footer = () => {
                   to="/membres"
                   className="text-background/70 hover:text-primary transition-smooth"
                 >
-                  Membres Premium
+                  {t("nav.members")}
                 </Link>
               </li>
             </ul>
@@ -109,38 +112,38 @@ const Footer = () => {
         <div className="border-t border-primary/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm font-body text-background/60">
-              &copy; {new Date().getFullYear()} Makil Business Club. Tous droits réservés.
+              &copy; {new Date().getFullYear()} Makil {t("footer.businessClub")}. {t("footer.rights")}
             </p>
             <div className="flex gap-6 text-sm font-body">
               <Link
                 to="/mentions-legales"
                 className="text-background/60 hover:text-primary transition-smooth"
               >
-                Mentions Légales
+                {t("footer.legalNotice")}
               </Link>
               <Link
                 to="/politique-confidentialite"
                 className="text-background/60 hover:text-primary transition-smooth"
               >
-                Politique de Confidentialité
+                {t("footer.privacy")}
               </Link>
               <Link
                 to="/cgu"
                 className="text-background/60 hover:text-primary transition-smooth"
               >
-                CGU
+                {t("footer.terms")}
               </Link>
               <Link
                 to="/cgv"
                 className="text-background/60 hover:text-primary transition-smooth"
               >
-                CGV
+                {t("footer.sales")}
               </Link>
               <Link
                 to="/accessibilite"
                 className="text-background/60 hover:text-primary transition-smooth"
               >
-                Accessibilité
+                {t("footer.accessibility")}
               </Link>
             </div>
           </div>
