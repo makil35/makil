@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -22,9 +24,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Candidature envoyée",
-      description:
-        "Nous avons bien reçu votre candidature. Notre équipe vous contactera sous 48h.",
+      title: t("contact.form.success.title"),
+      description: t("contact.form.success.desc"),
     });
     setFormData({
       firstName: "",
@@ -55,11 +56,10 @@ const Contact = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background mb-4 sm:mb-6">
-              Contact Club Business <span className="text-primary">UHNWI</span>
+              {t("contact.hero.title")} <span className="text-primary">{t("contact.hero.titleHighlight")}</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl font-body text-background/80 leading-relaxed px-4">
-              Rejoignez le cercle le plus exclusif d'entrepreneurs fortunés UHNWI et investisseurs premium.
-              Soumettez votre candidature pour accéder au réseau d'élite du networking luxe international.
+              {t("contact.hero.subtitle")}
             </p>
           </div>
         </div>
@@ -73,11 +73,10 @@ const Contact = () => {
             <div className="space-y-6 sm:space-y-8">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4 sm:mb-6">
-                  Contact Club Business <span className="text-gradient-gold">Exclusif UHNWI</span>
+                  {t("contact.info.title")} <span className="text-gradient-gold">{t("contact.info.titleHighlight")}</span>
                 </h2>
                 <p className="text-sm sm:text-base text-muted-foreground font-body leading-relaxed mb-6 sm:mb-8">
-                  Notre équipe dédiée au réseau d'élite est à votre disposition pour répondre à toutes vos
-                  questions concernant l'adhésion au club business premium UHNWI et les opportunités de networking luxe.
+                  {t("contact.info.subtitle")}
                 </p>
               </div>
 
@@ -88,7 +87,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">
-                      Email
+                      {t("contact.info.email")}
                     </h3>
                     <p className="text-muted-foreground font-body text-sm">
                       richard@makilbusinessclub.com
@@ -102,7 +101,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">
-                      Téléphone
+                      {t("contact.info.phone")}
                     </h3>
                     <p className="text-muted-foreground font-body text-sm">
                       06.26.50.08.80
@@ -116,7 +115,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">
-                      Adresse
+                      {t("contact.info.address")}
                     </h3>
                     <p className="text-muted-foreground font-body text-sm">
                       16 Avenue Montaigne<br />
@@ -128,13 +127,13 @@ const Contact = () => {
 
               <div className="bg-secondary rounded-lg p-6">
                 <h3 className="font-display font-bold text-background mb-3">
-                  Horaires d'ouverture
+                  {t("contact.info.hours")}
                 </h3>
                 <div className="space-y-2 text-sm font-body text-background/80">
-                  <p>Lundi: 19h - 23h</p>
-                  <p>Mercredi: 12h - 15h</p>
-                  <p>Vendredi: 19h - 23h</p>
-                  <p>Autres jours: Fermé</p>
+                  <p>{t("contact.info.hours.monday")}</p>
+                  <p>{t("contact.info.hours.wednesday")}</p>
+                  <p>{t("contact.info.hours.friday")}</p>
+                  <p>{t("contact.info.hours.other")}</p>
                 </div>
               </div>
             </div>
@@ -143,14 +142,14 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <div className="bg-card border border-border rounded-lg p-6 sm:p-8 shadow-elegant">
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4 sm:mb-6">
-                  Candidature Membres <span className="text-gradient-gold">UHNWI Premium</span>
+                  {t("contact.form.title")} <span className="text-gradient-gold">{t("contact.form.titleHighlight")}</span>
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        Prénom *
+                        {t("contact.form.firstName")} *
                       </label>
                       <Input
                         name="firstName"
@@ -162,7 +161,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        Nom *
+                        {t("contact.form.lastName")} *
                       </label>
                       <Input
                         name="lastName"
@@ -177,7 +176,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        Email *
+                        {t("contact.form.email")} *
                       </label>
                       <Input
                         type="email"
@@ -190,7 +189,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        Téléphone *
+                        {t("contact.form.phone")} *
                       </label>
                       <Input
                         type="tel"
@@ -206,7 +205,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        Entreprise *
+                        {t("contact.form.company")} *
                       </label>
                       <Input
                         name="company"
@@ -218,7 +217,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        Fonction *
+                        {t("contact.form.position")} *
                       </label>
                       <Input
                         name="position"
@@ -232,7 +231,7 @@ const Contact = () => {
 
                   <div>
                     <label className="block text-sm font-body font-medium text-foreground mb-2">
-                      Message *
+                      {t("contact.form.message")} *
                     </label>
                     <Textarea
                       name="message"
@@ -240,7 +239,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      placeholder="Parlez-nous de vous et de vos motivations pour rejoindre Makil Business Club..."
+                      placeholder={t("contact.form.messagePlaceholder")}
                       className="bg-background border-border focus:border-primary resize-none"
                     />
                   </div>
@@ -250,7 +249,7 @@ const Contact = () => {
                     size="lg"
                     className="w-full bg-primary hover:bg-primary/90 text-foreground font-body font-semibold shadow-gold transition-smooth"
                   >
-                    Envoyer ma Candidature <Send className="ml-2" size={20} />
+                    {t("contact.form.submit")} <Send className="ml-2" size={20} />
                   </Button>
                 </form>
               </div>

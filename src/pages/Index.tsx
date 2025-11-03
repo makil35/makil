@@ -4,11 +4,14 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-image.jpg";
 import event1 from "@/assets/event-1.jpg";
 import event2 from "@/assets/event-2.jpg";
 
 const Index = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -25,12 +28,11 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-background leading-tight">
-              Le Premier Club Business Exclusif des{" "}
-              <span className="text-gradient-gold">UHNWI</span>
+              {t("home.hero.title")}{" "}
+              <span className="text-gradient-gold">{t("home.hero.titleHighlight")}</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-body text-background/90 leading-relaxed px-4 sm:px-0">
-              Réseau d'élite exclusif d'entrepreneurs fortunés et investisseurs UHNWI (Ultra High Net Worth Individuals).
-              Networking luxe, événements VIP et opportunités business premium internationales.
+              {t("home.hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 px-4 sm:px-0">
               <Button
@@ -39,7 +41,7 @@ const Index = () => {
                 className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 shadow-gold transition-elegant w-full sm:w-auto"
               >
                 <Link to="/contact">
-                  Devenir Membre <ArrowRight className="ml-2" size={18} />
+                  {t("home.hero.becomeMember")} <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
               <Button
@@ -48,7 +50,7 @@ const Index = () => {
                 variant="outline"
                 className="border-2 border-primary bg-transparent hover:bg-primary/10 text-background hover:text-primary font-body font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 transition-elegant w-full sm:w-auto"
               >
-                <Link to="/evenements">Découvrir nos Événements</Link>
+                <Link to="/evenements">{t("home.hero.discoverEvents")}</Link>
               </Button>
             </div>
           </div>
@@ -60,10 +62,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-3 md:mb-4 px-4">
-              Club Business Premium : Une Expérience <span className="text-gradient-gold">Unique</span>
+              {t("home.features.title")} <span className="text-gradient-gold">{t("home.features.titleHighlight")}</span>
             </h2>
             <p className="text-base sm:text-lg font-body text-muted-foreground max-w-2xl mx-auto px-4">
-              Makil Business Club offre bien plus qu'un simple réseau professionnel : networking luxe pour entrepreneurs UHNWI et investisseurs fortunés
+              {t("home.features.subtitle")}
             </p>
           </div>
 
@@ -71,23 +73,23 @@ const Index = () => {
             {[
               {
                 icon: Users,
-                title: "Réseau d'Élite UHNWI",
-                description: "Networking exclusif avec entrepreneurs fortunés, investisseurs et leaders d'affaires internationaux triés sur le volet",
+                title: t("home.features.network.title"),
+                description: t("home.features.network.desc"),
               },
               {
                 icon: Calendar,
-                title: "Événements Business VIP",
-                description: "Accédez à des événements exclusifs de networking luxe dans les lieux les plus prestigieux du monde",
+                title: t("home.features.events.title"),
+                description: t("home.features.events.desc"),
               },
               {
                 icon: Award,
-                title: "Opportunités Business Premium",
-                description: "Découvrez des opportunités d'investissement exclusives, deals privés et collaborations stratégiques uniques",
+                title: t("home.features.opportunities.title"),
+                description: t("home.features.opportunities.desc"),
               },
               {
                 icon: Sparkles,
-                title: "Service Concierge Luxe",
-                description: "Bénéficiez d'un service concierge premium personnalisé 24/7 pour entrepreneurs et investisseurs",
+                title: t("home.features.concierge.title"),
+                description: t("home.features.concierge.desc"),
               },
             ].map((feature, index) => (
               <div
@@ -114,10 +116,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-background mb-3 md:mb-4 px-4">
-              Événements Business VIP <span className="text-primary">Exclusifs</span>
+              {t("home.eventsPreview.title")} <span className="text-primary">{t("home.eventsPreview.titleHighlight")}</span>
             </h2>
             <p className="text-base sm:text-lg font-body text-background/80 max-w-2xl mx-auto px-4">
-              Découvrez nos prochains événements de networking luxe pour entrepreneurs UHNWI et investisseurs fortunés
+              {t("home.eventsPreview.subtitle")}
             </p>
           </div>
 
@@ -162,7 +164,7 @@ const Index = () => {
               className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-lg px-8 py-6 shadow-gold transition-elegant"
             >
               <Link to="/evenements">
-                Voir Tous les Événements <ArrowRight className="ml-2" size={20} />
+                {t("home.eventsPreview.seeAll")} <ArrowRight className="ml-2" size={20} />
               </Link>
             </Button>
           </div>
@@ -179,11 +181,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6 md:space-y-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-background px-4">
-              Rejoindre le Club Business Exclusif <span className="text-gradient-gold">UHNWI</span>
+              {t("home.cta.title")} <span className="text-gradient-gold">{t("home.cta.titleHighlight")}</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl font-body text-background/80 leading-relaxed px-4">
-              Adhésion strictement sur invitation pour entrepreneurs fortunés et investisseurs UHNWI.
-              Intégrez le réseau d'élite du networking business international premium.
+              {t("home.cta.subtitle")}
             </p>
             <Button
               asChild
@@ -191,7 +192,7 @@ const Index = () => {
               className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 shadow-glow transition-elegant mx-4"
             >
               <Link to="/contact">
-                Soumettre ma Candidature <ArrowRight className="ml-2" size={18} />
+                {t("home.cta.button")} <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
           </div>

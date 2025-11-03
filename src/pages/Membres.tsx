@@ -3,10 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 import membersLounge from "@/assets/members-lounge.jpg";
 import membershipCard from "@/assets/membership-card.jpg";
 
 const Membres = () => {
+  const { t } = useLanguage();
+  
   const benefits = [
     "Accès illimité événements business VIP exclusifs et networking luxe UHNWI",
     "Service concierge premium personnel 24/7 pour entrepreneurs fortunés",
@@ -73,11 +76,10 @@ const Membres = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background mb-4 sm:mb-6">
-              Adhésion Club Business <span className="text-primary">UHNWI Premium</span>
+              {t("members.hero.title")} <span className="text-primary">{t("members.hero.titleHighlight")}</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl font-body text-background/80 leading-relaxed px-4">
-              Rejoignez un cercle exclusif d'entrepreneurs fortunés, investisseurs UHNWI et leaders business d'exception.
-              Adhésion sur invitation uniquement - Networking luxe international pour l'élite des affaires.
+              {t("members.hero.subtitle")}
             </p>
           </div>
         </div>
@@ -89,12 +91,10 @@ const Membres = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-4 sm:mb-6">
-                Avantages <span className="text-gradient-gold">Club Business Exclusif</span>
+                {t("members.benefits.title")} <span className="text-gradient-gold">{t("members.benefits.titleHighlight")}</span>
               </h2>
               <p className="text-base sm:text-lg font-body text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-                Être membre du Makil Business Club UHNWI, c'est accéder à un écosystème premium exclusif
-                de networking luxe conçu pour accélérer votre croissance professionnelle, vos investissements
-                et développer votre réseau d'élite international d'entrepreneurs fortunés.
+                {t("members.benefits.subtitle")}
               </p>
               <div className="space-y-3 sm:space-y-4">
                 {benefits.map((benefit, index) => (
@@ -124,10 +124,10 @@ const Membres = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-3 sm:mb-4 px-4">
-              Adhésion Club Business Premium <span className="text-gradient-gold">UHNWI</span>
+              {t("members.tiers.title")} <span className="text-gradient-gold">{t("members.tiers.titleHighlight")}</span>
             </h2>
             <p className="text-base sm:text-lg font-body text-muted-foreground px-4">
-              Formules d'adhésion exclusives adaptées aux entrepreneurs fortunés et investisseurs UHNWI
+              {t("members.tiers.subtitle")}
             </p>
           </div>
 
@@ -143,7 +143,7 @@ const Membres = () => {
               >
                 {tier.popular && (
                   <div className="bg-primary text-foreground text-center py-2 font-body font-semibold text-xs sm:text-sm">
-                    LE PLUS POPULAIRE
+                    {t("members.tiers.popular")}
                   </div>
                 )}
                 <div className="p-6 sm:p-8">
@@ -184,7 +184,7 @@ const Membres = () => {
                         : "bg-secondary hover:bg-secondary/90 text-background"
                     }`}
                   >
-                    <Link to="/contact">Postuler</Link>
+                    <Link to="/contact">{t("members.tiers.apply")}</Link>
                   </Button>
                 </div>
               </div>
@@ -207,16 +207,13 @@ const Membres = () => {
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-4 sm:mb-6">
-                Carte Membre <span className="text-gradient-gold">UHNWI Premium</span>
+                {t("members.card.title")} <span className="text-gradient-gold">{t("members.card.titleHighlight")}</span>
               </h2>
               <p className="text-base sm:text-lg font-body text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                Chaque membre UHNWI reçoit une carte exclusive en métal gravé premium, symbole de
-                votre appartenance au réseau d'élite des entrepreneurs fortunés et investisseurs du club business international.
+                {t("members.card.desc1")}
               </p>
               <p className="text-base sm:text-lg font-body text-muted-foreground leading-relaxed">
-                Cette carte membre premium vous ouvre les portes de nos espaces privés de networking luxe et vous
-                identifie instantanément comme membre du cercle le plus prestigieux et exclusif
-                d'entrepreneurs UHNWI et investisseurs fortunés au monde.
+                {t("members.card.desc2")}
               </p>
             </div>
           </div>
@@ -228,18 +225,17 @@ const Membres = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-background px-4">
-              Rejoindre le Réseau <span className="text-primary">UHNWI d'Élite</span>
+              {t("members.cta.title")} <span className="text-primary">{t("members.cta.titleHighlight")}</span>
             </h2>
             <p className="text-base sm:text-lg font-body text-background/80 leading-relaxed px-4">
-              Processus de sélection rigoureux pour entrepreneurs fortunés et investisseurs UHNWI. Adhésion club business exclusif limitée.
-              Soumettez votre candidature pour intégrer le réseau d'élite du networking luxe international.
+              {t("members.cta.subtitle")}
             </p>
             <Button
               asChild
               size="lg"
               className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 shadow-glow transition-elegant"
             >
-              <Link to="/contact">Soumettre ma Candidature</Link>
+              <Link to="/contact">{t("members.cta.button")}</Link>
             </Button>
           </div>
         </div>

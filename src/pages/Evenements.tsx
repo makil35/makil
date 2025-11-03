@@ -2,11 +2,14 @@ import { Calendar, MapPin, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 import event1 from "@/assets/event-1.jpg";
 import event2 from "@/assets/event-2.jpg";
 import event3 from "@/assets/event-3.jpg";
 
 const Evenements = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -16,11 +19,10 @@ const Evenements = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background mb-4 sm:mb-6">
-              Événements Business VIP <span className="text-primary">Exclusifs</span>
+              {t("events.hero.title")} <span className="text-primary">{t("events.hero.titleHighlight")}</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl font-body text-background/80 leading-relaxed px-4">
-              Événements de networking luxe et expériences premium uniques pour entrepreneurs UHNWI et investisseurs fortunés.
-              Créez des connexions stratégiques avec les membres les plus influents du club business international.
+              {t("events.hero.subtitle")}
             </p>
           </div>
         </div>
@@ -31,11 +33,10 @@ const Evenements = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-4 sm:mb-6 px-4">
-              Prochains Événements de Networking Luxe <span className="text-gradient-gold">UHNWI</span>
+              {t("events.coming.title")} <span className="text-gradient-gold">{t("events.coming.titleHighlight")}</span>
             </h2>
             <p className="text-base sm:text-lg font-body text-muted-foreground px-4">
-              Nos prochains événements business VIP exclusifs pour entrepreneurs fortunés et investisseurs seront bientôt annoncés.
-              Restez connectés au réseau d'élite pour ne rien manquer des opportunités de networking premium.
+              {t("events.coming.subtitle")}
             </p>
           </div>
         </div>
