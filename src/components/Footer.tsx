@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logoMBC from "@/assets/logo-mbc.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -12,11 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand */}
           <div className="space-y-3 sm:space-y-4">
-            <img 
-              src={logoMBC} 
-              alt="Makil Business Club" 
-              className="h-16 sm:h-20 w-auto"
-            />
+            <div className="text-2xl sm:text-3xl font-display font-bold text-gradient-gold">
+              MAKIL
+            </div>
             <p className="text-xs sm:text-sm font-body text-background/70 leading-relaxed">
               Premier club business exclusif pour Ultra High Net Worth Individuals (UHNWI). Réseau d'élite, networking luxe, événements VIP pour entrepreneurs fortunés et investisseurs.
             </p>
