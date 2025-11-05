@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Calendar, Award, Sparkles } from "lucide-react";
+import { ArrowRight, Users, Calendar, Award, Sparkles, FileText, UserCheck, MessageCircle, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -107,6 +107,74 @@ const Index = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-secondary/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-3 md:mb-4 px-4">
+              {t("home.process.title")} <span className="text-gradient-gold">{t("home.process.titleHighlight")}</span>
+            </h2>
+            <p className="text-base sm:text-lg font-body text-muted-foreground max-w-2xl mx-auto px-4">
+              {t("home.process.subtitle")}
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: FileText,
+                  number: "01",
+                  title: t("home.process.step1.title"),
+                  description: t("home.process.step1.desc"),
+                },
+                {
+                  icon: UserCheck,
+                  number: "02",
+                  title: t("home.process.step2.title"),
+                  description: t("home.process.step2.desc"),
+                },
+                {
+                  icon: MessageCircle,
+                  number: "03",
+                  title: t("home.process.step3.title"),
+                  description: t("home.process.step3.desc"),
+                },
+                {
+                  icon: CheckCircle2,
+                  number: "04",
+                  title: t("home.process.step4.title"),
+                  description: t("home.process.step4.desc"),
+                },
+              ].map((step, index) => (
+                <div
+                  key={index}
+                  className="relative bg-card border border-border rounded-lg p-6 hover:shadow-gold transition-elegant group"
+                >
+                  <div className="absolute -top-4 -left-4 bg-primary text-foreground w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-lg shadow-gold">
+                    {step.number}
+                  </div>
+                  <div className="bg-primary/10 text-primary w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-elegant">
+                    <step.icon size={28} />
+                  </div>
+                  <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Connection lines for desktop */}
+            <div className="hidden lg:block relative -mt-32 mb-16">
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+            </div>
           </div>
         </div>
       </section>
