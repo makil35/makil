@@ -57,60 +57,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-3 md:mb-4 px-4">
-              {t("home.features.title")} <span className="text-gradient-gold">{t("home.features.titleHighlight")}</span>
-            </h2>
-            <p className="text-base sm:text-lg font-body text-muted-foreground max-w-2xl mx-auto px-4">
-              {t("home.features.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {[
-              {
-                icon: Users,
-                title: t("home.features.network.title"),
-                description: t("home.features.network.desc"),
-              },
-              {
-                icon: Calendar,
-                title: t("home.features.events.title"),
-                description: t("home.features.events.desc"),
-              },
-              {
-                icon: Award,
-                title: t("home.features.opportunities.title"),
-                description: t("home.features.opportunities.desc"),
-              },
-              {
-                icon: Sparkles,
-                title: t("home.features.concierge.title"),
-                description: t("home.features.concierge.desc"),
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-card border border-border rounded-lg p-6 md:p-8 hover:shadow-gold transition-elegant group"
-              >
-                <div className="bg-primary/10 text-primary w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-elegant">
-                  <feature.icon size={28} className="md:w-8 md:h-8" />
-                </div>
-                <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-2 md:mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-sm md:text-base text-muted-foreground font-body leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-secondary/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,6 +121,60 @@ const Index = () => {
             <div className="hidden lg:block relative -mt-32 mb-16">
               <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-12 sm:py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-3 md:mb-4 px-4">
+              {t("home.features.title")} <span className="text-gradient-gold">{t("home.features.titleHighlight")}</span>
+            </h2>
+            <p className="text-base sm:text-lg font-body text-muted-foreground max-w-2xl mx-auto px-4">
+              {t("home.features.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {[
+              {
+                icon: Users,
+                title: t("home.features.network.title"),
+                description: t("home.features.network.desc"),
+              },
+              {
+                icon: Calendar,
+                title: t("home.features.events.title"),
+                description: t("home.features.events.desc"),
+              },
+              {
+                icon: Award,
+                title: t("home.features.opportunities.title"),
+                description: t("home.features.opportunities.desc"),
+              },
+              {
+                icon: Sparkles,
+                title: t("home.features.concierge.title"),
+                description: t("home.features.concierge.desc"),
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-lg p-6 md:p-8 hover:shadow-gold transition-elegant group"
+              >
+                <div className="bg-primary/10 text-primary w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-elegant">
+                  <feature.icon size={28} className="md:w-8 md:h-8" />
+                </div>
+                <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-2 md:mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-sm md:text-base text-muted-foreground font-body leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
