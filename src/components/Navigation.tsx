@@ -60,7 +60,7 @@ const Navigation = () => {
               asChild
               className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold shadow-gold transition-smooth"
             >
-              <Link to="/contact">{t("nav.becomeMember")}</Link>
+              <Link to="/membres">{t("nav.becomeMember")}</Link>
             </Button>
           </div>
 
@@ -106,7 +106,7 @@ const Navigation = () => {
                   asChild
                   className="w-full bg-primary hover:bg-primary/90 text-foreground font-body font-semibold"
                 >
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  <Link to="/membres" onClick={() => setIsOpen(false)}>
                     {t("nav.becomeMember")}
                   </Link>
                 </Button>
