@@ -8,6 +8,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-image.jpg";
 import event1 from "@/assets/event-1.jpg";
 import event2 from "@/assets/event-2.jpg";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -173,6 +176,76 @@ const Index = () => {
                 <p className="text-sm md:text-base text-muted-foreground font-body leading-relaxed">
                   {feature.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-secondary/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-3 md:mb-4 px-4">
+              {t("home.testimonials.title")} <span className="text-gradient-gold">{t("home.testimonials.titleHighlight")}</span>
+            </h2>
+            <p className="text-base sm:text-lg font-body text-muted-foreground max-w-2xl mx-auto px-4">
+              {t("home.testimonials.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                image: testimonial1,
+                name: t("home.testimonials.member1.name"),
+                role: t("home.testimonials.member1.role"),
+                quote: t("home.testimonials.member1.quote"),
+                result: t("home.testimonials.member1.result"),
+              },
+              {
+                image: testimonial2,
+                name: t("home.testimonials.member2.name"),
+                role: t("home.testimonials.member2.role"),
+                quote: t("home.testimonials.member2.quote"),
+                result: t("home.testimonials.member2.result"),
+              },
+              {
+                image: testimonial3,
+                name: t("home.testimonials.member3.name"),
+                role: t("home.testimonials.member3.role"),
+                quote: t("home.testimonials.member3.quote"),
+                result: t("home.testimonials.member3.result"),
+              },
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-gold transition-elegant group"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={testimonial.image}
+                    alt={`${testimonial.name} - ${testimonial.role} - Membre MAKIL Business Club`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-elegant duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-xl font-display font-bold text-background mb-1">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-sm font-body text-primary">{testimonial.role}</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-sm md:text-base font-body text-muted-foreground italic mb-4 leading-relaxed">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full">
+                    <span className="text-xs md:text-sm font-semibold">
+                      ✨ {testimonial.result}
+                    </span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
