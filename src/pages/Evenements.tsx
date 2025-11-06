@@ -1,11 +1,9 @@
-import { Calendar, MapPin, Users } from "lucide-react";
+import { Calendar, MapPin, Users, Utensils, Sparkles, Mountain, Wine, Lock, Award, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
-import event1 from "@/assets/event-1.jpg";
-import event2 from "@/assets/event-2.jpg";
-import event3 from "@/assets/event-3.jpg";
 
 const Evenements = () => {
   const { t } = useLanguage();
@@ -28,16 +26,95 @@ const Evenements = () => {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
+      {/* Events Types Section */}
       <section className="py-12 sm:py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-4 sm:mb-6 px-4">
-              {t("events.coming.title")} <span className="text-gradient-gold">{t("events.coming.titleHighlight")}</span>
+              {t("events.types.title")} <span className="text-gradient-gold">{t("events.types.titleHighlight")}</span>
             </h2>
             <p className="text-base sm:text-lg font-body text-muted-foreground px-4">
-              {t("events.coming.subtitle")}
+              {t("events.types.subtitle")}
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+            {/* Dîners Privés */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Utensils className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.dinner.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.dinner.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* Expériences Émotionnelles */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Sparkles className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.emotional.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.emotional.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* Retraites Stratégiques */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Mountain className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.retreat.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.retreat.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* Soirées de Collection */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Wine className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.collection.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.collection.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* Événements Secrets */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Lock className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.secret.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.secret.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* Événements Signature */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Award className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.signature.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.signature.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* Voyages d'Initiation */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 md:col-span-2 lg:col-span-1">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Plane className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.travel.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.travel.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
           </div>
         </div>
       </section>
