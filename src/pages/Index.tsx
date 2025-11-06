@@ -40,7 +40,7 @@ const Index = () => {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 shadow-gold transition-elegant w-full sm:w-auto"
               >
-                <Link to="/contact">
+                <Link to="/membres">
                   {t("home.hero.becomeMember")} <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
@@ -259,7 +259,7 @@ const Index = () => {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 shadow-glow transition-elegant mx-4"
             >
-              <Link to="/contact">
+              <Link to="/membres">
                 {t("home.cta.button")} <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
