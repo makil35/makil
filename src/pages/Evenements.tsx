@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Users, Utensils, Sparkles, Mountain, Wine, Lock, Award, Plane } from "lucide-react";
+import { Calendar, MapPin, Users, Utensils, Sparkles, Mountain, Wine, Lock, Award, Plane, Shield, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -106,13 +106,35 @@ const Evenements = () => {
             </Card>
 
             {/* Voyages d'Initiation */}
-            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 md:col-span-2 lg:col-span-1">
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
               <CardHeader>
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Plane className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle className="font-display text-xl">{t("events.types.travel.title")}</CardTitle>
                 <CardDescription className="font-body">{t("events.types.travel.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* The Circle of Silence */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.circle.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.circle.desc")}</CardDescription>
+              </CardHeader>
+            </Card>
+
+            {/* Makil Legacy Summit */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Crown className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="font-display text-xl">{t("events.types.summit.title")}</CardTitle>
+                <CardDescription className="font-body">{t("events.types.summit.desc")}</CardDescription>
               </CardHeader>
             </Card>
           </div>
