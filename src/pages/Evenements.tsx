@@ -141,6 +141,138 @@ const Evenements = () => {
         </div>
       </section>
 
+      {/* Upcoming Events Calendar */}
+      <section className="py-12 sm:py-16 md:py-24 bg-secondary/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-4 sm:mb-6 px-4">
+              {t("events.calendar.title")} <span className="text-gradient-gold">{t("events.calendar.titleHighlight")}</span>
+            </h2>
+            <p className="text-base sm:text-lg font-body text-muted-foreground px-4">
+              {t("events.calendar.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {/* Event 1 */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <CardTitle className="font-display text-xl mb-2">{t("events.calendar.event1.title")}</CardTitle>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event1.date")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event1.location")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event1.spots")}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CardDescription className="font-body mb-4">
+                  {t("events.calendar.event1.desc")}
+                </CardDescription>
+                <Button className="w-full">{t("events.calendar.register")}</Button>
+              </CardHeader>
+            </Card>
+
+            {/* Event 2 */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <CardTitle className="font-display text-xl mb-2">{t("events.calendar.event2.title")}</CardTitle>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event2.date")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event2.location")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event2.spots")}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CardDescription className="font-body mb-4">
+                  {t("events.calendar.event2.desc")}
+                </CardDescription>
+                <Button className="w-full">{t("events.calendar.register")}</Button>
+              </CardHeader>
+            </Card>
+
+            {/* Event 3 */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <CardTitle className="font-display text-xl mb-2">{t("events.calendar.event3.title")}</CardTitle>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event3.date")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event3.location")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event3.spots")}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CardDescription className="font-body mb-4">
+                  {t("events.calendar.event3.desc")}
+                </CardDescription>
+                <Button className="w-full">{t("events.calendar.register")}</Button>
+              </CardHeader>
+            </Card>
+
+            {/* Event 4 */}
+            <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <CardTitle className="font-display text-xl mb-2">{t("events.calendar.event4.title")}</CardTitle>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event4.date")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event4.location")}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4 text-primary" />
+                        <span>{t("events.calendar.event4.spots")}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CardDescription className="font-body mb-4">
+                  {t("events.calendar.event4.desc")}
+                </CardDescription>
+                <Button className="w-full">{t("events.calendar.register")}</Button>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
