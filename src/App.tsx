@@ -5,9 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
-import Evenements from "./pages/Evenements";
-import Galerie from "./pages/Galerie";
-import Membres from "./pages/Membres";
+import Services from "./pages/Services";
+import CercleException from "./pages/CercleException";
 import Contact from "./pages/Contact";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
@@ -27,9 +26,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/evenements" element={<Evenements />} />
-            <Route path="/galerie" element={<Galerie />} />
-            <Route path="/membres" element={<Membres />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/cercle-exception" element={<CercleException />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
