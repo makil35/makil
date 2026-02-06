@@ -1,96 +1,72 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Eye, Shield, Wand2 } from "lucide-react";
+import { ArrowRight, Crown, Diamond, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import CookieConsent from "@/components/CookieConsent";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-concierge.jpg";
+import cercleHero from "@/assets/cercle-hero.jpg";
 
-const Index = () => {
+const CercleException = () => {
   const { t } = useLanguage();
 
   return (
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section — Full-screen, cinematic */}
-      <section className="relative min-h-screen flex items-end pb-16 sm:pb-24 md:pb-32 overflow-hidden">
+      {/* Hero — Full-bleed immersive */}
+      <section className="relative min-h-[80vh] flex items-end pb-16 sm:pb-24 md:pb-32 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${cercleHero})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/60 to-foreground/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/70 to-foreground/20" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-6">
             <p className="text-xs sm:text-sm font-body tracking-[0.35em] uppercase text-primary">
-              {t("home.hero.subtitle")}
+              {t("cercle.hero.subtitle")}
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background leading-[1.1]">
-              {t("home.hero.title")}{" "}
-              <span className="text-gradient-gold">{t("home.hero.titleHighlight")}</span>
+              {t("cercle.hero.title")}{" "}
+              <span className="text-gradient-gold">{t("cercle.hero.titleHighlight")}</span>
             </h1>
-            <p className="text-base sm:text-lg font-body text-background/60 max-w-xl">
-              {t("home.hero.desc")}
+            <p className="text-base sm:text-lg font-body text-background/50 max-w-xl">
+              {t("cercle.hero.desc")}
             </p>
-            <div className="pt-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-6 shadow-gold transition-elegant"
-              >
-                <Link to="/contact">
-                  {t("home.hero.cta")} <ArrowRight className="ml-2" size={16} />
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Intro — Minimal poetic text */}
+      {/* Intro poétique */}
       <section className="py-24 sm:py-32 md:py-40 bg-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center space-y-4">
-            <p className="text-xl sm:text-2xl md:text-3xl font-display text-background/90 leading-relaxed italic">
-              {t("home.intro.line1")}
+            <p className="text-lg sm:text-xl md:text-2xl font-display text-background/80 leading-relaxed italic">
+              {t("cercle.intro.line1")}
             </p>
-            <p className="text-xl sm:text-2xl md:text-3xl font-display text-primary leading-relaxed italic">
-              {t("home.intro.line2")}
+            <p className="text-lg sm:text-xl md:text-2xl font-display text-primary leading-relaxed italic">
+              {t("cercle.intro.line2")}
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3 Pillars — Minimalist cards */}
+      {/* Pillars */}
       <section className="py-20 sm:py-28 md:py-36 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 sm:mb-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground">
-              {t("home.pillars.title")}{" "}
-              <span className="text-gradient-gold">{t("home.pillars.titleHighlight")}</span>
+              {t("cercle.pillars.title")}{" "}
+              <span className="text-gradient-gold">{t("cercle.pillars.titleHighlight")}</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border max-w-5xl mx-auto">
             {[
-              {
-                icon: Eye,
-                title: t("home.pillars.1.title"),
-                desc: t("home.pillars.1.desc"),
-              },
-              {
-                icon: Wand2,
-                title: t("home.pillars.2.title"),
-                desc: t("home.pillars.2.desc"),
-              },
-              {
-                icon: Shield,
-                title: t("home.pillars.3.title"),
-                desc: t("home.pillars.3.desc"),
-              },
+              { icon: Crown, titleKey: "cercle.pillars.1.title", descKey: "cercle.pillars.1.desc" },
+              { icon: Diamond, titleKey: "cercle.pillars.2.title", descKey: "cercle.pillars.2.desc" },
+              { icon: Lock, titleKey: "cercle.pillars.3.title", descKey: "cercle.pillars.3.desc" },
             ].map((pillar, i) => (
               <div
                 key={i}
@@ -101,10 +77,10 @@ const Index = () => {
                   className="text-primary mb-8 group-hover:scale-110 transition-elegant"
                 />
                 <h3 className="text-lg font-display font-semibold text-foreground group-hover:text-background mb-4 transition-elegant">
-                  {pillar.title}
+                  {t(pillar.titleKey)}
                 </h3>
                 <p className="text-sm font-body text-muted-foreground group-hover:text-background/60 leading-relaxed transition-elegant">
-                  {pillar.desc}
+                  {t(pillar.descKey)}
                 </p>
               </div>
             ))}
@@ -112,19 +88,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section — Dark, bold */}
+      {/* CTA */}
       <section className="py-24 sm:py-32 bg-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary rounded-full blur-[200px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary rounded-full blur-[150px]" />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl mx-auto text-center space-y-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-background">
-              {t("home.cta.title")}
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-background italic">
+              {t("cercle.cta.title")}
             </h2>
-            <p className="text-base sm:text-lg font-body text-background/50">
-              {t("home.cta.desc")}
+            <p className="text-base sm:text-lg font-body text-background/40">
+              {t("cercle.cta.desc")}
             </p>
             <Button
               asChild
@@ -133,7 +109,7 @@ const Index = () => {
               className="border border-primary/40 bg-transparent hover:bg-primary/10 text-primary font-body font-semibold text-sm tracking-wider uppercase px-10 py-6 transition-elegant"
             >
               <Link to="/contact">
-                {t("home.cta.button")} <ArrowRight className="ml-2" size={16} />
+                {t("cercle.cta.button")} <ArrowRight className="ml-2" size={16} />
               </Link>
             </Button>
           </div>
@@ -141,9 +117,8 @@ const Index = () => {
       </section>
 
       <Footer />
-      <CookieConsent />
     </div>
   );
 };
 
-export default Index;
+export default CercleException;

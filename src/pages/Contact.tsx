@@ -16,8 +16,6 @@ const Contact = () => {
     lastName: "",
     email: "",
     phone: "",
-    company: "",
-    position: "",
     message: "",
   });
 
@@ -27,129 +25,93 @@ const Contact = () => {
       title: t("contact.form.success.title"),
       description: t("contact.form.success.desc"),
     });
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      company: "",
-      position: "",
-      message: "",
-    });
+    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 bg-gradient-to-b from-foreground to-secondary">
+      {/* Hero */}
+      <section className="pt-28 sm:pt-36 md:pt-44 pb-16 sm:pb-20 md:pb-24 bg-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background mb-4 sm:mb-6">
-              {t("contact.hero.title")} <span className="text-primary">{t("contact.hero.titleHighlight")}</span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl font-body text-background/80 leading-relaxed px-4">
+          <div className="max-w-2xl space-y-6">
+            <p className="text-xs sm:text-sm font-body tracking-[0.35em] uppercase text-primary">
               {t("contact.hero.subtitle")}
+            </p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background leading-[1.1]">
+              {t("contact.hero.title")}{" "}
+              <span className="text-gradient-gold">{t("contact.hero.titleHighlight")}</span>
+            </h1>
+            <p className="text-base sm:text-lg font-body text-background/50">
+              {t("contact.hero.desc")}
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-12 sm:py-14 md:py-16 bg-background">
+      <section className="py-16 sm:py-20 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 max-w-6xl mx-auto">
-            {/* Contact Info */}
-            <div className="space-y-6 sm:space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            {/* Info */}
+            <div className="space-y-8">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4 sm:mb-6">
-                  {t("contact.info.title")} <span className="text-gradient-gold">{t("contact.info.titleHighlight")}</span>
+                <h2 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-4">
+                  {t("contact.info.title")}{" "}
+                  <span className="text-gradient-gold">{t("contact.info.titleHighlight")}</span>
                 </h2>
-                <p className="text-sm sm:text-base text-muted-foreground font-body leading-relaxed mb-6 sm:mb-8">
+                <p className="text-sm text-muted-foreground font-body leading-relaxed">
                   {t("contact.info.subtitle")}
                 </p>
               </div>
 
-              <div className="space-y-4 sm:space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail size={20} />
+              <div className="space-y-5">
+                {[
+                  { icon: Mail, label: t("contact.info.email"), value: "contact@makilconciergerie.com" },
+                  { icon: Phone, label: t("contact.info.phone"), value: "06.26.50.08.80" },
+                  { icon: MapPin, label: t("contact.info.address"), value: "Paris, France" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start space-x-4">
+                    <div className="bg-primary/10 text-primary w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <item.icon size={16} />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-display font-semibold text-foreground mb-0.5">
+                        {item.label}
+                      </h3>
+                      <p className="text-sm text-muted-foreground font-body">{item.value}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-display font-semibold text-foreground mb-1">
-                      {t("contact.info.email")}
-                    </h3>
-                    <p className="text-muted-foreground font-body text-sm">
-                      richard@makilbusinessclub.com
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-semibold text-foreground mb-1">
-                      {t("contact.info.phone")}
-                    </h3>
-                    <p className="text-muted-foreground font-body text-sm">
-                      06.26.50.08.80
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-semibold text-foreground mb-1">
-                      {t("contact.info.address")}
-                    </h3>
-                    <p className="text-muted-foreground font-body text-sm">
-                      16 Avenue Montaigne<br />
-                      75008 Paris, France
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
 
-              <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-display font-bold text-background mb-3">
+              <div className="bg-foreground rounded-lg p-6">
+                <h3 className="text-sm font-display font-semibold text-background mb-2">
                   {t("contact.info.hours")}
                 </h3>
-                <div className="space-y-2 text-sm font-body text-background/80">
-                  <p>{t("contact.info.hours.monday")}</p>
-                  <p>{t("contact.info.hours.wednesday")}</p>
-                  <p>{t("contact.info.hours.friday")}</p>
-                  <p>{t("contact.info.hours.other")}</p>
-                </div>
+                <p className="text-sm font-body text-background/60">{t("contact.info.hours.line1")}</p>
+                <p className="text-xs font-body text-background/40">{t("contact.info.hours.line2")}</p>
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Form */}
             <div className="lg:col-span-2">
               <div className="bg-card border border-border rounded-lg p-6 sm:p-8 shadow-elegant">
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4 sm:mb-6">
-                  {t("contact.form.title")} <span className="text-gradient-gold">{t("contact.form.titleHighlight")}</span>
+                <h2 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-6">
+                  {t("contact.form.title")}{" "}
+                  <span className="text-gradient-gold">{t("contact.form.titleHighlight")}</span>
                 </h2>
 
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        {t("contact.form.firstName")} *
+                      <label className="block text-xs font-body font-medium text-foreground mb-2 tracking-wider uppercase">
+                        {t("contact.form.firstName")}
                       </label>
                       <Input
                         name="firstName"
@@ -160,8 +122,8 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        {t("contact.form.lastName")} *
+                      <label className="block text-xs font-body font-medium text-foreground mb-2 tracking-wider uppercase">
+                        {t("contact.form.lastName")}
                       </label>
                       <Input
                         name="lastName"
@@ -173,10 +135,10 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        {t("contact.form.email")} *
+                      <label className="block text-xs font-body font-medium text-foreground mb-2 tracking-wider uppercase">
+                        {t("contact.form.email")}
                       </label>
                       <Input
                         type="email"
@@ -188,57 +150,29 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        {t("contact.form.phone")} *
+                      <label className="block text-xs font-body font-medium text-foreground mb-2 tracking-wider uppercase">
+                        {t("contact.form.phone")}
                       </label>
                       <Input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        required
-                        className="bg-background border-border focus:border-primary"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        {t("contact.form.company")} *
-                      </label>
-                      <Input
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        required
-                        className="bg-background border-border focus:border-primary"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-body font-medium text-foreground mb-2">
-                        {t("contact.form.position")} *
-                      </label>
-                      <Input
-                        name="position"
-                        value={formData.position}
-                        onChange={handleChange}
-                        required
                         className="bg-background border-border focus:border-primary"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-body font-medium text-foreground mb-2">
-                      {t("contact.form.message")} *
+                    <label className="block text-xs font-body font-medium text-foreground mb-2 tracking-wider uppercase">
+                      {t("contact.form.message")}
                     </label>
                     <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={6}
+                      rows={5}
                       placeholder={t("contact.form.messagePlaceholder")}
                       className="bg-background border-border focus:border-primary resize-none"
                     />
@@ -247,9 +181,9 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-foreground font-body font-semibold shadow-gold transition-smooth"
+                    className="w-full bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-sm tracking-wider uppercase shadow-gold transition-smooth"
                   >
-                    {t("contact.form.submit")} <Send className="ml-2" size={20} />
+                    {t("contact.form.submit")} <Send className="ml-2" size={16} />
                   </Button>
                 </form>
               </div>
