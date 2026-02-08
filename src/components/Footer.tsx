@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logo from "@/assets/logo-makil.png";
+import logoFull from "@/assets/logo-makil-full.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -12,12 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <img src={logo} alt="Makil" className="h-8 w-auto" />
-              <span className="text-xs font-body tracking-[0.3em] uppercase text-primary">
-                {t("footer.concierge")}
-              </span>
-            </div>
+            <img src={logoFull} alt="Makil Conciergerie" className="h-20 w-auto" />
             <p className="text-xs font-body text-background/40 leading-relaxed">
               {t("footer.tagline")}
             </p>
