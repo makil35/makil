@@ -73,7 +73,7 @@ export default {
   "services.categories.family.desc": "Integrated management of daily life, education, philanthropy, and succession.",
   "services.approach.title": "Our",
   "services.approach.titleHighlight": "approach",
-  "services.approach.desc": "One single point of contact. Available 24/7. Anywhere in the world. We don't make promises — we deliver results.",
+  "services.approach.desc": "One single point of contact. Available 24/7. Anywhere in the world. Our mandates span weeks to months — ensuring flawless execution from start to finish. We don't make promises — we deliver results.",
   "services.cta.title": "Let's begin.",
   "services.cta.desc": "Tell us your wish. The rest is our business.",
   "services.cta.button": "Write to us",
