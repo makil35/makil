@@ -73,7 +73,7 @@ export default {
   "services.categories.family.desc": "Gestion intégrée de la vie quotidienne, éducation, philanthropie et succession.",
   "services.approach.title": "Notre",
   "services.approach.titleHighlight": "approche",
-  "services.approach.desc": "Un seul interlocuteur. Disponible 24h/24. Partout dans le monde. Nous ne faisons pas de promesses — nous livrons des résultats.",
+  "services.approach.desc": "Un seul interlocuteur. Disponible 24h/24. Partout dans le monde. Nos mandats s'inscrivent dans la durée — quelques semaines à plusieurs mois — pour garantir une exécution sans faille. Nous ne faisons pas de promesses — nous livrons des résultats.",
   "services.cta.title": "Commençons.",
   "services.cta.desc": "Décrivez-nous votre souhait. Le reste est notre affaire.",
   "services.cta.button": "Nous écrire",
