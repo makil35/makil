@@ -10,7 +10,7 @@ All colors MUST be HSL.
   :root {
     /* Luxury color palette - Gold #CBA135, Black, Ivory, Bottle Green */
     --background: 40 30% 97%; /* Ivory white */
-    --foreground: 0 0% 8%; /* Deep black */
+    --foreground: 0 0% 0%; /* Pure black */
 
     --card: 40 30% 97%;
     --card-foreground: 0 0% 8%;
