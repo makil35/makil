@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
 import logo from "@/assets/logo-makil.png";
@@ -12,40 +11,37 @@ const Navigation = () => {
   const { t } = useLanguage();
 
   const navLinks = [
-    { name: t("nav.home"), path: "/" },
-    { name: t("nav.services"), path: "/services" },
-    { name: t("nav.cercle"), path: "/cercle-exception" },
+    { name: t("nav.collections"), path: "/collections" },
+    { name: t("nav.atelier"), path: "/atelier" },
     { name: t("nav.contact"), path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-primary/10" role="navigation" aria-label="Navigation principale">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" role="navigation" aria-label="Navigation principale">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3" aria-label="Makil Conciergerie - Retour à l'accueil">
-            <img src={logo} alt="Makil" className="h-10 w-auto" />
-            <div className="hidden sm:block">
-              <div className="text-xs font-body tracking-[0.3em] uppercase text-primary">
-                Conciergerie
-              </div>
-            </div>
+          <Link to="/" className="flex items-center space-x-3" aria-label="Makil-Maqil - Retour à l'accueil">
+            <img src={logo} alt="Makil-Maqil" className="h-10 w-auto" />
+            <span className="hidden sm:block font-display text-sm tracking-[0.15em] uppercase text-foreground">
+              Makil-Maqil
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1" role="menubar">
+          <div className="hidden lg:flex items-center space-x-8" role="menubar">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 role="menuitem"
                 aria-current={isActive(link.path) ? "page" : undefined}
-                className={`px-4 py-2 rounded-md font-body text-xs tracking-wider uppercase transition-smooth ${
+                className={`font-body text-xs tracking-[0.2em] uppercase transition-smooth ${
                   isActive(link.path)
-                    ? "text-primary"
-                    : "text-background/60 hover:text-primary"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {link.name}
@@ -54,24 +50,11 @@ const Navigation = () => {
             <LanguageSelector />
           </div>
 
-          {/* CTA Button Desktop */}
-          <div className="hidden lg:block">
-            <Button
-              asChild
-              size="sm"
-              variant="outline"
-              className="border-primary/30 bg-transparent hover:bg-primary/10 text-primary font-body text-xs tracking-wider uppercase transition-smooth"
-            >
-              <Link to="/contact">{t("nav.discover")}</Link>
-            </Button>
-          </div>
-
           <div className="flex items-center space-x-3 lg:hidden">
             <LanguageSelector />
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-primary hover:text-primary/80 transition-smooth"
+              className="text-foreground hover:text-muted-foreground transition-smooth"
               aria-label={isOpen ? t("nav.closeMenu") : t("nav.openMenu")}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
@@ -83,7 +66,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div id="mobile-menu" className="lg:hidden py-6 border-t border-primary/10" role="menu">
+          <div id="mobile-menu" className="lg:hidden py-8 border-t border-border" role="menu">
             <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <Link
@@ -92,26 +75,15 @@ const Navigation = () => {
                   role="menuitem"
                   onClick={() => setIsOpen(false)}
                   aria-current={isActive(link.path) ? "page" : undefined}
-                  className={`px-4 py-3 font-body text-xs tracking-wider uppercase transition-smooth ${
+                  className={`px-4 py-3 font-body text-xs tracking-[0.2em] uppercase transition-smooth ${
                     isActive(link.path)
-                      ? "text-primary"
-                      : "text-background/60 hover:text-primary"
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4 px-4">
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full border-primary/30 bg-transparent hover:bg-primary/10 text-primary font-body text-xs tracking-wider uppercase"
-                >
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>
-                    {t("nav.discover")}
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         )}

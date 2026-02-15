@@ -1,48 +1,69 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Eye, Shield, Wand2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-concierge.jpg";
+import heroImage from "@/assets/hero-fashion.jpg";
+import pretAPorter from "@/assets/collection-pret-a-porter.jpg";
+import hauteCouture from "@/assets/collection-haute-couture.jpg";
+import accessoires from "@/assets/collection-accessories.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
+
+  const collections = [
+    {
+      image: pretAPorter,
+      title: t("home.collections.pretaporter"),
+      desc: t("home.collections.pretaporter.desc"),
+      link: "/collections",
+    },
+    {
+      image: hauteCouture,
+      title: t("home.collections.hautecouture"),
+      desc: t("home.collections.hautecouture.desc"),
+      link: "/collections",
+    },
+    {
+      image: accessoires,
+      title: t("home.collections.accessoires"),
+      desc: t("home.collections.accessoires.desc"),
+      link: "/collections",
+    },
+  ];
 
   return (
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section — Full-screen, cinematic */}
+      {/* Hero — Full-screen editorial */}
       <section className="relative min-h-screen flex items-end pb-16 sm:pb-24 md:pb-32 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/60 to-foreground/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-6">
-            <p className="text-xs sm:text-sm font-body tracking-[0.35em] uppercase text-primary">
+          <div className="max-w-2xl space-y-6">
+            <p className="text-xs sm:text-sm font-body tracking-[0.4em] uppercase text-background/60">
               {t("home.hero.subtitle")}
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-background leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-normal text-background leading-[1.05]">
               {t("home.hero.title")}{" "}
-              <span className="text-gradient-gold">{t("home.hero.titleHighlight")}</span>
+              <em>{t("home.hero.titleHighlight")}</em>
             </h1>
-            <p className="text-base sm:text-lg font-body text-background/60 max-w-xl">
-              {t("home.hero.desc")}
-            </p>
-            <div className="pt-4">
+            <div className="pt-6">
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-6 shadow-gold transition-elegant"
+                className="bg-background hover:bg-background/90 text-foreground font-body text-xs tracking-[0.2em] uppercase px-10 py-6 transition-smooth"
               >
-                <Link to="/contact">
-                  {t("home.hero.cta")} <ArrowRight className="ml-2" size={16} />
+                <Link to="/collections">
+                  {t("home.hero.cta")} <ArrowRight className="ml-3" size={14} />
                 </Link>
               </Button>
             </div>
@@ -51,89 +72,71 @@ const Index = () => {
       </section>
 
       {/* Intro — Minimal poetic text */}
-      <section className="py-24 sm:py-32 md:py-40 bg-foreground">
+      <section className="py-28 sm:py-36 md:py-44 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center space-y-4">
-            <p className="text-xl sm:text-2xl md:text-3xl font-display text-background/90 leading-relaxed italic">
+          <div className="max-w-2xl mx-auto text-center space-y-3">
+            <p className="text-xl sm:text-2xl md:text-3xl font-display text-foreground/80 leading-relaxed">
               {t("home.intro.line1")}
             </p>
-            <p className="text-xl sm:text-2xl md:text-3xl font-display text-primary leading-relaxed italic">
+            <p className="text-xl sm:text-2xl md:text-3xl font-display text-foreground leading-relaxed italic">
               {t("home.intro.line2")}
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3 Pillars — Minimalist cards */}
-      <section className="py-20 sm:py-28 md:py-36 bg-background">
+      {/* Collections Grid */}
+      <section className="bg-background pb-20 sm:pb-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 sm:mb-20">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground">
-              {t("home.pillars.title")}{" "}
-              <span className="text-gradient-gold">{t("home.pillars.titleHighlight")}</span>
-            </h2>
-          </div>
+          <h2 className="text-xs font-body tracking-[0.3em] uppercase text-muted-foreground text-center mb-16">
+            {t("home.collections.title")}
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border max-w-5xl mx-auto">
-            {[
-              {
-                icon: Eye,
-                title: t("home.pillars.1.title"),
-                desc: t("home.pillars.1.desc"),
-              },
-              {
-                icon: Wand2,
-                title: t("home.pillars.2.title"),
-                desc: t("home.pillars.2.desc"),
-              },
-              {
-                icon: Shield,
-                title: t("home.pillars.3.title"),
-                desc: t("home.pillars.3.desc"),
-              },
-            ].map((pillar, i) => (
-              <div
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {collections.map((col, i) => (
+              <Link
                 key={i}
-                className="bg-background p-10 sm:p-12 md:p-14 group hover:bg-foreground transition-elegant"
+                to={col.link}
+                className="group block"
               >
-                <pillar.icon
-                  size={28}
-                  className="text-primary mb-8 group-hover:scale-110 transition-elegant"
-                />
-                <h3 className="text-lg font-display font-semibold text-foreground group-hover:text-background mb-4 transition-elegant">
-                  {pillar.title}
+                <div className="aspect-[3/4] overflow-hidden mb-5">
+                  <img
+                    src={col.image}
+                    alt={col.title}
+                    className="w-full h-full object-cover transition-smooth group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-sm font-display font-semibold text-foreground mb-1">
+                  {col.title}
                 </h3>
-                <p className="text-sm font-body text-muted-foreground group-hover:text-background/60 leading-relaxed transition-elegant">
-                  {pillar.desc}
+                <p className="text-xs font-body text-muted-foreground leading-relaxed">
+                  {col.desc}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section — Dark, bold */}
-      <section className="py-24 sm:py-32 bg-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary rounded-full blur-[200px]" />
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-2xl mx-auto text-center space-y-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-background">
+      {/* CTA Section */}
+      <section className="py-24 sm:py-32 bg-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-xl mx-auto text-center space-y-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-normal text-background">
               {t("home.cta.title")}
             </h2>
-            <p className="text-base sm:text-lg font-body text-background/50">
+            <p className="text-sm font-body text-background/50">
               {t("home.cta.desc")}
             </p>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border border-primary/40 bg-transparent hover:bg-primary/10 text-primary font-body font-semibold text-sm tracking-wider uppercase px-10 py-6 transition-elegant"
+              className="border border-background/20 bg-transparent hover:bg-background/10 text-background font-body text-xs tracking-[0.2em] uppercase px-10 py-6 transition-smooth"
             >
               <Link to="/contact">
-                {t("home.cta.button")} <ArrowRight className="ml-2" size={16} />
+                {t("home.cta.button")} <ArrowRight className="ml-3" size={14} />
               </Link>
             </Button>
           </div>
