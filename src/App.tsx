@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
-import Services from "./pages/Services";
-import CercleException from "./pages/CercleException";
+import Collections from "./pages/Collections";
+import Atelier from "./pages/Atelier";
 import Contact from "./pages/Contact";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
@@ -26,15 +26,14 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/cercle-exception" element={<CercleException />} />
+            <Route path="/collections" element={<Collections />} />
+            <Route path="/atelier" element={<Atelier />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
             <Route path="/cgu" element={<CGU />} />
             <Route path="/cgv" element={<CGV />} />
             <Route path="/accessibilite" element={<Accessibilite />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
