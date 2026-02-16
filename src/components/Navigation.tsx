@@ -24,7 +24,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" aria-label="Makil-Maqil - Retour à l'accueil">
-            <img src={logo} alt="Makil-Maqil" className="h-10 w-auto" />
+            <img src={logo} alt="Makil-Maqil" className="h-10 w-auto mix-blend-multiply" />
             <span className="hidden sm:block font-display text-sm tracking-[0.15em] uppercase text-foreground">
               Makil-Maqil
             </span>
