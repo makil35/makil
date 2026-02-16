@@ -65,7 +65,7 @@ export default {
   "collections.philosophy.subtitle": "Notre vision",
   "collections.philosophy.title": "Notre",
   "collections.philosophy.titleHighlight": "philosophie",
-  "collections.philosophy.desc": "Nous croyons en une mode qui dure. Des matières sourcées avec soin, un savoir-faire artisanal transmis de génération en génération, et une attention obsessionnelle portée au détail.",
+  "collections.philosophy.desc": "Nous ne créons pas pour la saison. Nous créons pour ce qui reste. Des matières nobles, un geste artisanal hérité, et cette obsession du détail qui distingue l'essentiel du superflu.",
   "collections.philosophy.1.title": "Intemporalité",
   "collections.philosophy.1.desc": "Nos pièces transcendent les saisons. Conçues pour durer, elles s'inscrivent dans une garde-robe pérenne, loin des tendances éphémères.",
   "collections.philosophy.2.title": "Responsabilité",
