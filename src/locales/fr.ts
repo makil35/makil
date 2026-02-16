@@ -1,7 +1,7 @@
 export default {
   // Navigation
   "nav.home": "Accueil",
-  "nav.collections": "Collections",
+  "nav.collections": "Pièces Fondatrices",
   "nav.atelier": "L'Atelier",
   "nav.contact": "Contact",
   "nav.discover": "Découvrir",
@@ -37,10 +37,10 @@ export default {
   "home.hero.subtitle": "Automne — Hiver 2026",
   "home.hero.title": "L'essentiel,",
   "home.hero.titleHighlight": "sublimé.",
-  "home.hero.cta": "Découvrir la collection",
+  "home.hero.cta": "Découvrir les pièces",
   "home.intro.line1": "Des lignes épurées.",
   "home.intro.line2": "Des matières nobles. Un savoir-faire d'exception.",
-  "home.collections.title": "Collections",
+  "home.collections.title": "Pièces Fondatrices",
   "home.collections.pretaporter": "Prêt-à-porter",
   "home.collections.pretaporter.desc": "L'élégance au quotidien, sans compromis sur la qualité.",
   "home.collections.hautecouture": "Haute Couture",
@@ -48,13 +48,13 @@ export default {
   "home.collections.accessoires": "Accessoires",
   "home.collections.accessoires.desc": "Maroquinerie, soie et bijoux — chaque détail compte.",
   "home.cta.title": "Prenez rendez-vous",
-  "home.cta.desc": "Découvrez nos collections en showroom privé.",
+  "home.cta.desc": "Découvrez nos pièces fondatrices en showroom privé.",
   "home.cta.button": "Nous contacter",
   
   // Collections Page (ex-Services)
   "collections.hero.subtitle": "Saison en cours",
   "collections.hero.title": "Nos",
-  "collections.hero.titleHighlight": "Collections",
+  "collections.hero.titleHighlight": "Pièces Fondatrices",
   "collections.hero.desc": "Chaque pièce est pensée comme un geste. Précis, nécessaire, intemporel.",
   "collections.pretaporter.title": "Prêt-à-porter",
   "collections.pretaporter.desc": "Des silhouettes structurées et fluides, taillées dans les plus beaux tissus. Pour homme et femme.",
@@ -66,7 +66,7 @@ export default {
   "collections.philosophy.titleHighlight": "philosophie",
   "collections.philosophy.desc": "Nous croyons en une mode qui dure. Des matières sourcées avec soin, un savoir-faire artisanal transmis de génération en génération, et une attention obsessionnelle portée au détail.",
   "collections.cta.title": "Voir en showroom",
-  "collections.cta.desc": "Nos collections sont disponibles en rendez-vous privé dans notre showroom parisien.",
+  "collections.cta.desc": "Nos pièces fondatrices sont disponibles en rendez-vous privé dans notre showroom parisien.",
   "collections.cta.button": "Prendre rendez-vous",
   
   // Atelier Page (ex-Cercle)

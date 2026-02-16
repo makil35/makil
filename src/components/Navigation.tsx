@@ -38,7 +38,7 @@ const Navigation = () => {
                 to={link.path}
                 role="menuitem"
                 aria-current={isActive(link.path) ? "page" : undefined}
-                className={`font-body text-xs tracking-[0.2em] uppercase transition-smooth ${
+                className={`font-body text-[10px] xl:text-xs tracking-[0.15em] xl:tracking-[0.2em] uppercase transition-smooth whitespace-nowrap ${
                   isActive(link.path)
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"
