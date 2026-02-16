@@ -90,7 +90,10 @@ const Collections = () => {
       {/* Philosophy */}
       <section className="py-24 sm:py-32 bg-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center space-y-8">
+          <div className="max-w-2xl mx-auto text-center space-y-6 mb-16 sm:mb-20">
+            <p className="text-xs font-body tracking-[0.4em] uppercase text-background/40">
+              {t("collections.philosophy.subtitle")}
+            </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-normal text-background">
               {t("collections.philosophy.title")}{" "}
               <em>{t("collections.philosophy.titleHighlight")}</em>
@@ -98,7 +101,20 @@ const Collections = () => {
             <p className="text-sm font-body text-background/50 leading-relaxed">
               {t("collections.philosophy.desc")}
             </p>
-            <div className="w-12 h-px bg-background/20 mx-auto" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 max-w-5xl mx-auto">
+            {[1, 2, 3].map((n) => (
+              <div key={n} className="text-center space-y-4">
+                <div className="w-12 h-px bg-background/20 mx-auto" />
+                <h3 className="text-sm sm:text-base font-display font-semibold text-background tracking-wide">
+                  {t(`collections.philosophy.${n}.title`)}
+                </h3>
+                <p className="text-xs sm:text-sm font-body text-background/40 leading-relaxed">
+                  {t(`collections.philosophy.${n}.desc`)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
