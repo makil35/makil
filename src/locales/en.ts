@@ -1,7 +1,7 @@
 export default {
   // Navigation
   "nav.home": "Home",
-  "nav.collections": "Collections",
+  "nav.collections": "Founding Pieces",
   "nav.atelier": "Atelier",
   "nav.contact": "Contact",
   "nav.discover": "Discover",
@@ -37,10 +37,10 @@ export default {
   "home.hero.subtitle": "Autumn — Winter 2026",
   "home.hero.title": "The essential,",
   "home.hero.titleHighlight": "elevated.",
-  "home.hero.cta": "Discover the collection",
+  "home.hero.cta": "Discover the pieces",
   "home.intro.line1": "Clean lines.",
   "home.intro.line2": "Noble materials. Exceptional craftsmanship.",
-  "home.collections.title": "Collections",
+  "home.collections.title": "Founding Pieces",
   "home.collections.pretaporter": "Ready-to-Wear",
   "home.collections.pretaporter.desc": "Everyday elegance, without compromising on quality.",
   "home.collections.hautecouture": "Haute Couture",
@@ -48,13 +48,13 @@ export default {
   "home.collections.accessoires": "Accessories",
   "home.collections.accessoires.desc": "Leather goods, silk and jewelry — every detail matters.",
   "home.cta.title": "Book an appointment",
-  "home.cta.desc": "Discover our collections in a private showroom.",
+  "home.cta.desc": "Discover our founding pieces in a private showroom.",
   "home.cta.button": "Contact us",
   
   // Collections Page
   "collections.hero.subtitle": "Current season",
   "collections.hero.title": "Our",
-  "collections.hero.titleHighlight": "Collections",
+  "collections.hero.titleHighlight": "Founding Pieces",
   "collections.hero.desc": "Each piece is conceived as a gesture. Precise, necessary, timeless.",
   "collections.pretaporter.title": "Ready-to-Wear",
   "collections.pretaporter.desc": "Structured and fluid silhouettes, cut from the finest fabrics. For men and women.",
@@ -66,7 +66,7 @@ export default {
   "collections.philosophy.titleHighlight": "philosophy",
   "collections.philosophy.desc": "We believe in fashion that lasts. Carefully sourced materials, artisanal craftsmanship passed down through generations, and an obsessive attention to detail.",
   "collections.cta.title": "View in showroom",
-  "collections.cta.desc": "Our collections are available by private appointment in our Parisian showroom.",
+  "collections.cta.desc": "Our founding pieces are available by private appointment in our Parisian showroom.",
   "collections.cta.button": "Book an appointment",
   
   // Atelier Page
