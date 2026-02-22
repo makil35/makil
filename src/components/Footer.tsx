@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logo from "@/assets/logo-makil-new.png";
+import logo from "@/assets/logo-makil-dark.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={logo} alt="Makil-Maqil" className="h-10 w-auto invert mix-blend-screen" />
+              <img src={logo} alt="Makil-Maqil" className="h-10 w-auto" />
               <span className="font-display text-sm tracking-[0.15em] uppercase text-background">
                 Makil-Maqil
               </span>
