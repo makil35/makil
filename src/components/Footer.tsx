@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logo from "@/assets/logo-makil.png";
+import logo from "@/assets/logo-makil-new.png";
 
 const Footer = () => {
   const { t } = useLanguage();

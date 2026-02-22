@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
-import logo from "@/assets/logo-makil.png";
+import logo from "@/assets/logo-makil-new.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
