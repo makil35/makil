@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={monogram} alt="Makil-Maqil" className="h-12 w-12 object-contain" />
+              <img src={monogram} alt="Makil-Maqil" className="h-12 w-12 object-contain mix-blend-screen" />
               <span className="font-display text-sm tracking-[0.15em] uppercase text-background">
                 Makil-Maqil
               </span>
