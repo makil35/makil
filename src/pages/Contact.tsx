@@ -72,7 +72,7 @@ const Contact = () => {
 
               <div className="space-y-5">
                 {[
-                  { icon: Mail, label: t("contact.info.email"), value: "contact@makil-maqil.com" },
+                  { icon: Mail, label: t("contact.info.email"), value: "richard@makil-maqil.com" },
                   { icon: Phone, label: t("contact.info.phone"), value: "06.26.50.08.80" },
                   { icon: MapPin, label: t("contact.info.address"), value: "Paris, France" },
                 ].map((item, i) => (
