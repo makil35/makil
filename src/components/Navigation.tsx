@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
-import logo from "@/assets/logo-makil-new.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,10 +21,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" role="navigation" aria-label="Navigation principale">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3" aria-label="Makil-Maqil - Retour à l'accueil">
-            <img src={logo} alt="Makil-Maqil" className="h-10 w-auto mix-blend-multiply" />
-            <span className="hidden sm:block font-display text-sm tracking-[0.15em] uppercase text-foreground">
+          <Link to="/" className="flex items-center" aria-label="Makil-Maqil - Retour à l'accueil">
+            <span className="font-display text-sm tracking-[0.15em] uppercase text-foreground">
               Makil-Maqil
             </span>
           </Link>
@@ -64,7 +61,6 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div id="mobile-menu" className="lg:hidden py-8 border-t border-border" role="menu">
             <div className="flex flex-col space-y-1">
