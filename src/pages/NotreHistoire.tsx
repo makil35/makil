@@ -52,7 +52,7 @@ const NotreHistoire = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
             <div className="aspect-[3/4] overflow-hidden">
               <img
-                src={atelierImage}
+                src={histoireImage}
                 alt={t("histoire.story.imageAlt")}
                 className="w-full h-full object-cover"
                 loading="lazy"
