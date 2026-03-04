@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
-import atelierImage from "@/assets/atelier.jpg";
+import histoireImage from "@/assets/histoire-hero.jpg";
 
 const NotreHistoire = () => {
   const { t } = useLanguage();
