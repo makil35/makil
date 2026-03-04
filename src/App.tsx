@@ -13,6 +13,7 @@ import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import CGU from "./pages/CGU";
 import CGV from "./pages/CGV";
 import Accessibilite from "./pages/Accessibilite";
+import NotreHistoire from "./pages/NotreHistoire";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/collections" element={<Collections />} />
+            <Route path="/notre-histoire" element={<NotreHistoire />} />
             <Route path="/atelier" element={<Atelier />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />

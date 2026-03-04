@@ -1,6 +1,7 @@
 export default {
   // Navigation
   "nav.home": "Home",
+  "nav.histoire": "Our Story",
   "nav.collections": "Founding Pieces",
   "nav.atelier": "Atelier",
   "nav.contact": "Contact",

@@ -10,6 +10,7 @@ const Navigation = () => {
   const { t } = useLanguage();
 
   const navLinks = [
+    { name: t("nav.histoire"), path: "/notre-histoire" },
     { name: t("nav.collections"), path: "/collections" },
     { name: t("nav.atelier"), path: "/atelier" },
     { name: t("nav.contact"), path: "/contact" },
