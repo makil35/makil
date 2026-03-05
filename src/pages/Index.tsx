@@ -8,7 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-fashion.jpg";
 import pretAPorter from "@/assets/collection-pret-a-porter.jpg";
 import hauteCouture from "@/assets/collection-haute-couture.jpg";
-import accessoires from "@/assets/collection-accessories.jpg";
+import accessoires from "@/assets/makil-bag.png";
 
 const Index = () => {
   const { t } = useLanguage();
