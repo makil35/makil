@@ -81,7 +81,7 @@ export default {
   "atelier.hero.subtitle": "Savoir-faire",
   "atelier.hero.title": "L'Atelier",
   "atelier.hero.titleHighlight": "Makil-Maqil",
-  "atelier.hero.desc": "Là où la main dialogue avec la matière.",
+  "atelier.hero.desc": "Chaque pièce est confectionnée en France ou en Italie, dans des matières nobles sélectionnées avec exigence.",
   "atelier.intro.line1": "Chaque point de couture est une signature.",
   "atelier.intro.line2": "Chaque pièce raconte une histoire.",
   "atelier.savoirfaire.subtitle": "Le geste",
