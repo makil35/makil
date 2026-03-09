@@ -116,7 +116,7 @@ export default {
   "contact.hero.subtitle": "Contact",
   "contact.hero.title": "Échangeons",
   "contact.hero.titleHighlight": "ensemble.",
-  "contact.hero.desc": "Pour un rendez-vous en showroom, une commande sur mesure ou toute autre demande.",
+  "contact.hero.desc": "Nos pièces ne se trouvent pas — elles se méritent. Chaque création est rare, chaque rencontre est unique. Si vous êtes ici, c'est que vous savez reconnaître l'exceptionnel.",
   "contact.info.title": "Nous",
   "contact.info.titleHighlight": "trouver",
   "contact.info.subtitle": "Showroom sur rendez-vous uniquement.",
