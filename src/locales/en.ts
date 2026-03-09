@@ -81,7 +81,7 @@ export default {
   "atelier.hero.subtitle": "Craftsmanship",
   "atelier.hero.title": "The",
   "atelier.hero.titleHighlight": "Atelier",
-  "atelier.hero.desc": "Where hand meets material.",
+  "atelier.hero.desc": "Every piece is crafted in France or Italy, from noble materials selected with uncompromising standards.",
   "atelier.intro.line1": "Every stitch is a signature.",
   "atelier.intro.line2": "Every piece tells a story.",
   "atelier.savoirfaire.subtitle": "The craft",
