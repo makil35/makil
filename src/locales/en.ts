@@ -92,7 +92,7 @@ export default {
   "atelier.pillars.1.title": "Noble Materials",
   "atelier.pillars.1.desc": "Cashmere, silk, linen and full-grain leathers. We select the finest suppliers worldwide.",
   "atelier.pillars.2.title": "Handcrafted",
-  "atelier.pillars.2.desc": "Every haute couture piece is entirely handmade in our Parisian atelier.",
+  "atelier.pillars.2.desc": "Every piece is entirely handmade in our workshops in France and Italy, by exceptional artisans.",
   "atelier.pillars.3.title": "Made to Measure",
   "atelier.pillars.3.desc": "A bespoke creation service for pieces that are uniquely yours, down to the smallest detail.",
   "atelier.detail.hands": "Our artisans carry on century-old techniques. Every stitch, every finish is the result of hours of patient, passionate work.",
