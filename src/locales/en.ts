@@ -116,7 +116,7 @@ export default {
   "contact.hero.subtitle": "Contact",
   "contact.hero.title": "Let's",
   "contact.hero.titleHighlight": "connect.",
-  "contact.hero.desc": "For a showroom appointment, a bespoke order, or any other inquiry.",
+  "contact.hero.desc": "Our pieces are not found — they are earned. Each creation is rare, each encounter unique. If you are here, you know how to recognize the exceptional.",
   "contact.info.title": "Find",
   "contact.info.titleHighlight": "us",
   "contact.info.subtitle": "Showroom by appointment only.",
