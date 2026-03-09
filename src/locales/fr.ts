@@ -92,7 +92,7 @@ export default {
   "atelier.pillars.1.title": "Matières Nobles",
   "atelier.pillars.1.desc": "Cachemire, soie, lin et cuirs pleine fleur. Nous sélectionnons les meilleurs fournisseurs au monde.",
   "atelier.pillars.2.title": "Façonnage à la Main",
-  "atelier.pillars.2.desc": "Chaque pièce haute couture est entièrement réalisée à la main dans notre atelier parisien.",
+  "atelier.pillars.2.desc": "Chaque pièce est entièrement réalisée à la main dans nos ateliers en France et en Italie, par des artisans d'exception.",
   "atelier.pillars.3.title": "Sur Mesure",
   "atelier.pillars.3.desc": "Un service de création sur mesure pour des pièces qui vous ressemblent, jusque dans les moindres détails.",
   "atelier.detail.hands": "Nos artisans perpétuent des gestes centenaires. Chaque couture, chaque finition est le fruit d'heures de travail patient et passionné.",
