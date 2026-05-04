@@ -1,85 +1,75 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageSelector from "@/components/LanguageSelector";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const { t } = useLanguage();
 
   const navLinks = [
-    { name: t("nav.histoire"), path: "/notre-histoire" },
-    { name: t("nav.collections"), path: "/collections" },
-    { name: t("nav.atelier"), path: "/atelier" },
-    { name: t("nav.contact"), path: "/contact" },
+    { name: "Univers", path: "/#univers" },
+    { name: "Approche", path: "/#approche" },
+    { name: "Vision", path: "/#vision" },
+    { name: "Accès", path: "/#acces" },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) =>
+    path.startsWith("/#") ? false : location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" role="navigation" aria-label="Navigation principale">
-      <div className="container mx-auto px-4">
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40"
+      role="navigation"
+      aria-label="Navigation principale"
+    >
+      <div className="container mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center" aria-label="Makil-Maqil - Retour à l'accueil">
-            <span className="font-display text-sm tracking-[0.15em] uppercase text-foreground">
-              Makil-Maqil
+          <Link to="/" aria-label="MAKIL — Accueil">
+            <span className="font-display text-xl tracking-[0.4em] uppercase text-foreground">
+              MAKIL
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8" role="menubar">
+          {/* Desktop */}
+          <div className="hidden lg:flex items-center space-x-12" role="menubar">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 role="menuitem"
-                aria-current={isActive(link.path) ? "page" : undefined}
-                className={`font-body text-[10px] xl:text-xs tracking-[0.15em] xl:tracking-[0.2em] uppercase transition-smooth whitespace-nowrap ${
+                className={`font-body text-[11px] tracking-[0.3em] uppercase transition-smooth ${
                   isActive(link.path)
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
-            <LanguageSelector />
           </div>
 
-          <div className="flex items-center space-x-3 lg:hidden">
-            <LanguageSelector />
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-muted-foreground transition-smooth"
-              aria-label={isOpen ? t("nav.closeMenu") : t("nav.openMenu")}
-              aria-expanded={isOpen}
-              aria-controls="mobile-menu"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-foreground"
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
 
         {isOpen && (
-          <div id="mobile-menu" className="lg:hidden py-8 border-t border-border" role="menu">
+          <div className="lg:hidden py-6 border-t border-border/40">
             <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.path}
-                  to={link.path}
-                  role="menuitem"
+                  href={link.path}
                   onClick={() => setIsOpen(false)}
-                  aria-current={isActive(link.path) ? "page" : undefined}
-                  className={`px-4 py-3 font-body text-xs tracking-[0.2em] uppercase transition-smooth ${
-                    isActive(link.path)
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className="px-2 py-3 font-body text-xs tracking-[0.3em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
