@@ -1,146 +1,197 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, ChevronDown, UserRound, Globe, Gem, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
-import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-fashion.jpg";
-import pretAPorter from "@/assets/collection-pret-a-porter.jpg";
-import hauteCouture from "@/assets/collection-haute-couture.jpg";
-import accessoires from "@/assets/makil-bag.png";
+import portrait from "@/assets/richard-portrait.jpg";
+import terrace from "@/assets/lifestyle-terrace.jpg";
+import glove from "@/assets/vision-glove.jpg";
+import paris from "@/assets/access-paris.jpg";
+
+const pillars = [
+  {
+    icon: UserRound,
+    title: "Discrétion",
+    desc: "La confidentialité est au cœur de chaque engagement.",
+  },
+  {
+    icon: Globe,
+    title: "Réseau Mondial",
+    desc: "Un accès privilégié aux meilleures ressources et aux bonnes personnes.",
+  },
+  {
+    icon: Gem,
+    title: "Excellence",
+    desc: "Des standards élevés, une attention obsessionnelle aux détails.",
+  },
+  {
+    icon: Clock,
+    title: "Liberté",
+    desc: "Vous gagnez du temps. Je m'occupe de tout, sans limites.",
+  },
+];
 
 const Index = () => {
-  const { t } = useLanguage();
-
-  const collections = [
-    {
-      image: pretAPorter,
-      title: t("home.collections.pretaporter"),
-      desc: t("home.collections.pretaporter.desc"),
-      link: "/collections",
-    },
-    {
-      image: hauteCouture,
-      title: t("home.collections.hautecouture"),
-      desc: t("home.collections.hautecouture.desc"),
-      link: "/collections",
-    },
-    {
-      image: accessoires,
-      title: t("home.collections.accessoires"),
-      desc: t("home.collections.accessoires.desc"),
-      link: "/collections",
-    },
-  ];
-
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
 
-      {/* Hero — Full-screen editorial */}
-      <section className="relative min-h-screen flex items-end pb-16 sm:pb-24 md:pb-32 overflow-hidden">
+      {/* HERO — Portrait éditorial */}
+      <section className="relative min-h-screen flex items-end pt-32 pb-20 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
-        </div>
+          style={{ backgroundImage: `url(${portrait})` }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" aria-hidden="true" />
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl space-y-6">
-            <p className="text-xs sm:text-sm font-body tracking-[0.4em] uppercase text-background/60">
-              {t("home.hero.subtitle")}
+        <div className="relative z-10 container mx-auto px-6 lg:px-10">
+          <div className="max-w-xl space-y-8">
+            <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
+              Richard Makil-Herrero
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-normal text-background leading-[1.05]">
-              {t("home.hero.title")}{" "}
-              <em>{t("home.hero.titleHighlight")}</em>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-normal leading-[1.05] text-foreground">
+              L'art de rendre <br />
+              <em className="italic">l'exceptionnel, naturel.</em>
             </h1>
-            <div className="pt-6">
-              <Button
-                asChild
-                size="lg"
-                className="bg-background hover:bg-background/90 text-foreground font-body text-xs tracking-[0.2em] uppercase px-10 py-6 transition-smooth"
-              >
-                <Link to="/collections">
-                  {t("home.hero.cta")} <ArrowRight className="ml-3" size={14} />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro — Minimal poetic text */}
-      <section className="py-28 sm:py-36 md:py-44 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center space-y-3">
-            <p className="text-xl sm:text-2xl md:text-3xl font-display text-foreground/80 leading-relaxed">
-              {t("home.intro.line1")}
+            <div className="w-12 h-px bg-accent" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-md">
+              J'accompagne une clientèle exigeante dans la réalisation de l'impossible.
+              Chaque demande est unique. Chaque expérience, inoubliable.
             </p>
-            <p className="text-xl sm:text-2xl md:text-3xl font-display text-foreground leading-relaxed italic">
-              {t("home.intro.line2")}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Collections Grid */}
-      <section className="bg-background pb-20 sm:pb-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xs font-body tracking-[0.3em] uppercase text-muted-foreground text-center mb-16">
-            {t("home.collections.title")}
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {collections.map((col, i) => (
-              <Link
-                key={i}
-                to={col.link}
-                className="group block"
-              >
-                <div className="aspect-[3/4] overflow-hidden mb-5">
-                  <img
-                    src={col.image}
-                    alt={col.title}
-                    className="w-full h-full object-cover transition-smooth group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 className="text-sm font-display font-semibold text-foreground mb-1">
-                  {col.title}
-                </h3>
-                <p className="text-xs font-body text-muted-foreground leading-relaxed">
-                  {col.desc}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 sm:py-32 bg-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-xl mx-auto text-center space-y-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-normal text-background">
-              {t("home.cta.title")}
-            </h2>
-            <p className="text-sm font-body text-background/50">
-              {t("home.cta.desc")}
-            </p>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border border-background/20 bg-transparent hover:bg-background/10 text-background font-body text-xs tracking-[0.2em] uppercase px-10 py-6 transition-smooth"
+            <a
+              href="#univers"
+              className="inline-flex flex-col items-start gap-2 group pt-4"
             >
-              <Link to="/contact">
-                {t("home.cta.button")} <ArrowRight className="ml-3" size={14} />
-              </Link>
-            </Button>
+              <span className="text-[11px] font-body tracking-[0.3em] uppercase text-accent group-hover:text-foreground transition-smooth">
+                Découvrir mon univers
+              </span>
+              <ChevronDown size={18} className="text-accent group-hover:translate-y-1 transition-smooth" />
+            </a>
           </div>
         </div>
+      </section>
+
+      {/* SIGNATURE — Image + texte */}
+      <section id="univers" className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
+        <div
+          className="aspect-[4/3] lg:aspect-auto bg-cover bg-center"
+          style={{ backgroundImage: `url(${terrace})` }}
+          role="img"
+          aria-label="Vue terrasse luxueuse en bord de mer"
+        />
+        <div className="flex items-center bg-background px-8 sm:px-16 lg:px-24 py-20">
+          <div className="max-w-md space-y-6">
+            <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
+              MAKIL
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
+              Bien plus qu'un service. <br />
+              <em className="italic">Une signature.</em>
+            </h2>
+            <div className="w-12 h-px bg-accent" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-relaxed">
+              Makil, c'est la rencontre entre discrétion absolue, réseau d'influence mondial
+              et sens du détail. Un univers où le luxe n'est pas une question d'apparence,
+              mais de liberté, de temps et de perfection.
+            </p>
+            <a
+              href="#approche"
+              className="inline-flex items-center gap-3 text-[11px] font-body tracking-[0.3em] uppercase text-accent hover:text-foreground transition-smooth pt-4"
+            >
+              En savoir plus <ArrowRight size={14} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* APPROCHE — 4 piliers */}
+      <section id="approche" className="py-28 sm:py-36 bg-background border-t border-border/40">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="text-center space-y-4 mb-20">
+            <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
+              Mon approche
+            </p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-foreground">
+              Anticiper. <em className="italic">Concevoir.</em> Accomplir.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/40 max-w-6xl mx-auto">
+            {pillars.map((p) => {
+              const Icon = p.icon;
+              return (
+                <div key={p.title} className="bg-background px-8 py-12 text-center space-y-5">
+                  <Icon size={36} strokeWidth={1} className="mx-auto text-accent" aria-hidden="true" />
+                  <h3 className="text-[11px] font-body tracking-[0.3em] uppercase text-foreground">
+                    {p.title}
+                  </h3>
+                  <p className="text-xs font-body text-muted-foreground leading-relaxed max-w-[200px] mx-auto">
+                    {p.desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* VISION — Image + texte inversé */}
+      <section id="vision" className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh] border-t border-border/40">
+        <div className="flex items-center bg-background px-8 sm:px-16 lg:px-24 py-20 order-2 lg:order-1">
+          <div className="max-w-md space-y-6">
+            <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
+              Ma vision
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
+              Le luxe ultime : <br />
+              <em className="italic">pouvoir se consacrer à l'essentiel.</em>
+            </h2>
+            <div className="w-12 h-px bg-accent" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-relaxed">
+              Je transforme vos demandes en expériences sur-mesure, avec une seule promesse :
+              l'exception, à chaque instant.
+            </p>
+          </div>
+        </div>
+        <div
+          className="aspect-[4/3] lg:aspect-auto bg-cover bg-center order-1 lg:order-2"
+          style={{ backgroundImage: `url(${glove})` }}
+          role="img"
+          aria-label="Main gantée ouvrant la portière d'une voiture de luxe"
+        />
+      </section>
+
+      {/* ACCÈS — CTA final */}
+      <section id="acces" className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh] border-t border-border/40">
+        <div className="flex items-center bg-background px-8 sm:px-16 lg:px-24 py-20">
+          <div className="max-w-md space-y-6">
+            <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
+              Accès
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
+              L'accès à Makil <br />
+              <em className="italic">se fait sur invitation.</em>
+            </h2>
+            <div className="w-12 h-px bg-accent" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-relaxed">
+              Chaque collaboration commence par un échange confidentiel afin de comprendre
+              vos attentes et vous proposer l'excellence qui vous correspond.
+            </p>
+            <a
+              href="mailto:richard@makil-maqil.com"
+              className="inline-flex items-center gap-3 mt-4 px-8 py-4 border border-accent text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-accent hover:text-accent-foreground transition-smooth"
+            >
+              Demander un échange confidentiel
+            </a>
+          </div>
+        </div>
+        <div
+          className="aspect-[4/3] lg:aspect-auto bg-cover bg-center"
+          style={{ backgroundImage: `url(${paris})` }}
+          role="img"
+          aria-label="Vue de Paris la nuit avec la Tour Eiffel"
+        />
       </section>
 
       <Footer />

@@ -4,42 +4,40 @@
 
 @layer base {
   :root {
-    /* Minimalist fashion palette — Black, White, Warm Gray */
-    --background: 30 20% 98%; /* Near-white with warmth */
-    --foreground: 0 0% 6%; /* Near-black */
+    /* MAKIL — Personal branding ultra-luxe (dark mode by default) */
+    --background: 0 0% 6%;          /* Near-black */
+    --foreground: 36 22% 92%;       /* Warm off-white */
 
-    --card: 30 20% 98%;
-    --card-foreground: 0 0% 6%;
+    --card: 0 0% 8%;
+    --card-foreground: 36 22% 92%;
 
     --popover: 0 0% 6%;
-    --popover-foreground: 30 20% 98%;
+    --popover-foreground: 36 22% 92%;
 
-    --primary: 0 0% 6%; /* Black as primary */
-    --primary-foreground: 30 20% 98%;
+    --primary: 36 30% 65%;          /* Warm gold accent */
+    --primary-foreground: 0 0% 6%;
 
-    --secondary: 30 8% 90%; /* Warm light gray */
-    --secondary-foreground: 0 0% 6%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 36 22% 92%;
 
-    --muted: 30 10% 93%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 36 10% 60%;
 
-    --accent: 30 8% 90%;
+    --accent: 36 35% 55%;           /* Gold */
     --accent-foreground: 0 0% 6%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 30 20% 98%;
+    --destructive-foreground: 36 22% 92%;
 
-    --border: 30 10% 88%;
-    --input: 30 10% 93%;
-    --ring: 0 0% 6%;
+    --border: 36 8% 18%;
+    --input: 0 0% 12%;
+    --ring: 36 30% 55%;
 
     --radius: 0rem;
 
-    /* Minimalist shadows */
-    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.06);
-    --shadow-elegant: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-elegant: 0 20px 60px rgba(0, 0, 0, 0.6);
 
-    /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-elegant: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
@@ -51,7 +49,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground font-body antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -60,19 +58,11 @@
 }
 
 @layer utilities {
-  .shadow-subtle {
-    box-shadow: var(--shadow-subtle);
-  }
+  .shadow-subtle { box-shadow: var(--shadow-subtle); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .transition-smooth { transition: var(--transition-smooth); }
+  .transition-elegant { transition: var(--transition-elegant); }
 
-  .shadow-elegant {
-    box-shadow: var(--shadow-elegant);
-  }
-
-  .transition-smooth {
-    transition: var(--transition-smooth);
-  }
-
-  .transition-elegant {
-    transition: var(--transition-elegant);
-  }
+  .text-gold { color: hsl(var(--accent)); }
+  .border-gold { border-color: hsl(var(--accent)); }
 }

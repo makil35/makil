@@ -5,15 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
-import Collections from "./pages/Collections";
-import Atelier from "./pages/Atelier";
-import Contact from "./pages/Contact";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
-import CGU from "./pages/CGU";
-import CGV from "./pages/CGV";
-import Accessibilite from "./pages/Accessibilite";
-import NotreHistoire from "./pages/NotreHistoire";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,15 +20,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/collections" element={<Collections />} />
-            <Route path="/notre-histoire" element={<NotreHistoire />} />
-            <Route path="/atelier" element={<Atelier />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
-            <Route path="/cgu" element={<CGU />} />
-            <Route path="/cgv" element={<CGV />} />
-            <Route path="/accessibilite" element={<Accessibilite />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
