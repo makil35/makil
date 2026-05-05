@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageToggle from "@/components/LanguageToggle";
+import { localizedPath } from "@/lib/routes";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
+  const home = localizedPath("home", language);
   const navLinks = [
-    { key: "nav.univers", path: "/#univers" },
-    { key: "nav.approche", path: "/#approche" },
-    { key: "nav.vision", path: "/#vision" },
-    { key: "nav.acces", path: "/#acces" },
+    { key: "nav.univers", path: `${home}#univers` },
+    { key: "nav.approche", path: `${home}#approche` },
+    { key: "nav.vision", path: `${home}#vision` },
+    { key: "nav.acces", path: `${home}#acces` },
   ];
 
   return (
@@ -23,7 +25,7 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" aria-label={t("nav.home")}>
+          <Link to={home} aria-label={t("nav.home")}>
             <span className="font-display text-xl tracking-[0.4em] uppercase text-foreground">
               MAKIL
             </span>
