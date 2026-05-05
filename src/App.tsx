@@ -7,6 +7,9 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+import Evenements from "./pages/Evenements";
+import Galerie from "./pages/Galerie";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,11 +26,17 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+            <Route path="/evenements" element={<Evenements />} />
+            <Route path="/galerie" element={<Galerie />} />
+            <Route path="/contact" element={<Contact />} />
 
             {/* English */}
             <Route path="/en" element={<Index />} />
             <Route path="/en/legal-notice" element={<MentionsLegales />} />
             <Route path="/en/privacy-policy" element={<PolitiqueConfidentialite />} />
+            <Route path="/en/events" element={<Evenements />} />
+            <Route path="/en/gallery" element={<Galerie />} />
+            <Route path="/en/contact" element={<Contact />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
