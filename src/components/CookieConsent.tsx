@@ -64,7 +64,7 @@ const CookieConsent = () => {
                   to="/politique-confidentialite"
                   className="text-primary hover:text-primary/80 underline transition-colors"
                 >
-                  En savoir plus
+                  {t("cookie.learnMore")}
                 </Link>
               </p>
             </div>
@@ -118,7 +118,7 @@ const CookieConsent = () => {
                     </p>
                   </div>
                   <div className="ml-2 sm:ml-4 px-2 sm:px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-semibold whitespace-nowrap">
-                    Obligatoire
+                    {t("cookie.required")}
                   </div>
                 </div>
               </div>
@@ -169,7 +169,7 @@ const CookieConsent = () => {
                 to="/politique-confidentialite"
                 className="text-xs sm:text-sm text-primary hover:text-primary/80 underline transition-colors text-center sm:text-left"
               >
-                Politique de confidentialité
+                {t("cookie.privacyLink")}
               </Link>
               <div className="flex gap-2 sm:gap-3">
                 <Button
