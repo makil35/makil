@@ -36,16 +36,19 @@ const Index = () => {
       <Navigation />
 
       {/* HERO — Portrait éditorial */}
-      <section className="relative min-h-screen flex items-end pt-32 pb-20 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${portrait})` }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" aria-hidden="true" />
+      <section className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-background">
+        <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 pointer-events-none">
+          <img
+            src={portrait}
+            alt="Portrait de Richard Makil-Herrero"
+            className="h-full w-full object-cover object-top grayscale contrast-110"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent lg:from-background lg:via-background/20 lg:to-transparent" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" aria-hidden="true" />
+        </div>
 
-        <div className="relative z-10 container mx-auto px-6 lg:px-10">
+        <div className="relative z-10 container mx-auto px-6 lg:px-10 h-full flex items-end min-h-[calc(100vh-13rem)]">
           <div className="max-w-xl space-y-8">
             <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
               Richard Makil-Herrero
