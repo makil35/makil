@@ -11,11 +11,6 @@ interface SeoOptions {
   descriptionKey: string;
 }
 
-const setMeta = (selector: string, attr: "content" | "href", value: string) => {
-  const el = document.head.querySelector<HTMLMetaElement | HTMLLinkElement>(selector);
-  if (el) el.setAttribute(attr, value);
-};
-
 const upsertMeta = (
   matchSelector: string,
   create: () => HTMLElement,
