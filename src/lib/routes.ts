@@ -1,11 +1,14 @@
 export type Lang = "fr" | "en";
 
-export type RouteKey = "home" | "legal" | "privacy";
+export type RouteKey = "home" | "legal" | "privacy" | "events" | "gallery" | "contact";
 
 export const ROUTES: Record<RouteKey, Record<Lang, string>> = {
   home: { fr: "/", en: "/en" },
   legal: { fr: "/mentions-legales", en: "/en/legal-notice" },
   privacy: { fr: "/politique-confidentialite", en: "/en/privacy-policy" },
+  events: { fr: "/evenements", en: "/en/events" },
+  gallery: { fr: "/galerie", en: "/en/gallery" },
+  contact: { fr: "/contact", en: "/en/contact" },
 };
 
 export const localizedPath = (key: RouteKey, lang: Lang): string =>
@@ -16,7 +19,6 @@ export const detectLangFromPath = (pathname: string): Lang =>
 
 /**
  * Given the current pathname, return the equivalent path in the target language.
- * Preserves hash if present (caller can re-append).
  */
 export const swapLangPath = (pathname: string, target: Lang): string => {
   for (const key of Object.keys(ROUTES) as RouteKey[]) {
@@ -24,6 +26,5 @@ export const swapLangPath = (pathname: string, target: Lang): string => {
     const en = ROUTES[key].en;
     if (pathname === fr || pathname === en) return ROUTES[key][target];
   }
-  // Fallback: home in target language
   return ROUTES.home[target];
 };

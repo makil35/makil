@@ -4,11 +4,26 @@ export default {
   "nav.approche": "Approche",
   "nav.vision": "Vision",
   "nav.acces": "Accès",
+  "nav.events": "Événements",
+  "nav.gallery": "Galerie",
+  "nav.contact": "Contact",
   "nav.openMenu": "Ouvrir le menu",
   "nav.closeMenu": "Fermer le menu",
   "nav.home": "MAKIL — Accueil",
   "nav.mainAria": "Navigation principale",
   "nav.langAria": "Changer de langue",
+
+  // Pages
+  "events.kicker": "Agenda confidentiel",
+  "events.title": "Événements",
+  "events.intro": "Présentations privées, rendez-vous d'atelier et apparitions sur invitation. Le calendrier détaillé sera dévoilé prochainement.",
+  "gallery.kicker": "Archives visuelles",
+  "gallery.title": "Galerie",
+  "gallery.intro": "Une sélection d'images et de moments choisis. La galerie complète sera publiée prochainement.",
+  "contact.kicker": "Échange confidentiel",
+  "contact.title": "Nous contacter",
+  "contact.intro": "Toute demande s'effectue par invitation et sur rendez-vous uniquement. Écrivez-nous directement pour initier la conversation.",
+  "contact.cta": "Écrire à Richard",
 
   // Footer
   "footer.rights": "Tous droits réservés",
