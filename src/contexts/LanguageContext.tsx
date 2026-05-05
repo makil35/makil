@@ -1,24 +1,10 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { detectLangFromPath, swapLangPath, type Lang } from "@/lib/routes";
+import { detectLangFromPath, swapLangPath } from "@/lib/routes";
+import { LanguageContext, type Language } from "@/contexts/language-context";
 
-type Language = Lang;
-
-interface LanguageContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
-}
-
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  }
-  return context;
-};
+// Re-export the hook for backwards compatibility with existing imports.
+export { useLanguage } from "@/hooks/useLanguage";
 
 interface LanguageProviderProps {
   children: React.ReactNode;
@@ -28,7 +14,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Language is derived from URL — single source of truth.
   const language: Language = detectLangFromPath(location.pathname);
 
   const [translations, setTranslations] = useState<Record<string, string>>({});
@@ -45,7 +30,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     };
   }, [language]);
 
-  // Persist preference + sync <html lang>
   useEffect(() => {
     localStorage.setItem("language", language);
     if (typeof document !== "undefined") {
