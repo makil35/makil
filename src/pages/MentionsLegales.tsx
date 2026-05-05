@@ -1,9 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { localizedPath } from "@/lib/routes";
 
 const MentionsLegales = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
@@ -65,7 +66,7 @@ const MentionsLegales = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("legal.s7.title")}</h2>
               <p>
                 {t("legal.s7.p1a")}{" "}
-                <a href="/politique-confidentialite" className="text-accent hover:underline">
+                <a href={localizedPath("privacy", language)} className="text-accent hover:underline">
                   {t("legal.s7.link")}
                 </a>.
               </p>
