@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-background border-t border-border/40">
       <div className="container mx-auto px-6 lg:px-10 py-10">
@@ -9,14 +11,14 @@ const Footer = () => {
             MAKIL
           </span>
           <p className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground">
-            © {new Date().getFullYear()} MAKIL — Tous droits réservés
+            © {new Date().getFullYear()} MAKIL — {t("footer.rights")}
           </p>
           <div className="flex gap-6 text-[11px] font-body tracking-[0.2em] uppercase">
             <Link to="/mentions-legales" className="text-muted-foreground hover:text-foreground transition-smooth">
-              Mentions légales
+              {t("footer.legal")}
             </Link>
             <Link to="/politique-confidentialite" className="text-muted-foreground hover:text-foreground transition-smooth">
-              Confidentialité
+              {t("footer.privacy")}
             </Link>
           </div>
         </div>
