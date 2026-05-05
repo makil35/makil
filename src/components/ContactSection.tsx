@@ -38,20 +38,19 @@ const ContactSection = () => {
     }
     setSubmitting(true);
     try {
-      const payload = { name: parsed.data.name, email: parsed.data.email, message: parsed.data.message };
-      const { data: insert, error: insertError } = await supabase
+      const submissionId = crypto.randomUUID();
+      const payload = { id: submissionId, name: parsed.data.name, email: parsed.data.email, message: parsed.data.message };
+      const { error: insertError } = await supabase
         .from("contact_submissions")
-        .insert(payload)
-        .select("id")
-        .single();
-      if (insertError || !insert) throw insertError ?? new Error("insert failed");
+        .insert(payload);
+      if (insertError) throw insertError;
 
       // Notification to Richard
       await supabase.functions.invoke("send-transactional-email", {
         body: {
           templateName: "contact-notification",
           recipientEmail: EMAIL,
-          idempotencyKey: `contact-notify-${insert.id}`,
+          idempotencyKey: `contact-notify-${submissionId}`,
           templateData: parsed.data,
         },
       });
@@ -60,7 +59,7 @@ const ContactSection = () => {
         body: {
           templateName: "contact-confirmation",
           recipientEmail: parsed.data.email,
-          idempotencyKey: `contact-confirm-${insert.id}`,
+          idempotencyKey: `contact-confirm-${submissionId}`,
           templateData: { name: parsed.data.name },
         },
       });
