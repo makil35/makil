@@ -86,6 +86,21 @@ export default {
   "home.acces.cta": "Demander un échange confidentiel",
   "home.acces.alt": "Vue de Paris la nuit",
 
+  // Home — Contact
+  "contact.kicker": "Contact",
+  "contact.title1": "Échangeons en",
+  "contact.title2": "toute confidentialité.",
+  "contact.desc": "Écrivez-moi directement ou utilisez le formulaire ci-dessous. Je vous réponds personnellement.",
+  "contact.copy": "Copier l'adresse",
+  "contact.field.name": "Nom",
+  "contact.field.email": "Email",
+  "contact.field.message": "Message",
+  "contact.send": "Envoyer",
+  "contact.sending": "Envoi en cours…",
+  "contact.success": "Votre message a bien été envoyé.",
+  "contact.error.invalid": "Merci de vérifier les champs du formulaire.",
+  "contact.error.send": "Une erreur est survenue. Merci de réessayer.",
+
   // Mentions Légales
   "legal.kicker": "MAKIL",
   "legal.title": "Mentions Légales",
