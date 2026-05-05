@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { detectLangFromPath, swapLangPath, type Lang } from "@/lib/routes";
 
-type Language = "fr" | "en";
+type Language = Lang;
 
 interface LanguageContextType {
   language: Language;
@@ -23,29 +25,41 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem("language");
-    return (saved as Language) || "fr";
-  });
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Language is derived from URL — single source of truth.
+  const language: Language = detectLangFromPath(location.pathname);
 
   const [translations, setTranslations] = useState<Record<string, string>>({});
 
   useEffect(() => {
+    let cancelled = false;
     const loadTranslations = async () => {
       const module = await import(`../locales/${language}.ts`);
-      setTranslations(module.default);
+      if (!cancelled) setTranslations(module.default);
     };
     loadTranslations();
+    return () => {
+      cancelled = true;
+    };
+  }, [language]);
+
+  // Persist preference + sync <html lang>
+  useEffect(() => {
+    localStorage.setItem("language", language);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = language;
+    }
   }, [language]);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    localStorage.setItem("language", lang);
+    if (lang === language) return;
+    const target = swapLangPath(location.pathname, lang);
+    navigate(target + location.hash);
   };
 
-  const t = (key: string): string => {
-    return translations[key] || key;
-  };
+  const t = (key: string): string => translations[key] || key;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
