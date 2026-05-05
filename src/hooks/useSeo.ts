@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ROUTES, swapLangPath, type Lang, type RouteKey } from "@/lib/routes";
+import { ROUTES, type Lang, type RouteKey } from "@/lib/routes";
 
 const SITE_URL = "https://makil.fr";
 
