@@ -25,7 +25,16 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
-          <Link to={home} aria-label={t("nav.home")}>
+          <Link
+            to={home}
+            aria-label={t("nav.home")}
+            onClick={(e) => {
+              if (window.location.pathname === home) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
             <span className="font-display text-xl tracking-[0.4em] uppercase text-foreground">
               MAKIL
             </span>

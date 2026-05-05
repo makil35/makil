@@ -8,9 +8,14 @@ const Footer = () => {
     <footer className="bg-background border-t border-border/40">
       <div className="container mx-auto px-6 lg:px-10 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <span className="font-display text-sm tracking-[0.4em] uppercase text-foreground">
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="font-display text-sm tracking-[0.4em] uppercase text-foreground hover:opacity-70 transition-smooth"
+            aria-label={t("nav.home")}
+          >
             MAKIL
-          </span>
+          </button>
           <p className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground">
             © {new Date().getFullYear()} MAKIL — {t("footer.rights")}
           </p>
