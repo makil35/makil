@@ -1,4 +1,12 @@
 export default {
+  // SEO
+  "seo.home.title": "MAKIL — Ultra-luxury fashion house, by invitation",
+  "seo.home.description": "Founding pieces, bespoke atelier and confidential access. By appointment only.",
+  "seo.legal.title": "Legal notice — MAKIL",
+  "seo.legal.description": "Legal information about the MAKIL website: publisher, hosting, intellectual property.",
+  "seo.privacy.title": "Privacy policy — MAKIL",
+  "seo.privacy.description": "How MAKIL collects, uses and protects your personal data, in compliance with GDPR.",
+
   // Navigation
   "nav.univers": "World",
   "nav.approche": "Approach",

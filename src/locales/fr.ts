@@ -1,4 +1,12 @@
 export default {
+  // SEO
+  "seo.home.title": "MAKIL — Maison de mode ultra-luxe sur invitation",
+  "seo.home.description": "Pièces fondatrices, atelier sur mesure et accès confidentiel. Sur rendez-vous uniquement.",
+  "seo.legal.title": "Mentions légales — MAKIL",
+  "seo.legal.description": "Informations légales relatives au site MAKIL : éditeur, hébergement, propriété intellectuelle.",
+  "seo.privacy.title": "Politique de confidentialité — MAKIL",
+  "seo.privacy.description": "Comment MAKIL collecte, utilise et protège vos données personnelles, conformément au RGPD.",
+
   // Navigation
   "nav.univers": "Univers",
   "nav.approche": "Approche",
