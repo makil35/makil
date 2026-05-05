@@ -63,7 +63,7 @@ const CookieConsent = () => {
               <p className="text-xs sm:text-sm font-body text-muted-foreground leading-relaxed">
                 {t("cookie.description")}{" "}
                 <Link
-                  to="/politique-confidentialite"
+                  to={privacyPath}
                   className="text-primary hover:text-primary/80 underline transition-colors"
                 >
                   {t("cookie.learnMore")}
@@ -168,7 +168,7 @@ const CookieConsent = () => {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-3 pt-2 border-t border-border">
               <Link
-                to="/politique-confidentialite"
+                to={privacyPath}
                 className="text-xs sm:text-sm text-primary hover:text-primary/80 underline transition-colors text-center sm:text-left"
               >
                 {t("cookie.privacyLink")}
