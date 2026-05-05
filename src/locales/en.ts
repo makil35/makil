@@ -4,11 +4,26 @@ export default {
   "nav.approche": "Approach",
   "nav.vision": "Vision",
   "nav.acces": "Access",
+  "nav.events": "Events",
+  "nav.gallery": "Gallery",
+  "nav.contact": "Contact",
   "nav.openMenu": "Open menu",
   "nav.closeMenu": "Close menu",
   "nav.home": "MAKIL — Home",
   "nav.mainAria": "Main navigation",
   "nav.langAria": "Change language",
+
+  // Pages
+  "events.kicker": "Private agenda",
+  "events.title": "Events",
+  "events.intro": "Private presentations, atelier appointments and by-invitation appearances. The detailed calendar will be unveiled soon.",
+  "gallery.kicker": "Visual archive",
+  "gallery.title": "Gallery",
+  "gallery.intro": "A curated selection of images and chosen moments. The full gallery will be published shortly.",
+  "contact.kicker": "Confidential exchange",
+  "contact.title": "Contact us",
+  "contact.intro": "All enquiries are by invitation and appointment only. Write to us directly to begin the conversation.",
+  "contact.cta": "Write to Richard",
 
   // Footer
   "footer.rights": "All rights reserved",
