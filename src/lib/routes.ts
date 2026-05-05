@@ -1,14 +1,11 @@
 export type Lang = "fr" | "en";
 
-export type RouteKey = "home" | "legal" | "privacy" | "events" | "gallery" | "contact";
+export type RouteKey = "home" | "legal" | "privacy";
 
 export const ROUTES: Record<RouteKey, Record<Lang, string>> = {
   home: { fr: "/", en: "/en" },
   legal: { fr: "/mentions-legales", en: "/en/legal-notice" },
   privacy: { fr: "/politique-confidentialite", en: "/en/privacy-policy" },
-  events: { fr: "/evenements", en: "/en/events" },
-  gallery: { fr: "/galerie", en: "/en/gallery" },
-  contact: { fr: "/contact", en: "/en/contact" },
 };
 
 export const localizedPath = (key: RouteKey, lang: Lang): string =>
