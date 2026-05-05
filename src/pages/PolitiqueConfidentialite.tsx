@@ -1,9 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useSeo } from "@/hooks/useSeo";
 
 const PolitiqueConfidentialite = () => {
   const { language, t } = useLanguage();
+  useSeo({ routeKey: "privacy", titleKey: "seo.privacy.title", descriptionKey: "seo.privacy.description" });
   const locale = language === "fr" ? "fr-FR" : "en-GB";
 
   return (

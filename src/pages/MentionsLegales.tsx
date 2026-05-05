@@ -1,10 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
 
 const MentionsLegales = () => {
   const { t, language } = useLanguage();
+  useSeo({ routeKey: "legal", titleKey: "seo.legal.title", descriptionKey: "seo.legal.description" });
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />

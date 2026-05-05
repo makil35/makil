@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useSeo } from "@/hooks/useSeo";
 import portrait from "@/assets/richard-portrait.jpg";
 import terrace from "@/assets/lifestyle-terrace.jpg";
 import glove from "@/assets/vision-glove.jpg";
@@ -10,6 +11,7 @@ import paris from "@/assets/access-paris.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
+  useSeo({ routeKey: "home", titleKey: "seo.home.title", descriptionKey: "seo.home.description" });
 
   const pillars = [
     { icon: UserRound, titleKey: "home.pillar.discretion", descKey: "home.pillar.discretion.desc" },
