@@ -86,6 +86,21 @@ export default {
   "home.acces.cta": "Request a confidential conversation",
   "home.acces.alt": "View of Paris at night",
 
+  // Home — Contact
+  "contact.kicker": "Contact",
+  "contact.title1": "Let's speak",
+  "contact.title2": "in confidence.",
+  "contact.desc": "Write directly or use the form below. I will reply personally.",
+  "contact.copy": "Copy address",
+  "contact.field.name": "Name",
+  "contact.field.email": "Email",
+  "contact.field.message": "Message",
+  "contact.send": "Send",
+  "contact.sending": "Sending…",
+  "contact.success": "Your message has been sent.",
+  "contact.error.invalid": "Please check the form fields.",
+  "contact.error.send": "Something went wrong. Please try again.",
+
   // Legal Notice
   "legal.kicker": "MAKIL",
   "legal.title": "Legal Notice",

@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
+import Unsubscribe from "./pages/Unsubscribe";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/en" element={<Index />} />
             <Route path="/en/legal-notice" element={<MentionsLegales />} />
             <Route path="/en/privacy-policy" element={<PolitiqueConfidentialite />} />
+            <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </LanguageProvider>

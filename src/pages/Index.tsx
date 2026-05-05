@@ -1,6 +1,7 @@
 import { ArrowRight, ChevronDown, UserRound, Globe, Gem, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ContactSection from "@/components/ContactSection";
 import CookieConsent from "@/components/CookieConsent";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
@@ -163,9 +164,7 @@ const Index = () => {
               {t("home.acces.desc")}
             </p>
             <a
-              href="mailto:richard@makil.fr"
-              target="_top"
-              rel="noopener"
+              href="#contact"
               className="inline-flex items-center gap-3 mt-4 px-8 py-4 border border-accent text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-accent hover:text-accent-foreground transition-smooth"
             >
               {t("home.acces.cta")}
@@ -180,6 +179,7 @@ const Index = () => {
         />
       </section>
 
+      <ContactSection />
       <Footer />
       <CookieConsent />
     </div>
