@@ -38,9 +38,10 @@ const ContactSection = () => {
     }
     setSubmitting(true);
     try {
+      const payload = { name: parsed.data.name, email: parsed.data.email, message: parsed.data.message };
       const { data: insert, error: insertError } = await supabase
         .from("contact_submissions")
-        .insert(parsed.data)
+        .insert(payload)
         .select("id")
         .single();
       if (insertError || !insert) throw insertError ?? new Error("insert failed");
