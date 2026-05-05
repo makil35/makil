@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { X, Settings } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { localizedPath } from "@/lib/routes";
 
 interface CookiePreferences {
   essential: boolean;
@@ -11,7 +12,8 @@ interface CookiePreferences {
 }
 
 const CookieConsent = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const privacyPath = localizedPath("privacy", language);
   const [isVisible, setIsVisible] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>({
