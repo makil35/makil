@@ -182,7 +182,7 @@ const Index = () => {
               vos attentes et vous proposer l'excellence qui vous correspond.
             </p>
             <a
-              href="mailto:richard@makil-maqil.com"
+              href="mailto:richard@makil.fr"
               className="inline-flex items-center gap-3 mt-4 px-8 py-4 border border-accent text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-accent hover:text-accent-foreground transition-smooth"
             >
               Demander un échange confidentiel
