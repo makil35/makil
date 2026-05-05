@@ -15,9 +15,6 @@ const Navigation = () => {
     { key: "nav.approche", path: `${home}#approche` },
     { key: "nav.vision", path: `${home}#vision` },
     { key: "nav.acces", path: `${home}#acces` },
-    { key: "nav.events", path: localizedPath("events", language) },
-    { key: "nav.gallery", path: localizedPath("gallery", language) },
-    { key: "nav.contact", path: localizedPath("contact", language) },
   ];
 
   return (
