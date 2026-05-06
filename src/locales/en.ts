@@ -2,10 +2,10 @@ export default {
   // SEO
   "seo.home.title": "MAKIL — The art of making the exceptional, effortless",
   "seo.home.description": "Richard Makil-Herrero supports a discerning clientele with discretion, network and excellence. By appointment only.",
-  "seo.legal.title": "Legal notice — MAKIL",
-  "seo.legal.description": "Legal information about the MAKIL website: publisher, hosting, intellectual property.",
-  "seo.privacy.title": "Privacy policy — MAKIL",
-  "seo.privacy.description": "How MAKIL collects, uses and protects your personal data, in compliance with GDPR.",
+  "seo.legal.title": "Legal notice — MAKIL — The art of making the exceptional, effortless",
+  "seo.legal.description": "Legal information for the MAKIL website. Richard Makil-Herrero supports a discerning clientele with discretion, network and excellence. By appointment only.",
+  "seo.privacy.title": "Privacy policy — MAKIL — The art of making the exceptional, effortless",
+  "seo.privacy.description": "MAKIL privacy policy. Richard Makil-Herrero supports a discerning clientele with discretion, network and excellence. By appointment only.",
 
   // Navigation
   "nav.univers": "World",
