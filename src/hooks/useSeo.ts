@@ -93,6 +93,8 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
     upsertLinkRel("alternate", "x-default", altFr);
 
     // Open Graph
+    upsertMetaProperty("og:type", "website");
+    upsertMetaProperty("og:site_name", "MAKIL");
     upsertMetaProperty("og:title", title);
     upsertMetaProperty("og:description", description);
     upsertMetaProperty("og:url", canonical);
@@ -101,9 +103,39 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
       "og:locale:alternate",
       lang === "fr" ? "en_GB" : "fr_FR"
     );
+    upsertMetaProperty("og:image", `${SITE_URL}/og-image.jpg`);
 
     // Twitter
+    upsertMetaName("twitter:card", "summary_large_image");
     upsertMetaName("twitter:title", title);
     upsertMetaName("twitter:description", description);
+    upsertMetaName("twitter:image", `${SITE_URL}/og-image.jpg`);
+
+    // Robots & ultra-luxe keywords per page
+    upsertMetaName("robots", "index, follow, max-image-preview:large, max-snippet:-1");
+    const keywords = lang === "fr"
+      ? "ultra-luxe, luxe confidentiel, MAKIL, Richard Makil-Herrero, accompagnement ultra-luxe, art de vivre, expériences sur mesure, clientèle privée, discrétion, excellence, Paris, Monaco, Saint-Tropez, Côte d'Azur, Genève, Londres, Dubaï"
+      : "ultra-luxury, confidential luxury, MAKIL, Richard Makil-Herrero, bespoke experiences, art de vivre, private clientele, discretion, excellence, Paris, Monaco, Saint-Tropez, French Riviera, Geneva, London, Dubai";
+    upsertMetaName("keywords", keywords);
+
+    // JSON-LD WebPage per route
+    const ldId = "ld-webpage";
+    let ld = document.getElementById(ldId) as HTMLScriptElement | null;
+    if (!ld) {
+      ld = document.createElement("script");
+      ld.type = "application/ld+json";
+      ld.id = ldId;
+      document.head.appendChild(ld);
+    }
+    ld.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url: canonical,
+      inLanguage: lang === "fr" ? "fr-FR" : "en-GB",
+      isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
+      about: { "@type": "Thing", name: lang === "fr" ? "Ultra-luxe confidentiel" : "Confidential ultra-luxury" },
+    });
   }, [routeKey, titleKey, descriptionKey, language, location.pathname, t]);
 };
