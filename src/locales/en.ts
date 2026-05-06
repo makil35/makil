@@ -1,7 +1,7 @@
 export default {
   // SEO
-  "seo.home.title": "MAKIL — Ultra-luxury fashion house, by invitation",
-  "seo.home.description": "Founding pieces, bespoke atelier and confidential access. By appointment only.",
+  "seo.home.title": "MAKIL — The art of making the exceptional, effortless",
+  "seo.home.description": "Richard Makil-Herrero supports a discerning clientele with discretion, network and excellence. By appointment only.",
   "seo.legal.title": "Legal notice — MAKIL",
   "seo.legal.description": "Legal information about the MAKIL website: publisher, hosting, intellectual property.",
   "seo.privacy.title": "Privacy policy — MAKIL",
