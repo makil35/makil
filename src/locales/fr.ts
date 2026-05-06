@@ -1,11 +1,11 @@
 export default {
   // SEO
-  "seo.home.title": "MAKIL — Ultra-luxe confidentiel · L'art de rendre l'exceptionnel, naturel",
-  "seo.home.description": "MAKIL, signature ultra-luxe par Richard Makil-Herrero. Accompagnement confidentiel, art de vivre et expériences sur mesure pour une clientèle d'exception. Sur rendez-vous uniquement.",
-  "seo.legal.title": "Mentions légales — MAKIL · Ultra-luxe confidentiel",
-  "seo.legal.description": "Informations légales de MAKIL, signature ultra-luxe par Richard Makil-Herrero. Accompagnement confidentiel et expériences sur mesure. Sur rendez-vous uniquement.",
-  "seo.privacy.title": "Politique de confidentialité — MAKIL · Ultra-luxe confidentiel",
-  "seo.privacy.description": "Politique de confidentialité de MAKIL, signature ultra-luxe par Richard Makil-Herrero. Discrétion absolue pour une clientèle d'exception.",
+  "seo.home.title": "MAKIL · Ultra-luxe confidentiel — Richard Makil-Herrero | Paris · Monaco · Côte d'Azur",
+  "seo.home.description": "MAKIL — signature ultra-luxe par Richard Makil-Herrero. Accompagnement confidentiel d'une clientèle d'exception : art de vivre, expériences sur mesure, accès privilégiés à Paris, Monaco, Saint-Tropez, Genève, Londres, Dubaï. Sur rendez-vous uniquement.",
+  "seo.legal.title": "Mentions légales · MAKIL — Ultra-luxe confidentiel | Richard Makil-Herrero",
+  "seo.legal.description": "Mentions légales de MAKIL, maison ultra-luxe confidentielle par Richard Makil-Herrero. Accompagnement d'exception, discrétion absolue, expériences sur mesure pour une clientèle ultra-exigeante.",
+  "seo.privacy.title": "Politique de confidentialité · MAKIL — Ultra-luxe confidentiel | Discrétion absolue",
+  "seo.privacy.description": "Politique de confidentialité de MAKIL, signature ultra-luxe par Richard Makil-Herrero. Protection des données et discrétion absolue pour une clientèle privée d'exception.",
 
   // Navigation
   "nav.univers": "Univers",
