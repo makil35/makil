@@ -1,11 +1,11 @@
 export default {
   // SEO
-  "seo.home.title": "MAKIL — The art of making the exceptional, effortless",
-  "seo.home.description": "Richard Makil-Herrero supports a discerning clientele with discretion, network and excellence. By appointment only.",
-  "seo.legal.title": "Legal notice — MAKIL — The art of making the exceptional, effortless",
-  "seo.legal.description": "Legal information for the MAKIL website. Richard Makil-Herrero supports a discerning clientele with discretion, network and excellence. By appointment only.",
-  "seo.privacy.title": "Privacy policy — MAKIL — The art of making the exceptional, effortless",
-  "seo.privacy.description": "MAKIL privacy policy. Richard Makil-Herrero supports a discerning clientele with discretion, network and excellence. By appointment only.",
+  "seo.home.title": "MAKIL — Confidential ultra-luxury · The art of making the exceptional, effortless",
+  "seo.home.description": "MAKIL, an ultra-luxury signature by Richard Makil-Herrero. Confidential support, art de vivre and bespoke experiences for an exceptional clientele. By appointment only.",
+  "seo.legal.title": "Legal notice — MAKIL · Confidential ultra-luxury",
+  "seo.legal.description": "Legal information for MAKIL, an ultra-luxury signature by Richard Makil-Herrero. Confidential support and bespoke experiences. By appointment only.",
+  "seo.privacy.title": "Privacy policy — MAKIL · Confidential ultra-luxury",
+  "seo.privacy.description": "Privacy policy of MAKIL, an ultra-luxury signature by Richard Makil-Herrero. Absolute discretion for an exceptional clientele.",
 
   // Navigation
   "nav.univers": "World",
