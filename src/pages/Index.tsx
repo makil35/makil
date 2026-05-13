@@ -100,7 +100,7 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/40 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-black max-w-6xl mx-auto">
             {pillars.map((p) => {
               return (
                 <div key={p.titleKey} className="bg-background px-8 py-12 text-center space-y-5">
