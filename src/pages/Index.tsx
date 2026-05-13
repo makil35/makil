@@ -12,10 +12,10 @@ const Index = () => {
   useSeo({ routeKey: "home", titleKey: "seo.home.title", descriptionKey: "seo.home.description" });
 
   const pillars = [
-    { icon: UserRound, titleKey: "home.pillar.discretion", descKey: "home.pillar.discretion.desc" },
-    { icon: Globe, titleKey: "home.pillar.network", descKey: "home.pillar.network.desc" },
-    { icon: Gem, titleKey: "home.pillar.excellence", descKey: "home.pillar.excellence.desc" },
-    { icon: Clock, titleKey: "home.pillar.liberty", descKey: "home.pillar.liberty.desc" },
+    { titleKey: "home.pillar.discretion", descKey: "home.pillar.discretion.desc" },
+    { titleKey: "home.pillar.network", descKey: "home.pillar.network.desc" },
+    { titleKey: "home.pillar.excellence", descKey: "home.pillar.excellence.desc" },
+    { titleKey: "home.pillar.liberty", descKey: "home.pillar.liberty.desc" },
   ];
 
   return (
