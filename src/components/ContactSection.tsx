@@ -11,7 +11,7 @@ const schema = z.object({
   message: z.string().trim().min(1).max(5000),
 });
 
-const EMAIL = "richard@makil.fr";
+const EMAIL = "richard@makil-private.com";
 
 const ContactSection = () => {
   const { t } = useLanguage();
