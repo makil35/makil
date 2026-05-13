@@ -14,15 +14,10 @@ const Footer = () => {
             <span className="text-[11px] font-body tracking-[0.4em] uppercase text-white/60">
               {t("footer.makilPrivate")}
             </span>
-            <a
-              href="https://makil-private.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-[11px] font-body tracking-[0.3em] uppercase text-white hover:text-white/70 transition-smooth"
-            >
+            <span className="inline-flex items-center gap-3 text-[11px] font-body tracking-[0.3em] uppercase text-white/40">
               {t("footer.discoverExperiences")}
               <ArrowRight size={14} />
-            </a>
+            </span>
           </div>
         </div>
       </div>
