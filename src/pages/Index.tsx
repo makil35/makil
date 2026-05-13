@@ -102,10 +102,8 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/40 max-w-6xl mx-auto">
             {pillars.map((p) => {
-              const Icon = p.icon;
               return (
                 <div key={p.titleKey} className="bg-background px-8 py-12 text-center space-y-5">
-                  <Icon size={36} strokeWidth={1} className="mx-auto text-accent" aria-hidden="true" />
                   <h3 className="text-[11px] font-body tracking-[0.3em] uppercase text-foreground">
                     {t(p.titleKey)}
                   </h3>
