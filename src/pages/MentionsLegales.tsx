@@ -28,7 +28,7 @@ const MentionsLegales = () => {
                 <strong>{t("legal.s1.site")}</strong>{" "}
                 <a href="https://makil.fr" className="text-accent hover:underline">https://makil.fr</a><br />
                 <strong>{t("legal.s1.email")}</strong>{" "}
-                <a href="mailto:richard@makil.fr" className="text-accent hover:underline">richard@makil.fr</a><br />
+                <a href="mailto:richard@makil-private.com" className="text-accent hover:underline">richard@makil-private.com</a><br />
                 <strong>{t("legal.s1.location")}</strong> {t("legal.s1.locationValue")}
               </p>
             </section>
@@ -55,7 +55,7 @@ const MentionsLegales = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("legal.s5.title")}</h2>
               <p>
                 {t("legal.s5.p1a")}{" "}
-                <a href="mailto:richard@makil.fr" className="text-accent hover:underline">richard@makil.fr</a>.
+                <a href="mailto:richard@makil-private.com" className="text-accent hover:underline">richard@makil-private.com</a>.
               </p>
             </section>
 
