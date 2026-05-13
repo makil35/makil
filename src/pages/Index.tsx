@@ -6,9 +6,6 @@ import CookieConsent from "@/components/CookieConsent";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import portrait from "@/assets/richard-portrait.jpg";
-import terrace from "@/assets/lifestyle-terrace.jpg";
-import glove from "@/assets/vision-glove.jpg";
-import paris from "@/assets/access-paris.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
