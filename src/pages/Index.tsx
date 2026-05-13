@@ -6,9 +6,6 @@ import CookieConsent from "@/components/CookieConsent";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import portrait from "@/assets/richard-portrait.jpg";
-import terrace from "@/assets/lifestyle-terrace.jpg";
-import glove from "@/assets/vision-glove.jpg";
-import paris from "@/assets/access-paris.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -64,8 +61,7 @@ const Index = () => {
       {/* SIGNATURE */}
       <section id="univers" className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
         <div
-          className="aspect-[4/3] lg:aspect-auto bg-cover bg-center"
-          style={{ backgroundImage: `url(${terrace})` }}
+          className="aspect-[4/3] lg:aspect-auto bg-black"
           role="img"
           aria-label={t("home.univers.alt")}
         />
@@ -141,8 +137,7 @@ const Index = () => {
           </div>
         </div>
         <div
-          className="aspect-[4/3] lg:aspect-auto bg-cover bg-center order-1 lg:order-2"
-          style={{ backgroundImage: `url(${glove})` }}
+          className="aspect-[4/3] lg:aspect-auto bg-black order-1 lg:order-2"
           role="img"
           aria-label={t("home.vision.alt")}
         />
@@ -172,8 +167,7 @@ const Index = () => {
           </div>
         </div>
         <div
-          className="aspect-[4/3] lg:aspect-auto bg-cover bg-center"
-          style={{ backgroundImage: `url(${paris})` }}
+          className="aspect-[4/3] lg:aspect-auto bg-black"
           role="img"
           aria-label={t("home.acces.alt")}
         />
