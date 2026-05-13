@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown, UserRound, Globe, Gem, Clock } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
