@@ -39,7 +39,7 @@ export const template = {
   component: ContactNotificationEmail,
   subject: (d: Record<string, any>) => `MAKIL — Nouvelle demande de ${d.name ?? 'visiteur'}`,
   displayName: 'Notification contact (admin)',
-  to: 'richard@makil.fr',
+  to: 'richard@makil-private.com',
   previewData: { name: 'Jane Doe', email: 'jane@example.com', message: 'Bonjour, j\'aimerais échanger.' },
 } satisfies TemplateEntry
 
