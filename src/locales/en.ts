@@ -22,6 +22,8 @@ export default {
   "footer.rights": "All rights reserved",
   "footer.legal": "Legal notice",
   "footer.privacy": "Privacy",
+  "footer.makilPrivate": "Makil Private",
+  "footer.discoverExperiences": "Discover our experiences",
 
   // Cookie Consent
   "cookie.title": "Cookie Management",
