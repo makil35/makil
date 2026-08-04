@@ -61,6 +61,16 @@ Deno.serve(async (req) => {
     )
   }
 
+  if (!isInternalCaller(req, supabaseServiceKey)) {
+    console.warn('Rejected non-internal call to send-transactional-email')
+    return new Response(JSON.stringify({ error: 'Forbidden' }), {
+      status: 403,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    })
+  }
+
+
+
   // Parse request body
   let templateName: string
   let recipientEmail: string
