@@ -38,31 +38,10 @@ const ContactSection = () => {
     }
     setSubmitting(true);
     try {
-      const submissionId = crypto.randomUUID();
-      const payload = { id: submissionId, name: parsed.data.name, email: parsed.data.email, message: parsed.data.message };
-      const { error: insertError } = await supabase
-        .from("contact_submissions")
-        .insert(payload);
-      if (insertError) throw insertError;
-
-      // Notification to Richard
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "contact-notification",
-          recipientEmail: EMAIL,
-          idempotencyKey: `contact-notify-${submissionId}`,
-          templateData: parsed.data,
-        },
+      const { data, error } = await supabase.functions.invoke("submit-contact", {
+        body: parsed.data,
       });
-      // Confirmation to visitor
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "contact-confirmation",
-          recipientEmail: parsed.data.email,
-          idempotencyKey: `contact-confirm-${submissionId}`,
-          templateData: { name: parsed.data.name },
-        },
-      });
+      if (error || !data?.success) throw error ?? new Error("send_failed");
 
       toast.success(t("contact.success"));
       setName(""); setEmail(""); setMessage("");
@@ -72,6 +51,7 @@ const ContactSection = () => {
       setSubmitting(false);
     }
   };
+
 
   return (
     <section id="contact" className="py-28 sm:py-36 bg-background border-t border-border/40">
