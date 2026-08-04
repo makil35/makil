@@ -68,9 +68,9 @@ const MentionsLegales = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("legal.s7.title")}</h2>
               <p>
                 {t("legal.s7.p1a")}{" "}
-                <a href={localizedPath("privacy", language)} className="text-accent hover:underline">
+                <Link to={localizedPath("privacy", language)} className="text-accent hover:underline">
                   {t("legal.s7.link")}
-                </a>.
+                </Link>.
               </p>
             </section>
 
