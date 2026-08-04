@@ -26,7 +26,7 @@ const PolitiqueConfidentialite = () => {
             <section>
               <p>
                 {t("privacy.intro")} (
-                <a href="https://makil.fr" className="text-accent hover:underline">https://makil.fr</a>)
+                <a href={siteUrl} className="text-accent hover:underline">{siteUrl}</a>)
               </p>
               <p className="mt-3">
                 <strong>{t("privacy.lastUpdate")}</strong> {new Date().toLocaleDateString(locale)}
