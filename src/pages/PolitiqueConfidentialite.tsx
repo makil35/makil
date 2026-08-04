@@ -7,6 +7,7 @@ const PolitiqueConfidentialite = () => {
   const { language, t } = useLanguage();
   useSeo({ routeKey: "privacy", titleKey: "seo.privacy.title", descriptionKey: "seo.privacy.description" });
   const locale = language === "fr" ? "fr-FR" : "en-GB";
+  const siteUrl = language === "fr" ? "https://makil.fr" : "https://makil.fr/en";
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
