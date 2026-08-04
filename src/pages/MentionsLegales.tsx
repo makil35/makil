@@ -27,7 +27,7 @@ const MentionsLegales = () => {
               <p>{t("legal.s1.p1")}</p>
               <p className="mt-3">
                 <strong>{t("legal.s1.site")}</strong>{" "}
-                <a href={language === "fr" ? "https://makil.fr" : "https://makil.fr/en"} className="text-accent hover:underline">{language === "fr" ? "https://makil.fr" : "https://makil.fr/en"}</a><br />
+                <Link to={localizedPath("home", language)} className="text-accent hover:underline">{language === "fr" ? "makil.fr" : "makil.fr/en"}</Link><br />
                 <strong>{t("legal.s1.email")}</strong>{" "}
                 <a href="mailto:richard@makil-private.com" className="text-accent hover:underline">richard@makil-private.com</a><br />
                 <strong>{t("legal.s1.location")}</strong> {t("legal.s1.locationValue")}

@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
+import { localizedPath } from "@/lib/routes";
 
 const PolitiqueConfidentialite = () => {
   const { language, t } = useLanguage();
   useSeo({ routeKey: "privacy", titleKey: "seo.privacy.title", descriptionKey: "seo.privacy.description" });
   const locale = language === "fr" ? "fr-FR" : "en-GB";
-  const siteUrl = language === "fr" ? "https://makil.fr" : "https://makil.fr/en";
+  const siteLabel = language === "fr" ? "makil.fr" : "makil.fr/en";
+  const homePath = localizedPath("home", language);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
