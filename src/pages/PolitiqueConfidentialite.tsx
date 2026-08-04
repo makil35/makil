@@ -98,7 +98,7 @@ const PolitiqueConfidentialite = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("privacy.s9.title")}</h2>
               <p>
                 {t("privacy.s9.p1a")}{" "}
-                <a href="https://makil.fr" className="text-accent hover:underline">makil.fr</a>{" "}
+                <a href={siteUrl} className="text-accent hover:underline">makil.fr</a>{" "}
                 {t("privacy.s9.p1b")}
               </p>
             </section>
