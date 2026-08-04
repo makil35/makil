@@ -1,11 +1,11 @@
 export default {
   // SEO
-  "seo.home.title": "MAKIL · Confidential ultra-luxury — Richard Makil-Herrero | Paris · Monaco · French Riviera",
-  "seo.home.description": "MAKIL — a confidential ultra-luxury signature by Richard Makil-Herrero. Bespoke support for an exceptional clientele: art de vivre, tailor-made experiences and privileged access in Paris, Monaco, Saint-Tropez, Geneva, London, Dubai. By appointment only.",
-  "seo.legal.title": "Legal notice · MAKIL — Confidential ultra-luxury | Richard Makil-Herrero",
-  "seo.legal.description": "Legal notice for MAKIL, a confidential ultra-luxury house by Richard Makil-Herrero. Exceptional support, absolute discretion and bespoke experiences for a highly demanding clientele.",
-  "seo.privacy.title": "Privacy policy · MAKIL — Confidential ultra-luxury | Absolute discretion",
-  "seo.privacy.description": "Privacy policy of MAKIL, a confidential ultra-luxury signature by Richard Makil-Herrero. Data protection and absolute discretion for an exceptional private clientele.",
+  "seo.home.title": "MAKIL · Confidential ultra-luxury — Richard Makil-Herrero",
+  "seo.home.description": "A confidential ultra-luxury signature by Richard Makil-Herrero: bespoke support, art de vivre and tailor-made experiences. By appointment only.",
+  "seo.legal.title": "Legal notice · MAKIL — Confidential ultra-luxury",
+  "seo.legal.description": "Legal notice for MAKIL, a confidential ultra-luxury signature by Richard Makil-Herrero. Publisher, hosting and contact details.",
+  "seo.privacy.title": "Privacy policy · MAKIL — Confidential ultra-luxury",
+  "seo.privacy.description": "MAKIL privacy policy: data protection and absolute discretion for an exceptional private clientele.",
 
   // Navigation
   "nav.univers": "World",
@@ -28,7 +28,7 @@ export default {
   // Cookie Consent
   "cookie.title": "Cookie Management",
   "cookie.description": "We use cookies to enhance your experience. Essential cookies are required for the site to function.",
-  "cookie.learnMore": "Learn more",
+  "cookie.learnMore": "Read our privacy policy",
   "cookie.essential": "Essential Cookies",
   "cookie.essentialDesc": "Required for the site to function (always active)",
   "cookie.required": "Required",
@@ -56,7 +56,7 @@ export default {
   "home.univers.title1": "Far more than a service.",
   "home.univers.title2": "A signature.",
   "home.univers.desc": "Makil is the meeting point between absolute discretion, a global network of influence and an obsession with detail. A world where luxury is not about appearance, but about freedom, time and perfection.",
-  "home.univers.cta": "Learn more",
+  "home.univers.cta": "Discover my approach",
   "home.univers.alt": "Luxurious seaside terrace view",
 
   // Home — Approach
