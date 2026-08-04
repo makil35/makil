@@ -30,15 +30,22 @@ function generateToken(): string {
     .join('')
 }
 
-// Auth note: this function uses verify_jwt = true in config.toml, so Supabase's
-// gateway validates the caller's JWT (anon or service_role) before the request
-// reaches this code. No in-function auth check is needed.
+// Auth note: this endpoint is INTERNAL ONLY. A valid anon JWT is not enough —
+// the caller must present the service role key. Public flows (e.g. the contact
+// form) must go through a dedicated function such as `submit-contact`, which
+// validates the request and then calls this endpoint server-side.
+function isInternalCaller(req: Request, serviceKey: string): boolean {
+  const auth = req.headers.get('Authorization') ?? ''
+  const bearer = auth.startsWith('Bearer ') ? auth.slice(7).trim() : ''
+  return bearer.length > 0 && bearer === serviceKey
+}
 
 Deno.serve(async (req) => {
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+
 
   const supabaseUrl = Deno.env.get('SUPABASE_URL')
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
@@ -53,6 +60,16 @@ Deno.serve(async (req) => {
       }
     )
   }
+
+  if (!isInternalCaller(req, supabaseServiceKey)) {
+    console.warn('Rejected non-internal call to send-transactional-email')
+    return new Response(JSON.stringify({ error: 'Forbidden' }), {
+      status: 403,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    })
+  }
+
+
 
   // Parse request body
   let templateName: string
