@@ -7,6 +7,7 @@ const PolitiqueConfidentialite = () => {
   const { language, t } = useLanguage();
   useSeo({ routeKey: "privacy", titleKey: "seo.privacy.title", descriptionKey: "seo.privacy.description" });
   const locale = language === "fr" ? "fr-FR" : "en-GB";
+  const siteUrl = language === "fr" ? "https://makil.fr" : "https://makil.fr/en";
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -25,7 +26,7 @@ const PolitiqueConfidentialite = () => {
             <section>
               <p>
                 {t("privacy.intro")} (
-                <a href="https://makil.fr" className="text-accent hover:underline">https://makil.fr</a>)
+                <a href={siteUrl} className="text-accent hover:underline">{siteUrl}</a>)
               </p>
               <p className="mt-3">
                 <strong>{t("privacy.lastUpdate")}</strong> {new Date().toLocaleDateString(locale)}
@@ -97,7 +98,7 @@ const PolitiqueConfidentialite = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("privacy.s9.title")}</h2>
               <p>
                 {t("privacy.s9.p1a")}{" "}
-                <a href="https://makil.fr" className="text-accent hover:underline">makil.fr</a>{" "}
+                <a href={siteUrl} className="text-accent hover:underline">makil.fr</a>{" "}
                 {t("privacy.s9.p1b")}
               </p>
             </section>

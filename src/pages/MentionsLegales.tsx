@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -26,7 +27,7 @@ const MentionsLegales = () => {
               <p>{t("legal.s1.p1")}</p>
               <p className="mt-3">
                 <strong>{t("legal.s1.site")}</strong>{" "}
-                <a href="https://makil.fr" className="text-accent hover:underline">https://makil.fr</a><br />
+                <a href={language === "fr" ? "https://makil.fr" : "https://makil.fr/en"} className="text-accent hover:underline">{language === "fr" ? "https://makil.fr" : "https://makil.fr/en"}</a><br />
                 <strong>{t("legal.s1.email")}</strong>{" "}
                 <a href="mailto:richard@makil-private.com" className="text-accent hover:underline">richard@makil-private.com</a><br />
                 <strong>{t("legal.s1.location")}</strong> {t("legal.s1.locationValue")}
@@ -68,9 +69,9 @@ const MentionsLegales = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("legal.s7.title")}</h2>
               <p>
                 {t("legal.s7.p1a")}{" "}
-                <a href={localizedPath("privacy", language)} className="text-accent hover:underline">
+                <Link to={localizedPath("privacy", language)} className="text-accent hover:underline">
                   {t("legal.s7.link")}
-                </a>.
+                </Link>.
               </p>
             </section>
 

@@ -1,10 +1,11 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { localizedPath } from "@/lib/routes";
 
 const NotFound = () => {
   const location = useLocation();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
@@ -15,9 +16,9 @@ const NotFound = () => {
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold">{t("notfound.title")}</h1>
         <p className="mb-4 text-xl text-gray-600">{t("notfound.subtitle")}</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
+        <Link to={localizedPath("home", language)} className="text-blue-500 underline hover:text-blue-700">
           {t("notfound.button")}
-        </a>
+        </Link>
       </div>
     </div>
   );
