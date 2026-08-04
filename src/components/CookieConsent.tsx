@@ -136,6 +136,7 @@ const CookieConsent = () => {
                   <label className="relative inline-flex items-center cursor-pointer ml-2 sm:ml-4 flex-shrink-0">
                     <input
                       type="checkbox"
+                      aria-label={t("cookie.analytics")}
                       checked={preferences.analytics}
                       onChange={(e) => setPreferences({ ...preferences, analytics: e.target.checked })}
                       className="sr-only peer"
@@ -156,6 +157,7 @@ const CookieConsent = () => {
                   <label className="relative inline-flex items-center cursor-pointer ml-2 sm:ml-4 flex-shrink-0">
                     <input
                       type="checkbox"
+                      aria-label={t("cookie.marketing")}
                       checked={preferences.marketing}
                       onChange={(e) => setPreferences({ ...preferences, marketing: e.target.checked })}
                       className="sr-only peer"
