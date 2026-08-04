@@ -29,7 +29,7 @@ const PolitiqueConfidentialite = () => {
             <section>
               <p>
                 {t("privacy.intro")} (
-                <a href={siteUrl} className="text-accent hover:underline">{siteUrl}</a>)
+                <Link to={homePath} className="text-accent hover:underline">{siteLabel}</Link>)
               </p>
               <p className="mt-3">
                 <strong>{t("privacy.lastUpdate")}</strong> {new Date().toLocaleDateString(locale)}
@@ -101,7 +101,7 @@ const PolitiqueConfidentialite = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("privacy.s9.title")}</h2>
               <p>
                 {t("privacy.s9.p1a")}{" "}
-                <a href={siteUrl} className="text-accent hover:underline">makil.fr</a>{" "}
+                <Link to={homePath} className="text-accent hover:underline">{siteLabel}</Link>{" "}
                 {t("privacy.s9.p1b")}
               </p>
             </section>
