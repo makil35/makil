@@ -24,6 +24,7 @@
     <loc>https://makil.fr/mentions-legales</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/mentions-legales" />
     <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/mentions-legales" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -32,6 +33,7 @@
     <loc>https://makil.fr/en/legal-notice</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/mentions-legales" />
     <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/mentions-legales" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -40,6 +42,7 @@
     <loc>https://makil.fr/politique-confidentialite</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/politique-confidentialite" />
     <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/politique-confidentialite" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -48,6 +51,7 @@
     <loc>https://makil.fr/en/privacy-policy</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/politique-confidentialite" />
     <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/politique-confidentialite" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

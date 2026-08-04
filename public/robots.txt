@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Pages techniques non indexables
+Disallow: /unsubscribe
+
 Sitemap: https://makil.fr/sitemap.xml
