@@ -77,6 +77,10 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
     const title = t(titleKey);
     const description = t(descriptionKey);
 
+    // Translations load asynchronously: skip while keys are unresolved
+    // to avoid exposing raw keys as the document title / meta description.
+    if (title === titleKey || description === descriptionKey) return;
+
     document.title = title;
     document.documentElement.lang = lang;
 
