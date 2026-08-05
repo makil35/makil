@@ -55,7 +55,8 @@ const ContactSection = () => {
       if (error || !data?.success) throw error ?? new Error("send_failed");
 
       toast.success(t("contact.success"));
-      setName(""); setEmail(""); setMessage("");
+      setName(""); setEmail(""); setMessage(""); setCompany("");
+      mountedAt.current = Date.now();
     } catch {
       toast.error(t("contact.error.send"));
     } finally {
@@ -100,6 +101,19 @@ const ContactSection = () => {
 
         {/* Form */}
         <form onSubmit={onSubmit} className="space-y-6">
+          {/* Honeypot — hidden from humans, bots tend to fill it */}
+          <div className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+            <label htmlFor="c-company">Company</label>
+            <input
+              id="c-company"
+              name="company"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+            />
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label htmlFor="c-name" className="block text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground mb-2">
