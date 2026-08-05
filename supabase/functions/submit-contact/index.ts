@@ -34,14 +34,36 @@ Deno.serve(async (req) => {
   let name = ''
   let email = ''
   let message = ''
+  let honeypot = ''
+  let elapsedMs = 0
   try {
     const body = await req.json()
     name = typeof body.name === 'string' ? body.name.trim() : ''
     email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : ''
     message = typeof body.message === 'string' ? body.message.trim() : ''
+    honeypot = typeof body.company === 'string' ? body.company.trim() : ''
+    elapsedMs = typeof body.elapsedMs === 'number' ? body.elapsedMs : 0
   } catch {
     return new Response(JSON.stringify({ error: 'Invalid JSON in request body' }), {
       status: 400,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    })
+  }
+
+  // Anti-spam: honeypot filled or form submitted too fast => silently accept, never send.
+  if (honeypot.length > 0 || elapsedMs < 2000) {
+    console.warn('Contact submission rejected by anti-spam', { honeypot: honeypot.length > 0, elapsedMs })
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    })
+  }
+
+  // Basic content heuristics against link-spam
+  const linkCount = (message.match(/https?:\/\//gi) ?? []).length
+  if (linkCount > 3) {
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })
   }
