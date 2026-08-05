@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, useRef, useEffect, FormEvent } from "react";
 import { z } from "zod";
 import { Copy, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -20,6 +20,13 @@ const ContactSection = () => {
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [copied, setCopied] = useState(false);
+  // Anti-spam: honeypot field (invisible to humans) + minimum fill time
+  const [company, setCompany] = useState("");
+  const mountedAt = useRef<number>(Date.now());
+
+  useEffect(() => {
+    mountedAt.current = Date.now();
+  }, []);
 
   const copy = async () => {
     try {
@@ -39,7 +46,11 @@ const ContactSection = () => {
     setSubmitting(true);
     try {
       const { data, error } = await supabase.functions.invoke("submit-contact", {
-        body: parsed.data,
+        body: {
+          ...parsed.data,
+          company,
+          elapsedMs: Date.now() - mountedAt.current,
+        },
       });
       if (error || !data?.success) throw error ?? new Error("send_failed");
 
