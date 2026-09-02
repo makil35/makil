@@ -6,9 +6,14 @@ import { ROUTES, type Lang, type RouteKey } from "@/lib/routes";
 const SITE_URL = "https://makil.fr";
 
 interface SeoOptions {
-  routeKey: RouteKey;
+  /** Known public route; omit and use `path` for utility routes. */
+  routeKey?: RouteKey;
+  /** Explicit path for routes not present in ROUTES (e.g. /unsubscribe). */
+  path?: string;
   titleKey: string;
   descriptionKey: string;
+  /** Keep utility/error pages out of the index. */
+  noindex?: boolean;
 }
 
 const upsertMeta = (
