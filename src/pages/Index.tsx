@@ -243,7 +243,7 @@ const Index = () => {
           <div className="container relative z-10 mx-auto px-6 lg:px-10">
             <Reveal className="max-w-2xl space-y-6">
               <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
-                <Index_ n="05" />
+                <Index_ n="06" />
                 {t("home.acces.kicker")}
               </p>
               <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
