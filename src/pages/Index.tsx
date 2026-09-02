@@ -6,6 +6,7 @@ import CookieConsent from "@/components/CookieConsent";
 import Reveal from "@/components/Reveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -210,6 +211,9 @@ const Index = () => {
               <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.acces.desc")}</p>
               <a
                 href="#contact"
+                onClick={(e) => {
+                  if (scrollToSection("contact")) e.preventDefault();
+                }}
                 className="inline-flex items-center gap-3 mt-6 px-8 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-foreground hover:text-background transition-smooth"
               >
                 {t("home.acces.cta")}
