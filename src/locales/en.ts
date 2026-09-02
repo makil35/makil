@@ -72,6 +72,20 @@ export default {
   "home.profil.stat3.desc": "Clients introduced, never solicited",
   "home.profil.quote": "\u201cLuxury is not what one owns. It is what one no longer has to think about.\u201d",
   "home.profil.sign": "Makil-Herrero Richard",
+  "home.profil.portrait.alt": "Editorial portrait, Makil-Herrero Richard",
+
+  // Home · Credibility
+  "home.credibility.kicker": "Principles",
+  "home.credibility.title1": "What governs",
+  "home.credibility.title2": "every engagement.",
+  "home.credibility.item1": "I answer personally",
+  "home.credibility.item1.desc": "No assistants, no account managers. One name, one direct line.",
+  "home.credibility.item2": "Each engagement is limited",
+  "home.credibility.item2.desc": "I take on only a handful of clients each year, so each one has my full attention.",
+  "home.credibility.item3": "Discretion is the practice",
+  "home.credibility.item3.desc": "What is known stays between us. What is unknown stays that way.",
+  "home.credibility.item4": "Presence before promise",
+  "home.credibility.item4.desc": "The right door, the right moment, the right silence. Without noise.",
 
   // Home · Univers
   "home.univers.kicker": "MAKIL",
