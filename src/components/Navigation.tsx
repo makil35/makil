@@ -77,7 +77,9 @@ const Navigation = () => {
               <a
                 key={link.id}
                 href={`${home}#${link.id}`}
+                onClick={(e) => handleAnchor(e, link.id)}
                 aria-current={active === link.id ? "true" : undefined}
+
                 className={`font-body text-[11px] tracking-[0.3em] uppercase transition-smooth ${
                   active === link.id ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                 }`}
