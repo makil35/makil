@@ -51,6 +51,8 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
+    background-color: hsl(var(--background));
+    color-scheme: light;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -63,8 +65,14 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    min-height: 100%;
     text-rendering: optimizeLegibility;
     font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  #root {
+    min-height: 100vh;
+    background-color: hsl(var(--background));
   }
 
   h1, h2, h3, h4, h5, h6 {
