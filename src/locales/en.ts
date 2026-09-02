@@ -24,7 +24,7 @@ export default {
   "footer.legal": "Legal notice",
   "footer.privacy": "Privacy",
   "footer.makilPrivate": "Makil Private",
-  "footer.discoverExperiences": "Discover our experiences",
+  "footer.discoverExperiences": "By invitation only",
 
   // Cookie Consent
   "cookie.title": "Cookie Management",
