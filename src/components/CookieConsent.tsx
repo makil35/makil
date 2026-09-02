@@ -17,7 +17,7 @@ const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>({
-    essential: true, // Toujours activé
+    essential: true, // Always active
     analytics: false,
     marketing: false,
   });

@@ -10,25 +10,25 @@ interface Props {
 }
 
 const ContactConfirmationEmail = ({ name }: Props) => (
-  <Html lang="fr" dir="ltr">
+  <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Votre demande a bien été reçue — MAKIL</Preview>
+    <Preview>Your message has been received · MAKIL</Preview>
     <Body style={main}>
       <Container style={container}>
         <Heading style={h1}>MAKIL</Heading>
         <Hr style={hr} />
         <Text style={text}>
-          {name ? `${name},` : 'Bonjour,'}
+          {name ? `${name},` : 'Hello,'}
         </Text>
         <Text style={text}>
-          Votre message a bien été reçu. Richard vous reviendra personnellement dans les plus brefs délais.
+          Your message has been received. Richard will come back to you personally, shortly.
         </Text>
         <Text style={text}>
-          Avec mes plus cordiales salutations,
+          With my warmest regards,
         </Text>
         <Text style={signature}>Makil-Herrero Richard</Text>
         <Hr style={hr} />
-        <Text style={footer}>MAKIL — Sur invitation uniquement</Text>
+        <Text style={footer}>MAKIL · By invitation only</Text>
       </Container>
     </Body>
   </Html>
@@ -36,8 +36,8 @@ const ContactConfirmationEmail = ({ name }: Props) => (
 
 export const template = {
   component: ContactConfirmationEmail,
-  subject: 'Votre demande a bien été reçue — MAKIL',
-  displayName: 'Confirmation contact (visiteur)',
+  subject: 'Your message has been received · MAKIL',
+  displayName: 'Contact confirmation (visitor)',
   previewData: { name: 'Jane' },
 } satisfies TemplateEntry
 

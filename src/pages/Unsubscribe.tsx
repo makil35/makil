@@ -54,23 +54,23 @@ const Unsubscribe = () => {
       <main className="flex-1 flex items-center justify-center px-6 py-32">
         <div className="max-w-md text-center space-y-6">
           <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">MAKIL</p>
-          <h1 className="text-3xl font-display">Désabonnement</h1>
-          {state === "loading" && <p className="text-sm text-muted-foreground">Vérification…</p>}
+          <h1 className="text-3xl font-display">Unsubscribe</h1>
+          {state === "loading" && <p className="text-sm text-muted-foreground">Checking…</p>}
           {state === "valid" && (
             <>
-              <p className="text-sm text-muted-foreground">Confirmez-vous votre désabonnement de nos communications ?</p>
+              <p className="text-sm text-muted-foreground">Do you confirm that you wish to unsubscribe from our correspondence?</p>
               <button onClick={confirm} className="inline-flex items-center gap-3 mt-4 px-8 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase hover:bg-foreground hover:text-background transition-smooth">
-                Confirmer le désabonnement
+                Confirm unsubscribe
               </button>
             </>
           )}
-          {state === "submitting" && <p className="text-sm text-muted-foreground">Traitement…</p>}
-          {state === "success" && <p className="text-sm text-muted-foreground">Vous êtes désabonné. Nous ne vous contacterons plus.</p>}
-          {state === "already" && <p className="text-sm text-muted-foreground">Cette adresse est déjà désabonnée.</p>}
-          {state === "invalid" && <p className="text-sm text-muted-foreground">Lien invalide ou expiré.</p>}
-          {state === "error" && <p className="text-sm text-muted-foreground">Une erreur est survenue. Veuillez réessayer.</p>}
+          {state === "submitting" && <p className="text-sm text-muted-foreground">Processing…</p>}
+          {state === "success" && <p className="text-sm text-muted-foreground">You have been unsubscribed. We will not contact you again.</p>}
+          {state === "already" && <p className="text-sm text-muted-foreground">This address is already unsubscribed.</p>}
+          {state === "invalid" && <p className="text-sm text-muted-foreground">This link is invalid or has expired.</p>}
+          {state === "error" && <p className="text-sm text-muted-foreground">Something went wrong. Please try again.</p>}
           <div className="pt-8">
-            <Link to="/" className="text-[11px] font-body tracking-[0.3em] uppercase text-foreground/70 hover:text-foreground transition-smooth">Retour à l'accueil</Link>
+            <Link to="/" className="text-[11px] font-body tracking-[0.3em] uppercase text-foreground/70 hover:text-foreground transition-smooth">Back to home</Link>
           </div>
         </div>
       </main>
