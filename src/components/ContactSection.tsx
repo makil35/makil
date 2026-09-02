@@ -162,7 +162,7 @@ const ContactSection = () => {
             <button
               type="submit"
               disabled={submitting}
-              className="inline-flex items-center gap-3 px-10 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-accent hover:text-muted-foreground-foreground transition-smooth disabled:opacity-50"
+              className="inline-flex items-center gap-3 px-10 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-foreground hover:text-background transition-smooth disabled:opacity-50"
             >
               {submitting ? t("contact.sending") : t("contact.send")}
             </button>
