@@ -8,6 +8,7 @@ export default {
   "seo.privacy.description": "MAKIL privacy policy: data protection and absolute discretion for an exceptional private clientele.",
 
   // Navigation
+  "nav.profil": "Profile",
   "nav.univers": "World",
   "nav.approche": "Approach",
   "nav.vision": "Vision",
@@ -44,12 +45,28 @@ export default {
   "cookie.privacyLink": "Privacy policy",
 
   // Home — Hero
-  "home.hero.kicker": "Makil-Herrero Richard",
-  "home.hero.title1": "The art of making",
-  "home.hero.title2": "the exceptional, effortless.",
-  "home.hero.desc": "I support a discerning clientele in achieving the impossible. Every request is unique. Every experience, unforgettable.",
+  "home.hero.kicker": "Makil-Herrero Richard — Paris",
+  "home.hero.role": "Private adviser · Art de vivre · Bespoke experiences",
+  "home.hero.title1": "Makil-Herrero",
+  "home.hero.title2": "Richard.",
+  "home.hero.desc": "I am a private adviser to a discerning international clientele. I design, arrange and protect the experiences that matter most to them — with absolute discretion.",
   "home.hero.cta": "Discover my world",
   "home.hero.alt": "Portrait of Makil-Herrero Richard",
+
+  // Home — Profile
+  "home.profil.kicker": "Profile",
+  "home.profil.title1": "A single name,",
+  "home.profil.title2": "a personal engagement.",
+  "home.profil.p1": "For more than a decade I have worked alongside families, founders and public figures whose time is their rarest asset. I do not run an agency: you speak to me, and I answer personally.",
+  "home.profil.p2": "My work sits between Paris, Monaco, London, Geneva and Dubai — wherever my clients need a trusted presence. Each engagement is limited in number, so that each one remains exceptional.",
+  "home.profil.stat1": "10+ years",
+  "home.profil.stat1.desc": "Serving private clients",
+  "home.profil.stat2": "6 cities",
+  "home.profil.stat2.desc": "Paris · Monaco · London · Geneva · Dubai",
+  "home.profil.stat3": "By referral",
+  "home.profil.stat3.desc": "Clients introduced, never solicited",
+  "home.profil.quote": "\u201cLuxury is not what one owns. It is what one no longer has to think about.\u201d",
+  "home.profil.sign": "Makil-Herrero Richard",
 
   // Home — Univers
   "home.univers.kicker": "MAKIL",
