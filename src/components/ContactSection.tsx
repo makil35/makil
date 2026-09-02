@@ -100,7 +100,7 @@ const ContactSection = () => {
 
         {/* Form */}
         <form onSubmit={onSubmit} className="space-y-6">
-          {/* Honeypot — hidden from humans, bots tend to fill it */}
+          {/* Honeypot · hidden from humans, bots tend to fill it */}
           <div className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
             <label htmlFor="c-company">Company</label>
             <input

@@ -35,7 +35,7 @@ const Footer = () => {
               MAKIL
             </button>
             <p className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground">
-              © {new Date().getFullYear()} MAKIL — {t("footer.rights")}
+              © {new Date().getFullYear()} MAKIL · {t("footer.rights")}
             </p>
             <div className="flex gap-6 text-[11px] font-body tracking-[0.2em] uppercase">
               <Link to={localizedPath("legal")} className="text-muted-foreground hover:text-foreground transition-smooth">

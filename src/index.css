@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* MAKIL — Ultra-luxe monochrome (no gold), dark by default */
+    /* MAKIL · Ultra-luxe monochrome (no gold), dark by default */
     --background: 0 0% 4%;          /* Deep black */
     --foreground: 0 0% 95%;         /* Neutral off-white */
 
