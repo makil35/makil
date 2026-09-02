@@ -82,7 +82,7 @@ const Index = () => {
 
       <main>
         {/* PROFILE */}
-        <section id="profil" className="scroll-mt-24 py-32 sm:py-44 bg-background">
+        <section id="profil" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
             <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
               <Reveal className="space-y-6">
@@ -129,7 +129,7 @@ const Index = () => {
         </section>
 
         {/* SIGNATURE */}
-        <section id="univers" className="scroll-mt-24 py-32 sm:py-44 bg-background">
+        <section id="univers" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
             <Reveal className="max-w-2xl space-y-6">
               <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -152,7 +152,7 @@ const Index = () => {
         </section>
 
         {/* APPROCHE */}
-        <section id="approche" className="scroll-mt-24 py-32 sm:py-44 bg-background">
+        <section id="approche" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
             <Reveal className="text-center space-y-4 mb-20">
               <p className="flex items-center justify-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -179,7 +179,7 @@ const Index = () => {
         </section>
 
         {/* VISION */}
-        <section id="vision" className="scroll-mt-24 py-32 sm:py-44 bg-background">
+        <section id="vision" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
             <Reveal className="max-w-2xl ml-auto text-left space-y-6">
               <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -196,7 +196,7 @@ const Index = () => {
         </section>
 
         {/* ACCÈS */}
-        <section id="acces" className="scroll-mt-24 py-32 sm:py-44 bg-background atmosphere grain relative overflow-hidden">
+        <section id="acces" className="scroll-mt-24 py-24 sm:py-32 bg-background atmosphere grain relative overflow-hidden">
           <div className="container relative z-10 mx-auto px-6 lg:px-10">
             <Reveal className="max-w-2xl space-y-6">
               <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
