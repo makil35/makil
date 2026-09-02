@@ -23,14 +23,8 @@ const Index = () => {
 
       {/* HERO */}
       <section className="relative flex min-h-svh items-end overflow-hidden bg-background">
-        <img
-          src={portrait}
-          alt={t("home.hero.alt")}
-          className="absolute inset-0 h-full w-full object-cover object-[50%_20%] grayscale contrast-110 lg:object-[70%_20%]"
-          loading="eager"
-        />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20 lg:bg-gradient-to-r lg:from-background lg:via-background/70 lg:to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20"
           aria-hidden="true"
         />
 
