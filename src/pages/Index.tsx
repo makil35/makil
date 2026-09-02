@@ -23,10 +23,9 @@ const Index = () => {
       <Navigation />
 
       {/* HERO */}
-      <section className="relative bg-background pt-20">
-        <div className="container mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-14 lg:py-24 lg:min-h-[calc(100svh-5rem)]">
-            <div className="order-2 lg:order-1 max-w-xl space-y-7">
+      <section className="relative min-h-[calc(100svh-1.5rem)] overflow-hidden bg-background pt-20">
+        <div className="container relative mx-auto min-h-[calc(100svh-6.5rem)] px-6 lg:px-10">
+          <div className="relative z-20 flex min-h-[calc(100svh-6.5rem)] max-w-xl flex-col justify-end space-y-6 pb-14 sm:pb-20 lg:justify-center lg:pb-0">
               <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
                 {t("home.hero.kicker")}
               </p>
@@ -44,21 +43,18 @@ const Index = () => {
                 </span>
                 <ChevronDown size={18} className="text-accent group-hover:translate-y-1 transition-smooth" />
               </a>
-            </div>
-
-            <div className="order-1 lg:order-2 relative">
-              <img
-                src={portrait}
-                alt={t("home.hero.alt")}
-                className="w-full h-[46vh] sm:h-[60vh] lg:h-[72vh] object-cover object-top grayscale contrast-110"
-                loading="eager"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"
-                aria-hidden="true"
-              />
-            </div>
           </div>
+
+          <img
+            src={portrait}
+            alt={t("home.hero.alt")}
+            className="absolute left-1/2 top-8 z-0 h-[55svh] w-auto max-w-none -translate-x-1/2 object-contain grayscale contrast-110 sm:h-[62svh] lg:left-auto lg:right-0 lg:top-auto lg:bottom-0 lg:h-[88%] lg:translate-x-0"
+            loading="eager"
+          />
+          <div
+            className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r lg:from-background lg:via-background/20 lg:to-transparent"
+            aria-hidden="true"
+          />
         </div>
       </section>
 
