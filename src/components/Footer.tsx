@@ -23,7 +23,7 @@ const Footer = () => {
       </div>
 
       {/* Main footer */}
-      <div className="bg-background border-t border-border/40">
+      <div className="bg-background">
         <div className="container mx-auto px-6 lg:px-10 py-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <button
