@@ -46,7 +46,6 @@ const Unsubscribe = () => {
         <div className="max-w-md text-center space-y-6">
           <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">MAKIL</p>
           <h1 className="text-3xl font-display">Désabonnement</h1>
-          <div className="w-12 h-px bg-foreground/25 mx-auto" />
           {state === "loading" && <p className="text-sm text-muted-foreground">Vérification…</p>}
           {state === "valid" && (
             <>
