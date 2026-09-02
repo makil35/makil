@@ -86,8 +86,8 @@ const Index = () => {
         {/* PROFILE */}
         <section id="profil" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
-            <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
-              <Reveal className="space-y-6">
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-start">
+              <Reveal className="order-2 lg:order-1 space-y-6">
                 <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
                   <Index_ n="01" />
                   {t("home.profil.kicker")}
@@ -99,18 +99,16 @@ const Index = () => {
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p1")}</p>
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p2")}</p>
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p3")}</p>
-              </Reveal>
 
-              <Reveal delay={140} className="flex flex-col justify-between gap-12">
-                <dl className="space-y-8">
+                <dl className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8">
                   {[
                     ["home.profil.stat1", "home.profil.stat1.desc"],
                     ["home.profil.stat2", "home.profil.stat2.desc"],
                     ["home.profil.stat3", "home.profil.stat3.desc"],
                   ].map(([k, d]) => (
-                    <div key={k} className="pt-5">
-                      <dt className="font-display text-xl text-foreground">{t(k)}</dt>
-                      <dd className="mt-2 text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground">
+                    <div key={k}>
+                      <dt className="font-display text-lg text-foreground">{t(k)}</dt>
+                      <dd className="mt-2 text-[10px] font-body tracking-[0.18em] uppercase text-muted-foreground">
                         {t(d)}
                       </dd>
                     </div>
@@ -125,6 +123,19 @@ const Index = () => {
                     {t("home.profil.sign")}
                   </figcaption>
                 </figure>
+              </Reveal>
+
+              <Reveal delay={160} className="order-1 lg:order-2">
+                <div className="relative aspect-[4/5] w-full max-w-md lg:max-w-none mx-auto overflow-hidden bg-muted">
+                  <img
+                    src={portraitEditorial}
+                    alt={t("home.profil.portrait.alt")}
+                    loading="lazy"
+                    width={1024}
+                    height={1280}
+                    className="h-full w-full object-cover grayscale"
+                  />
+                </div>
               </Reveal>
             </div>
           </div>
