@@ -186,6 +186,9 @@ export default {
   "privacy.s10.title": "10. Complaints",
   "privacy.s10.p1a": "You may lodge a complaint with the CNIL:",
 
+  // Accessibility
+  "a11y.skip": "Skip to content",
+
   // Not Found
   "notfound.title": "404",
   "notfound.subtitle": "This page does not exist",
