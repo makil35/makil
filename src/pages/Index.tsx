@@ -86,8 +86,8 @@ const Index = () => {
         {/* PROFILE */}
         <section id="profil" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-start">
-              <Reveal className="order-2 lg:order-1 space-y-6">
+            <div className="max-w-2xl space-y-6">
+              <Reveal className="space-y-6">
                 <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
                   <Index_ n="01" />
                   {t("home.profil.kicker")}
@@ -123,19 +123,6 @@ const Index = () => {
                     {t("home.profil.sign")}
                   </figcaption>
                 </figure>
-              </Reveal>
-
-              <Reveal delay={160} className="order-1 lg:order-2">
-                <div className="relative aspect-square w-full max-w-sm lg:max-w-md mx-auto overflow-hidden">
-                  <img
-                    src={richardPortrait.url}
-                    alt={t("home.profil.portrait.alt")}
-                    loading="lazy"
-                    width={1024}
-                    height={1024}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
               </Reveal>
             </div>
           </div>
