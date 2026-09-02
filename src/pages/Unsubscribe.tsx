@@ -46,12 +46,12 @@ const Unsubscribe = () => {
         <div className="max-w-md text-center space-y-6">
           <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">MAKIL</p>
           <h1 className="text-3xl font-display">Désabonnement</h1>
-          <div className="w-12 h-px bg-accent mx-auto" />
+          <div className="w-12 h-px bg-foreground/25 mx-auto" />
           {state === "loading" && <p className="text-sm text-muted-foreground">Vérification…</p>}
           {state === "valid" && (
             <>
               <p className="text-sm text-muted-foreground">Confirmez-vous votre désabonnement de nos communications ?</p>
-              <button onClick={confirm} className="inline-flex items-center gap-3 mt-4 px-8 py-4 border border-accent text-[11px] font-body tracking-[0.3em] uppercase hover:bg-accent hover:text-accent-foreground transition-smooth">
+              <button onClick={confirm} className="inline-flex items-center gap-3 mt-4 px-8 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase hover:bg-accent hover:text-muted-foreground-foreground transition-smooth">
                 Confirmer le désabonnement
               </button>
             </>
@@ -62,7 +62,7 @@ const Unsubscribe = () => {
           {state === "invalid" && <p className="text-sm text-muted-foreground">Lien invalide ou expiré.</p>}
           {state === "error" && <p className="text-sm text-muted-foreground">Une erreur est survenue. Veuillez réessayer.</p>}
           <div className="pt-8">
-            <Link to="/" className="text-[11px] font-body tracking-[0.3em] uppercase text-accent hover:text-foreground transition-smooth">Retour à l'accueil</Link>
+            <Link to="/" className="text-[11px] font-body tracking-[0.3em] uppercase text-foreground/70 hover:text-foreground transition-smooth">Retour à l'accueil</Link>
           </div>
         </div>
       </main>

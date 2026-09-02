@@ -29,7 +29,7 @@ const PolitiqueConfidentialite = () => {
             <section>
               <p>
                 {t("privacy.intro")} (
-                <Link to={homePath} className="text-accent hover:underline">{siteLabel}</Link>)
+                <Link to={homePath} className="text-foreground/80 hover:text-foreground underline underline-offset-4">{siteLabel}</Link>)
               </p>
               <p className="mt-3">
                 <strong>{t("privacy.lastUpdate")}</strong> {new Date().toLocaleDateString(locale)}
@@ -41,7 +41,7 @@ const PolitiqueConfidentialite = () => {
               <p>{t("privacy.s1.p1")}</p>
               <p className="mt-2">
                 <strong>{t("privacy.s1.contact")}</strong>{" "}
-                <a href="mailto:richard@makil-private.com" className="text-accent hover:underline">richard@makil-private.com</a>
+                <a href="mailto:richard@makil-private.com" className="text-foreground/80 hover:text-foreground underline underline-offset-4">richard@makil-private.com</a>
               </p>
             </section>
 
@@ -88,7 +88,7 @@ const PolitiqueConfidentialite = () => {
               <p className="mb-3">{t("privacy.s7.p1")}</p>
               <p>
                 {t("privacy.s7.p2a")}{" "}
-                <a href="mailto:richard@makil-private.com" className="text-accent hover:underline">richard@makil-private.com</a>.
+                <a href="mailto:richard@makil-private.com" className="text-foreground/80 hover:text-foreground underline underline-offset-4">richard@makil-private.com</a>.
               </p>
             </section>
 
@@ -101,7 +101,7 @@ const PolitiqueConfidentialite = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("privacy.s9.title")}</h2>
               <p>
                 {t("privacy.s9.p1a")}{" "}
-                <Link to={homePath} className="text-accent hover:underline">{siteLabel}</Link>{" "}
+                <Link to={homePath} className="text-foreground/80 hover:text-foreground underline underline-offset-4">{siteLabel}</Link>{" "}
                 {t("privacy.s9.p1b")}
               </p>
             </section>
@@ -110,7 +110,7 @@ const PolitiqueConfidentialite = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("privacy.s10.title")}</h2>
               <p>
                 {t("privacy.s10.p1a")}{" "}
-                <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground underline underline-offset-4">
                   www.cnil.fr
                 </a>.
               </p>

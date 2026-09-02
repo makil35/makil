@@ -75,7 +75,7 @@ const ContactSection = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-foreground">
             {t("contact.title1")} <em className="italic">{t("contact.title2")}</em>
           </h2>
-          <div className="w-12 h-px bg-accent mx-auto" />
+          <div className="w-12 h-px bg-foreground/25 mx-auto" />
           <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl mx-auto pt-2">
             {t("contact.desc")}
           </p>
@@ -85,7 +85,7 @@ const ContactSection = () => {
         <div className="flex items-center justify-center gap-3 mb-14">
           <a
             href={`mailto:${EMAIL}`}
-            className="text-base sm:text-lg font-display tracking-wide text-foreground hover:text-accent transition-smooth"
+            className="text-base sm:text-lg font-display tracking-wide text-foreground hover:text-muted-foreground transition-smooth"
           >
             {EMAIL}
           </a>
@@ -126,7 +126,7 @@ const ContactSection = () => {
                 maxLength={120}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full bg-transparent border-b border-border/60 focus:border-accent outline-none py-2 text-sm font-body text-foreground transition-colors"
+                className="w-full bg-transparent border-b border-border/60 focus:border-foreground/60 outline-none py-2 text-sm font-body text-foreground transition-colors"
               />
             </div>
             <div>
@@ -140,7 +140,7 @@ const ContactSection = () => {
                 maxLength={255}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-transparent border-b border-border/60 focus:border-accent outline-none py-2 text-sm font-body text-foreground transition-colors"
+                className="w-full bg-transparent border-b border-border/60 focus:border-foreground/60 outline-none py-2 text-sm font-body text-foreground transition-colors"
               />
             </div>
           </div>
@@ -155,14 +155,14 @@ const ContactSection = () => {
               rows={5}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full bg-transparent border-b border-border/60 focus:border-accent outline-none py-2 text-sm font-body text-foreground resize-none transition-colors"
+              className="w-full bg-transparent border-b border-border/60 focus:border-foreground/60 outline-none py-2 text-sm font-body text-foreground resize-none transition-colors"
             />
           </div>
           <div className="flex justify-center pt-4">
             <button
               type="submit"
               disabled={submitting}
-              className="inline-flex items-center gap-3 px-10 py-4 border border-accent text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-accent hover:text-accent-foreground transition-smooth disabled:opacity-50"
+              className="inline-flex items-center gap-3 px-10 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-accent hover:text-muted-foreground-foreground transition-smooth disabled:opacity-50"
             >
               {submitting ? t("contact.sending") : t("contact.send")}
             </button>
