@@ -113,7 +113,12 @@ export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey,
     upsertMetaName("twitter:image", `${SITE_URL}/og-image.jpg`);
 
     // Robots & ultra-luxe keywords per page
-    upsertMetaName("robots", "index, follow, max-image-preview:large, max-snippet:-1");
+    upsertMetaName(
+      "robots",
+      noindex
+        ? "noindex, follow"
+        : "index, follow, max-image-preview:large, max-snippet:-1"
+    );
     const keywords = "ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Saint-Tropez, French Riviera, Geneva, London, Dubai";
     upsertMetaName("keywords", keywords);
 
