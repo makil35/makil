@@ -26,7 +26,7 @@ const ContactConfirmationEmail = ({ name }: Props) => (
         <Text style={text}>
           Avec mes plus cordiales salutations,
         </Text>
-        <Text style={signature}>Richard Makil-Herrero</Text>
+        <Text style={signature}>Makil-Herrero Richard</Text>
         <Hr style={hr} />
         <Text style={footer}>MAKIL — Sur invitation uniquement</Text>
       </Container>
