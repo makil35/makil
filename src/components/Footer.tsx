@@ -8,13 +8,13 @@ const Footer = () => {
   return (
     <footer>
       {/* Makil Private banner */}
-      <div className="bg-black">
+      <div className="bg-foreground">
         <div className="container mx-auto px-6 lg:px-10 py-12">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-[11px] font-body tracking-[0.4em] uppercase text-white/60">
+            <span className="text-[11px] font-body tracking-[0.4em] uppercase text-background/70">
               {t("footer.makilPrivate")}
             </span>
-            <span className="inline-flex items-center gap-3 text-[11px] font-body tracking-[0.3em] uppercase text-white/40">
+            <span className="inline-flex items-center gap-3 text-[11px] font-body tracking-[0.3em] uppercase text-background/50">
               {t("footer.discoverExperiences")}
               <ArrowRight size={14} />
             </span>
