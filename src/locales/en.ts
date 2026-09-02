@@ -1,6 +1,6 @@
 export default {
   // SEO
-  "seo.home.title": "MAKIL · Confidential ultra-luxury · Makil-Herrero Richard",
+  "seo.home.title": "Makil-Herrero Richard · MAKIL · Private Adviser, Ultra-Luxury",
   "seo.home.description": "A private signature by Makil-Herrero Richard. Discretion, presence, and the art of making the exceptional feel natural. By introduction only.",
   "seo.legal.title": "Legal notice · MAKIL · Confidential ultra-luxury",
   "seo.legal.description": "Legal notice for MAKIL, a private signature by Makil-Herrero Richard. Publisher, hosting and contact details.",
