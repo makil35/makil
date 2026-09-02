@@ -42,9 +42,15 @@ const Navigation = () => {
     const target = document.getElementById(id);
     if (!target) return;
     e.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    // Sections carry large editorial padding: land on the content, not on the
+    // empty top padding (which reads as a blank black screen).
+    const padTop = parseFloat(getComputedStyle(target).paddingTop) || 0;
+    const headerOffset = 110;
+    const y = target.getBoundingClientRect().top + window.scrollY + padTop - headerOffset;
+    window.scrollTo({ top: Math.max(y, 0), behavior: "smooth" });
     window.history.replaceState(null, "", `${home}#${id}`);
   };
+
 
 
   return (
