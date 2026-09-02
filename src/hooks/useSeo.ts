@@ -73,7 +73,7 @@ const upsertMetaProperty = (property: string, content: string) => {
   );
 };
 
-export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
+export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey, noindex }: SeoOptions) => {
   const { t, language } = useLanguage();
   const location = useLocation();
 
