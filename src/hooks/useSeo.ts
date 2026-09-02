@@ -141,5 +141,5 @@ export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey,
       isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
       about: { "@type": "Thing", name: "Confidential ultra-luxury" },
     });
-  }, [routeKey, titleKey, descriptionKey, language, location.pathname, t]);
+  }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, language, location.pathname, t]);
 };
