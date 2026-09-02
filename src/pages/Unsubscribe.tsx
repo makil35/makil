@@ -51,7 +51,7 @@ const Unsubscribe = () => {
           {state === "valid" && (
             <>
               <p className="text-sm text-muted-foreground">Confirmez-vous votre désabonnement de nos communications ?</p>
-              <button onClick={confirm} className="inline-flex items-center gap-3 mt-4 px-8 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase hover:bg-accent hover:text-muted-foreground-foreground transition-smooth">
+              <button onClick={confirm} className="inline-flex items-center gap-3 mt-4 px-8 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase hover:bg-foreground hover:text-background transition-smooth">
                 Confirmer le désabonnement
               </button>
             </>
