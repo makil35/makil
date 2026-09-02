@@ -56,7 +56,7 @@ export default {
   "home.hero.title2": "Richard.",
   "home.hero.desc": "I am a private adviser to a small circle of individuals who value what cannot be bought: time, trust, and the certainty that nothing is left to chance.",
   "home.hero.cta": "Discover my world",
-  "home.hero.alt": "Portrait of Makil-Herrero Richard",
+  
 
   // Home · Profile
   "home.profil.kicker": "Profile",
@@ -73,7 +73,7 @@ export default {
   "home.profil.stat3.desc": "Clients introduced, never solicited",
   "home.profil.quote": "\u201cLuxury is not what one owns. It is what one no longer has to think about.\u201d",
   "home.profil.sign": "Makil-Herrero Richard",
-  "home.profil.portrait.alt": "Editorial portrait, Makil-Herrero Richard",
+
 
   // Home · Credibility
   "home.credibility.kicker": "Principles",
@@ -94,7 +94,6 @@ export default {
   "home.univers.title2": "A way of being.",
   "home.univers.desc": "Makil is how I move through the world: quietly, precisely, and only for those I choose to work with. No offices. No portfolios. Just a direct line to the people and places that matter.",
   "home.univers.cta": "Discover my approach",
-  "home.univers.alt": "Luxurious seaside terrace view",
 
   // Home · Approach
   "home.approche.kicker": "My approach",
@@ -115,7 +114,6 @@ export default {
   "home.vision.title1": "What I protect",
   "home.vision.title2": "is your attention.",
   "home.vision.desc": "I do not sell experiences. I remove what distracts from them. My work is invisible by design: the right preparation, the right silence, the right timing. You are simply there.",
-  "home.vision.alt": "Gloved hand opening a luxury car door",
 
   // Home · Access
   "home.acces.kicker": "Access",
