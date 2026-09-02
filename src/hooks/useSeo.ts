@@ -6,9 +6,14 @@ import { ROUTES, type Lang, type RouteKey } from "@/lib/routes";
 const SITE_URL = "https://makil.fr";
 
 interface SeoOptions {
-  routeKey: RouteKey;
+  /** Known public route; omit and use `path` for utility routes. */
+  routeKey?: RouteKey;
+  /** Explicit path for routes not present in ROUTES (e.g. /unsubscribe). */
+  path?: string;
   titleKey: string;
   descriptionKey: string;
+  /** Keep utility/error pages out of the index. */
+  noindex?: boolean;
 }
 
 const upsertMeta = (
@@ -68,7 +73,7 @@ const upsertMetaProperty = (property: string, content: string) => {
   );
 };
 
-export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
+export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey, noindex }: SeoOptions) => {
   const { t, language } = useLanguage();
   const location = useLocation();
 
@@ -86,7 +91,7 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
 
     upsertMetaName("description", description);
 
-    const path = ROUTES[routeKey][lang];
+    const path = routeKey ? ROUTES[routeKey][lang] : (explicitPath ?? location.pathname);
     const canonical = `${SITE_URL}${path === "/" ? "/" : path}`;
     upsertLinkRel("canonical", null, canonical);
     upsertLinkRel("alternate", "en", canonical);
@@ -108,7 +113,12 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
     upsertMetaName("twitter:image", `${SITE_URL}/og-image.jpg`);
 
     // Robots & ultra-luxe keywords per page
-    upsertMetaName("robots", "index, follow, max-image-preview:large, max-snippet:-1");
+    upsertMetaName(
+      "robots",
+      noindex
+        ? "noindex, follow"
+        : "index, follow, max-image-preview:large, max-snippet:-1"
+    );
     const keywords = "ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Saint-Tropez, French Riviera, Geneva, London, Dubai";
     upsertMetaName("keywords", keywords);
 
@@ -131,5 +141,5 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
       isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
       about: { "@type": "Thing", name: "Confidential ultra-luxury" },
     });
-  }, [routeKey, titleKey, descriptionKey, language, location.pathname, t]);
+  }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, language, location.pathname, t]);
 };
