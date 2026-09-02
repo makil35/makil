@@ -83,8 +83,8 @@
 
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: hsl(var(--background)); }
-  ::-webkit-scrollbar-thumb { background: hsl(0 0% 20%); }
-  ::-webkit-scrollbar-thumb:hover { background: hsl(0 0% 30%); }
+  ::-webkit-scrollbar-thumb { background: hsl(0 0% 80%); }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(0 0% 65%); }
 }
 
 @layer utilities {
@@ -103,8 +103,8 @@
   /* Barely-there atmospheric depth behind the hero */
   .atmosphere {
     background:
-      radial-gradient(80% 60% at 15% 0%, hsl(0 0% 100% / 0.06), transparent 60%),
-      radial-gradient(60% 50% at 100% 100%, hsl(0 0% 100% / 0.035), transparent 60%);
+      radial-gradient(80% 60% at 15% 0%, hsl(0 0% 0% / 0.035), transparent 60%),
+      radial-gradient(60% 50% at 100% 100%, hsl(0 0% 0% / 0.02), transparent 60%);
   }
 
   /* Fine film grain, keeps large black areas from banding */
@@ -113,7 +113,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.035;
+    opacity: 0.02;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
