@@ -19,7 +19,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md"
       role="navigation"
       aria-label={t("nav.mainAria")}
     >
@@ -65,7 +65,7 @@ const Navigation = () => {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden py-6 border-t border-border/40">
+          <div className="lg:hidden py-6">
             <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <a

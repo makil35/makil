@@ -49,7 +49,7 @@ export default {
   "home.hero.role": "Private adviser · Art of living · Bespoke experiences",
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
-  "home.hero.desc": "I am a private adviser to a discerning international clientele. I design, arrange and protect the experiences that matter most to them · with absolute discretion.",
+  "home.hero.desc": "I am a private adviser to a discerning international clientele. I design, arrange and protect the experiences that matter most to them, with absolute discretion.",
   "home.hero.cta": "Discover my world",
   "home.hero.alt": "Portrait of Makil-Herrero Richard",
 
@@ -58,7 +58,7 @@ export default {
   "home.profil.title1": "A single name,",
   "home.profil.title2": "a personal engagement.",
   "home.profil.p1": "For more than a decade I have worked alongside families, founders and public figures whose time is their rarest asset. I do not run an agency: you speak to me, and I answer personally.",
-  "home.profil.p2": "My work sits between Paris, Monaco, London, Geneva and Dubai · wherever my clients need a trusted presence. Each engagement is limited in number, so that each one remains exceptional.",
+  "home.profil.p2": "My work sits between Paris, Monaco, London, Geneva and Dubai, wherever my clients need a trusted presence. Each engagement is limited in number, so that each one remains exceptional.",
   "home.profil.stat1": "10+ years",
   "home.profil.stat1.desc": "Serving private clients",
   "home.profil.stat2": "6 cities",

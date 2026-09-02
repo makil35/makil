@@ -67,7 +67,6 @@
   .text-gold { color: hsl(var(--accent)); }
   .border-gold { border-color: hsl(var(--accent)); }
 
-  /* Editorial hairlines & letterspacing for ultra-minimal luxury */
-  .rule-hairline { height: 1px; background: hsl(var(--foreground) / 0.25); }
+  /* Editorial letterspacing for ultra-minimal luxury */
   .tracking-luxe { letter-spacing: 0.42em; }
 }
