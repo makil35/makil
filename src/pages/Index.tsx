@@ -23,9 +23,10 @@ const Index = () => {
       <Navigation />
 
       {/* HERO */}
-      <section className="relative min-h-[calc(100svh-1.5rem)] overflow-hidden bg-background pt-20">
-        <div className="container relative mx-auto min-h-[calc(100svh-6.5rem)] px-6 lg:px-10">
-          <div className="relative z-20 flex min-h-[calc(100svh-6.5rem)] max-w-xl flex-col justify-end space-y-6 pb-14 sm:pb-20 lg:justify-center lg:pb-0">
+      <section className="relative overflow-hidden bg-background pt-24 pb-16 lg:pt-28 lg:pb-0">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="grid items-center gap-10 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-2 lg:gap-12">
+            <div className="order-2 flex max-w-xl flex-col justify-center space-y-6 lg:order-1">
               <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
                 {t("home.hero.kicker")}
               </p>
@@ -43,20 +44,20 @@ const Index = () => {
                 </span>
                 <ChevronDown size={18} className="text-accent group-hover:translate-y-1 transition-smooth" />
               </a>
-          </div>
+            </div>
 
-          <img
-            src={portrait}
-            alt={t("home.hero.alt")}
-            className="absolute left-1/2 top-8 z-0 h-[55svh] w-auto max-w-none -translate-x-1/2 object-contain grayscale contrast-110 sm:h-[62svh] lg:left-auto lg:right-0 lg:top-auto lg:bottom-0 lg:h-[88%] lg:translate-x-0"
-            loading="eager"
-          />
-          <div
-            className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r lg:from-background lg:via-background/20 lg:to-transparent"
-            aria-hidden="true"
-          />
+            <div className="order-1 flex justify-center lg:order-2 lg:h-[calc(100svh-7rem)] lg:items-end lg:justify-end">
+              <img
+                src={portrait}
+                alt={t("home.hero.alt")}
+                className="h-[40svh] w-auto max-w-full object-contain object-bottom grayscale contrast-110 sm:h-[48svh] lg:h-full"
+                loading="eager"
+              />
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* SIGNATURE */}
       <section id="univers" className="py-24 sm:py-32 bg-background border-t border-border/40">
