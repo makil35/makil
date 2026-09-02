@@ -32,6 +32,9 @@ const Index = () => {
               {t("home.hero.title1")} <br />
               <em className="italic">{t("home.hero.title2")}</em>
             </h1>
+            <p className="text-[10px] font-body tracking-[0.3em] uppercase text-foreground/60">
+              {t("home.hero.role")}
+            </p>
             <div className="w-16 rule-hairline" aria-hidden="true" />
             <p className="text-sm font-body text-muted-foreground leading-loose max-w-md">
               {t("home.hero.desc")}
