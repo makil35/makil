@@ -23,40 +23,41 @@ const Index = () => {
       <Navigation />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-background pt-24 pb-16 lg:pt-28 lg:pb-0">
-        <div className="container mx-auto px-6 lg:px-10">
-          <div className="grid items-center gap-10 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-2 lg:gap-12">
-            <div className="order-2 flex max-w-xl flex-col justify-center space-y-6 lg:order-1">
-              <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
-                {t("home.hero.kicker")}
-              </p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-normal leading-[1.05] text-foreground">
-                {t("home.hero.title1")} <br />
-                <em className="italic">{t("home.hero.title2")}</em>
-              </h1>
-              <div className="w-12 h-px bg-accent" aria-hidden="true" />
-              <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-md">
-                {t("home.hero.desc")}
-              </p>
-              <a href="#univers" className="inline-flex flex-col items-start gap-2 group pt-2">
-                <span className="text-[11px] font-body tracking-[0.3em] uppercase text-accent group-hover:text-foreground transition-smooth">
-                  {t("home.hero.cta")}
-                </span>
-                <ChevronDown size={18} className="text-accent group-hover:translate-y-1 transition-smooth" />
-              </a>
-            </div>
+      <section className="relative flex min-h-svh items-end overflow-hidden bg-background">
+        <img
+          src={portrait}
+          alt={t("home.hero.alt")}
+          className="absolute inset-0 h-full w-full object-cover object-[50%_20%] grayscale contrast-110 lg:object-[70%_20%]"
+          loading="eager"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20 lg:bg-gradient-to-r lg:from-background lg:via-background/70 lg:to-transparent"
+          aria-hidden="true"
+        />
 
-            <div className="order-1 flex justify-center lg:order-2 lg:h-[calc(100svh-7rem)] lg:items-end lg:justify-end">
-              <img
-                src={portrait}
-                alt={t("home.hero.alt")}
-                className="h-[40svh] w-auto max-w-full object-contain object-bottom grayscale contrast-110 sm:h-[48svh] lg:h-full"
-                loading="eager"
-              />
-            </div>
+        <div className="container relative z-10 mx-auto px-6 pb-20 lg:px-10 lg:pb-28">
+          <div className="max-w-xl space-y-6">
+            <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
+              {t("home.hero.kicker")}
+            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-normal leading-[1.05] text-foreground">
+              {t("home.hero.title1")} <br />
+              <em className="italic">{t("home.hero.title2")}</em>
+            </h1>
+            <div className="w-12 h-px bg-accent" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-md">
+              {t("home.hero.desc")}
+            </p>
+            <a href="#univers" className="inline-flex flex-col items-start gap-2 group pt-2">
+              <span className="text-[11px] font-body tracking-[0.3em] uppercase text-accent group-hover:text-foreground transition-smooth">
+                {t("home.hero.cta")}
+              </span>
+              <ChevronDown size={18} className="text-accent group-hover:translate-y-1 transition-smooth" />
+            </a>
           </div>
         </div>
       </section>
+
 
 
       {/* SIGNATURE */}
