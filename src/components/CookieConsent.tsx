@@ -52,7 +52,7 @@ const CookieConsent = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-3 sm:p-4 md:p-6 bg-card/95 backdrop-blur-lg border-t border-border shadow-elegant animate-in slide-in-from-bottom duration-500">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-3 sm:p-4 md:p-6 bg-card/95 backdrop-blur-lg shadow-elegant animate-in slide-in-from-bottom duration-500">
       <div className="container mx-auto max-w-6xl">
         {!showPreferences ? (
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 sm:gap-4">
@@ -168,7 +168,7 @@ const CookieConsent = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-3 pt-2 border-t border-border">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-3 pt-2">
               <Link
                 to={privacyPath}
                 className="text-xs sm:text-sm text-primary hover:text-primary/80 underline transition-colors text-center sm:text-left"
