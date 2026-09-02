@@ -7,6 +7,7 @@ import Reveal from "@/components/Reveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { scrollToSection } from "@/lib/scrollToSection";
+import portraitEditorial from "@/assets/portrait-editorial.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
