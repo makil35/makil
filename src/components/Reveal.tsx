@@ -28,17 +28,25 @@ const Reveal = ({ children, delay = 0, className = "", as = "div" }: RevealProps
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
             setVisible(true);
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0, rootMargin: "0px 0px -5% 0px" },
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+
+    // Safety net: never leave content invisible (e.g. anchor jumps, tall blocks)
+    const fallback = window.setTimeout(() => setVisible(true), 1200);
+
+    return () => {
+      window.clearTimeout(fallback);
+      observer.disconnect();
+    };
+
   }, []);
 
   const Tag = as as "div";

@@ -36,6 +36,17 @@ const Navigation = () => {
     { key: "nav.acces", id: "acces" },
   ];
 
+  const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    setIsOpen(false);
+    if (window.location.pathname !== home) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", `${home}#${id}`);
+  };
+
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-elegant ${
@@ -66,7 +77,9 @@ const Navigation = () => {
               <a
                 key={link.id}
                 href={`${home}#${link.id}`}
+                onClick={(e) => handleAnchor(e, link.id)}
                 aria-current={active === link.id ? "true" : undefined}
+
                 className={`font-body text-[11px] tracking-[0.3em] uppercase transition-smooth ${
                   active === link.id ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                 }`}
@@ -98,7 +111,8 @@ const Navigation = () => {
             <a
               key={link.id}
               href={`${home}#${link.id}`}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleAnchor(e, link.id)}
+
               style={{ transitionDelay: isOpen ? `${120 + i * 70}ms` : "0ms" }}
               className={`py-5 font-display text-2xl text-foreground transition-[opacity,transform] duration-700 ${
                 isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
