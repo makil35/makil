@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { detectLangFromPath, swapLangPath } from "@/lib/routes";
+import React, { useEffect } from "react";
+import en from "@/locales/en";
 import { LanguageContext, type Language } from "@/contexts/language-context";
 
 // Re-export the hook for backwards compatibility with existing imports.
@@ -11,39 +10,19 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const language: Language = detectLangFromPath(location.pathname);
-
-  const [translations, setTranslations] = useState<Record<string, string>>({});
+  const language: Language = "en";
 
   useEffect(() => {
-    let cancelled = false;
-    const loadTranslations = async () => {
-      const module = await import(`../locales/${language}.ts`);
-      if (!cancelled) setTranslations(module.default);
-    };
-    loadTranslations();
-    return () => {
-      cancelled = true;
-    };
-  }, [language]);
-
-  useEffect(() => {
-    localStorage.setItem("language", language);
     if (typeof document !== "undefined") {
-      document.documentElement.lang = language;
+      document.documentElement.lang = "en";
     }
-  }, [language]);
+  }, []);
 
-  const setLanguage = (lang: Language) => {
-    if (lang === language) return;
-    const target = swapLangPath(location.pathname, lang);
-    navigate(target + location.hash);
+  const setLanguage = (_lang: Language) => {
+    /* English-only site */
   };
 
-  const t = (key: string): string => translations[key] || key;
+  const t = (key: string): string => (en as Record<string, string>)[key] || key;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
