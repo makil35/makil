@@ -10,6 +10,7 @@ const Navigation = () => {
 
   const home = localizedPath("home");
   const navLinks = [
+    { key: "nav.profil", path: `${home}#profil` },
     { key: "nav.univers", path: `${home}#univers` },
     { key: "nav.approche", path: `${home}#approche` },
     { key: "nav.vision", path: `${home}#vision` },
