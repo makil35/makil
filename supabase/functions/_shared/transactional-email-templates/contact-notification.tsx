@@ -22,11 +22,11 @@ const ContactNotificationEmail = ({ name, email, message }: Props) => (
         <Hr style={hr} />
         <Section>
           <Text style={label}>Nom</Text>
-          <Text style={value}>{name ?? '—'}</Text>
+          <Text style={value}>{name ?? '·'}</Text>
           <Text style={label}>Email</Text>
-          <Text style={value}>{email ?? '—'}</Text>
+          <Text style={value}>{email ?? '·'}</Text>
           <Text style={label}>Message</Text>
-          <Text style={{ ...value, whiteSpace: 'pre-wrap' as const }}>{message ?? '—'}</Text>
+          <Text style={{ ...value, whiteSpace: 'pre-wrap' as const }}>{message ?? '·'}</Text>
         </Section>
         <Hr style={hr} />
         <Text style={footer}>Message envoyé depuis makil.fr</Text>
@@ -37,7 +37,7 @@ const ContactNotificationEmail = ({ name, email, message }: Props) => (
 
 export const template = {
   component: ContactNotificationEmail,
-  subject: (d: Record<string, any>) => `MAKIL — Nouvelle demande de ${d.name ?? 'visiteur'}`,
+  subject: (d: Record<string, any>) => `MAKIL · Nouvelle demande de ${d.name ?? 'visiteur'}`,
   displayName: 'Notification contact (admin)',
   to: 'richard@makil-private.com',
   previewData: { name: 'Jane Doe', email: 'jane@example.com', message: 'Bonjour, j\'aimerais échanger.' },
