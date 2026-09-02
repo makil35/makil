@@ -49,8 +49,55 @@ const Index = () => {
         </div>
       </section>
 
+      {/* PROFILE */}
+      <section id="profil" className="py-32 sm:py-44 bg-background border-t border-border/60">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+            <div className="space-y-6">
+              <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
+                {t("home.profil.kicker")}
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
+                {t("home.profil.title1")} <br />
+                <em className="italic">{t("home.profil.title2")}</em>
+              </h2>
+              <div className="w-16 rule-hairline" aria-hidden="true" />
+              <p className="text-sm font-body text-muted-foreground leading-loose">
+                {t("home.profil.p1")}
+              </p>
+              <p className="text-sm font-body text-muted-foreground leading-loose">
+                {t("home.profil.p2")}
+              </p>
+            </div>
 
+            <div className="flex flex-col justify-between gap-12">
+              <dl className="space-y-8">
+                {[
+                  ["home.profil.stat1", "home.profil.stat1.desc"],
+                  ["home.profil.stat2", "home.profil.stat2.desc"],
+                  ["home.profil.stat3", "home.profil.stat3.desc"],
+                ].map(([k, d]) => (
+                  <div key={k} className="border-t border-border/60 pt-5">
+                    <dt className="font-display text-xl text-foreground">{t(k)}</dt>
+                    <dd className="mt-2 text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground">
+                      {t(d)}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
 
+              <figure className="border-t border-border/60 pt-8">
+                <blockquote className="font-display italic text-lg sm:text-xl leading-relaxed text-foreground/90">
+                  {t("home.profil.quote")}
+                </blockquote>
+                <figcaption className="mt-5 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
+                  {t("home.profil.sign")}
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* SIGNATURE */}
       <section id="univers" className="py-32 sm:py-44 bg-background border-t border-border/60">
