@@ -126,14 +126,14 @@ const Index = () => {
               </Reveal>
 
               <Reveal delay={160} className="order-1 lg:order-2">
-                <div className="relative aspect-[4/5] w-full max-w-md lg:max-w-none mx-auto overflow-hidden bg-muted">
+                <div className="relative aspect-square w-full max-w-sm lg:max-w-md mx-auto overflow-hidden">
                   <img
-                    src={portraitEditorial}
+                    src={richardPortrait.url}
                     alt={t("home.profil.portrait.alt")}
                     loading="lazy"
                     width={1024}
-                    height={1280}
-                    className="h-full w-full object-cover grayscale"
+                    height={1024}
+                    className="h-full w-full object-cover"
                   />
                 </div>
               </Reveal>
