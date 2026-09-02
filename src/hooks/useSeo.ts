@@ -91,7 +91,7 @@ export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey,
 
     upsertMetaName("description", description);
 
-    const path = ROUTES[routeKey][lang];
+    const path = routeKey ? ROUTES[routeKey][lang] : (explicitPath ?? location.pathname);
     const canonical = `${SITE_URL}${path === "/" ? "/" : path}`;
     upsertLinkRel("canonical", null, canonical);
     upsertLinkRel("alternate", "en", canonical);
