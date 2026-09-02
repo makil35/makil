@@ -6,6 +6,10 @@ export default {
   "seo.legal.description": "Legal notice for MAKIL, a private signature by Makil-Herrero Richard. Publisher, hosting and contact details.",
   "seo.privacy.title": "Privacy policy · MAKIL · Confidential ultra-luxury",
   "seo.privacy.description": "MAKIL privacy policy: data protection and absolute discretion for a private, introduction-only clientele.",
+  "seo.unsubscribe.title": "Unsubscribe · MAKIL correspondence",
+  "seo.unsubscribe.description": "Confirm the end of MAKIL private correspondence. One click, no questions, and your address is removed.",
+  "seo.notfound.title": "Page not found · MAKIL",
+  "seo.notfound.description": "This MAKIL page does not exist or is no longer available. Return to the home page to continue.",
 
   // Navigation
   "nav.profil": "Profile",
