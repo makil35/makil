@@ -1,7 +1,7 @@
 export default {
   // SEO
   "seo.home.title": "MAKIL · Confidential ultra-luxury — Makil-Herrero Richard",
-  "seo.home.description": "A confidential ultra-luxury signature by Makil-Herrero Richard: bespoke support, art de vivre and tailor-made experiences. By appointment only.",
+  "seo.home.description": "A confidential ultra-luxury signature by Makil-Herrero Richard: bespoke support, art of living and tailor-made experiences. By appointment only.",
   "seo.legal.title": "Legal notice · MAKIL — Confidential ultra-luxury",
   "seo.legal.description": "Legal notice for MAKIL, a confidential ultra-luxury signature by Makil-Herrero Richard. Publisher, hosting and contact details.",
   "seo.privacy.title": "Privacy policy · MAKIL — Confidential ultra-luxury",
@@ -46,7 +46,7 @@ export default {
 
   // Home — Hero
   "home.hero.kicker": "Makil-Herrero Richard — Paris",
-  "home.hero.role": "Private adviser · Art de vivre · Bespoke experiences",
+  "home.hero.role": "Private adviser · Art of living · Bespoke experiences",
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
   "home.hero.desc": "I am a private adviser to a discerning international clientele. I design, arrange and protect the experiences that matter most to them — with absolute discretion.",
