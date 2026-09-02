@@ -15,6 +15,14 @@ const Unsubscribe = () => {
   const token = params.get("token");
   const [state, setState] = useState<State>("loading");
 
+  useSeo({
+    path: "/unsubscribe",
+    titleKey: "seo.unsubscribe.title",
+    descriptionKey: "seo.unsubscribe.description",
+    noindex: true,
+  });
+
+
   useEffect(() => {
     if (!token) { setState("invalid"); return; }
     (async () => {
