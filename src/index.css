@@ -60,9 +60,14 @@
 @layer utilities {
   .shadow-subtle { box-shadow: var(--shadow-subtle); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-gold { box-shadow: none; }
   .transition-smooth { transition: var(--transition-smooth); }
   .transition-elegant { transition: var(--transition-elegant); }
 
   .text-gold { color: hsl(var(--accent)); }
   .border-gold { border-color: hsl(var(--accent)); }
+
+  /* Editorial hairlines & letterspacing for ultra-minimal luxury */
+  .rule-hairline { height: 1px; background: hsl(var(--foreground) / 0.25); }
+  .tracking-luxe { letter-spacing: 0.42em; }
 }
