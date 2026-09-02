@@ -4,4 +4,17 @@ Allow: /
 # Pages techniques non indexables
 Disallow: /unsubscribe
 
+# AI search crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 Sitemap: https://makil.fr/sitemap.xml
