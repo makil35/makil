@@ -48,13 +48,43 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
     @apply bg-background text-foreground font-body antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }
+
+  ::selection {
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
+  }
+
+  :focus-visible {
+    outline: 1px solid hsl(var(--foreground) / 0.7);
+    outline-offset: 3px;
+  }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
+  ::-webkit-scrollbar-thumb { background: hsl(0 0% 20%); }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(0 0% 30%); }
 }
 
 @layer utilities {
@@ -69,4 +99,61 @@
 
   /* Editorial letterspacing for ultra-minimal luxury */
   .tracking-luxe { letter-spacing: 0.42em; }
+
+  /* Barely-there atmospheric depth behind the hero */
+  .atmosphere {
+    background:
+      radial-gradient(80% 60% at 15% 0%, hsl(0 0% 100% / 0.06), transparent 60%),
+      radial-gradient(60% 50% at 100% 100%, hsl(0 0% 100% / 0.035), transparent 60%);
+  }
+
+  /* Fine film grain, keeps large black areas from banding */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Understated underline that draws itself on hover */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes makil-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-rise {
+  animation: makil-rise 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes makil-drift {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+.animate-drift {
+  animation: makil-drift 2.6s ease-in-out infinite;
 }

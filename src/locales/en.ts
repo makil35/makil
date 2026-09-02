@@ -112,7 +112,7 @@ export default {
 
   // Home · Contact
   "contact.kicker": "Contact",
-  "contact.title1": "Let's speak",
+  "contact.title1": "Let\u2019s speak",
   "contact.title2": "in confidence.",
   "contact.desc": "If the fit is right, we will know quickly. Write directly, or use the form below. I read every message myself.",
   "contact.copy": "Copy address",
@@ -185,6 +185,9 @@ export default {
   "privacy.s9.p1b": "may place cookies to measure audience and improve your experience. You can manage your preferences via the consent banner or your browser settings.",
   "privacy.s10.title": "10. Complaints",
   "privacy.s10.p1a": "You may lodge a complaint with the CNIL:",
+
+  // Accessibility
+  "a11y.skip": "Skip to content",
 
   // Not Found
   "notfound.title": "404",
