@@ -16,6 +16,7 @@ export default {
   "nav.univers": "World",
   "nav.approche": "Approach",
   "nav.vision": "Vision",
+  "nav.principles": "Principles",
   "nav.acces": "Access",
   "nav.openMenu": "Open menu",
   "nav.closeMenu": "Close menu",
