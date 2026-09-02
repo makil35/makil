@@ -66,6 +66,9 @@ const Index = () => {
               <p className="text-sm font-body text-muted-foreground leading-loose">
                 {t("home.profil.p2")}
               </p>
+              <p className="text-sm font-body text-muted-foreground leading-loose">
+                {t("home.profil.p3")}
+              </p>
             </div>
 
             <div className="flex flex-col justify-between gap-12">
