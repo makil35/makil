@@ -88,13 +88,9 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
 
     const path = ROUTES[routeKey][lang];
     const canonical = `${SITE_URL}${path === "/" ? "/" : path}`;
-    const altFr = `${SITE_URL}${ROUTES[routeKey].fr}`;
-    const altEn = `${SITE_URL}${ROUTES[routeKey].en}`;
-
     upsertLinkRel("canonical", null, canonical);
-    upsertLinkRel("alternate", "fr", altFr);
-    upsertLinkRel("alternate", "en", altEn);
-    upsertLinkRel("alternate", "x-default", altFr);
+    upsertLinkRel("alternate", "en", canonical);
+    upsertLinkRel("alternate", "x-default", canonical);
 
     // Open Graph
     upsertMetaProperty("og:type", "website");
@@ -102,11 +98,7 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
     upsertMetaProperty("og:title", title);
     upsertMetaProperty("og:description", description);
     upsertMetaProperty("og:url", canonical);
-    upsertMetaProperty("og:locale", lang === "fr" ? "fr_FR" : "en_GB");
-    upsertMetaProperty(
-      "og:locale:alternate",
-      lang === "fr" ? "en_GB" : "fr_FR"
-    );
+    upsertMetaProperty("og:locale", "en_GB");
     upsertMetaProperty("og:image", `${SITE_URL}/og-image.jpg`);
 
     // Twitter
@@ -117,9 +109,7 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
 
     // Robots & ultra-luxe keywords per page
     upsertMetaName("robots", "index, follow, max-image-preview:large, max-snippet:-1");
-    const keywords = lang === "fr"
-      ? "ultra-luxe, luxe confidentiel, MAKIL, Richard Makil-Herrero, accompagnement ultra-luxe, art de vivre, expériences sur mesure, clientèle privée, discrétion, excellence, Paris, Monaco, Saint-Tropez, Côte d'Azur, Genève, Londres, Dubaï"
-      : "ultra-luxury, confidential luxury, MAKIL, Richard Makil-Herrero, bespoke experiences, art de vivre, private clientele, discretion, excellence, Paris, Monaco, Saint-Tropez, French Riviera, Geneva, London, Dubai";
+    const keywords = "ultra-luxury, confidential luxury, MAKIL, Richard Makil-Herrero, bespoke experiences, art de vivre, private clientele, discretion, excellence, Paris, Monaco, Saint-Tropez, French Riviera, Geneva, London, Dubai";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route
@@ -137,9 +127,9 @@ export const useSeo = ({ routeKey, titleKey, descriptionKey }: SeoOptions) => {
       name: title,
       description,
       url: canonical,
-      inLanguage: lang === "fr" ? "fr-FR" : "en-GB",
+      inLanguage: "en-GB",
       isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
-      about: { "@type": "Thing", name: lang === "fr" ? "Ultra-luxe confidentiel" : "Confidential ultra-luxury" },
+      about: { "@type": "Thing", name: "Confidential ultra-luxury" },
     });
   }, [routeKey, titleKey, descriptionKey, language, location.pathname, t]);
 };

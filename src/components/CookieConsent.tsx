@@ -12,8 +12,8 @@ interface CookiePreferences {
 }
 
 const CookieConsent = () => {
-  const { t, language } = useLanguage();
-  const privacyPath = localizedPath("privacy", language);
+  const { t } = useLanguage();
+  const privacyPath = localizedPath("privacy");
   const [isVisible, setIsVisible] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>({

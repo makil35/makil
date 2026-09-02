@@ -2,14 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageToggle from "@/components/LanguageToggle";
 import { localizedPath } from "@/lib/routes";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
-  const home = localizedPath("home", language);
+  const home = localizedPath("home");
   const navLinks = [
     { key: "nav.univers", path: `${home}#univers` },
     { key: "nav.approche", path: `${home}#approche` },
@@ -52,7 +51,6 @@ const Navigation = () => {
                 {t(link.key)}
               </a>
             ))}
-            <LanguageToggle className="ml-4 pl-6 border-l border-border/40" />
           </div>
 
           <button
@@ -79,7 +77,6 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="px-2 pt-4">
-                <LanguageToggle />
               </div>
             </div>
           </div>
