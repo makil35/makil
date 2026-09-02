@@ -53,15 +53,15 @@ const Index = () => {
       <section id="univers" className="py-32 sm:py-44 bg-background border-t border-border/60">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-2xl space-y-6">
-            <p className="text-[11px] font-body tracking-[0.42em] uppercase text-muted-foreground">
+            <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
               {t("home.univers.kicker")}
             </p>
             <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
               {t("home.univers.title1")} <br />
               <em className="italic">{t("home.univers.title2")}</em>
             </h2>
-            <div className="w-12 h-px bg-foreground/25" aria-hidden="true" />
-            <p className="text-sm font-body text-muted-foreground leading-relaxed">
+            <div className="w-16 rule-hairline" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-loose">
               {t("home.univers.desc")}
             </p>
             <a
@@ -78,7 +78,7 @@ const Index = () => {
       <section id="approche" className="py-32 sm:py-44 bg-background border-t border-border/60">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center space-y-4 mb-16">
-            <p className="text-[11px] font-body tracking-[0.42em] uppercase text-muted-foreground">
+            <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
               {t("home.approche.kicker")}
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-foreground">
@@ -86,13 +86,13 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-10 max-w-6xl mx-auto">
             {pillars.map((p) => (
               <div key={p.titleKey} className="text-center space-y-4">
                 <h3 className="text-[11px] font-body tracking-[0.3em] uppercase text-foreground">
                   {t(p.titleKey)}
                 </h3>
-                <p className="text-xs font-body text-muted-foreground leading-relaxed max-w-[220px] mx-auto">
+                <p className="text-xs font-body text-muted-foreground leading-loose max-w-[220px] mx-auto">
                   {t(p.descKey)}
                 </p>
               </div>
@@ -105,15 +105,15 @@ const Index = () => {
       <section id="vision" className="py-32 sm:py-44 bg-background border-t border-border/60">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-2xl ml-auto text-left space-y-6">
-            <p className="text-[11px] font-body tracking-[0.42em] uppercase text-muted-foreground">
+            <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
               {t("home.vision.kicker")}
             </p>
             <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
               {t("home.vision.title1")} <br />
               <em className="italic">{t("home.vision.title2")}</em>
             </h2>
-            <div className="w-12 h-px bg-foreground/25" aria-hidden="true" />
-            <p className="text-sm font-body text-muted-foreground leading-relaxed">
+            <div className="w-16 rule-hairline" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-loose">
               {t("home.vision.desc")}
             </p>
           </div>
@@ -124,15 +124,15 @@ const Index = () => {
       <section id="acces" className="py-32 sm:py-44 bg-background border-t border-border/60">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-2xl space-y-6">
-            <p className="text-[11px] font-body tracking-[0.42em] uppercase text-muted-foreground">
+            <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
               {t("home.acces.kicker")}
             </p>
             <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
               {t("home.acces.title1")} <br />
               <em className="italic">{t("home.acces.title2")}</em>
             </h2>
-            <div className="w-12 h-px bg-foreground/25" aria-hidden="true" />
-            <p className="text-sm font-body text-muted-foreground leading-relaxed">
+            <div className="w-16 rule-hairline" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-loose">
               {t("home.acces.desc")}
             </p>
             <a
