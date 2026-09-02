@@ -5,7 +5,6 @@ import ContactSection from "@/components/ContactSection";
 import CookieConsent from "@/components/CookieConsent";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
-import portrait from "@/assets/richard-portrait.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
