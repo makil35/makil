@@ -1,11 +1,11 @@
 export default {
   // SEO
   "seo.home.title": "MAKIL · Confidential ultra-luxury · Makil-Herrero Richard",
-  "seo.home.description": "A confidential ultra-luxury signature by Makil-Herrero Richard: bespoke support, art of living and tailor-made experiences. By appointment only.",
+  "seo.home.description": "A private signature by Makil-Herrero Richard. Discretion, presence, and the art of making the exceptional feel natural. By introduction only.",
   "seo.legal.title": "Legal notice · MAKIL · Confidential ultra-luxury",
-  "seo.legal.description": "Legal notice for MAKIL, a confidential ultra-luxury signature by Makil-Herrero Richard. Publisher, hosting and contact details.",
+  "seo.legal.description": "Legal notice for MAKIL, a private signature by Makil-Herrero Richard. Publisher, hosting and contact details.",
   "seo.privacy.title": "Privacy policy · MAKIL · Confidential ultra-luxury",
-  "seo.privacy.description": "MAKIL privacy policy: data protection and absolute discretion for an exceptional private clientele.",
+  "seo.privacy.description": "MAKIL privacy policy: data protection and absolute discretion for a private, introduction-only clientele.",
 
   // Navigation
   "nav.profil": "Profile",
@@ -24,7 +24,7 @@ export default {
   "footer.legal": "Legal notice",
   "footer.privacy": "Privacy",
   "footer.makilPrivate": "Makil Private",
-  "footer.discoverExperiences": "Discover our experiences",
+  "footer.discoverExperiences": "By invitation only",
 
   // Cookie Consent
   "cookie.title": "Cookie Management",
@@ -46,10 +46,10 @@ export default {
 
   // Home · Hero
   "home.hero.kicker": "Makil-Herrero Richard · Paris",
-  "home.hero.role": "Private adviser · Art of living · Bespoke experiences",
+  "home.hero.role": "Private adviser · Art of living · Select presence",
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
-  "home.hero.desc": "I am a private adviser to a discerning international clientele. I design, arrange and protect the experiences that matter most to them, with absolute discretion.",
+  "home.hero.desc": "I am a private adviser to a small circle of individuals who value what cannot be bought: time, trust, and the certainty that nothing is left to chance.",
   "home.hero.cta": "Discover my world",
   "home.hero.alt": "Portrait of Makil-Herrero Richard",
 
@@ -58,10 +58,10 @@ export default {
   "home.profil.title1": "A single name,",
   "home.profil.title2": "a personal engagement.",
   "home.profil.p1": "I work directly with families, founders and public figures whose time is their rarest asset. I do not run an agency: you speak to me, and I answer personally.",
-  "home.profil.p2": "My work sits between Paris, Monaco, London, Geneva and Dubai, wherever my clients need a trusted presence. Each engagement is limited in number, so that each one remains exceptional.",
+  "home.profil.p2": "My practice moves between Paris, Monaco, London, Geneva and Dubai, wherever my clients need a trusted presence. Each engagement is limited, so that each one remains entirely mine.",
   "home.profil.stat1": "Personal practice",
   "home.profil.stat1.desc": "One name, one point of contact",
-  "home.profil.stat2": "6 cities",
+  "home.profil.stat2": "5 cities",
   "home.profil.stat2.desc": "Paris · Monaco · London · Geneva · Dubai",
   "home.profil.stat3": "By referral",
   "home.profil.stat3.desc": "Clients introduced, never solicited",
@@ -70,38 +70,38 @@ export default {
 
   // Home · Univers
   "home.univers.kicker": "MAKIL",
-  "home.univers.title1": "Far more than a service.",
-  "home.univers.title2": "A signature.",
-  "home.univers.desc": "Makil is the meeting point between absolute discretion, a global network of influence and an obsession with detail. A world where luxury is not about appearance, but about freedom, time and perfection.",
+  "home.univers.title1": "Not a service.",
+  "home.univers.title2": "A way of being.",
+  "home.univers.desc": "Makil is how I move through the world: quietly, precisely, and only for those I choose to work with. No offices. No portfolios. Just a direct line to the people and places that matter.",
   "home.univers.cta": "Discover my approach",
   "home.univers.alt": "Luxurious seaside terrace view",
 
   // Home · Approach
   "home.approche.kicker": "My approach",
-  "home.approche.title1": "Anticipate.",
-  "home.approche.title2": "Design.",
-  "home.approche.title3": "Achieve.",
+  "home.approche.title1": "Observe.",
+  "home.approche.title2": "Decide.",
+  "home.approche.title3": "Deliver.",
   "home.pillar.discretion": "Discretion",
-  "home.pillar.discretion.desc": "Confidentiality is at the heart of every engagement.",
-  "home.pillar.network": "Global Network",
-  "home.pillar.network.desc": "Privileged access to the finest resources and the right people.",
-  "home.pillar.excellence": "Excellence",
-  "home.pillar.excellence.desc": "High standards, an obsessive attention to detail.",
+  "home.pillar.discretion.desc": "What is known stays between us. What is unknown stays that way.",
+  "home.pillar.network": "Presence",
+  "home.pillar.network.desc": "The right person, the right door, the right moment. Without noise.",
+  "home.pillar.excellence": "Exactness",
+  "home.pillar.excellence.desc": "Not the best at any cost. The right thing, done the right way.",
   "home.pillar.liberty": "Freedom",
-  "home.pillar.liberty.desc": "You gain time. I take care of everything, without limits.",
+  "home.pillar.liberty.desc": "Your time returned to you. That is the only luxury I offer.",
 
   // Home · Vision
   "home.vision.kicker": "My vision",
-  "home.vision.title1": "The ultimate luxury:",
-  "home.vision.title2": "the freedom to focus on what matters.",
-  "home.vision.desc": "I turn your requests into bespoke experiences, with a single promise: the exceptional, at every moment.",
+  "home.vision.title1": "What I protect",
+  "home.vision.title2": "is your attention.",
+  "home.vision.desc": "I do not sell experiences. I remove what distracts from them. My work is invisible by design: the right preparation, the right silence, the right timing. You are simply there.",
   "home.vision.alt": "Gloved hand opening a luxury car door",
 
   // Home · Access
   "home.acces.kicker": "Access",
   "home.acces.title1": "Access to Makil",
   "home.acces.title2": "is by invitation only.",
-  "home.acces.desc": "Every collaboration begins with a confidential conversation to understand your expectations and offer the excellence that suits you.",
+  "home.acces.desc": "Every collaboration begins with a conversation. Confidential, direct, and without obligation. I take on only a handful of engagements each year.",
   "home.acces.cta": "Request a confidential conversation",
   "home.acces.alt": "View of Paris at night",
 
@@ -109,7 +109,7 @@ export default {
   "contact.kicker": "Contact",
   "contact.title1": "Let's speak",
   "contact.title2": "in confidence.",
-  "contact.desc": "Write directly or use the form below. I will reply personally.",
+  "contact.desc": "If the fit is right, we will know quickly. Write directly, or use the form below. I read every message myself.",
   "contact.copy": "Copy address",
   "contact.field.name": "Name",
   "contact.field.email": "Email",
