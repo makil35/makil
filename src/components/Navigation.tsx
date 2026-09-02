@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { localizedPath } from "@/lib/routes";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 
-const SECTION_IDS = ["profil", "univers", "approche", "vision", "acces"];
+const SECTION_IDS = ["profil", "univers", "approche", "vision", "principles", "acces"];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +33,7 @@ const Navigation = () => {
     { key: "nav.univers", id: "univers" },
     { key: "nav.approche", id: "approche" },
     { key: "nav.vision", id: "vision" },
+    { key: "nav.principles", id: "principles" },
     { key: "nav.acces", id: "acces" },
   ];
 
