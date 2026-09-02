@@ -6,11 +6,11 @@ import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
 
 const PolitiqueConfidentialite = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
   useSeo({ routeKey: "privacy", titleKey: "seo.privacy.title", descriptionKey: "seo.privacy.description" });
-  const locale = language === "fr" ? "fr-FR" : "en-GB";
-  const siteLabel = language === "fr" ? "makil.fr" : "makil.fr/en";
-  const homePath = localizedPath("home", language);
+  const locale = "en-GB";
+  const siteLabel = "makil.fr";
+  const homePath = localizedPath("home");
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

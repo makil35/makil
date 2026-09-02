@@ -4,7 +4,7 @@ import { localizedPath } from "@/lib/routes";
 import { ArrowRight } from "lucide-react";
 
 const Footer = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   return (
     <footer>
       {/* Makil Private banner */}
@@ -38,10 +38,10 @@ const Footer = () => {
               © {new Date().getFullYear()} MAKIL — {t("footer.rights")}
             </p>
             <div className="flex gap-6 text-[11px] font-body tracking-[0.2em] uppercase">
-              <Link to={localizedPath("legal", language)} className="text-muted-foreground hover:text-foreground transition-smooth">
+              <Link to={localizedPath("legal")} className="text-muted-foreground hover:text-foreground transition-smooth">
                 {t("footer.legal")}
               </Link>
-              <Link to={localizedPath("privacy", language)} className="text-muted-foreground hover:text-foreground transition-smooth">
+              <Link to={localizedPath("privacy")} className="text-muted-foreground hover:text-foreground transition-smooth">
                 {t("footer.privacy")}
               </Link>
             </div>

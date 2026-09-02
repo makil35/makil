@@ -6,7 +6,7 @@ import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
 
 const MentionsLegales = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   useSeo({ routeKey: "legal", titleKey: "seo.legal.title", descriptionKey: "seo.legal.description" });
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -27,7 +27,7 @@ const MentionsLegales = () => {
               <p>{t("legal.s1.p1")}</p>
               <p className="mt-3">
                 <strong>{t("legal.s1.site")}</strong>{" "}
-                <Link to={localizedPath("home", language)} className="text-accent hover:underline">{language === "fr" ? "makil.fr" : "makil.fr/en"}</Link><br />
+                <Link to={localizedPath("home")} className="text-accent hover:underline">makil.fr</Link><br />
                 <strong>{t("legal.s1.email")}</strong>{" "}
                 <a href="mailto:richard@makil-private.com" className="text-accent hover:underline">richard@makil-private.com</a><br />
                 <strong>{t("legal.s1.location")}</strong> {t("legal.s1.locationValue")}
@@ -69,7 +69,7 @@ const MentionsLegales = () => {
               <h2 className="text-xl font-display text-foreground mb-4">{t("legal.s7.title")}</h2>
               <p>
                 {t("legal.s7.p1a")}{" "}
-                <Link to={localizedPath("privacy", language)} className="text-accent hover:underline">
+                <Link to={localizedPath("privacy")} className="text-accent hover:underline">
                   {t("legal.s7.link")}
                 </Link>.
               </p>
