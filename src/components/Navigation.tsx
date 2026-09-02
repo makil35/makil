@@ -36,6 +36,17 @@ const Navigation = () => {
     { key: "nav.acces", id: "acces" },
   ];
 
+  const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    setIsOpen(false);
+    if (window.location.pathname !== home) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", `${home}#${id}`);
+  };
+
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-elegant ${
