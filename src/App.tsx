@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import MentionsLegales from "./pages/MentionsLegales";
@@ -20,10 +20,14 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <Routes>
-            {/* French (default) */}
-            <Route path="/" element={<Index />} />
-            <Route path="/mentions-legales" element={<MentionsLegales />} />
-            <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+            {/* French */}
+            <Route path="/" element={<Navigate to="/fr" replace />} />
+            <Route path="/fr" element={<Index />} />
+            <Route path="/fr/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/fr/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+            {/* Preserve legacy French links */}
+            <Route path="/mentions-legales" element={<Navigate to="/fr/mentions-legales" replace />} />
+            <Route path="/politique-confidentialite" element={<Navigate to="/fr/politique-confidentialite" replace />} />
             {/* English */}
             <Route path="/en" element={<Index />} />
             <Route path="/en/legal-notice" element={<MentionsLegales />} />
