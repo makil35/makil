@@ -1,57 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://makil.fr/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://makil.fr/en</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/" />
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://makil.fr/mentions-legales</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/mentions-legales" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en/legal-notice" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/mentions-legales" />
+    <loc>https://makil.fr/legal-notice</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <url>
-    <loc>https://makil.fr/en/legal-notice</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/mentions-legales" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en/legal-notice" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/mentions-legales" />
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://makil.fr/politique-confidentialite</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/politique-confidentialite" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/politique-confidentialite" />
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://makil.fr/en/privacy-policy</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://makil.fr/politique-confidentialite" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://makil.fr/en/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makil.fr/politique-confidentialite" />
+    <loc>https://makil.fr/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

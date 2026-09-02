@@ -20,18 +20,18 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <Routes>
-            {/* French */}
-            <Route path="/" element={<Navigate to="/fr" replace />} />
-            <Route path="/fr" element={<Index />} />
-            <Route path="/fr/mentions-legales" element={<MentionsLegales />} />
-            <Route path="/fr/politique-confidentialite" element={<PolitiqueConfidentialite />} />
-            {/* Preserve legacy French links */}
-            <Route path="/mentions-legales" element={<Navigate to="/fr/mentions-legales" replace />} />
-            <Route path="/politique-confidentialite" element={<Navigate to="/fr/politique-confidentialite" replace />} />
-            {/* English */}
-            <Route path="/en" element={<Index />} />
-            <Route path="/en/legal-notice" element={<MentionsLegales />} />
-            <Route path="/en/privacy-policy" element={<PolitiqueConfidentialite />} />
+            <Route path="/" element={<Index />} />
+            <Route path="/legal-notice" element={<MentionsLegales />} />
+            <Route path="/privacy-policy" element={<PolitiqueConfidentialite />} />
+            {/* Legacy localized links */}
+            <Route path="/fr" element={<Navigate to="/" replace />} />
+            <Route path="/en" element={<Navigate to="/" replace />} />
+            <Route path="/fr/mentions-legales" element={<Navigate to="/legal-notice" replace />} />
+            <Route path="/mentions-legales" element={<Navigate to="/legal-notice" replace />} />
+            <Route path="/en/legal-notice" element={<Navigate to="/legal-notice" replace />} />
+            <Route path="/fr/politique-confidentialite" element={<Navigate to="/privacy-policy" replace />} />
+            <Route path="/politique-confidentialite" element={<Navigate to="/privacy-policy" replace />} />
+            <Route path="/en/privacy-policy" element={<Navigate to="/privacy-policy" replace />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
