@@ -112,7 +112,7 @@ export default {
 
   // Home · Contact
   "contact.kicker": "Contact",
-  "contact.title1": "Let's speak",
+  "contact.title1": "Let\u2019s speak",
   "contact.title2": "in confidence.",
   "contact.desc": "If the fit is right, we will know quickly. Write directly, or use the form below. I read every message myself.",
   "contact.copy": "Copy address",
