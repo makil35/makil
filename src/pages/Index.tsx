@@ -22,34 +22,30 @@ const Index = () => {
       <Navigation />
 
       {/* HERO */}
-      <section className="relative flex min-h-svh items-end overflow-hidden bg-background">
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20"
-          aria-hidden="true"
-        />
-
-        <div className="container relative z-10 mx-auto px-6 pb-20 lg:px-10 lg:pb-28">
-          <div className="max-w-xl space-y-8">
-            <p className="text-[11px] font-body tracking-[0.42em] uppercase text-muted-foreground">
+      <section className="relative flex min-h-[92svh] items-center overflow-hidden bg-background">
+        <div className="container relative z-10 mx-auto px-6 py-28 lg:px-10">
+          <div className="max-w-2xl space-y-10">
+            <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
               {t("home.hero.kicker")}
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-normal leading-[1.05] text-foreground">
+            <h1 className="text-4xl sm:text-5xl md:text-[4.25rem] font-display font-normal leading-[1.08] tracking-[-0.01em] text-foreground">
               {t("home.hero.title1")} <br />
               <em className="italic">{t("home.hero.title2")}</em>
             </h1>
-            <div className="w-12 h-px bg-foreground/25" aria-hidden="true" />
-            <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-md">
+            <div className="w-16 rule-hairline" aria-hidden="true" />
+            <p className="text-sm font-body text-muted-foreground leading-loose max-w-md">
               {t("home.hero.desc")}
             </p>
-            <a href="#univers" className="inline-flex flex-col items-start gap-2 group pt-2">
-              <span className="text-[11px] font-body tracking-[0.3em] uppercase text-muted-foreground group-hover:text-foreground transition-smooth">
+            <a href="#univers" className="inline-flex flex-col items-start gap-3 group pt-4">
+              <span className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground group-hover:text-foreground transition-smooth">
                 {t("home.hero.cta")}
               </span>
-              <ChevronDown size={18} className="text-muted-foreground group-hover:translate-y-1 transition-smooth" />
+              <ChevronDown size={16} strokeWidth={1} className="text-muted-foreground group-hover:translate-y-1 transition-smooth" />
             </a>
           </div>
         </div>
       </section>
+
 
 
 
