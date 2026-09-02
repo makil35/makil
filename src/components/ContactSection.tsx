@@ -66,7 +66,7 @@ const ContactSection = () => {
 
 
   return (
-    <section id="contact" className="py-28 sm:py-36 bg-background border-t border-border/40">
+    <section id="contact" className="py-28 sm:py-36 bg-background">
       <div className="container mx-auto px-6 lg:px-10 max-w-3xl">
         <div className="text-center space-y-4 mb-16">
           <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground">
@@ -75,7 +75,6 @@ const ContactSection = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-foreground">
             {t("contact.title1")} <em className="italic">{t("contact.title2")}</em>
           </h2>
-          <div className="w-12 h-px bg-foreground/25 mx-auto" />
           <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl mx-auto pt-2">
             {t("contact.desc")}
           </p>

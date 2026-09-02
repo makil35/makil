@@ -35,7 +35,6 @@ const Index = () => {
             <p className="text-[10px] font-body tracking-[0.3em] uppercase text-foreground/60">
               {t("home.hero.role")}
             </p>
-            <div className="w-16 rule-hairline" aria-hidden="true" />
             <p className="text-sm font-body text-muted-foreground leading-loose max-w-md">
               {t("home.hero.desc")}
             </p>
@@ -50,7 +49,7 @@ const Index = () => {
       </section>
 
       {/* PROFILE */}
-      <section id="profil" className="py-32 sm:py-44 bg-background border-t border-border/60">
+      <section id="profil" className="py-32 sm:py-44 bg-background">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
             <div className="space-y-6">
@@ -61,7 +60,6 @@ const Index = () => {
                 {t("home.profil.title1")} <br />
                 <em className="italic">{t("home.profil.title2")}</em>
               </h2>
-              <div className="w-16 rule-hairline" aria-hidden="true" />
               <p className="text-sm font-body text-muted-foreground leading-loose">
                 {t("home.profil.p1")}
               </p>
@@ -77,7 +75,7 @@ const Index = () => {
                   ["home.profil.stat2", "home.profil.stat2.desc"],
                   ["home.profil.stat3", "home.profil.stat3.desc"],
                 ].map(([k, d]) => (
-                  <div key={k} className="border-t border-border/60 pt-5">
+                  <div key={k} className="pt-5">
                     <dt className="font-display text-xl text-foreground">{t(k)}</dt>
                     <dd className="mt-2 text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground">
                       {t(d)}
@@ -86,7 +84,7 @@ const Index = () => {
                 ))}
               </dl>
 
-              <figure className="border-t border-border/60 pt-8">
+              <figure className="pt-8">
                 <blockquote className="font-display italic text-lg sm:text-xl leading-relaxed text-foreground/90">
                   {t("home.profil.quote")}
                 </blockquote>
@@ -100,7 +98,7 @@ const Index = () => {
       </section>
 
       {/* SIGNATURE */}
-      <section id="univers" className="py-32 sm:py-44 bg-background border-t border-border/60">
+      <section id="univers" className="py-32 sm:py-44 bg-background">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-2xl space-y-6">
             <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -110,7 +108,6 @@ const Index = () => {
               {t("home.univers.title1")} <br />
               <em className="italic">{t("home.univers.title2")}</em>
             </h2>
-            <div className="w-16 rule-hairline" aria-hidden="true" />
             <p className="text-sm font-body text-muted-foreground leading-loose">
               {t("home.univers.desc")}
             </p>
@@ -125,7 +122,7 @@ const Index = () => {
       </section>
 
       {/* APPROCHE */}
-      <section id="approche" className="py-32 sm:py-44 bg-background border-t border-border/60">
+      <section id="approche" className="py-32 sm:py-44 bg-background">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center space-y-4 mb-16">
             <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -152,7 +149,7 @@ const Index = () => {
       </section>
 
       {/* VISION */}
-      <section id="vision" className="py-32 sm:py-44 bg-background border-t border-border/60">
+      <section id="vision" className="py-32 sm:py-44 bg-background">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-2xl ml-auto text-left space-y-6">
             <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -162,7 +159,6 @@ const Index = () => {
               {t("home.vision.title1")} <br />
               <em className="italic">{t("home.vision.title2")}</em>
             </h2>
-            <div className="w-16 rule-hairline" aria-hidden="true" />
             <p className="text-sm font-body text-muted-foreground leading-loose">
               {t("home.vision.desc")}
             </p>
@@ -171,7 +167,7 @@ const Index = () => {
       </section>
 
       {/* ACCÈS */}
-      <section id="acces" className="py-32 sm:py-44 bg-background border-t border-border/60">
+      <section id="acces" className="py-32 sm:py-44 bg-background">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-2xl space-y-6">
             <p className="text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -181,7 +177,6 @@ const Index = () => {
               {t("home.acces.title1")} <br />
               <em className="italic">{t("home.acces.title2")}</em>
             </h2>
-            <div className="w-16 rule-hairline" aria-hidden="true" />
             <p className="text-sm font-body text-muted-foreground leading-loose">
               {t("home.acces.desc")}
             </p>
