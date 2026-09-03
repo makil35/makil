@@ -41,7 +41,7 @@ const Index = () => {
 
       {/* HERO */}
       <header className="relative flex min-h-[92svh] items-center overflow-hidden bg-background atmosphere grain">
-        <div className="container relative z-10 mx-auto px-6 py-28 lg:px-10">
+        <div className="container relative z-10 mx-auto px-6 py-28 lg:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-16 items-center">
           <div className="max-w-2xl space-y-10">
             <p
               className="animate-rise text-[10px] font-body tracking-luxe uppercase text-muted-foreground"
