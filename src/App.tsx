@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 import Journal from "./pages/Journal";
 import JournalArticle from "./pages/JournalArticle";
+import Contact from "./pages/Contact";
 import ScrollToTop from "@/components/ScrollToTop";
 
 
