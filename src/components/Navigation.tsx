@@ -32,6 +32,7 @@ const Navigation = () => {
     { key: "nav.profil", id: "profil" },
     { key: "nav.univers", id: "univers" },
     { key: "nav.approche", id: "approche" },
+    { key: "nav.mandates", id: "mandates" },
     { key: "nav.vision", id: "vision" },
     { key: "nav.principles", id: "principles" },
     { key: "nav.acces", id: "acces" },

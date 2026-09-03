@@ -59,7 +59,7 @@ const MentionsLegales = () => {
                 <Link to={localizedPath("home")} className={linkClass}>makil.fr</Link>
                 <br />
                 <strong className="font-normal text-foreground">{t("legal.s1.email")}</strong>{" "}
-                <a href="mailto:richard@makil-private.com" className={linkClass}>richard@makil-private.com</a>
+                <a href="mailto:richard@makil.fr" className={linkClass}>richard@makil.fr</a>
                 <br />
                 <strong className="font-normal text-foreground">{t("legal.s1.location")}</strong>{" "}
                 {t("legal.s1.locationValue")}
@@ -82,7 +82,7 @@ const MentionsLegales = () => {
             <Section n="05" title={t("legal.s5.title")}>
               <p>
                 {t("legal.s5.p1a")}{" "}
-                <a href="mailto:richard@makil-private.com" className={linkClass}>richard@makil-private.com</a>.
+                <a href="mailto:richard@makil.fr" className={linkClass}>richard@makil.fr</a>.
               </p>
             </Section>
 

@@ -72,7 +72,7 @@ const PolitiqueConfidentialite = () => {
               <p>{t("privacy.s1.p1")}</p>
               <p>
                 <strong className="font-normal text-foreground">{t("privacy.s1.contact")}</strong>{" "}
-                <a href="mailto:richard@makil-private.com" className={linkClass}>richard@makil-private.com</a>
+                <a href="mailto:richard@makil.fr" className={linkClass}>richard@makil.fr</a>
               </p>
             </Section>
 
@@ -113,7 +113,7 @@ const PolitiqueConfidentialite = () => {
               <p>{t("privacy.s7.p1")}</p>
               <p>
                 {t("privacy.s7.p2a")}{" "}
-                <a href="mailto:richard@makil-private.com" className={linkClass}>richard@makil-private.com</a>.
+                <a href="mailto:richard@makil.fr" className={linkClass}>richard@makil.fr</a>.
               </p>
             </Section>
 
