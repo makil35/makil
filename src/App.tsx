@@ -32,6 +32,7 @@ const App = () => (
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal/:slug" element={<JournalArticle />} />
             <Route path="/blog" element={<Navigate to="/journal" replace />} />
+            <Route path="/contact" element={<Contact />} />
 
             {/* Legacy localized links */}
             <Route path="/fr" element={<Navigate to="/" replace />} />
