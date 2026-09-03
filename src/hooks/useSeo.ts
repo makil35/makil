@@ -119,7 +119,7 @@ export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey,
         ? "noindex, follow"
         : "index, follow, max-image-preview:large, max-snippet:-1"
     );
-    const keywords = "ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Saint-Tropez, French Riviera, Geneva, London, Dubai";
+    const keywords = "private adviser, personal branding, ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private advisory, luxury advisory, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Geneva, London, Dubai";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route
