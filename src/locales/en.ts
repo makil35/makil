@@ -68,6 +68,7 @@ export default {
   "home.profil.p1": "I work directly with families, founders and public figures whose time is their rarest asset. I do not run an agency: you speak to me, and I answer personally.",
   "home.profil.p2": "My practice moves between Paris, Monaco, London, Geneva and Dubai, wherever my clients need a trusted presence. Each engagement is limited, so that each one remains entirely mine.",
   "home.profil.p3": "The name Makil belongs to the Banu Ma'qil, to the Makil. It is not an invented signature. It is a lineage that has crossed centuries, and that I carry forward in my own way.",
+  "home.profil.p4": "Why this work, and not another: because the requests that matter are never delegated twice. They are entrusted to someone. I chose to be that someone.",
   "home.profil.stat1": "Personal practice",
   "home.profil.stat1.desc": "One name, one point of contact",
   "home.profil.stat2": "5 cities",

@@ -41,7 +41,7 @@ const Index = () => {
 
       {/* HERO */}
       <header className="relative flex min-h-[92svh] items-center overflow-hidden bg-background atmosphere grain">
-        <div className="container relative z-10 mx-auto px-6 py-28 lg:px-10">
+        <div className="container relative z-10 mx-auto px-6 py-28 lg:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-16 items-center">
           <div className="max-w-2xl space-y-10">
             <p
               className="animate-rise text-[10px] font-body tracking-luxe uppercase text-muted-foreground"
@@ -83,6 +83,23 @@ const Index = () => {
               />
             </a>
           </div>
+
+          <figure
+            className="animate-rise hidden lg:block justify-self-end"
+            style={{ animationDelay: "520ms" }}
+          >
+            <img
+              src={portraitMakil.url}
+              alt="Makil-Herrero Richard, private adviser in Paris"
+              loading="eager"
+              width={1024}
+              height={1536}
+              className="w-full max-w-[300px] object-cover grayscale opacity-90"
+            />
+            <figcaption className="mt-4 text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">
+              Makil-Herrero Richard · Paris
+            </figcaption>
+          </figure>
         </div>
       </header>
 
@@ -103,6 +120,7 @@ const Index = () => {
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p1")}</p>
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p2")}</p>
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p3")}</p>
+                <p className="text-sm font-body text-foreground/80 leading-loose italic font-display">{t("home.profil.p4")}</p>
 
                 <dl className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8">
                   {[
