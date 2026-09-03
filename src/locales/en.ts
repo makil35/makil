@@ -32,7 +32,7 @@ export default {
   "footer.legal": "Legal notice",
   "footer.privacy": "Privacy",
   "footer.makilPrivate": "By introduction only.",
-  "footer.discoverExperiences": "Write",
+  "footer.discoverExperiences": "Correspondence",
 
   // Cookie Consent
   "cookie.title": "Cookie Management",
@@ -58,7 +58,7 @@ export default {
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
   "home.hero.desc": "Private adviser. A practice of reading situations, choosing the right move, and leaving no trace.",
-  "home.hero.cta": "",
+  "home.hero.cta": "Continue",
 
   // Home · Profile
   "home.profil.kicker": "Richard",
@@ -130,7 +130,7 @@ export default {
   "home.acces.title1": "Access is limited",
   "home.acces.title2": "by design.",
   "home.acces.desc": "Every mandate begins with a conversation. The situation is understood, the interlocutors chosen, the execution overseen. The list stays short because the work cannot be scaled.",
-  "home.acces.cta": "Write",
+  "home.acces.cta": "Open a correspondence",
   "home.acces.alt": "View of Paris at night",
 
   // Home · Contact
