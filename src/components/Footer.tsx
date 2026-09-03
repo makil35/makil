@@ -28,13 +28,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer>
+    <footer className="bg-background">
       {/* Access banner — a single, quiet entry point */}
-      <div className="bg-background border-t border-foreground/10">
+      <div className="border-t border-foreground/10">
         <div className="container mx-auto px-6 lg:px-10">
           <Link
             to={`${home}#acces`}
-            className="group flex flex-col sm:flex-row items-center justify-between gap-6 py-10 sm:py-12"
+            className="group flex flex-col sm:flex-row items-center justify-between gap-6 py-12 sm:py-16"
           >
             <span className="text-[11px] font-body tracking-[0.4em] uppercase text-foreground/60 transition-smooth group-hover:text-foreground">
               {t("footer.makilPrivate")}
@@ -42,7 +42,7 @@ const Footer = () => {
 
             <span className="inline-flex items-center gap-4 text-[10px] font-body tracking-[0.35em] uppercase text-foreground/40 transition-smooth group-hover:text-foreground/80">
               {t("footer.discoverExperiences")}
-              <span className="relative flex items-center justify-center w-9 h-9 border border-foreground/10 rounded-full transition-smooth group-hover:border-foreground/30 group-hover:scale-105">
+              <span className="relative flex items-center justify-center w-10 h-10 border border-foreground/10 rounded-full transition-smooth group-hover:border-foreground/40 group-hover:scale-105">
                 <LongArrow className="w-5 h-5 text-current transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5" />
               </span>
             </span>
@@ -50,9 +50,18 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Oversized wordmark */}
+      <div className="border-t border-foreground/10 overflow-hidden" aria-hidden="true">
+        <div className="container mx-auto px-6 lg:px-10">
+          <p className="py-10 sm:py-14 font-display text-center text-[18vw] sm:text-[14vw] leading-none tracking-[0.08em] text-foreground/[0.06] select-none">
+            MAKIL
+          </p>
+        </div>
+      </div>
+
       {/* Sitemap */}
-      <div className="bg-background border-t border-foreground/10">
-        <div className="container mx-auto px-6 lg:px-10 py-16">
+      <div className="border-t border-foreground/10">
+        <div className="container mx-auto px-6 lg:px-10 py-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
               <button
@@ -142,7 +151,7 @@ const Footer = () => {
             </nav>
           </div>
 
-          <p className="mt-16 text-[10px] font-body tracking-[0.25em] uppercase text-muted-foreground">
+          <p className="mt-20 border-t border-foreground/10 pt-8 text-[10px] font-body tracking-[0.25em] uppercase text-muted-foreground">
             © {new Date().getFullYear()} MAKIL · {t("footer.rights")}
           </p>
         </div>
