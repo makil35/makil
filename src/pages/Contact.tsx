@@ -11,7 +11,7 @@ import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
 import { toast } from "sonner";
 
-const EMAIL = "richard@makil-private.com";
+const EMAIL = "richard@makil.fr";
 
 const schema = z.object({
   name: z.string().trim().min(1).max(120),
