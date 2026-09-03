@@ -26,9 +26,9 @@ export const journalArticles: JournalArticle[] = [
       "A private adviser is not a concierge and not an agency. It is one point of contact, one judgement, and a very short list of people.",
     metaTitle: "What a Private Adviser Actually Does · MAKIL · Paris",
     metaDescription:
-      "A private adviser in ultra-luxury explained: one point of contact, absolute discretion and decisions made close to the client. By Makil-Herrero Richard, Paris.",
+      "A private adviser explained: one point of contact, direct judgement and decisions made close to the client. By Makil-Herrero Richard, Paris.",
     keywords:
-      "private adviser, private advisory, ultra-luxury adviser, personal adviser Paris, discreet advisory, Makil-Herrero Richard",
+      "private adviser, private advisory, personal adviser Paris, discreet advisory, Makil-Herrero Richard",
     date: "2026-08-12",
     readingTime: "4 min",
     blocks: [
@@ -41,8 +41,8 @@ export const journalArticles: JournalArticle[] = [
       {
         heading: "One point of contact",
         paragraphs: [
-          "Most structures multiply intermediaries. Each addition is a new surface where information can travel. A private practice does the opposite: it reduces the chain to a single name who answers, decides and carries the consequence.",
-          "That is why the practice stays deliberately small. Capacity is not a marketing constraint here, it is the condition of the work.",
+          "Most structures multiply intermediaries. Each addition is a new surface where information can travel. A private practice does the opposite: it reduces the chain to a single name who reads, decides and carries the consequence.",
+          "That is why the practice stays deliberately small. Capacity is not a constraint here, it is the condition of the work.",
         ],
       },
       {
@@ -53,9 +53,9 @@ export const journalArticles: JournalArticle[] = [
         ],
       },
       {
-        heading: "Discretion as a method",
+        heading: "Silence as a method",
         paragraphs: [
-          "Discretion is often described as a promise. It is more useful as a method: fewer people involved, fewer written traces, fewer requests made on your behalf without your knowledge.",
+          "Silence is often described as a promise. It is more useful as a method: fewer people involved, fewer written traces, fewer requests made on your behalf without your knowledge.",
           "What is protected is not only information. It is attention.",
         ],
       },
@@ -77,7 +77,7 @@ export const journalArticles: JournalArticle[] = [
     blocks: [
       {
         paragraphs: [
-          "Personal branding, as it is usually sold, is an addition: more content, more platforms, more frequency. For someone whose name already carries weight, addition is the wrong operation.",
+          "Personal branding, as it is usually practised, is an addition: more content, more platforms, more frequency. For someone whose name already carries weight, addition is the wrong operation.",
           "The work is subtraction. What can be removed without weakening the signal.",
         ],
       },
@@ -114,7 +114,7 @@ export const journalArticles: JournalArticle[] = [
     metaDescription:
       "How confidentiality is organised in a private advisory practice: direct contact, minimal traces and no intermediaries. Makil-Herrero Richard, Paris.",
     keywords:
-      "discretion, confidentiality, confidential advisory, private clientele, ultra-luxury discretion, private adviser Paris",
+      "discretion, confidentiality, confidential advisory, private clientele, private adviser Paris",
     date: "2026-08-26",
     readingTime: "3 min",
     blocks: [
@@ -153,7 +153,7 @@ export const journalArticles: JournalArticle[] = [
     metaDescription:
       "Five questions to ask before choosing a private adviser: who answers, how many clients, what is written down, what is declined, and what stays private.",
     keywords:
-      "choosing a private adviser, hire private adviser, private advisory Paris, personal branding adviser, ultra-luxury advisory",
+      "choosing a private adviser, hire private adviser, private advisory Paris, personal branding adviser",
     date: "2026-09-02",
     readingTime: "4 min",
     blocks: [
