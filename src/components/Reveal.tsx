@@ -25,6 +25,13 @@ const Reveal = ({ children, delay = 0, className = "", as = "div" }: RevealProps
       return;
     }
 
+    // Already on screen at mount (deep link / anchor jump): show immediately.
+    const rect = node.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -40,7 +47,7 @@ const Reveal = ({ children, delay = 0, className = "", as = "div" }: RevealProps
     observer.observe(node);
 
     // Safety net: never leave content invisible (e.g. anchor jumps, tall blocks)
-    const fallback = window.setTimeout(() => setVisible(true), 1200);
+    const fallback = window.setTimeout(() => setVisible(true), 500);
 
     return () => {
       window.clearTimeout(fallback);
