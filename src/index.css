@@ -51,6 +51,8 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
+    overflow-x: clip;
+    scrollbar-gutter: stable;
     background-color: hsl(var(--background));
     color-scheme: light;
   }
@@ -70,6 +72,19 @@
     text-rendering: optimizeLegibility;
     font-feature-settings: "kern" 1, "liga" 1;
     -webkit-text-size-adjust: 100%;
+    overscroll-behavior-y: none;
+  }
+
+  /* Media never overflows and always reserves its own space */
+  img, svg, video, canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Long words and URLs never widen the layout on narrow screens */
+  p, li, h1, h2, h3, h4, h5, h6, a, span {
+    overflow-wrap: anywhere;
   }
 
   #root {
