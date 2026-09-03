@@ -9,6 +9,9 @@ import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
+import Journal from "./pages/Journal";
+import JournalArticle from "./pages/JournalArticle";
+
 
 const queryClient = new QueryClient();
 
