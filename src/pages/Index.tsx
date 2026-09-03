@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import Reveal from "@/components/Reveal";
 import portraitMakil from "@/assets/portrait-makil.png.asset.json";
 import NextStep from "@/components/NextStep";
+import Signature from "@/components/Signature";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { scrollToSection } from "@/lib/scrollToSection";
@@ -134,6 +135,11 @@ const Index = () => {
                     {t("home.profil.sign")}
                   </figcaption>
                 </figure>
+
+                <div className="pt-10">
+                  <Signature className="h-10 sm:h-12 opacity-70" />
+                </div>
+
               </Reveal>
             </div>
 

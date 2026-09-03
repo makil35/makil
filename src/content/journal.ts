@@ -294,6 +294,55 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
   },
+  {
+    slug: "the-first-conversation",
+    title: "The first conversation",
+    kicker: "The house",
+    excerpt:
+      "Before anything is undertaken, there is a conversation. It decides more than any document that follows.",
+    metaTitle: "The First Conversation · Private Adviser · MAKIL · Paris",
+    metaDescription:
+      "What happens in a first conversation with a private adviser: reading the situation, defining what is not to be done, and deciding whether the house is the right one. Makil-Herrero Richard, Paris.",
+    keywords:
+      "private adviser first meeting, private advisory Paris, confidential conversation, discreet adviser, Makil-Herrero Richard, MAKIL",
+    date: "2026-09-03",
+    readingTime: "4 min",
+    blocks: [
+      {
+        paragraphs: [
+          "Nothing is undertaken before a conversation. It is not a formality placed in front of the work; it is the first part of the work, and often the part that determines everything after it.",
+        ],
+      },
+      {
+        heading: "Reading before answering",
+        paragraphs: [
+          "The first exchange is spent listening to what is said and noticing what is avoided. A situation is rarely described accurately the first time, not out of concealment, but because the person living it is inside it.",
+          "The role is to read the situation from outside, and to say what is actually at stake.",
+        ],
+      },
+      {
+        heading: "What should not be done",
+        paragraphs: [
+          "Most first conversations end with a shorter list than the one they began with. Several intentions are set aside, some are postponed, one remains.",
+          "Removing is the least visible part of the work and the one that protects a name most reliably.",
+        ],
+      },
+      {
+        heading: "Whether the house is the right one",
+        paragraphs: [
+          "Not every situation belongs here. A conversation can conclude with a name given to someone better placed, and that outcome is treated as a proper one.",
+          "A mandate accepted out of politeness serves no one.",
+        ],
+      },
+      {
+        heading: "What stays after it",
+        paragraphs: [
+          "Nothing is recorded beyond what is necessary, nothing is repeated, and nothing is used afterwards as a reference.",
+          "Observe. Decide. Deliver. The first conversation is where the first two happen.",
+        ],
+      },
+    ],
+  },
 ];
 
 
