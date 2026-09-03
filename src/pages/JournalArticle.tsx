@@ -18,10 +18,20 @@ const JournalArticle = () => {
     title: article?.metaTitle ?? "",
     description: article?.metaDescription ?? "",
     keywords: article?.keywords,
+    ogType: article ? "article" : undefined,
+    article: article
+      ? {
+          publishedTime: article.date,
+          modifiedTime: article.date,
+          author: "Makil-Herrero Richard",
+          section: article.kicker,
+          tags: article.keywords.split(",").map((k) => k.trim()).filter(Boolean),
+        }
+      : undefined,
     jsonLd: article
       ? {
           "@context": "https://schema.org",
-          "@type": "BlogPosting",
+          "@type": ["BlogPosting", "Article"],
           headline: article.title,
           description: article.metaDescription,
           datePublished: article.date,
@@ -114,6 +124,7 @@ const JournalArticle = () => {
           <NextStep
             links={[
               { kicker: "Journal", label: "All notes", to: "/journal" },
+              { kicker: "Archive", label: "Every note, by month", to: "/journal/archive" },
               { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
               { kicker: "The house", label: "Profile and principles", to: "/#richard" },
             ]}

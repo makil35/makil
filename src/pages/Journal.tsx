@@ -54,6 +54,15 @@ const Journal = () => {
             what is declined, and what is never published.
           </p>
 
+          <p className="-mt-10 mb-16">
+            <Link
+              to="/journal/archive"
+              className="text-[10px] font-body tracking-[0.35em] uppercase text-foreground/60 hover:text-foreground transition-smooth"
+            >
+              Full archive
+            </Link>
+          </p>
+
           <div className="space-y-14">
             {journalArticles.map((article) => (
               <article key={article.slug}>
@@ -83,6 +92,7 @@ const Journal = () => {
 
           <NextStep
             links={[
+              { kicker: "Archive", label: "Every note, by month", to: "/journal/archive" },
               { kicker: "The house", label: "Profile and principles", to: `${localizedPath("home")}#richard` },
               { kicker: "Correspondence", label: "Write", to: "/contact" },
               { kicker: "Access", label: "By introduction", to: "/#access" },
