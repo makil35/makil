@@ -53,7 +53,7 @@ export default {
 
   // Home · Hero
   "home.hero.kicker": "Makil-Herrero Richard · Paris",
-  "home.hero.role": "Private adviser · Art of living · Select presence",
+  "home.hero.role": "Private access. Private orchestration. Absolute discretion.",
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
   "home.hero.desc": "Private adviser in ultra-luxury, based in Paris. I serve a small circle of individuals who value what cannot be bought: time, trust, and the certainty that nothing is left to chance.",
