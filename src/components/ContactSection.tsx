@@ -18,6 +18,7 @@ const ContactSection = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [org, setOrg] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [copied, setCopied] = useState(false);
   // Anti-spam: honeypot field (invisible to humans) + minimum fill time
@@ -48,6 +49,7 @@ const ContactSection = () => {
       const { data, error } = await supabase.functions.invoke("submit-contact", {
         body: {
           ...parsed.data,
+          message: org.trim() ? `Company / Family office: ${org.trim()}\n\n${parsed.data.message}` : parsed.data.message,
           company,
           elapsedMs: Date.now() - mountedAt.current,
         },
@@ -55,7 +57,7 @@ const ContactSection = () => {
       if (error || !data?.success) throw error ?? new Error("send_failed");
 
       toast.success(t("contact.success"));
-      setName(""); setEmail(""); setMessage(""); setCompany("");
+      setName(""); setEmail(""); setMessage(""); setCompany(""); setOrg("");
       mountedAt.current = Date.now();
     } catch {
       toast.error(t("contact.error.send"));
@@ -142,6 +144,19 @@ const ContactSection = () => {
                 className="w-full bg-transparent border-b border-border/60 focus:border-foreground/60 outline-none py-2 text-sm font-body text-foreground transition-colors"
               />
             </div>
+          </div>
+          <div>
+            <label htmlFor="c-org" className="block text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground mb-2">
+              {t("contact.field.org")}
+            </label>
+            <input
+              id="c-org"
+              type="text"
+              maxLength={160}
+              value={org}
+              onChange={(e) => setOrg(e.target.value)}
+              className="w-full bg-transparent border-b border-border/60 focus:border-foreground/60 outline-none py-2 text-sm font-body text-foreground transition-colors"
+            />
           </div>
           <div>
             <label htmlFor="c-msg" className="block text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground mb-2">
