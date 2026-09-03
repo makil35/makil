@@ -1,6 +1,8 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
+import { journalArticles } from "@/content/journal";
 import ContactSection from "@/components/ContactSection";
 import CookieConsent from "@/components/CookieConsent";
 import Reveal from "@/components/Reveal";
@@ -247,6 +249,45 @@ const Index = () => {
               >
                 {t("home.acces.cta")}
               </a>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* JOURNAL */}
+        <section id="journal" className="scroll-mt-24 py-24 sm:py-32 bg-background">
+          <div className="container mx-auto px-6 lg:px-10">
+            <Reveal className="max-w-2xl space-y-6 mb-16">
+              <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
+                <Index_ n="07" />
+                Journal
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
+                Notes on the practice, <br />
+                <em className="italic">written plainly</em>
+              </h2>
+            </Reveal>
+
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-5xl">
+              {journalArticles.slice(0, 3).map((a, i) => (
+                <Reveal as="li" key={a.slug} delay={i * 120} className="space-y-3">
+                  <p className="text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">{a.kicker}</p>
+                  <h3 className="font-display text-lg leading-snug text-foreground">
+                    <Link to={`/journal/${a.slug}`} className="hover:opacity-70 transition-smooth">
+                      {a.title}
+                    </Link>
+                  </h3>
+                  <p className="text-xs font-body text-muted-foreground leading-loose">{a.excerpt}</p>
+                </Reveal>
+              ))}
+            </ul>
+
+            <Reveal className="mt-14">
+              <Link
+                to="/journal"
+                className="inline-flex items-center gap-3 text-[10px] font-body tracking-[0.35em] uppercase text-foreground/70 hover:text-foreground transition-smooth"
+              >
+                All notes <span aria-hidden="true">&rarr;</span>
+              </Link>
             </Reveal>
           </div>
         </section>

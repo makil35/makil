@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
 import { getArticle, journalArticles, formatArticleDate } from "@/content/journal";
+import PageIntro from "@/components/PageIntro";
+import NextStep from "@/components/NextStep";
 
 const SITE_URL = "https://makil.fr";
 
@@ -50,12 +52,7 @@ const JournalArticle = () => {
 
       <main className="flex-grow container mx-auto px-6 lg:px-10 py-20 mt-16">
         <article className="max-w-3xl mx-auto">
-          <Link
-            to="/journal"
-            className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
-          >
-            Journal
-          </Link>
+          <PageIntro crumbs={[{ label: "Journal", to: "/journal" }, { label: article.kicker }]} />
 
           <p className="mt-8 text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground">
             {article.kicker} · {formatArticleDate(article.date)} · {article.readingTime}
@@ -114,14 +111,12 @@ const JournalArticle = () => {
             </nav>
           )}
 
-          <div className="mt-16 flex flex-wrap gap-6 text-[10px] font-body tracking-[0.35em] uppercase">
-            <Link to={localizedPath("legal")} className="text-muted-foreground hover:text-foreground transition-smooth">
-              Legal notice
-            </Link>
-            <Link to={localizedPath("privacy")} className="text-muted-foreground hover:text-foreground transition-smooth">
-              Privacy
-            </Link>
-          </div>
+          <NextStep
+            links={[
+              { kicker: "Journal", label: "All notes", to: "/journal" },
+              { kicker: "Introductions", label: "Private access", to: `${localizedPath("home")}#acces` },
+            ]}
+          />
         </article>
       </main>
 

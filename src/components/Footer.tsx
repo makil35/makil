@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { localizedPath } from "@/lib/routes";
+import { journalArticles } from "@/content/journal";
 
 const LongArrow = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 32 12"
-    fill="none"
-    className={className}
-    aria-hidden="true"
-  >
+  <svg viewBox="0 0 32 12" fill="none" className={className} aria-hidden="true">
     <path
       d="M0 6h30M30 6l-5.5-5M30 6l-5.5 5"
       stroke="currentColor"
@@ -21,12 +17,25 @@ const LongArrow = ({ className }: { className?: string }) => (
 
 const Footer = () => {
   const { t } = useLanguage();
+  const home = localizedPath("home");
+
+  const practice = [
+    { label: t("nav.profil"), to: `${home}#profil` },
+    { label: t("nav.univers"), to: `${home}#univers` },
+    { label: t("nav.approche"), to: `${home}#approche` },
+    { label: t("nav.vision"), to: `${home}#vision` },
+    { label: t("nav.principles"), to: `${home}#principles` },
+  ];
+
   return (
     <footer>
-      {/* Makil Private banner */}
+      {/* Access banner — a single, quiet entry point */}
       <div className="bg-background border-t border-foreground/10">
-        <div className="container mx-auto px-6 lg:px-10 py-10 sm:py-12">
-          <div className="group flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="container mx-auto px-6 lg:px-10">
+          <Link
+            to={`${home}#acces`}
+            className="group flex flex-col sm:flex-row items-center justify-between gap-6 py-10 sm:py-12"
+          >
             <span className="text-[11px] font-body tracking-[0.4em] uppercase text-foreground/60 transition-smooth group-hover:text-foreground">
               {t("footer.makilPrivate")}
             </span>
@@ -37,38 +46,105 @@ const Footer = () => {
                 <LongArrow className="w-5 h-5 text-current transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5" />
               </span>
             </span>
-          </div>
+          </Link>
         </div>
       </div>
 
-      {/* Main footer */}
-      <div className="bg-background">
-        <div className="container mx-auto px-6 lg:px-10 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <button
-              type="button"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="font-display text-sm tracking-[0.4em] uppercase text-foreground hover:opacity-70 transition-smooth"
-              aria-label={t("nav.home")}
-            >
-              MAKIL
-            </button>
-            <p className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground">
-              © {new Date().getFullYear()} MAKIL · {t("footer.rights")}
-            </p>
-            <div className="flex gap-6 text-[11px] font-body tracking-[0.2em] uppercase">
-              <Link to="/journal" className="text-muted-foreground hover:text-foreground transition-smooth">
-                Journal
-              </Link>
-
-              <Link to={localizedPath("legal")} className="text-muted-foreground hover:text-foreground transition-smooth">
-                {t("footer.legal")}
-              </Link>
-              <Link to={localizedPath("privacy")} className="text-muted-foreground hover:text-foreground transition-smooth">
-                {t("footer.privacy")}
-              </Link>
+      {/* Sitemap */}
+      <div className="bg-background border-t border-foreground/10">
+        <div className="container mx-auto px-6 lg:px-10 py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div>
+              <button
+                type="button"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="font-display text-sm tracking-[0.4em] uppercase text-foreground hover:opacity-70 transition-smooth"
+                aria-label={t("nav.home")}
+              >
+                MAKIL
+              </button>
             </div>
+
+            <nav aria-label={t("nav.mainAria")} className="space-y-4">
+              <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground/70">
+                The practice
+              </p>
+              <ul className="space-y-3">
+                {practice.map((l) => (
+                  <li key={l.to}>
+                    <Link
+                      to={l.to}
+                      className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <nav aria-label="Journal" className="space-y-4">
+              <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground/70">
+                Journal
+              </p>
+              <ul className="space-y-3">
+                {journalArticles.slice(0, 3).map((a) => (
+                  <li key={a.slug}>
+                    <Link
+                      to={`/journal/${a.slug}`}
+                      className="text-[11px] font-body leading-relaxed text-muted-foreground hover:text-foreground transition-smooth"
+                    >
+                      {a.title}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link
+                    to="/journal"
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-foreground/70 hover:text-foreground transition-smooth"
+                  >
+                    All notes
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+
+            <nav aria-label="Legal" className="space-y-4">
+              <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground/70">
+                Contact
+              </p>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    to={`${home}#acces`}
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    {t("nav.acces")}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={localizedPath("legal")}
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    {t("footer.legal")}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={localizedPath("privacy")}
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    {t("footer.privacy")}
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
+
+          <p className="mt-16 text-[10px] font-body tracking-[0.25em] uppercase text-muted-foreground">
+            © {new Date().getFullYear()} MAKIL · {t("footer.rights")}
+          </p>
         </div>
       </div>
     </footer>

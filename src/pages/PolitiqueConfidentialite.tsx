@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
+import PageIntro from "@/components/PageIntro";
+import NextStep from "@/components/NextStep";
 
 const PolitiqueConfidentialite = () => {
   const { t } = useLanguage();
@@ -18,6 +20,8 @@ const PolitiqueConfidentialite = () => {
 
       <main className="flex-grow container mx-auto px-6 lg:px-10 py-20 mt-16">
         <div className="max-w-3xl mx-auto">
+          <PageIntro crumbs={[{ label: t("privacy.title") }]} />
+
           <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground mb-4">
             {t("legal.kicker")}
           </p>
@@ -116,6 +120,12 @@ const PolitiqueConfidentialite = () => {
               </p>
             </section>
           </div>
+          <NextStep
+            links={[
+              { kicker: "The practice", label: "Back to Makil", to: localizedPath("home") },
+              { kicker: "Journal", label: "Notes and perspective", to: "/journal" },
+            ]}
+          />
         </div>
       </main>
 
