@@ -69,21 +69,23 @@ const Index = () => {
               {t("home.hero.desc")}
             </p>
             <a
-              href="#access"
+              href="#profile"
+              onClick={(e) => {
+                if (scrollToSection("profile")) e.preventDefault();
+              }}
               className="animate-rise inline-flex flex-col items-start gap-3 group pt-4"
               style={{ animationDelay: "600ms" }}
             >
-              {t("home.hero.cta") && (
-                <span className="link-underline text-[10px] font-body tracking-luxe uppercase text-muted-foreground group-hover:text-foreground transition-smooth">
-                  {t("home.hero.cta")}
-                </span>
-              )}
+              <span className="link-underline text-[10px] font-body tracking-luxe uppercase text-muted-foreground group-hover:text-foreground transition-smooth">
+                {t("home.hero.cta")}
+              </span>
               <ChevronDown
                 size={16}
                 strokeWidth={1}
                 className="animate-drift text-muted-foreground group-hover:text-foreground transition-smooth"
               />
             </a>
+
           </div>
         </div>
       </header>
