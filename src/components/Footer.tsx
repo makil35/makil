@@ -193,6 +193,26 @@ const Footer = () => {
                     YouTube
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/makilprivate/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/richardmakilherrero"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    Facebook
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
