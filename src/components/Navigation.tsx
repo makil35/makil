@@ -56,7 +56,7 @@ const Navigation = () => {
       role="navigation"
       aria-label={t("nav.mainAria")}
     >
-      <div className="container mx-auto px-6 lg:px-10">
+      <div className="container relative z-50 mx-auto px-6 sm:px-8 lg:px-10">
         <div className={`flex items-center justify-between transition-elegant ${scrolled ? "h-16" : "h-20"}`}>
           <Link
             to={home}
@@ -99,7 +99,7 @@ const Navigation = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-foreground"
+            className="relative z-50 lg:hidden text-foreground"
             aria-label={isOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={isOpen}
           >
@@ -110,7 +110,7 @@ const Navigation = () => {
 
       {/* Mobile overlay */}
       <div
-        className={`lg:hidden fixed inset-0 top-0 bg-background transition-[opacity,visibility] duration-500 ${
+        className={`lg:hidden fixed inset-0 top-0 z-40 bg-background transition-[opacity,visibility] duration-500 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
