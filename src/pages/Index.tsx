@@ -31,7 +31,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <a
-        href="#profile"
+        href="#richard"
         className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:bg-foreground focus:px-4 focus:py-2 focus:text-[11px] focus:uppercase focus:tracking-[0.3em] focus:text-background"
       >
         {t("a11y.skip")}
@@ -69,9 +69,12 @@ const Index = () => {
               {t("home.hero.desc")}
             </p>
             <a
-              href="#profile"
+              href="#richard"
               onClick={(e) => {
-                if (scrollToSection("profile")) e.preventDefault();
+                if (scrollToSection("richard")) {
+                  e.preventDefault();
+                  window.history.replaceState(null, "", "#richard");
+                }
               }}
               className="animate-rise inline-flex flex-col items-start gap-3 group pt-4"
               style={{ animationDelay: "600ms" }}
@@ -92,7 +95,7 @@ const Index = () => {
 
       <main>
         {/* PROFILE */}
-        <section id="profile" className="scroll-mt-24 py-24 sm:py-32 bg-background">
+        <section id="richard" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-16 lg:gap-24 items-start">
             <div className="max-w-2xl space-y-6">
               <Reveal className="space-y-6">
