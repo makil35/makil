@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 import Journal from "./pages/Journal";
 import JournalArticle from "./pages/JournalArticle";
+import ScrollToTop from "@/components/ScrollToTop";
 
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <LanguageProvider>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/legal-notice" element={<MentionsLegales />} />
