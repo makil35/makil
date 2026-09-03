@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 /**
  * Keeps navigation predictable: every route change starts at the top,
- * and hash links (e.g. /#acces) land on the right section after mount.
+ * and hash links (e.g. /#access) land on the right section after mount.
  */
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();

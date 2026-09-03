@@ -85,7 +85,7 @@ const JournalArticle = () => {
               main page
             </Link>
             . Introductions are made through{" "}
-            <Link to={`${localizedPath("home")}#acces`} className="underline underline-offset-4 hover:text-foreground">
+            <Link to={`${localizedPath("home")}#access`} className="underline underline-offset-4 hover:text-foreground">
               private access
             </Link>
             .
@@ -115,7 +115,7 @@ const JournalArticle = () => {
             links={[
               { kicker: "Journal", label: "All notes", to: "/journal" },
               { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
-              { kicker: "The practice", label: "Profile and principles", to: "/#profil" },
+              { kicker: "The practice", label: "Profile and principles", to: "/#profile" },
             ]}
           />
         </article>

@@ -18,7 +18,7 @@ interface Entry {
 const staticEntries: Entry[] = [
   {
     title: "Private adviser · The practice",
-    to: "/#approche",
+    to: "/#approach",
     kicker: "Practice",
     summary:
       "One name, one point of contact. Private advisory in ultra-luxury, conducted personally and by introduction only.",
@@ -27,7 +27,7 @@ const staticEntries: Entry[] = [
   },
   {
     title: "Personal branding, without noise",
-    to: "/#univers",
+    to: "/#signature",
     kicker: "Universe",
     summary:
       "Presence, image and reputation shaped with restraint for families, founders and public figures.",
@@ -43,7 +43,7 @@ const staticEntries: Entry[] = [
   },
   {
     title: "Access · By introduction only",
-    to: "/#acces",
+    to: "/#access",
     kicker: "Access",
     summary: "How an engagement begins, and why the list stays short.",
     terms: "access invitation introduction availability engagement client onboarding",
@@ -244,7 +244,7 @@ const Search = () => {
 
           <NextStep
             links={[
-              { kicker: "Practice", label: "The approach", to: "/#approche" },
+              { kicker: "Practice", label: "The approach", to: "/#approach" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
               { kicker: "Contact", label: "Confidential conversation", to: "/contact" },
             ]}

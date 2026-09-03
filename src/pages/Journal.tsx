@@ -85,7 +85,7 @@ const Journal = () => {
             links={[
               { kicker: "The practice", label: "Profile and principles", to: localizedPath("home") },
               { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
-              { kicker: "Access", label: "By invitation only", to: "/#acces" },
+              { kicker: "Access", label: "By invitation only", to: "/#access" },
             ]}
           />
         </div>
