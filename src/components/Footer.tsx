@@ -38,8 +38,10 @@ const Footer = () => {
     { label: t("nav.profil"), to: `${home}#richard` },
     { label: t("nav.univers"), to: `${home}#signature` },
     { label: t("nav.approche"), to: `${home}#approach` },
+    { label: t("nav.mandates"), to: `${home}#mandates` },
     { label: t("nav.vision"), to: `${home}#vision` },
     { label: t("nav.principles"), to: `${home}#principles` },
+    { label: t("nav.acces"), to: `${home}#access` },
   ];
 
   return (
@@ -134,9 +136,9 @@ const Footer = () => {
               </ul>
             </nav>
 
-            <nav aria-label="Legal" className="space-y-4">
+            <nav aria-label="Contact and information" className="space-y-4">
               <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground/70">
-                Contact
+                Contact & information
               </p>
               <ul className="space-y-3">
                 <li>

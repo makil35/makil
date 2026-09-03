@@ -365,7 +365,8 @@ const Index = () => {
             links={[
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
               { kicker: "Correspondence", label: "Write", to: "/contact" },
-              { kicker: "Legal", label: "Legal notice", to: "/legal-notice" },
+              { kicker: "Access", label: "By introduction", to: "#access" },
+              { kicker: "Information", label: "Legal notice", to: "/legal-notice" },
             ]}
           />
         </div>
