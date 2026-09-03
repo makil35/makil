@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import ScrollToTop from "@/components/ScrollToTop";
 import AccessGate from "@/components/AccessGate";
+import CookieConsent from "@/components/CookieConsent";
 
 
 const queryClient = new QueryClient();
@@ -51,6 +52,7 @@ const App = () => (
             <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <CookieConsent />
           </AccessGate>
         </LanguageProvider>
       </BrowserRouter>

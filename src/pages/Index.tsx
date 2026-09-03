@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { journalArticles } from "@/content/journal";
 import ContactSection from "@/components/ContactSection";
-import CookieConsent from "@/components/CookieConsent";
 import Reveal from "@/components/Reveal";
 import portraitMakil from "@/assets/portrait-makil.png.asset.json";
 import NextStep from "@/components/NextStep";
@@ -373,7 +372,6 @@ const Index = () => {
       </main>
 
       <Footer />
-      <CookieConsent />
     </div>
   );
 };
