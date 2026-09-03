@@ -78,8 +78,8 @@ const Reveal = ({ children, delay = 0, className = "", as = "div" }: RevealProps
     <Tag
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-[opacity,transform] duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[opacity,transform] ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+      className={`transition-opacity duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[opacity] ${
+        visible ? "opacity-100" : "opacity-0"
       } ${className}`}
     >
       {children}
