@@ -118,11 +118,7 @@ export default {
   "home.mandates.title1": "Judgement, network,",
   "home.mandates.title2": "discretion.",
   "home.mandates.p1": "There is no catalogue here. Each request is considered on its own terms: what it truly requires, whom it should involve, and how it should be carried out, quietly.",
-  "home.mandates.p2": "Some requests call for access. Others call for orchestration, or simply for the right person at the right moment. What they share is the need for someone who can be called when a situation requires judgement, network and discretion.",
-  "home.mandates.when": "One calls Makil",
-  "home.mandates.w1": "when a decision must be made quietly, and quickly;",
-  "home.mandates.w2": "when the right introduction matters more than the right price;",
-  "home.mandates.w3": "when a matter is personal enough that it cannot be handed to a team.",
+  "home.mandates.p2": "Some requests call for access. Others call for orchestration, or simply for the right person at the right moment. I do not take every request. I take those where my presence changes the outcome.",
   "home.mandates.p3": "Others will offer you a structure. I offer you a name, and the responsibility that comes with it.",
 
   // Home · Vision

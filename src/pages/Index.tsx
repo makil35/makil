@@ -213,16 +213,6 @@ const Index = () => {
               </h2>
               <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.mandates.p1")}</p>
               <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.mandates.p2")}</p>
-              <div className="pt-6 space-y-3">
-                <p className="text-[10px] font-body tracking-luxe uppercase text-foreground/70">{t("home.mandates.when")}</p>
-                <ul className="space-y-2">
-                  {["home.mandates.w1", "home.mandates.w2", "home.mandates.w3"].map((k) => (
-                    <li key={k} className="text-sm font-body text-muted-foreground leading-loose">
-                      {t(k)}
-                    </li>
-                  ))}
-                </ul>
-              </div>
               <p className="text-sm font-body text-foreground/80 leading-loose italic font-display pt-4">{t("home.mandates.p3")}</p>
             </Reveal>
           </div>
