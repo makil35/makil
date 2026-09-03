@@ -114,7 +114,7 @@ const JournalArticle = () => {
           <NextStep
             links={[
               { kicker: "Journal", label: "All notes", to: "/journal" },
-              { kicker: "Introductions", label: "Private access", to: `${localizedPath("home")}#acces` },
+              { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
             ]}
           />
         </article>
