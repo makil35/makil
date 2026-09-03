@@ -49,7 +49,7 @@ const Contact = () => {
     titleKey: "seo.contact.title",
     descriptionKey: "seo.contact.description",
     keywords:
-      "contact private adviser, private advisory Paris, confidential conversation, personal branding adviser, MAKIL contact, Makil-Herrero Richard, ultra-luxury advisory",
+      "contact private adviser, request confidential conversation, personal branding adviser Paris, private advisory enquiry, Makil-Herrero Richard, MAKIL contact, ultra-luxury adviser",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "ContactPage",

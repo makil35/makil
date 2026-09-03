@@ -16,7 +16,7 @@ const Journal = () => {
     description:
       "Notes on private advisory and personal branding by Makil-Herrero Richard, private adviser in Paris. Discretion, restraint and the practice behind a name.",
     keywords:
-      "private adviser journal, personal branding articles, private advisory Paris, ultra-luxury advisory, Makil-Herrero Richard",
+      "private adviser journal, personal branding notes, ultra-luxury advisory insights, discretion, reputation management, Makil-Herrero Richard, MAKIL Paris",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Blog",
