@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, FormEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import { z } from "zod";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -48,7 +49,7 @@ const Contact = () => {
     titleKey: "seo.contact.title",
     descriptionKey: "seo.contact.description",
     keywords:
-      "contact private adviser, private advisory Paris, confidential conversation, personal branding adviser, MAKIL contact, Makil-Herrero Richard, ultra-luxury advisory",
+      "contact private adviser, request confidential conversation, personal branding adviser Paris, private advisory enquiry, Makil-Herrero Richard, MAKIL contact, ultra-luxury adviser",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "ContactPage",
@@ -63,7 +64,11 @@ const Contact = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [searchParams] = useSearchParams();
+  const carriedQuery = (searchParams.get("q") ?? "").slice(0, 300);
+  const [message, setMessage] = useState(
+    carriedQuery ? `Request: ${carriedQuery}\n\n` : ""
+  );
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
   // Anti-spam: honeypot field (invisible to humans) + minimum fill time

@@ -137,7 +137,7 @@ export const useSeo = ({
         ? "noindex, follow"
         : "index, follow, max-image-preview:large, max-snippet:-1"
     );
-    const keywords = rawKeywords ?? "private adviser, personal branding, ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private advisory, luxury advisory, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Geneva, London, Dubai";
+    const keywords = rawKeywords ?? "private adviser, private advisory, personal branding, personal brand strategist, ultra-luxury lifestyle, confidential advisory, discreet adviser, MAKIL, Makil-Herrero Richard, private client adviser Paris, reputation and image adviser, bespoke experiences, art of living, high net worth private adviser, by introduction only, Paris, Monaco, London, Geneva, Dubai";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route
