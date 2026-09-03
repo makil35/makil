@@ -84,7 +84,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
     setRequestSent(true);
   };
 
-  if (status === "granted") return <>{children}</>;
+  if (GATE_PAUSED || status === "granted") return <>{children}</>;
 
   if (status === "checking") {
     return <div className="min-h-screen bg-background" aria-hidden />;
