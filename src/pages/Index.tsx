@@ -15,7 +15,71 @@ import { scrollToSection } from "@/lib/scrollToSection";
 
 const Index = () => {
   const { t } = useLanguage();
-  useSeo({ routeKey: "home", titleKey: "seo.home.title", descriptionKey: "seo.home.description" });
+  useSeo({
+    routeKey: "home",
+    titleKey: "seo.home.title",
+    descriptionKey: "seo.home.description",
+    ogType: "profile",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://makil.fr/#website",
+          name: "MAKIL",
+          url: "https://makil.fr/",
+          inLanguage: "en-GB",
+          publisher: { "@id": "https://makil.fr/#person" },
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://makil.fr/#profilepage",
+          url: "https://makil.fr/",
+          name: "Makil-Herrero Richard · Private Adviser · Paris",
+          inLanguage: "en-GB",
+          isPartOf: { "@id": "https://makil.fr/#website" },
+          mainEntity: { "@id": "https://makil.fr/#person" },
+        },
+        {
+          "@type": "Person",
+          "@id": "https://makil.fr/#person",
+          name: "Makil-Herrero Richard",
+          jobTitle: "Private Adviser",
+          description:
+            "Private adviser in Paris. Reading, judgement and quiet orchestration for a select circle. By introduction only.",
+          url: "https://makil.fr/",
+          image: `https://makil.fr${portraitMakil.url}`,
+          email: "mailto:richard@makil.fr",
+          knowsAbout: [
+            "Private advisory",
+            "Personal branding",
+            "Discretion and confidentiality",
+            "Private orchestration",
+          ],
+          areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai"],
+          address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
+          sameAs: [
+            "https://www.instagram.com/makilprivate/",
+            "https://www.youtube.com/@makilprivate",
+            "https://www.facebook.com/richardmakilherrero",
+          ],
+          worksFor: { "@id": "https://makil.fr/#house" },
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://makil.fr/#house",
+          name: "MAKIL",
+          url: "https://makil.fr/",
+          description:
+            "A private house: access, private orchestration and discreet execution, carried by a single name.",
+          founder: { "@id": "https://makil.fr/#person" },
+          areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai"],
+          email: "mailto:richard@makil.fr",
+        },
+      ],
+    },
+  });
+
 
   const pillars = [
     { titleKey: "home.pillar.discretion", descKey: "home.pillar.discretion.desc" },

@@ -32,7 +32,7 @@ const linkClass =
 
 const MentionsLegales = () => {
   const { t } = useLanguage();
-  useSeo({ routeKey: "legal", titleKey: "seo.legal.title", descriptionKey: "seo.legal.description" });
+  useSeo({ breadcrumbs: [{ name: "Legal notice", path: "/legal-notice" }], routeKey: "legal", titleKey: "seo.legal.title", descriptionKey: "seo.legal.description" });
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />

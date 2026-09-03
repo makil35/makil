@@ -15,6 +15,12 @@ const JournalArticle = () => {
 
   useSeo({
     path: `/journal/${slug ?? ""}`,
+    breadcrumbs: article
+      ? [
+          { name: "Journal", path: "/journal" },
+          { name: article.title, path: `/journal/${article.slug}` },
+        ]
+      : undefined,
     title: article?.metaTitle ?? "",
     description: article?.metaDescription ?? "",
     keywords: article?.keywords,
@@ -40,13 +46,21 @@ const JournalArticle = () => {
           url: `${SITE_URL}/journal/${article.slug}`,
           mainEntityOfPage: `${SITE_URL}/journal/${article.slug}`,
           keywords: article.keywords,
+          articleSection: article.kicker,
           author: {
             "@type": "Person",
+            "@id": `${SITE_URL}/#person`,
             name: "Makil-Herrero Richard",
             jobTitle: "Private Adviser · Personal Branding",
             url: SITE_URL,
           },
-          publisher: { "@type": "Organization", name: "MAKIL", url: SITE_URL },
+          publisher: {
+            "@type": "Organization",
+            name: "MAKIL",
+            url: SITE_URL,
+            logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` },
+          },
+          image: [`${SITE_URL}/og-image.jpg`],
           isPartOf: { "@type": "Blog", name: "MAKIL Journal", url: `${SITE_URL}/journal` },
         }
       : undefined,
