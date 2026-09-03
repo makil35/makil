@@ -115,7 +115,7 @@ const JournalArticle = () => {
             links={[
               { kicker: "Journal", label: "All notes", to: "/journal" },
               { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
-              { kicker: "The practice", label: "Profile and principles", to: "/#profile" },
+              { kicker: "The practice", label: "Profile and principles", to: "/#richard" },
             ]}
           />
         </article>
