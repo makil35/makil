@@ -73,9 +73,11 @@ const Index = () => {
               className="animate-rise inline-flex flex-col items-start gap-3 group pt-4"
               style={{ animationDelay: "600ms" }}
             >
-              <span className="link-underline text-[10px] font-body tracking-luxe uppercase text-muted-foreground group-hover:text-foreground transition-smooth">
-                {t("home.hero.cta")}
-              </span>
+              {t("home.hero.cta") && (
+                <span className="link-underline text-[10px] font-body tracking-luxe uppercase text-muted-foreground group-hover:text-foreground transition-smooth">
+                  {t("home.hero.cta")}
+                </span>
+              )}
               <ChevronDown
                 size={16}
                 strokeWidth={1}
@@ -321,8 +323,8 @@ const Index = () => {
                 Journal
               </p>
               <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
-                Notes on the practice, <br />
-                <em className="italic">written plainly</em>
+                Notes on reading, judgement <br />
+                <em className="italic">and silence</em>
               </h2>
             </Reveal>
 
@@ -356,8 +358,8 @@ const Index = () => {
         <div className="container mx-auto px-6 lg:px-10 pb-24">
           <NextStep
             links={[
-              { kicker: "Journal", label: "Notes and perspective", to: "/journal" },
-              { kicker: "Introductions", label: "Request private access", to: "/contact" },
+              { kicker: "Journal", label: "Read the notes", to: "/journal" },
+              { kicker: "Correspondence", label: "Write", to: "/contact" },
               { kicker: "Legal", label: "Legal notice", to: "/legal-notice" },
             ]}
           />

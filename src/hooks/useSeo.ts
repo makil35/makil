@@ -137,7 +137,7 @@ export const useSeo = ({
         ? "noindex, follow"
         : "index, follow, max-image-preview:large, max-snippet:-1"
     );
-    const keywords = rawKeywords ?? "private adviser, private advisory, personal branding, personal brand strategist, ultra-luxury lifestyle, confidential advisory, discreet adviser, MAKIL, Makil-Herrero Richard, private client adviser Paris, reputation and image adviser, bespoke experiences, art of living, high net worth private adviser, by introduction only, Paris, Monaco, London, Geneva, Dubai";
+    const keywords = rawKeywords ?? "private adviser, private advisory, personal branding, personal brand strategist, confidential advisory, discreet adviser, MAKIL, Makil-Herrero Richard, private client adviser Paris, reputation and image adviser, art of living, high net worth private adviser, by introduction only, Paris, Monaco, London, Geneva, Dubai";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route
@@ -158,7 +158,7 @@ export const useSeo = ({
         url: canonical,
         inLanguage: "en-GB",
         isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
-        about: { "@type": "Thing", name: "Confidential ultra-luxury" },
+        about: { "@type": "Thing", name: "Private advisory" },
       }
     );
   }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, rawTitle, rawDescription, rawKeywords, jsonLd, language, location.pathname, t]);

@@ -21,9 +21,9 @@ const staticEntries: Entry[] = [
     to: "/#approach",
     kicker: "Practice",
     summary:
-      "One name, one point of contact. Private advisory in ultra-luxury, conducted personally and by introduction only.",
+      "One name, one point of contact. Private advisory conducted personally and by introduction only.",
     terms:
-      "private adviser advisory practice approach method ultra luxury paris confidential discretion bespoke",
+      "private adviser advisory practice approach method paris confidential discretion reading judgement",
   },
   {
     title: "Personal branding, without noise",
@@ -35,7 +35,7 @@ const staticEntries: Entry[] = [
       "personal branding image reputation presence founder public figure profile positioning",
   },
   {
-    title: "Vision · Observe. Decide. Deliver.",
+    title: "Vision · Clarity before noise",
     to: "/#vision",
     kicker: "Vision",
     summary: "What guides every engagement: exactness, restraint and protected attention.",
@@ -46,20 +46,20 @@ const staticEntries: Entry[] = [
     to: "/#access",
     kicker: "Access",
     summary: "How an engagement begins, and why the list stays short.",
-    terms: "access invitation introduction availability engagement client onboarding",
+    terms: "access invitation introduction availability engagement client",
   },
   {
-    title: "Request a confidential conversation",
+    title: "Correspondence",
     to: "/contact",
     kicker: "Contact",
-    summary: "A direct, private exchange. Every message is read personally.",
-    terms: "contact email conversation request appointment meeting call reach out enquiry",
+    summary: "A direct exchange. Every message is read personally.",
+    terms: "contact email conversation message reach enquiry",
   },
   {
     title: "Journal",
     to: "/journal",
     kicker: "Journal",
-    summary: "Notes on private advisory, personal branding and discretion.",
+    summary: "Notes on reading, judgement and silence.",
     terms: "journal blog articles notes writing insight",
   },
   {
@@ -103,11 +103,11 @@ const Search = () => {
 
   useSeo({
     path: "/search",
-    title: "Search · MAKIL · Private Adviser & Personal Branding",
+    title: "Search · MAKIL · Private Adviser",
     description:
-      "Search the MAKIL practice of Makil-Herrero Richard: private advisory, personal branding, journal notes and confidential contact.",
+      "Search the MAKIL practice of Makil-Herrero Richard: private advisory, personal branding, journal notes and direct correspondence.",
     keywords:
-      "MAKIL search, private adviser search, Makil-Herrero Richard, personal branding Paris, confidential advisory",
+      "MAKIL search, private adviser search, Makil-Herrero Richard, personal branding Paris",
     noindex: true,
   });
 
@@ -149,11 +149,11 @@ const Search = () => {
               Private index
             </p>
             <h1 className="mt-8 text-5xl sm:text-6xl font-display leading-[1.05] tracking-tight text-foreground">
-              What are you <em className="italic">looking for</em>
+              Search the <em className="italic">practice</em>
             </h1>
             <div aria-hidden="true" className="mt-10 h-px w-16 bg-foreground/25" />
             <p className="mt-10 max-w-xl text-sm font-body text-muted-foreground leading-loose">
-              A quiet index of the practice. If the answer is not written here, it is
+              A quiet index of what is written here. If the answer is not written here, it is
               answered in private.
             </p>
           </header>
@@ -163,7 +163,7 @@ const Search = () => {
               htmlFor="site-search"
               className="block text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground mb-3"
             >
-              Your request
+              Your query
             </label>
             <div className="flex items-end gap-6">
               <input
@@ -225,17 +225,17 @@ const Search = () => {
             {submitted && (
               <div className="mt-20 border-t border-foreground/10 pt-12">
                 <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground">
-                  Ask directly
+                  Write
                 </p>
                 <p className="mt-6 max-w-xl font-display text-2xl sm:text-3xl leading-tight text-foreground">
-                  Your request is carried, word for word, to a confidential conversation.
+                  What you write here is carried, word for word, to a direct line.
                 </p>
                 <button
                   type="button"
                   onClick={toContact}
                   className="mt-10 inline-flex items-center gap-4 border border-foreground/25 px-8 py-4 text-[10px] font-body tracking-[0.35em] uppercase text-foreground transition-smooth hover:border-foreground"
                 >
-                  Continue to contact
+                  Write
                   <span aria-hidden="true">→</span>
                 </button>
               </div>
@@ -246,7 +246,7 @@ const Search = () => {
             links={[
               { kicker: "Practice", label: "The approach", to: "/#approach" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
-              { kicker: "Contact", label: "Confidential conversation", to: "/contact" },
+              { kicker: "Contact", label: "Write", to: "/contact" },
             ]}
           />
         </div>
