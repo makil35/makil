@@ -41,7 +41,7 @@ const Index = () => {
 
       {/* HERO */}
       <header className="relative flex min-h-[92svh] items-center overflow-hidden bg-background atmosphere grain">
-        <div className="container relative z-10 mx-auto px-6 py-28 lg:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-16 items-center">
+        <div className="container relative z-10 mx-auto px-6 py-28 lg:px-10">
           <div className="max-w-2xl space-y-10">
             <p
               className="animate-rise text-[10px] font-body tracking-luxe uppercase text-muted-foreground"
@@ -83,23 +83,6 @@ const Index = () => {
               />
             </a>
           </div>
-
-          <figure
-            className="animate-rise hidden lg:block justify-self-end"
-            style={{ animationDelay: "520ms" }}
-          >
-            <img
-              src={portraitMakil.url}
-              alt="Makil-Herrero Richard, private adviser in Paris"
-              loading="eager"
-              width={1024}
-              height={1536}
-              className="w-full max-w-[300px] object-cover grayscale opacity-90"
-            />
-            <figcaption className="mt-4 text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">
-              Makil-Herrero Richard · Paris
-            </figcaption>
-          </figure>
         </div>
       </header>
 
