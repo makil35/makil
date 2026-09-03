@@ -158,7 +158,7 @@ export const useSeo = ({
         url: canonical,
         inLanguage: "en-GB",
         isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
-        about: { "@type": "Thing", name: "Confidential ultra-luxury" },
+        about: { "@type": "Thing", name: "Private advisory" },
       }
     );
   }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, rawTitle, rawDescription, rawKeywords, jsonLd, language, location.pathname, t]);

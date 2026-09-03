@@ -12,11 +12,11 @@ const SITE_URL = "https://makil.fr";
 const Journal = () => {
   useSeo({
     path: "/journal",
-    title: "Journal · Private Adviser & Personal Branding · MAKIL",
+    title: "Journal · Private Adviser · MAKIL",
     description:
       "Notes on private advisory and personal branding by Makil-Herrero Richard, private adviser in Paris. Discretion, restraint and the practice behind a name.",
     keywords:
-      "private adviser journal, personal branding notes, ultra-luxury advisory insights, discretion, reputation management, Makil-Herrero Richard, MAKIL Paris",
+      "private adviser journal, personal branding notes, discretion, reputation management, Makil-Herrero Richard, MAKIL Paris",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Blog",
@@ -47,7 +47,7 @@ const Journal = () => {
             Journal
           </p>
           <h1 className="text-4xl sm:text-5xl font-display text-foreground mb-6">
-            Private advisory and personal branding
+            Reading, judgement and silence
           </h1>
           <p className="font-body text-sm leading-relaxed text-foreground/70 max-w-xl mb-16">
             Short notes on how a private practice is organised: what is decided,
@@ -84,8 +84,8 @@ const Journal = () => {
           <NextStep
             links={[
               { kicker: "The practice", label: "Profile and principles", to: localizedPath("home") },
-              { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
-              { kicker: "Access", label: "By invitation only", to: "/#access" },
+              { kicker: "Correspondence", label: "Write", to: "/contact" },
+              { kicker: "Access", label: "By introduction", to: "/#access" },
             ]}
           />
         </div>
