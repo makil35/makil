@@ -137,7 +137,7 @@ export const useSeo = ({
         ? "noindex, follow"
         : "index, follow, max-image-preview:large, max-snippet:-1"
     );
-    const keywords = "private adviser, personal branding, ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private advisory, luxury advisory, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Geneva, London, Dubai";
+    const keywords = rawKeywords ?? "private adviser, personal branding, ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private advisory, luxury advisory, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Geneva, London, Dubai";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route
@@ -149,15 +149,18 @@ export const useSeo = ({
       ld.id = ldId;
       document.head.appendChild(ld);
     }
-    ld.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: title,
-      description,
-      url: canonical,
-      inLanguage: "en-GB",
-      isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
-      about: { "@type": "Thing", name: "Confidential ultra-luxury" },
-    });
-  }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, language, location.pathname, t]);
+    ld.textContent = JSON.stringify(
+      jsonLd ?? {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: title,
+        description,
+        url: canonical,
+        inLanguage: "en-GB",
+        isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
+        about: { "@type": "Thing", name: "Confidential ultra-luxury" },
+      }
+    );
+  }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, rawTitle, rawDescription, rawKeywords, jsonLd, language, location.pathname, t]);
+
 };
