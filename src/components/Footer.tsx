@@ -60,8 +60,8 @@ const Footer = () => {
       </div>
 
       {/* Sitemap */}
-      <div className="bg-background border-t border-foreground/10">
-        <div className="container mx-auto px-6 lg:px-10 py-16">
+      <div className="border-t border-foreground/10">
+        <div className="container mx-auto px-6 lg:px-10 py-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
               <button
@@ -151,7 +151,7 @@ const Footer = () => {
             </nav>
           </div>
 
-          <p className="mt-16 text-[10px] font-body tracking-[0.25em] uppercase text-muted-foreground">
+          <p className="mt-20 border-t border-foreground/10 pt-8 text-[10px] font-body tracking-[0.25em] uppercase text-muted-foreground">
             © {new Date().getFullYear()} MAKIL · {t("footer.rights")}
           </p>
         </div>
