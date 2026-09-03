@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { localizedPath } from "@/lib/routes";
 import { journalArticles } from "@/content/journal";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const LongArrow = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 32 12" fill="none" className={className} aria-hidden="true">
@@ -18,6 +19,20 @@ const LongArrow = ({ className }: { className?: string }) => (
 const Footer = () => {
   const { t } = useLanguage();
   const home = localizedPath("home");
+  const navigate = useNavigate();
+
+  // Anchor links must land on section content, not on the large editorial
+  // top padding (which reads as a blank/black screen).
+  const goToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    if (window.location.pathname === home) {
+      scrollToSection(id);
+      window.history.replaceState(null, "", `${home}#${id}`);
+    } else {
+      navigate(`${home}#${id}`);
+      setTimeout(() => scrollToSection(id), 150);
+    }
+  };
 
   const practice = [
     { label: t("nav.profil"), to: `${home}#profil` },
@@ -34,6 +49,7 @@ const Footer = () => {
         <div className="container mx-auto px-6 lg:px-10">
           <Link
             to={`${home}#acces`}
+            onClick={(e) => goToSection(e, "acces")}
             className="group flex flex-col sm:flex-row items-center justify-between gap-6 py-12 sm:py-16"
           >
             <span className="text-[11px] font-body tracking-[0.4em] uppercase text-foreground/60 transition-smooth group-hover:text-foreground">
@@ -83,6 +99,7 @@ const Footer = () => {
                   <li key={l.to}>
                     <Link
                       to={l.to}
+                      onClick={(e) => goToSection(e, l.to.split("#")[1])}
                       className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
                     >
                       {l.label}
@@ -132,12 +149,13 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to={`${home}#acces`}
-                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
-                  >
-                    {t("nav.acces")}
-                  </Link>
+                    <Link
+                      to={`${home}#acces`}
+                      onClick={(e) => goToSection(e, "acces")}
+                      className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                    >
+                      {t("nav.acces")}
+                    </Link>
                 </li>
                 <li>
                   <Link
