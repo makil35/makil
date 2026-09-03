@@ -143,6 +143,7 @@ const PolitiqueConfidentialite = () => {
             links={[
               { kicker: "The practice", label: "Back to Makil", to: localizedPath("home") },
               { kicker: "Journal", label: "Notes and perspective", to: "/journal" },
+              { kicker: "Introductions", label: "Contact", to: "/contact" },
             ]}
           />
         </div>
