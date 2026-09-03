@@ -3,8 +3,8 @@ import { supabase } from "@/integrations/supabase/client";
 
 const STORAGE_KEY = "makil.access.token";
 
-// Gate paused by request — the site is open for validation.
-const GATE_PAUSED = true;
+// Gate active — the house is entered by key only.
+const GATE_PAUSED = false;
 
 type Status = "checking" | "locked" | "granted";
 
