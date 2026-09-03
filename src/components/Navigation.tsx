@@ -94,7 +94,14 @@ const Navigation = () => {
                 {t(link.key)}
               </a>
             ))}
+            <Link
+              to="/journal"
+              className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+            >
+              Journal
+            </Link>
           </div>
+
 
           <button
             onClick={() => setIsOpen(!isOpen)}
