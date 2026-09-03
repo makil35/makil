@@ -99,6 +99,7 @@ const Footer = () => {
                   <li key={l.to}>
                     <Link
                       to={l.to}
+                      onClick={(e) => goToSection(e, l.to.split("#")[1])}
                       className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
                     >
                       {l.label}
