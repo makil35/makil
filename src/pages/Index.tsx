@@ -39,9 +39,9 @@ const Index = () => {
       <Navigation />
 
       {/* HERO */}
-      <header className="relative flex min-h-[92svh] items-center overflow-hidden bg-background atmosphere grain">
-        <div className="container relative z-10 mx-auto px-6 py-28 lg:px-10">
-          <div className="max-w-2xl space-y-10">
+      <header className="relative flex min-h-[clamp(680px,92svh,980px)] items-center overflow-hidden bg-background atmosphere grain">
+        <div className="container relative z-10 mx-auto w-full px-6 py-24 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+          <div className="min-w-0 max-w-2xl space-y-10">
             <p
               className="animate-rise text-[10px] font-body tracking-luxe uppercase text-muted-foreground"
               style={{ animationDelay: "80ms" }}
@@ -95,8 +95,8 @@ const Index = () => {
       <main>
         {/* PROFILE */}
         <section id="richard" className="scroll-mt-24 py-24 sm:py-32 bg-background">
-          <div className="container mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-16 lg:gap-24 items-start">
-            <div className="max-w-2xl space-y-6">
+          <div className="container mx-auto grid grid-cols-1 items-start gap-16 px-6 sm:px-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-24 lg:px-10">
+            <div className="min-w-0 max-w-2xl space-y-6">
               <Reveal className="space-y-6">
                 <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
                   <Index_ n="01" />
@@ -137,7 +137,7 @@ const Index = () => {
               </Reveal>
             </div>
 
-            <Reveal delay={120} className="lg:sticky lg:top-32">
+            <Reveal delay={120} className="min-w-0 lg:sticky lg:top-32">
               <figure className="space-y-4">
                 <img
                   src={portraitMakil.url}
@@ -145,7 +145,7 @@ const Index = () => {
                   loading="lazy"
                   width={1024}
                   height={1536}
-                  className="w-full max-w-[320px] lg:max-w-none object-cover grayscale"
+                  className="aspect-[2/3] w-full max-w-[320px] object-cover object-center grayscale lg:max-w-none"
                 />
                 <figcaption className="text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">
                   Makil-Herrero Richard · Paris

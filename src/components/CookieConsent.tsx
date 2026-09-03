@@ -33,9 +33,9 @@ const CookieConsent = () => {
       aria-live="polite"
       className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background"
     >
-      <div className="container mx-auto max-w-6xl px-6 py-4">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-xs sm:text-sm font-body text-foreground leading-relaxed">
+      <div className="container mx-auto max-w-6xl px-6 py-4 sm:px-8">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <p className="max-w-3xl text-xs font-body leading-relaxed text-foreground sm:text-sm">
             {t("cookie.description")}{" "}
             <Link
               to={privacyPath}
@@ -47,7 +47,7 @@ const CookieConsent = () => {
           <Button
             onClick={handleContinue}
             variant="outline"
-            className="font-body text-xs sm:text-sm border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors shrink-0"
+            className="shrink-0 self-end border-foreground font-body text-xs text-foreground transition-colors hover:bg-foreground hover:text-background sm:self-auto sm:text-sm"
           >
             {t("cookie.continue")}
           </Button>

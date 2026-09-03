@@ -118,11 +118,11 @@ const Contact = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
 
-      <main className="flex-grow container mx-auto px-6 lg:px-10 py-24 mt-16">
-        <div className="max-w-5xl mx-auto">
+      <main className="container mx-auto mt-16 flex-grow px-6 py-20 sm:px-8 sm:py-24 lg:px-10">
+        <div className="mx-auto max-w-5xl">
           <PageIntro crumbs={[{ label: t("contact.kicker") }]} />
 
-          <header className="mt-16 mb-20 max-w-3xl">
+          <header className="mt-14 mb-16 max-w-3xl sm:mt-16 sm:mb-20">
             <p className="text-[10px] font-body tracking-[0.45em] uppercase text-muted-foreground">
               {t("contact.page.kicker")}
             </p>
@@ -136,9 +136,9 @@ const Contact = () => {
             </p>
           </header>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
+          <div className="grid min-w-0 grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-12">
             {/* Details */}
-            <aside className="lg:col-span-4 space-y-12">
+            <aside className="min-w-0 space-y-10 sm:space-y-12 lg:col-span-4">
               <div>
                 <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground mb-4">
                   {t("contact.page.direct")}
@@ -177,7 +177,7 @@ const Contact = () => {
             </aside>
 
             {/* Form */}
-            <div className="lg:col-span-8">
+            <div className="min-w-0 lg:col-span-8">
               {sent ? (
                 <div className="border-t border-foreground/10 pt-12 space-y-6">
                   <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground">
@@ -193,10 +193,7 @@ const Contact = () => {
               ) : (
                 <form onSubmit={onSubmit} className="space-y-10 border-t border-foreground/10 pt-12">
                   {/* Honeypot · hidden from humans, bots tend to fill it */}
-                  <div
-                    className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden"
-                    aria-hidden="true"
-                  >
+                  <div className="sr-only" aria-hidden="true">
                     <label htmlFor="contact-company">Company</label>
                     <input
                       id="contact-company"

@@ -66,8 +66,10 @@
   body {
     @apply bg-background text-foreground font-body antialiased;
     min-height: 100%;
+    overflow-x: clip;
     text-rendering: optimizeLegibility;
     font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-text-size-adjust: 100%;
   }
 
   #root {
@@ -91,8 +93,8 @@
 
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: hsl(var(--background)); }
-  ::-webkit-scrollbar-thumb { background: hsl(0 0% 80%); }
-  ::-webkit-scrollbar-thumb:hover { background: hsl(0 0% 65%); }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--border)); }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground)); }
 }
 
 @layer utilities {
