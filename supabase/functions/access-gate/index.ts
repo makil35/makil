@@ -4,7 +4,7 @@ const corsHeaders = {
 }
 
 const OWNER_EMAIL = 'richard@makil.fr'
-const TOKEN_TTL_DAYS = 30
+const TOKEN_TTL_HOURS = 24
 
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), {
@@ -69,7 +69,7 @@ Deno.serve(async (req) => {
     await new Promise((r) => setTimeout(r, 400))
     if (!timingSafeEqual(key, accessKey)) return json({ valid: false }, 200)
 
-    const exp = Date.now() + TOKEN_TTL_DAYS * 24 * 60 * 60 * 1000
+    const exp = Date.now() + TOKEN_TTL_HOURS * 60 * 60 * 1000
     const payload = String(exp)
     const token = `${payload}.${await sign(payload, tokenSecret)}`
     return json({ valid: true, token, exp })
