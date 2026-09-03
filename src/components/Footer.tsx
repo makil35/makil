@@ -149,12 +149,13 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to={`${home}#acces`}
-                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
-                  >
-                    {t("nav.acces")}
-                  </Link>
+                    <Link
+                      to={`${home}#acces`}
+                      onClick={(e) => goToSection(e, "acces")}
+                      className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                    >
+                      {t("nav.acces")}
+                    </Link>
                 </li>
                 <li>
                   <Link
