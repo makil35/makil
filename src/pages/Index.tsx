@@ -228,28 +228,49 @@ const Index = () => {
         </section>
 
         {/* ACCÈS */}
-        <section id="acces" className="scroll-mt-24 py-24 sm:py-32 bg-background atmosphere grain relative overflow-hidden">
+        <section id="acces" className="scroll-mt-24 py-28 sm:py-40 bg-background atmosphere grain relative overflow-hidden">
           <div className="container relative z-10 mx-auto px-6 lg:px-10">
-            <Reveal className="max-w-2xl space-y-6">
-              <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
-                <Index_ n="06" />
-                {t("home.acces.kicker")}
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
-                {t("home.acces.title1")} <br />
-                <em className="italic">{t("home.acces.title2")}</em>
-              </h2>
-              <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.acces.desc")}</p>
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  if (scrollToSection("contact")) e.preventDefault();
-                }}
-                className="inline-flex items-center gap-3 mt-6 px-8 py-4 border border-foreground/30 text-[11px] font-body tracking-[0.3em] uppercase text-foreground hover:bg-foreground hover:text-background transition-smooth"
-              >
-                {t("home.acces.cta")}
-              </a>
-            </Reveal>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+              <Reveal className="lg:col-span-4">
+                <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
+                  <Index_ n="06" />
+                  {t("home.acces.kicker")}
+                </p>
+              </Reveal>
+
+              <div className="lg:col-span-8 space-y-10">
+                <Reveal>
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display leading-[1.08] tracking-tight text-foreground">
+                    {t("home.acces.title1")} <br />
+                    <em className="italic">{t("home.acces.title2")}</em>
+                  </h2>
+                </Reveal>
+
+                <Reveal delay={140}>
+                  <p className="max-w-xl text-sm font-body text-muted-foreground leading-loose">
+                    {t("home.acces.desc")}
+                  </p>
+                </Reveal>
+
+                <Reveal delay={280}>
+                  <a
+                    href="#contact"
+                    onClick={(e) => {
+                      if (scrollToSection("contact")) e.preventDefault();
+                    }}
+                    className="group inline-flex items-center gap-5 px-9 py-5 border border-foreground/25 text-[11px] font-body tracking-[0.35em] uppercase text-foreground transition-smooth hover:border-foreground hover:bg-foreground hover:text-background"
+                  >
+                    {t("home.acces.cta")}
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1"
+                    >
+                      &rarr;
+                    </span>
+                  </a>
+                </Reveal>
+              </div>
+            </div>
           </div>
         </section>
 
