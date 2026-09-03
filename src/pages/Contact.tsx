@@ -49,13 +49,13 @@ const Contact = () => {
     titleKey: "seo.contact.title",
     descriptionKey: "seo.contact.description",
     keywords:
-      "contact private adviser, request confidential conversation, personal branding adviser Paris, private advisory enquiry, Makil-Herrero Richard, MAKIL contact, ultra-luxury adviser",
+      "contact private adviser, personal branding adviser Paris, private advisory enquiry, Makil-Herrero Richard, MAKIL contact",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "ContactPage",
       name: "Contact · MAKIL",
       description:
-        "Request a confidential conversation with Makil-Herrero Richard, private adviser in ultra-luxury and personal branding, based in Paris.",
+        "Contact Makil-Herrero Richard, private adviser based in Paris. A direct exchange — every message is read personally.",
       url: "https://makil.fr/contact",
       inLanguage: "en-GB",
       isPartOf: { "@type": "WebSite", name: "MAKIL", url: "https://makil.fr" },
@@ -67,7 +67,7 @@ const Contact = () => {
   const [searchParams] = useSearchParams();
   const carriedQuery = (searchParams.get("q") ?? "").slice(0, 300);
   const [message, setMessage] = useState(
-    carriedQuery ? `Request: ${carriedQuery}\n\n` : ""
+    carriedQuery ? `Note: ${carriedQuery}\n\n` : ""
   );
   const [org, setOrg] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -282,9 +282,9 @@ const Contact = () => {
 
           <NextStep
             links={[
-              { kicker: "The practice", label: "Back to Makil", to: localizedPath("home") },
-              { kicker: "Journal", label: "Notes and perspective", to: "/journal" },
-              { kicker: "Access", label: "By invitation only", to: "/#access" },
+              { kicker: "The practice", label: "Makil", to: localizedPath("home") },
+              { kicker: "Journal", label: "Read the notes", to: "/journal" },
+              { kicker: "Access", label: "By introduction", to: "/#access" },
             ]}
           />
         </div>
