@@ -57,6 +57,10 @@ const Footer = () => {
               © {new Date().getFullYear()} MAKIL · {t("footer.rights")}
             </p>
             <div className="flex gap-6 text-[11px] font-body tracking-[0.2em] uppercase">
+              <Link to="/journal" className="text-muted-foreground hover:text-foreground transition-smooth">
+                Journal
+              </Link>
+
               <Link to={localizedPath("legal")} className="text-muted-foreground hover:text-foreground transition-smooth">
                 {t("footer.legal")}
               </Link>
