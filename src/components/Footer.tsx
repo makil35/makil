@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { localizedPath } from "@/lib/routes";
 import { journalArticles } from "@/content/journal";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const LongArrow = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 32 12" fill="none" className={className} aria-hidden="true">
