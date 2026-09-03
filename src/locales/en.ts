@@ -91,7 +91,7 @@ export default {
   "home.credibility.item4": "Presence before promise",
   "home.credibility.item4.desc": "The right door, the right moment, the right silence. Without noise.",
 
-  // Home · Univers
+  // Home · Signature
   "home.univers.kicker": "MAKIL",
   "home.univers.title1": "A private approach",
   "home.univers.title2": "to exceptional requests.",
