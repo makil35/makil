@@ -6,6 +6,7 @@ import { journalArticles } from "@/content/journal";
 import ContactSection from "@/components/ContactSection";
 import CookieConsent from "@/components/CookieConsent";
 import Reveal from "@/components/Reveal";
+import portraitMakil from "@/assets/portrait-makil.png.asset.json";
 import NextStep from "@/components/NextStep";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
@@ -88,7 +89,7 @@ const Index = () => {
       <main>
         {/* PROFILE */}
         <section id="profil" className="scroll-mt-24 py-24 sm:py-32 bg-background">
-          <div className="container mx-auto px-6 lg:px-10">
+          <div className="container mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-16 lg:gap-24 items-start">
             <div className="max-w-2xl space-y-6">
               <Reveal className="space-y-6">
                 <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -128,6 +129,22 @@ const Index = () => {
                 </figure>
               </Reveal>
             </div>
+
+            <Reveal delay={120} className="lg:sticky lg:top-32">
+              <figure className="space-y-4">
+                <img
+                  src={portraitMakil.url}
+                  alt="Portrait of Makil-Herrero Richard, private adviser in Paris"
+                  loading="lazy"
+                  width={1024}
+                  height={1536}
+                  className="w-full max-w-[320px] lg:max-w-none object-cover grayscale"
+                />
+                <figcaption className="text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">
+                  Makil-Herrero Richard · Paris
+                </figcaption>
+              </figure>
+            </Reveal>
           </div>
         </section>
 
