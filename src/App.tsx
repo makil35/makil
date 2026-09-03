@@ -10,6 +10,7 @@ import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
 import Unsubscribe from "./pages/Unsubscribe";
 import Journal from "./pages/Journal";
+import JournalArchive from "./pages/JournalArchive";
 import JournalArticle from "./pages/JournalArticle";
 import Contact from "./pages/Contact";
 import Mandates from "./pages/Mandates";
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/legal-notice" element={<MentionsLegales />} />
             <Route path="/privacy-policy" element={<PolitiqueConfidentialite />} />
             <Route path="/journal" element={<Journal />} />
+            <Route path="/journal/archive" element={<JournalArchive />} />
             <Route path="/journal/:slug" element={<JournalArticle />} />
             <Route path="/blog" element={<Navigate to="/journal" replace />} />
             <Route path="/contact" element={<Contact />} />

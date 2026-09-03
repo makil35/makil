@@ -20,6 +20,16 @@ interface SeoOptions {
   jsonLd?: Record<string, unknown>;
   /** Keep utility/error pages out of the index. */
   noindex?: boolean;
+  /** og:type override, e.g. "article" for Journal notes. */
+  ogType?: string;
+  /** Article-specific Open Graph metadata (Journal notes). */
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    section?: string;
+    tags?: string[];
+  };
 
 }
 
@@ -90,6 +100,8 @@ export const useSeo = ({
   keywords: rawKeywords,
   jsonLd,
   noindex,
+  ogType,
+  article,
 }: SeoOptions) => {
   const { t, language } = useLanguage();
   const location = useLocation();
@@ -116,13 +128,31 @@ export const useSeo = ({
     upsertLinkRel("alternate", "x-default", canonical);
 
     // Open Graph
-    upsertMetaProperty("og:type", "website");
+    upsertMetaProperty("og:type", ogType ?? "website");
     upsertMetaProperty("og:site_name", "MAKIL");
     upsertMetaProperty("og:title", title);
     upsertMetaProperty("og:description", description);
     upsertMetaProperty("og:url", canonical);
     upsertMetaProperty("og:locale", "en_GB");
     upsertMetaProperty("og:image", `${SITE_URL}/og-image.jpg`);
+
+    // Article-specific Open Graph
+    document.head
+      .querySelectorAll('meta[property^="article:"]')
+      .forEach((el) => el.remove());
+    if (article) {
+      const add = (property: string, content: string) => {
+        const m = document.createElement("meta");
+        m.setAttribute("property", property);
+        m.setAttribute("content", content);
+        document.head.appendChild(m);
+      };
+      if (article.publishedTime) add("article:published_time", article.publishedTime);
+      if (article.modifiedTime) add("article:modified_time", article.modifiedTime);
+      if (article.author) add("article:author", article.author);
+      if (article.section) add("article:section", article.section);
+      (article.tags ?? []).forEach((tag) => add("article:tag", tag));
+    }
 
     // Twitter
     upsertMetaName("twitter:card", "summary_large_image");
@@ -161,6 +191,6 @@ export const useSeo = ({
         about: { "@type": "Thing", name: "Private advisory" },
       }
     );
-  }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, rawTitle, rawDescription, rawKeywords, jsonLd, language, location.pathname, t]);
+  }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, rawTitle, rawDescription, rawKeywords, jsonLd, language, location.pathname, t, ogType, article]);
 
 };
