@@ -31,8 +31,8 @@ export default {
   "footer.rights": "All rights reserved",
   "footer.legal": "Legal notice",
   "footer.privacy": "Privacy",
-  "footer.makilPrivate": "Makil Private",
-  "footer.discoverExperiences": "By invitation only",
+  "footer.makilPrivate": "Private access. Exceptional requests. Personally orchestrated.",
+  "footer.discoverExperiences": "Request private access",
 
   // Cookie Consent
   "cookie.title": "Cookie Management",
