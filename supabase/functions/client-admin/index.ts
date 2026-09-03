@@ -22,6 +22,48 @@ Deno.serve(async (req) => {
   const ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
   const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
+  const admin0 = createClient(SUPABASE_URL, SERVICE_KEY);
+
+  // One-time bootstrap: if the house has no administrator yet, the owner's
+  // address may claim the role. Disabled for ever after the first admin exists.
+  let bootstrapBody: Record<string, unknown> | null = null;
+  try {
+    bootstrapBody = await req.clone().json();
+  } catch {
+    bootstrapBody = null;
+  }
+  if (bootstrapBody && bootstrapBody.action === "bootstrap") {
+    const OWNER_EMAIL = "richard@makil.fr";
+    const { count } = await admin0
+      .from("user_roles")
+      .select("id", { count: "exact", head: true })
+      .eq("role", "admin");
+    if ((count ?? 0) > 0) return json({ error: "Already configured" }, 403);
+
+    const { data: list } = await admin0.auth.admin.listUsers({ page: 1, perPage: 1000 });
+    let owner = list?.users?.find((u) => (u.email ?? "").toLowerCase() === OWNER_EMAIL);
+    if (!owner) {
+      const { data: invited, error: inviteError } =
+        await admin0.auth.admin.inviteUserByEmail(OWNER_EMAIL, {
+          data: { full_name: "Makil-Herrero Richard" },
+          redirectTo: String(bootstrapBody.redirect_to ?? "") || undefined,
+        });
+      if (inviteError) return json({ error: inviteError.message }, 400);
+      owner = invited.user ?? undefined;
+    }
+    if (!owner) return json({ error: "Bootstrap failed" }, 400);
+
+    await admin0.from("profiles").upsert(
+      { id: owner.id, email: OWNER_EMAIL, full_name: "Makil-Herrero Richard" },
+      { onConflict: "id" },
+    );
+    const { error: roleError } = await admin0
+      .from("user_roles")
+      .insert({ user_id: owner.id, role: "admin" });
+    if (roleError) return json({ error: roleError.message }, 400);
+    return json({ success: true });
+  }
+
   const authHeader = req.headers.get("Authorization") ?? "";
   if (!authHeader) return json({ error: "Unauthorized" }, 401);
 
