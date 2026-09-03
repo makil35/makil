@@ -114,16 +114,10 @@ export default {
 
   // Home · Mandates
   "home.mandates.kicker": "Private mandates",
-  "home.mandates.title1": "The field",
-  "home.mandates.title2": "of intervention.",
-  "home.mandates.item1": "Access",
-  "home.mandates.item1.desc": "Rare and highly restricted opportunities, obtained through direct relationships.",
-  "home.mandates.item2": "Orchestration",
-  "home.mandates.item2.desc": "Complex private requests coordinated end to end through a trusted network.",
-  "home.mandates.item3": "Lifestyle",
-  "home.mandates.item3.desc": "Private residences, yachts, aviation, dining, events and bespoke arrangements.",
-  "home.mandates.item4": "Special projects",
-  "home.mandates.item4.desc": "Requests requiring discretion, creativity and exceptional resources.",
+  "home.mandates.title1": "Judgement, network,",
+  "home.mandates.title2": "discretion.",
+  "home.mandates.p1": "There is no catalogue here. Each request is considered on its own terms: what it truly requires, whom it should involve, and how it should be carried out, quietly.",
+  "home.mandates.p2": "Some requests call for access. Others call for orchestration, or simply for the right person at the right moment. What they share is the need for someone who can be called when a situation requires judgement, network and discretion.",
 
   // Home · Vision
   "home.vision.kicker": "Philosophy",
