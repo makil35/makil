@@ -62,7 +62,7 @@ const Footer = () => {
       {/* Sitemap */}
       <div className="border-t border-foreground/10">
         <div className="container mx-auto px-6 lg:px-10 py-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
             <div>
               <button
                 type="button"
@@ -154,6 +154,44 @@ const Footer = () => {
                   >
                     {t("footer.privacy")}
                   </Link>
+                </li>
+              </ul>
+            </nav>
+
+            <nav aria-label="Elsewhere" className="space-y-4">
+              <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground/70">
+                Elsewhere
+              </p>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/richardmakilherrero"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/makil-private"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    Makil Private
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@makilprivate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    YouTube
+                  </a>
                 </li>
               </ul>
             </nav>
