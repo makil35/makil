@@ -220,6 +220,12 @@ const Index = () => {
               <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.mandates.p1")}</p>
               <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.mandates.p2")}</p>
               <p className="text-sm font-body text-foreground/80 leading-loose italic font-display pt-4">{t("home.mandates.p3")}</p>
+              <Link
+                to="/mandates"
+                className="link-underline inline-flex items-center gap-3 text-[11px] font-body tracking-[0.3em] uppercase text-foreground/70 hover:text-foreground transition-smooth mt-6"
+              >
+                The shape of a mandate <ArrowRight size={14} />
+              </Link>
             </Reveal>
           </div>
         </section>
@@ -362,9 +368,9 @@ const Index = () => {
         <div className="container mx-auto px-6 lg:px-10 pb-24">
           <NextStep
             links={[
+              { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
               { kicker: "Correspondence", label: "Write", to: "/contact" },
-              { kicker: "Access", label: "By introduction", to: "#access" },
               { kicker: "Information", label: "Legal notice", to: "/legal-notice" },
             ]}
           />

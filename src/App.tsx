@@ -12,6 +12,7 @@ import Unsubscribe from "./pages/Unsubscribe";
 import Journal from "./pages/Journal";
 import JournalArticle from "./pages/JournalArticle";
 import Contact from "./pages/Contact";
+import Mandates from "./pages/Mandates";
 import Search from "./pages/Search";
 import ScrollToTop from "@/components/ScrollToTop";
 import AccessGate from "@/components/AccessGate";
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/journal/:slug" element={<JournalArticle />} />
             <Route path="/blog" element={<Navigate to="/journal" replace />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/mandates" element={<Mandates />} />
             {/* Unlisted internal search (noindex, not linked in navigation) */}
             <Route path="/search" element={<Search />} />
 

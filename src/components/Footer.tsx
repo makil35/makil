@@ -163,6 +163,15 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link
+                    to="/mandates"
+                    onClick={(e) => goToPage(e, "/mandates")}
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    {t("nav.mandates")}
+                  </Link>
+                </li>
+                <li>
                     <Link
                       to={`${home}#access`}
                       onClick={(e) => goToSection(e, "access")}
