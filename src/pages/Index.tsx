@@ -71,7 +71,10 @@ const Index = () => {
             <a
               href="#richard"
               onClick={(e) => {
-                if (scrollToSection("richard")) e.preventDefault();
+                if (scrollToSection("richard")) {
+                  e.preventDefault();
+                  window.history.replaceState(null, "", "#richard");
+                }
               }}
               className="animate-rise inline-flex flex-col items-start gap-3 group pt-4"
               style={{ animationDelay: "600ms" }}
