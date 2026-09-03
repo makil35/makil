@@ -64,7 +64,11 @@ const Contact = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [searchParams] = useSearchParams();
+  const carriedQuery = (searchParams.get("q") ?? "").slice(0, 300);
+  const [message, setMessage] = useState(
+    carriedQuery ? `Request: ${carriedQuery}\n\n` : ""
+  );
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
   // Anti-spam: honeypot field (invisible to humans) + minimum fill time
