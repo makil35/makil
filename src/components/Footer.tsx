@@ -49,6 +49,7 @@ const Footer = () => {
         <div className="container mx-auto px-6 lg:px-10">
           <Link
             to={`${home}#acces`}
+            onClick={(e) => goToSection(e, "acces")}
             className="group flex flex-col sm:flex-row items-center justify-between gap-6 py-12 sm:py-16"
           >
             <span className="text-[11px] font-body tracking-[0.4em] uppercase text-foreground/60 transition-smooth group-hover:text-foreground">
