@@ -12,8 +12,8 @@ export interface NextStepLink {
  */
 const NextStep = ({ links }: { links: NextStepLink[] }) => (
   <nav
-    aria-label="Continue"
-    className="mt-24 border-t border-foreground/10 pt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+    aria-label="Continue through the house"
+    className="mt-24 border-t border-foreground/10 pt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12"
   >
     {links.map((l) => (
       <Link key={l.to} to={l.to} className="group block">
