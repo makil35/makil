@@ -110,7 +110,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
         </p>
         <h1 className="mt-8 text-4xl font-light tracking-[0.35em]">MAKIL</h1>
         <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-          This practice is accessible by key only. Enter yours to continue.
+          This house is entered by key only. Enter yours to continue.
         </p>
 
         {mode === "key" ? (

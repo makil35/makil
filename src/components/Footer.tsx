@@ -103,7 +103,7 @@ const Footer = () => {
 
             <nav aria-label={t("nav.mainAria")} className="space-y-4">
               <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground/70">
-                The practice
+                The house
               </p>
               <ul className="space-y-3">
                 {practice.map((l) => (
