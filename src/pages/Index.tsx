@@ -83,6 +83,23 @@ const Index = () => {
               />
             </a>
           </div>
+
+          <figure
+            className="animate-rise hidden lg:block justify-self-end"
+            style={{ animationDelay: "520ms" }}
+          >
+            <img
+              src={portraitMakil.url}
+              alt="Makil-Herrero Richard, private adviser in Paris"
+              loading="eager"
+              width={1024}
+              height={1536}
+              className="w-full max-w-[300px] object-cover grayscale opacity-90"
+            />
+            <figcaption className="mt-4 text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">
+              Makil-Herrero Richard · Paris
+            </figcaption>
+          </figure>
         </div>
       </header>
 
