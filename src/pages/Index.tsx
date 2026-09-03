@@ -6,6 +6,7 @@ import { journalArticles } from "@/content/journal";
 import ContactSection from "@/components/ContactSection";
 import CookieConsent from "@/components/CookieConsent";
 import Reveal from "@/components/Reveal";
+import NextStep from "@/components/NextStep";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { scrollToSection } from "@/lib/scrollToSection";
