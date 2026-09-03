@@ -344,6 +344,16 @@ const Index = () => {
         </section>
 
         <ContactSection />
+
+        <div className="container mx-auto px-6 lg:px-10 pb-24">
+          <NextStep
+            links={[
+              { kicker: "Journal", label: "Notes and perspective", to: "/journal" },
+              { kicker: "Introductions", label: "Request private access", to: "/contact" },
+              { kicker: "Legal", label: "Legal notice", to: "/legal-notice" },
+            ]}
+          />
+        </div>
       </main>
 
       <Footer />
