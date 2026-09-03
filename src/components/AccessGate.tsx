@@ -3,6 +3,9 @@ import { supabase } from "@/integrations/supabase/client";
 
 const STORAGE_KEY = "makil.access.token";
 
+// Gate paused by request — the site is open for validation.
+const GATE_PAUSED = true;
+
 type Status = "checking" | "locked" | "granted";
 
 const AccessGate = ({ children }: { children: ReactNode }) => {
@@ -81,7 +84,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
     setRequestSent(true);
   };
 
-  if (status === "granted") return <>{children}</>;
+  if (GATE_PAUSED || status === "granted") return <>{children}</>;
 
   if (status === "checking") {
     return <div className="min-h-screen bg-background" aria-hidden />;
