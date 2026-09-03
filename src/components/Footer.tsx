@@ -175,16 +175,6 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.linkedin.com/company/makil-private"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
-                  >
-                    Makil Private
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="https://www.youtube.com/@makilprivate"
                     target="_blank"
                     rel="noopener noreferrer"
