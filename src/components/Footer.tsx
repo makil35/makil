@@ -60,6 +60,7 @@ const Footer = () => {
         <div className="container mx-auto px-6 lg:px-10">
           <Link
             to="/contact"
+            onClick={(e) => goToPage(e, "/contact")}
             className="group flex flex-col sm:flex-row items-center justify-between gap-6 py-12 sm:py-16"
           >
             <span className="text-[11px] font-body tracking-[0.4em] uppercase text-foreground/60 transition-smooth group-hover:text-foreground">
@@ -128,6 +129,7 @@ const Footer = () => {
                   <li key={a.slug}>
                     <Link
                       to={`/journal/${a.slug}`}
+                      onClick={(e) => goToPage(e, `/journal/${a.slug}`)}
                       className="text-[11px] font-body leading-relaxed text-muted-foreground hover:text-foreground transition-smooth"
                     >
                       {a.title}
@@ -137,6 +139,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/journal"
+                    onClick={(e) => goToPage(e, "/journal")}
                     className="text-[11px] font-body tracking-[0.2em] uppercase text-foreground/70 hover:text-foreground transition-smooth"
                   >
                     All notes
@@ -153,6 +156,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/contact"
+                    onClick={(e) => goToPage(e, "/contact")}
                     className="text-[11px] font-body tracking-[0.2em] uppercase text-foreground/80 hover:text-foreground transition-smooth"
                   >
                     {t("contact.kicker")}
@@ -170,6 +174,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to={localizedPath("legal")}
+                    onClick={(e) => goToPage(e, localizedPath("legal"))}
                     className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
                   >
                     {t("footer.legal")}
@@ -178,6 +183,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to={localizedPath("privacy")}
+                    onClick={(e) => goToPage(e, localizedPath("privacy"))}
                     className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
                   >
                     {t("footer.privacy")}
