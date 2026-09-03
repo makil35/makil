@@ -21,9 +21,9 @@ const staticEntries: Entry[] = [
     to: "/#approach",
     kicker: "Practice",
     summary:
-      "One name, one point of contact. Private advisory in ultra-luxury, conducted personally and by introduction only.",
+      "One name, one point of contact. Private advisory conducted personally and by introduction only.",
     terms:
-      "private adviser advisory practice approach method ultra luxury paris confidential discretion bespoke",
+      "private adviser advisory practice approach method paris confidential discretion reading judgement",
   },
   {
     title: "Personal branding, without noise",
@@ -35,7 +35,7 @@ const staticEntries: Entry[] = [
       "personal branding image reputation presence founder public figure profile positioning",
   },
   {
-    title: "Vision · Observe. Decide. Deliver.",
+    title: "Vision · Clarity before noise",
     to: "/#vision",
     kicker: "Vision",
     summary: "What guides every engagement: exactness, restraint and protected attention.",
@@ -46,20 +46,20 @@ const staticEntries: Entry[] = [
     to: "/#access",
     kicker: "Access",
     summary: "How an engagement begins, and why the list stays short.",
-    terms: "access invitation introduction availability engagement client onboarding",
+    terms: "access invitation introduction availability engagement client",
   },
   {
-    title: "Request a confidential conversation",
+    title: "Correspondence",
     to: "/contact",
     kicker: "Contact",
-    summary: "A direct, private exchange. Every message is read personally.",
-    terms: "contact email conversation request appointment meeting call reach out enquiry",
+    summary: "A direct exchange. Every message is read personally.",
+    terms: "contact email conversation message reach enquiry",
   },
   {
     title: "Journal",
     to: "/journal",
     kicker: "Journal",
-    summary: "Notes on private advisory, personal branding and discretion.",
+    summary: "Notes on reading, judgement and silence.",
     terms: "journal blog articles notes writing insight",
   },
   {
