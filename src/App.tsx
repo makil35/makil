@@ -15,6 +15,7 @@ import JournalArticle from "./pages/JournalArticle";
 import Contact from "./pages/Contact";
 import Mandates from "./pages/Mandates";
 import Search from "./pages/Search";
+import Private from "./pages/Private";
 import ScrollToTop from "@/components/ScrollToTop";
 import AccessGate from "@/components/AccessGate";
 import CookieConsent from "@/components/CookieConsent";
@@ -43,6 +44,8 @@ const App = () => (
             <Route path="/mandates" element={<Mandates />} />
             {/* Unlisted internal search (noindex, not linked in navigation) */}
             <Route path="/search" element={<Search />} />
+            {/* Private client area (own authentication, noindex) */}
+            <Route path="/private" element={<Private />} />
 
             {/* Legacy localized links */}
             <Route path="/fr" element={<Navigate to="/" replace />} />
