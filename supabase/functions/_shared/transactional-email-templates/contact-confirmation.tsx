@@ -21,10 +21,8 @@ const ContactConfirmationEmail = ({ name }: Props) => (
           {name ? `${name},` : 'Hello,'}
         </Text>
         <Text style={text}>
-          Your message has been received. Richard will come back to you personally, shortly.
-        </Text>
-        <Text style={text}>
-          With my warmest regards,
+          I have read your message myself. I will answer you personally, and only when I have
+          something worth saying.
         </Text>
         <Text style={signature}>Makil-Herrero Richard</Text>
         <Hr style={hr} />

@@ -6,6 +6,14 @@ const STORAGE_KEY = "makil.access.token";
 // Gate active — the house is entered by key only.
 const GATE_PAUSED = false;
 
+// Search and AI crawlers must be able to read the public pages, otherwise
+// makil.fr cannot be indexed at all. They see the site; they cannot act on it.
+const CRAWLER_UA =
+  /(googlebot|google-inspectiontool|bingbot|duckduckbot|yandex(bot)?|baiduspider|slurp|applebot|petalbot|linkedinbot|twitterbot|facebookexternalhit|whatsapp|telegrambot|discordbot|embedly|slackbot|pinterest|gptbot|oai-searchbot|chatgpt-user|perplexitybot|claudebot|anthropic-ai|ccbot|google-extended|lighthouse|pagespeed)/i;
+
+const isCrawler = () =>
+  typeof navigator !== "undefined" && CRAWLER_UA.test(navigator.userAgent);
+
 type Status = "checking" | "locked" | "granted";
 
 const AccessGate = ({ children }: { children: ReactNode }) => {
@@ -25,6 +33,10 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     let active = true;
+    if (isCrawler()) {
+      setStatus("granted");
+      return;
+    }
     const token = localStorage.getItem(STORAGE_KEY);
     if (!token) {
       setStatus("locked");
