@@ -96,7 +96,12 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
     setRequestSent(true);
   };
 
-  if (GATE_PAUSED || status === "granted") return <>{children}</>;
+  // The private client area has its own authentication (single-use email link),
+  // so it must not sit behind the house key.
+  const onPrivateArea =
+    typeof window !== "undefined" && window.location.pathname.startsWith("/private");
+
+  if (GATE_PAUSED || onPrivateArea || status === "granted") return <>{children}</>;
 
   if (status === "checking") {
     return <div className="min-h-screen bg-background" aria-hidden />;

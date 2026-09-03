@@ -125,6 +125,80 @@ export type Database = {
         }
         Relationships: []
       }
+      mandates: {
+        Row: {
+          client_id: string
+          closed_on: string | null
+          created_at: string
+          expected_on: string | null
+          id: string
+          opened_on: string
+          reference: string | null
+          status: string
+          summary: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          client_id: string
+          closed_on?: string | null
+          created_at?: string
+          expected_on?: string | null
+          id?: string
+          opened_on?: string
+          reference?: string | null
+          status?: string
+          summary?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          client_id?: string
+          closed_on?: string | null
+          created_at?: string
+          expected_on?: string | null
+          id?: string
+          opened_on?: string
+          reference?: string | null
+          status?: string
+          summary?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "mandates_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string
