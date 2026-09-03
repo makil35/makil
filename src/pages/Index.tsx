@@ -67,7 +67,7 @@ const Index = () => {
               {t("home.hero.desc")}
             </p>
             <a
-              href="#univers"
+              href="#acces"
               className="animate-rise inline-flex flex-col items-start gap-3 group pt-4"
               style={{ animationDelay: "600ms" }}
             >
