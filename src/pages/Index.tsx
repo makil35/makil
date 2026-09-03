@@ -128,6 +128,22 @@ const Index = () => {
                 </figure>
               </Reveal>
             </div>
+
+            <Reveal delay={120} className="lg:sticky lg:top-32">
+              <figure className="space-y-4">
+                <img
+                  src={portraitMakil.url}
+                  alt="Portrait of Makil-Herrero Richard, private adviser in Paris"
+                  loading="lazy"
+                  width={1024}
+                  height={1536}
+                  className="w-full max-w-[320px] lg:max-w-none object-cover grayscale"
+                />
+                <figcaption className="text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">
+                  Makil-Herrero Richard · Paris
+                </figcaption>
+              </figure>
+            </Reveal>
           </div>
         </section>
 
