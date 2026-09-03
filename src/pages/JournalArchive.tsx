@@ -24,6 +24,10 @@ const JournalArchive = () => {
 
   useSeo({
     path: "/journal/archive",
+    breadcrumbs: [
+      { name: "Journal", path: "/journal" },
+      { name: "Archive", path: "/journal/archive" },
+    ],
     title: "Journal Archive · Monthly Notes · MAKIL",
     description:
       "The complete archive of monthly notes by Makil-Herrero Richard, private adviser in Paris: private advisory, personal branding, discretion and private orchestration.",

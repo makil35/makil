@@ -28,6 +28,7 @@ const vignettes = [
 const Mandates = () => {
   useSeo({
     path: "/mandates",
+    breadcrumbs: [{ name: "Mandates", path: "/mandates" }],
     title: "Private Mandates · Makil-Herrero Richard · Private Adviser",
     description:
       "Private mandates carried personally by Makil-Herrero Richard, private adviser in Paris: access, private orchestration and discreet execution for a select circle. By introduction only.",
@@ -40,6 +41,7 @@ const Mandates = () => {
       serviceType: "Private advisory and private orchestration",
       provider: {
         "@type": "Person",
+        "@id": `${SITE_URL}/#person`,
         name: "Makil-Herrero Richard",
         jobTitle: "Private Adviser",
         url: SITE_URL,

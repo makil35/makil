@@ -12,6 +12,7 @@ const SITE_URL = "https://makil.fr";
 const Journal = () => {
   useSeo({
     path: "/journal",
+    breadcrumbs: [{ name: "Journal", path: "/journal" }],
     title: "Journal · Private Adviser · MAKIL",
     description:
       "Notes on private advisory and personal branding by Makil-Herrero Richard, private adviser in Paris. Discretion, restraint and the house behind a name.",
@@ -25,7 +26,8 @@ const Journal = () => {
         "Notes on private advisory and personal branding by Makil-Herrero Richard, private adviser in Paris.",
       url: `${SITE_URL}/journal`,
       inLanguage: "en-GB",
-      author: { "@type": "Person", name: "Makil-Herrero Richard" },
+      author: { "@type": "Person", "@id": `${SITE_URL}/#person`, name: "Makil-Herrero Richard" },
+      publisher: { "@type": "Organization", name: "MAKIL", url: SITE_URL },
       blogPost: journalArticles.map((a) => ({
         "@type": "BlogPosting",
         headline: a.title,

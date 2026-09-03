@@ -46,6 +46,7 @@ const Contact = () => {
   const { t } = useLanguage();
   useSeo({
     path: "/contact",
+    breadcrumbs: [{ name: "Contact", path: "/contact" }],
     titleKey: "seo.contact.title",
     descriptionKey: "seo.contact.description",
     keywords:
@@ -59,6 +60,22 @@ const Contact = () => {
       url: "https://makil.fr/contact",
       inLanguage: "en-GB",
       isPartOf: { "@type": "WebSite", name: "MAKIL", url: "https://makil.fr" },
+      mainEntity: {
+        "@type": "Person",
+        "@id": "https://makil.fr/#person",
+        name: "Makil-Herrero Richard",
+        jobTitle: "Private Adviser",
+        email: "mailto:richard@makil.fr",
+        url: "https://makil.fr/",
+        address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "Private enquiries",
+          email: "richard@makil.fr",
+          availableLanguage: ["en", "fr"],
+          areaServed: ["FR", "MC", "GB", "CH", "AE"],
+        },
+      },
     },
   });
 

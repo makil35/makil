@@ -34,7 +34,7 @@ const listClass = "list-none space-y-3 [&>li]:pl-5 [&>li]:relative [&>li]:before
 
 const PolitiqueConfidentialite = () => {
   const { t } = useLanguage();
-  useSeo({ routeKey: "privacy", titleKey: "seo.privacy.title", descriptionKey: "seo.privacy.description" });
+  useSeo({ breadcrumbs: [{ name: "Privacy policy", path: "/privacy-policy" }], routeKey: "privacy", titleKey: "seo.privacy.title", descriptionKey: "seo.privacy.description" });
   const locale = "en-GB";
   const siteLabel = "makil.fr";
   const homePath = localizedPath("home");
