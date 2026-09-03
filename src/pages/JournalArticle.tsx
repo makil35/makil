@@ -80,7 +80,7 @@ const JournalArticle = () => {
           </div>
 
           <p className="mt-16 font-body text-sm leading-relaxed text-foreground/70">
-            The practice, its principles and the way to reach it are described on the{" "}
+            The house, its principles and the way to reach it are described on the{" "}
             <Link to={localizedPath("home")} className="underline underline-offset-4 hover:text-foreground">
               main page
             </Link>
@@ -115,7 +115,7 @@ const JournalArticle = () => {
             links={[
               { kicker: "Journal", label: "All notes", to: "/journal" },
               { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
-              { kicker: "The practice", label: "Profile and principles", to: "/#richard" },
+              { kicker: "The house", label: "Profile and principles", to: "/#richard" },
             ]}
           />
         </article>

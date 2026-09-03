@@ -17,7 +17,7 @@ interface Entry {
 
 const staticEntries: Entry[] = [
   {
-    title: "Private adviser · The practice",
+    title: "Private adviser · The house",
     to: "/#approach",
     kicker: "Practice",
     summary:
@@ -105,7 +105,7 @@ const Search = () => {
     path: "/search",
     title: "Search · MAKIL · Private Adviser",
     description:
-      "Search the MAKIL practice of Makil-Herrero Richard: private advisory, personal branding, journal notes and direct correspondence.",
+      "Search the MAKIL house of Makil-Herrero Richard: private advisory, personal branding, journal notes and direct correspondence.",
     keywords:
       "MAKIL search, private adviser search, Makil-Herrero Richard, personal branding Paris",
     noindex: true,
