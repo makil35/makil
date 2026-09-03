@@ -1,11 +1,11 @@
 export default {
   // SEO
-  "seo.home.title": "Makil-Herrero Richard · MAKIL · Private Adviser, Ultra-Luxury",
-  "seo.home.description": "A private signature by Makil-Herrero Richard. Discretion, presence, and the art of making the exceptional feel natural. By introduction only.",
-  "seo.legal.title": "Legal notice · MAKIL · Confidential ultra-luxury",
-  "seo.legal.description": "Legal notice for MAKIL, a private signature by Makil-Herrero Richard. Publisher, hosting and contact details.",
-  "seo.privacy.title": "Privacy policy · MAKIL · Confidential ultra-luxury",
-  "seo.privacy.description": "MAKIL privacy policy: data protection and absolute discretion for a private, introduction-only clientele.",
+  "seo.home.title": "Makil-Herrero Richard · Private Adviser in Ultra-Luxury · Paris",
+  "seo.home.description": "Makil-Herrero Richard, private adviser in ultra-luxury based in Paris. Discretion, presence and art of living for a select clientele in Paris, Monaco, London, Geneva and Dubai. By introduction only.",
+  "seo.legal.title": "Legal Notice · MAKIL · Makil-Herrero Richard, Private Adviser",
+  "seo.legal.description": "Legal notice of makil.fr, the official site of Makil-Herrero Richard, private adviser in ultra-luxury based in Paris. Publisher, hosting, intellectual property and contact details.",
+  "seo.privacy.title": "Privacy Policy · MAKIL · GDPR & Data Protection",
+  "seo.privacy.description": "MAKIL privacy policy: how makil.fr collects, uses and protects your personal data. GDPR rights, cookies, retention and absolute discretion for a private clientele.",
   "seo.unsubscribe.title": "Unsubscribe · MAKIL correspondence",
   "seo.unsubscribe.description": "Confirm the end of MAKIL private correspondence. One click, no questions, and your address is removed.",
   "seo.notfound.title": "Page not found · MAKIL",
@@ -54,7 +54,7 @@ export default {
   "home.hero.role": "Private adviser · Art of living · Select presence",
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
-  "home.hero.desc": "I am a private adviser to a small circle of individuals who value what cannot be bought: time, trust, and the certainty that nothing is left to chance.",
+  "home.hero.desc": "Private adviser in ultra-luxury, based in Paris. I serve a small circle of individuals who value what cannot be bought: time, trust, and the certainty that nothing is left to chance.",
   "home.hero.cta": "Discover my world",
   
 
@@ -166,7 +166,7 @@ export default {
 
   // Privacy Policy
   "privacy.title": "Privacy Policy",
-  "privacy.intro": "This policy describes how MAKIL collects, uses and protects the personal data of visitors to the site.",
+  "privacy.intro": "This policy describes how MAKIL, the private practice of Makil-Herrero Richard in Paris, collects, uses and protects the personal data of visitors to makil.fr, in compliance with the GDPR and the French Data Protection Act.",
   "privacy.lastUpdate": "Last updated:",
   "privacy.s1.title": "1. Data controller",
   "privacy.s1.p1": "The data controller is Makil-Herrero Richard, based in Paris, France.",
