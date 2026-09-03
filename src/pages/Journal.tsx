@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
 import { journalArticles, formatArticleDate } from "@/content/journal";
+import PageIntro from "@/components/PageIntro";
+import NextStep from "@/components/NextStep";
 
 const SITE_URL = "https://makil.fr";
 
@@ -40,7 +42,8 @@ const Journal = () => {
 
       <main className="flex-grow container mx-auto px-6 lg:px-10 py-20 mt-16">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground mb-4">
+          <PageIntro crumbs={[{ label: "Journal" }]} />
+          <p className="mt-10 text-[11px] font-body tracking-[0.4em] uppercase text-muted-foreground mb-4">
             Journal
           </p>
           <h1 className="text-4xl sm:text-5xl font-display text-foreground mb-6">
@@ -78,20 +81,12 @@ const Journal = () => {
             ))}
           </div>
 
-          <nav
-            aria-label="Related pages"
-            className="mt-20 flex flex-wrap gap-6 text-[10px] font-body tracking-[0.35em] uppercase"
-          >
-            <Link to={localizedPath("home")} className="text-muted-foreground hover:text-foreground transition-smooth">
-              The practice
-            </Link>
-            <Link to={`${localizedPath("home")}#acces`} className="text-muted-foreground hover:text-foreground transition-smooth">
-              Access
-            </Link>
-            <Link to={localizedPath("privacy")} className="text-muted-foreground hover:text-foreground transition-smooth">
-              Privacy
-            </Link>
-          </nav>
+          <NextStep
+            links={[
+              { kicker: "The practice", label: "Profile and principles", to: localizedPath("home") },
+              { kicker: "Introductions", label: "Private access", to: `${localizedPath("home")}#acces` },
+            ]}
+          />
         </div>
       </main>
 
