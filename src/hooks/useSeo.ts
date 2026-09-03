@@ -10,10 +10,17 @@ interface SeoOptions {
   routeKey?: RouteKey;
   /** Explicit path for routes not present in ROUTES (e.g. /unsubscribe). */
   path?: string;
-  titleKey: string;
-  descriptionKey: string;
+  titleKey?: string;
+  descriptionKey?: string;
+  /** Raw values for dynamic pages (journal articles) not backed by locale keys. */
+  title?: string;
+  description?: string;
+  keywords?: string;
+  /** Replaces the default WebPage JSON-LD payload. */
+  jsonLd?: Record<string, unknown>;
   /** Keep utility/error pages out of the index. */
   noindex?: boolean;
+
 }
 
 const upsertMeta = (
