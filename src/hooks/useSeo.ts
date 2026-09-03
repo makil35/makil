@@ -73,23 +73,34 @@ const upsertMetaProperty = (property: string, content: string) => {
   );
 };
 
-export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey, noindex }: SeoOptions) => {
+export const useSeo = ({
+  routeKey,
+  path: explicitPath,
+  titleKey,
+  descriptionKey,
+  title: rawTitle,
+  description: rawDescription,
+  keywords: rawKeywords,
+  jsonLd,
+  noindex,
+}: SeoOptions) => {
   const { t, language } = useLanguage();
   const location = useLocation();
 
   useEffect(() => {
     const lang: Lang = language;
-    const title = t(titleKey);
-    const description = t(descriptionKey);
+    const title = rawTitle ?? (titleKey ? t(titleKey) : "");
+    const description = rawDescription ?? (descriptionKey ? t(descriptionKey) : "");
 
     // Translations load asynchronously: skip while keys are unresolved
     // to avoid exposing raw keys as the document title / meta description.
-    if (title === titleKey || description === descriptionKey) return;
+    if (!title || !description || title === titleKey || description === descriptionKey) return;
 
     document.title = title;
     document.documentElement.lang = lang;
 
     upsertMetaName("description", description);
+
 
     const path = routeKey ? ROUTES[routeKey][lang] : (explicitPath ?? location.pathname);
     const canonical = `${SITE_URL}${path === "/" ? "/" : path}`;
