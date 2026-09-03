@@ -119,7 +119,7 @@ export default {
   "home.mandates.title2": "discretion.",
   "home.mandates.p1": "There is no catalogue here. Each request is considered on its own terms: what it truly requires, whom it should involve, and how it should be carried out, quietly.",
   "home.mandates.p2": "Some requests call for access. Others call for orchestration, or simply for the right person at the right moment. I do not take every request. I take those where my presence changes the outcome.",
-  "home.mandates.p3": "Others will offer you a structure. I offer you a name, and the responsibility that comes with it.",
+  "home.mandates.p3": "I do not delegate what carries my name.",
 
   // Home · Vision
   "home.vision.kicker": "Philosophy",
