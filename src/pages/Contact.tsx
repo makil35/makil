@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, FormEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import { z } from "zod";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
