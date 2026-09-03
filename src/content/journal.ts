@@ -197,32 +197,32 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: "private-dinner-orchestrator",
     title: "What a private dinner orchestrator is for",
-    kicker: "Private orchestration",
+    kicker: "Makil Private",
     excerpt:
-      "A private dinner is not an event. It is a room, a table and a sequence that cannot be repeated. Makil Private explains what an orchestrator actually protects.",
+      "Makil Private exists to orchestrate dinners that cannot be reproduced. One room, one table, one evening, and a sequence that disappears with the guests.",
     metaTitle: "Private Dinner Orchestrator · Makil Private · Paris",
     metaDescription:
-      "What a private dinner orchestrator is for: non-reproducible dinners, closed guest lists, discretion and execution. Makil Private, Makil-Herrero Richard, Paris.",
+      "Makil Private orchestrates non-reproducible private dinners: closed guest lists, single-point orchestration, discretion and execution. Makil-Herrero Richard, Paris.",
     keywords:
-      "private dinner orchestrator, private dinner Paris, non-reproducible dinner, exclusive private dinner, ultra luxury dinner, private table, Makil Private, private adviser, Makil-Herrero Richard",
+      "Makil Private, private dinner orchestrator, private dinner Paris, non-reproducible dinner, exclusive private dinner, ultra luxury dinner, private table, private adviser, Makil-Herrero Richard",
     date: "2026-09-03",
     readingTime: "5 min",
     blocks: [
       {
         paragraphs: [
-          "A private dinner is often mistaken for an event. An event is designed to be repeated: a format, a supplier list, a template that can be sold again next season. A private dinner, when it is done properly, cannot be repeated at all. It exists once, for those people, on that evening, and it disappears.",
-          "That is the whole point, and it is also the reason an orchestrator is needed. Someone has to hold a sequence that has no second take.",
+          "Makil Private is not a catering service, an agency, or an event company. It is a private orchestration for dinners that are not meant to happen twice. The purpose is singular: to hold an evening that exists only for the people in the room, and then to let it disappear.",
+          "A public event is built to be repeated, sold again, photographed and reproduced. A private dinner, when it is done properly, is the opposite. It has no template, no second season, no version that can be offered to someone else. That irreducibility is exactly why it requires an orchestrator.",
         ],
       },
       {
         heading: "Non-reproducible means unforgiving",
         paragraphs: [
           "Everything that makes a dinner singular also removes the safety net. There is no rehearsal, no second service, no version B. The guest list is closed, the room is fixed, the timing is decided before anyone arrives.",
-          "A private dinner orchestrator exists so that this fragility never becomes the host's problem. The host should have exactly one responsibility that evening: being present at their own table.",
+          "The orchestrator at Makil Private exists so that this fragility never becomes the host's problem. The host should have exactly one responsibility that evening: being present at their own table.",
         ],
       },
       {
-        heading: "What is actually orchestrated",
+        heading: "What Makil Private orchestrates",
         paragraphs: [
           "Not decoration. The sequence. Who arrives first and who arrives last. Who is seated next to whom, and why that pairing matters more than the menu. When the room goes quiet. When it should not.",
           "Suppliers, kitchen, service, transport and security are simply the visible layer. Underneath is a single decision chain, held by one name, so nothing is negotiated twice and nothing is improvised in front of guests.",
@@ -232,21 +232,21 @@ export const journalArticles: JournalArticle[] = [
         heading: "Discretion is part of the format",
         paragraphs: [
           "For a private clientele, the value of a dinner is inseparable from what does not leave the room. No published guest list, no images, no supplier who can name the host afterwards.",
-          "At Makil Private, that is treated as a working constraint rather than a promise: fewer intermediaries, fewer written traces, fewer requests made on your behalf without your knowledge.",
+          "At Makil Private, discretion is treated as a working constraint rather than a promise: fewer intermediaries, fewer written traces, fewer requests made on your behalf without your knowledge.",
         ],
       },
       {
         heading: "Why one name rather than a structure",
         paragraphs: [
           "A structure distributes responsibility until no one carries it. A private orchestration is the opposite arrangement. One person reads the room, decides, and answers for the evening.",
-          "That is the position Makil-Herrero Richard occupies for the houses, families and founders who work with Makil Private, in Paris and where their table happens to be that season.",
+          "That is the position Makil-Herrero Richard occupies for the houses, families and founders who work with Makil Private, in Paris and wherever their table happens to be that season.",
         ],
       },
       {
         heading: "The measure of a well-orchestrated dinner",
         paragraphs: [
           "It is not the spectacle, and it is rarely the food. It is that no one present could describe how it was made to work.",
-          "Observe. Decide. Deliver. A dinner that cannot be reproduced is judged by what it left with the people who were there, and by the silence that follows it.",
+          "Observe. Decide. Deliver. A dinner orchestrated by Makil Private is judged by what it left with the people who were there, and by the silence that follows it.",
         ],
       },
     ],
