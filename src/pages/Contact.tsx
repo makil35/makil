@@ -282,7 +282,7 @@ const Contact = () => {
 
           <NextStep
             links={[
-              { kicker: "The practice", label: "Makil", to: localizedPath("home") },
+              { kicker: "The house", label: "Makil", to: localizedPath("home") },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
               { kicker: "Access", label: "By introduction", to: "/#access" },
             ]}
