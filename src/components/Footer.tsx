@@ -34,6 +34,15 @@ const Footer = () => {
     }
   };
 
+  // A link to the page you are already on must still feel like a move:
+  // return to the top instead of doing nothing.
+  const goToPage = (e: React.MouseEvent, to: string) => {
+    if (window.location.pathname === to) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const practice = [
     { label: t("nav.profil"), to: `${home}#richard` },
     { label: t("nav.univers"), to: `${home}#signature` },
