@@ -4,6 +4,7 @@ Allow: /
 # Pages techniques non indexables
 Disallow: /unsubscribe
 Disallow: /search
+Disallow: /private
 
 # AI search crawlers
 User-agent: GPTBot
