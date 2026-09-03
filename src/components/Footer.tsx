@@ -125,6 +125,14 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <Link
+                    to="/contact"
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-foreground/80 hover:text-foreground transition-smooth"
+                  >
+                    {t("contact.kicker")}
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to={`${home}#acces`}
                     className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
                   >
