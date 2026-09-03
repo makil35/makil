@@ -1,6 +1,8 @@
 project_id = "qbqbnychnbcnuhiyvuaq"
 
 [functions]
+  [functions.access-gate]
+    verify_jwt = false
   [functions.auth-email-hook]
     verify_jwt = false
   [functions.handle-email-suppression]

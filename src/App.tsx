@@ -14,6 +14,7 @@ import JournalArticle from "./pages/JournalArticle";
 import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import ScrollToTop from "@/components/ScrollToTop";
+import AccessGate from "@/components/AccessGate";
 
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <ScrollToTop />
+          <AccessGate>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/legal-notice" element={<MentionsLegales />} />
@@ -49,6 +51,7 @@ const App = () => (
             <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </AccessGate>
         </LanguageProvider>
       </BrowserRouter>
     </TooltipProvider>
