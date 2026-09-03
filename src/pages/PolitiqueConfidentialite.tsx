@@ -24,7 +24,7 @@ const Section = ({ n, title, children }: { n: string; title?: string; children: 
         {children}
       </div>
     </div>
-  </Section>
+  </section>
 );
 
 const linkClass =
