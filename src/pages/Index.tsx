@@ -232,7 +232,7 @@ const Index = () => {
           <div className="container mx-auto px-6 lg:px-10">
             <Reveal className="max-w-2xl space-y-6 mb-16">
               <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
-                <Index_ n="05" />
+                <Index_ n="06" />
                 {t("home.credibility.kicker")}
               </p>
               <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
@@ -263,7 +263,7 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
               <Reveal className="lg:col-span-4">
                 <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
-                  <Index_ n="06" />
+                  <Index_ n="07" />
                   {t("home.acces.kicker")}
                 </p>
               </Reveal>
@@ -309,7 +309,7 @@ const Index = () => {
           <div className="container mx-auto px-6 lg:px-10">
             <Reveal className="max-w-2xl space-y-6 mb-16">
               <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
-                <Index_ n="07" />
+                <Index_ n="08" />
                 Journal
               </p>
               <h2 className="text-3xl sm:text-4xl font-display leading-tight text-foreground">
