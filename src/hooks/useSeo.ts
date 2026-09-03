@@ -10,10 +10,17 @@ interface SeoOptions {
   routeKey?: RouteKey;
   /** Explicit path for routes not present in ROUTES (e.g. /unsubscribe). */
   path?: string;
-  titleKey: string;
-  descriptionKey: string;
+  titleKey?: string;
+  descriptionKey?: string;
+  /** Raw values for dynamic pages (journal articles) not backed by locale keys. */
+  title?: string;
+  description?: string;
+  keywords?: string;
+  /** Replaces the default WebPage JSON-LD payload. */
+  jsonLd?: Record<string, unknown>;
   /** Keep utility/error pages out of the index. */
   noindex?: boolean;
+
 }
 
 const upsertMeta = (
@@ -73,23 +80,34 @@ const upsertMetaProperty = (property: string, content: string) => {
   );
 };
 
-export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey, noindex }: SeoOptions) => {
+export const useSeo = ({
+  routeKey,
+  path: explicitPath,
+  titleKey,
+  descriptionKey,
+  title: rawTitle,
+  description: rawDescription,
+  keywords: rawKeywords,
+  jsonLd,
+  noindex,
+}: SeoOptions) => {
   const { t, language } = useLanguage();
   const location = useLocation();
 
   useEffect(() => {
     const lang: Lang = language;
-    const title = t(titleKey);
-    const description = t(descriptionKey);
+    const title = rawTitle ?? (titleKey ? t(titleKey) : "");
+    const description = rawDescription ?? (descriptionKey ? t(descriptionKey) : "");
 
     // Translations load asynchronously: skip while keys are unresolved
     // to avoid exposing raw keys as the document title / meta description.
-    if (title === titleKey || description === descriptionKey) return;
+    if (!title || !description || title === titleKey || description === descriptionKey) return;
 
     document.title = title;
     document.documentElement.lang = lang;
 
     upsertMetaName("description", description);
+
 
     const path = routeKey ? ROUTES[routeKey][lang] : (explicitPath ?? location.pathname);
     const canonical = `${SITE_URL}${path === "/" ? "/" : path}`;
@@ -119,7 +137,7 @@ export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey,
         ? "noindex, follow"
         : "index, follow, max-image-preview:large, max-snippet:-1"
     );
-    const keywords = "private adviser, personal branding, ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private advisory, luxury advisory, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Geneva, London, Dubai";
+    const keywords = rawKeywords ?? "private adviser, personal branding, ultra-luxury, confidential luxury, MAKIL, Makil-Herrero Richard, private advisory, luxury advisory, private signature, select presence, art of living, private clientele, discretion, exactness, Paris, Monaco, Geneva, London, Dubai";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route
@@ -131,15 +149,18 @@ export const useSeo = ({ routeKey, path: explicitPath, titleKey, descriptionKey,
       ld.id = ldId;
       document.head.appendChild(ld);
     }
-    ld.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: title,
-      description,
-      url: canonical,
-      inLanguage: "en-GB",
-      isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
-      about: { "@type": "Thing", name: "Confidential ultra-luxury" },
-    });
-  }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, language, location.pathname, t]);
+    ld.textContent = JSON.stringify(
+      jsonLd ?? {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: title,
+        description,
+        url: canonical,
+        inLanguage: "en-GB",
+        isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
+        about: { "@type": "Thing", name: "Confidential ultra-luxury" },
+      }
+    );
+  }, [routeKey, explicitPath, noindex, titleKey, descriptionKey, rawTitle, rawDescription, rawKeywords, jsonLd, language, location.pathname, t]);
+
 };
