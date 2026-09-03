@@ -69,6 +69,7 @@ const Contact = () => {
   const [message, setMessage] = useState(
     carriedQuery ? `Request: ${carriedQuery}\n\n` : ""
   );
+  const [org, setOrg] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
   // Anti-spam: honeypot field (invisible to humans) + minimum fill time
@@ -91,6 +92,7 @@ const Contact = () => {
       const { data, error } = await supabase.functions.invoke("submit-contact", {
         body: {
           ...parsed.data,
+          message: org.trim() ? `Company / Family office: ${org.trim()}\n\n${parsed.data.message}` : parsed.data.message,
           company,
           elapsedMs: Date.now() - mountedAt.current,
         },
@@ -102,6 +104,7 @@ const Contact = () => {
       setName("");
       setEmail("");
       setMessage("");
+      setOrg("");
       setCompany("");
       mountedAt.current = Date.now();
     } catch {
@@ -232,6 +235,18 @@ const Contact = () => {
                       />
                     </Field>
                   </div>
+
+                  <Field id="contact-org" label={t("contact.field.org")}>
+                    <input
+                      id="contact-org"
+                      type="text"
+                      maxLength={160}
+                      autoComplete="organization"
+                      value={org}
+                      onChange={(e) => setOrg(e.target.value)}
+                      className={inputClass}
+                    />
+                  </Field>
 
                   <Field id="contact-message" label={t("contact.field.message")}>
                     <textarea
