@@ -15,8 +15,9 @@ export default {
 
   // Navigation
   "nav.profil": "Profile",
-  "nav.univers": "World",
-  "nav.approche": "Approach",
+  "nav.univers": "Signature",
+  "nav.approche": "Capability",
+  "nav.mandates": "Mandates",
   "nav.vision": "Vision",
   "nav.principles": "Principles",
   "nav.acces": "Access",
@@ -56,8 +57,8 @@ export default {
   "home.hero.role": "Private access. Private orchestration. Absolute discretion.",
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
-  "home.hero.desc": "Private adviser in ultra-luxury, based in Paris. I serve a small circle of individuals who value what cannot be bought: time, trust, and the certainty that nothing is left to chance.",
-  "home.hero.cta": "Discover my world",
+  "home.hero.desc": "A private office for exceptional requests. Access, orchestration and execution, handled personally, for a limited circle of families, founders and private offices.",
+  "home.hero.cta": "Request private access",
   
 
   // Home · Profile
@@ -92,48 +93,61 @@ export default {
 
   // Home · Univers
   "home.univers.kicker": "MAKIL",
-  "home.univers.title1": "Not a service.",
-  "home.univers.title2": "A way of being.",
-  "home.univers.desc": "Makil is how I move through the world: quietly, precisely, and only for those I choose to work with. No offices. No portfolios. Just a direct line to the people and places that matter.",
-  "home.univers.cta": "Discover my approach",
+  "home.univers.title1": "A private office",
+  "home.univers.title2": "for exceptional requests.",
+  "home.univers.desc": "Makil is not a concierge service. It is a private structure dedicated to confidential access, complex orchestration and precise execution. One interlocutor, one network, no unnecessary limits.",
+  "home.univers.cta": "See the capability",
 
   // Home · Approach
-  "home.approche.kicker": "My approach",
-  "home.approche.title1": "Observe.",
-  "home.approche.title2": "Decide.",
-  "home.approche.title3": "Deliver.",
+  "home.approche.kicker": "Capability",
+  "home.approche.title1": "Access.",
+  "home.approche.title2": "Orchestration.",
+  "home.approche.title3": "Execution.",
   "home.pillar.discretion": "Discretion",
   "home.pillar.discretion.desc": "What is known stays between us. What is unknown stays that way.",
   "home.pillar.network": "Presence",
   "home.pillar.network.desc": "The right person, the right door, the right moment. Without noise.",
-  "home.pillar.excellence": "Exactness",
-  "home.pillar.excellence.desc": "Not the best at any cost. The right thing, done the right way.",
+  "home.pillar.excellence": "Execution",
+  "home.pillar.excellence.desc": "You request. I orchestrate. The result is delivered, without you managing it.",
   "home.pillar.liberty": "Freedom",
   "home.pillar.liberty.desc": "Your time returned to you. That is the only luxury I offer.",
+
+  // Home · Mandates
+  "home.mandates.kicker": "Private mandates",
+  "home.mandates.title1": "The field",
+  "home.mandates.title2": "of intervention.",
+  "home.mandates.item1": "Access",
+  "home.mandates.item1.desc": "Rare and highly restricted opportunities, obtained through direct relationships.",
+  "home.mandates.item2": "Orchestration",
+  "home.mandates.item2.desc": "Complex private requests coordinated end to end through a trusted network.",
+  "home.mandates.item3": "Lifestyle",
+  "home.mandates.item3.desc": "Private residences, yachts, aviation, dining, events and bespoke arrangements.",
+  "home.mandates.item4": "Special projects",
+  "home.mandates.item4.desc": "Requests requiring discretion, creativity and exceptional resources.",
 
   // Home · Vision
   "home.vision.kicker": "My vision",
   "home.vision.title1": "What I protect",
   "home.vision.title2": "is your attention.",
-  "home.vision.desc": "I do not sell experiences. I remove what distracts from them. My work is invisible by design: the right preparation, the right silence, the right timing. You are simply there.",
+  "home.vision.desc": "Your time should never be spent solving what others can solve for you. My work is invisible by design: the right preparation, the right resources, the right timing. You are simply there.",
 
   // Home · Access
   "home.acces.kicker": "Access",
   "home.acces.title1": "Access to Makil",
   "home.acces.title2": "is by invitation only.",
-  "home.acces.desc": "Every collaboration begins with a conversation. Confidential, direct, and without obligation. I take on only a handful of engagements each year.",
-  "home.acces.cta": "Request a confidential conversation",
+  "home.acces.desc": "Access to Makil is intentionally limited. Each mandate begins with a private conversation, allowing me to understand the request, determine the appropriate resources and personally oversee its execution.",
+  "home.acces.cta": "Request private access",
   "home.acces.alt": "View of Paris at night",
 
   // Home · Contact
   "contact.kicker": "Contact",
   "contact.title1": "Let\u2019s speak",
   "contact.title2": "in confidence.",
-  "contact.desc": "If the fit is right, we will know quickly. Write directly, or use the form below. I read every message myself.",
+  "contact.desc": "State the request plainly. Every message is read personally, and answered when the fit is right.",
   "contact.copy": "Copy address",
   "contact.field.name": "Name",
   "contact.field.email": "Email",
-  "contact.field.message": "Message",
+  "contact.field.message": "Your request",
   "contact.page.kicker": "Private adviser",
   "contact.page.title1": "A confidential",
   "contact.page.title2": "conversation.",
@@ -144,7 +158,7 @@ export default {
   "contact.page.locations": "Presence",
   "contact.page.locationsValue": "Paris · Monaco · London · Geneva · Dubai",
   "contact.page.discretion": "Nothing you write is shared, published, or discussed. Discretion begins with this form.",
-  "contact.send": "Send",
+  "contact.send": "Request private access",
   "contact.sending": "Sending…",
   "contact.success": "Your message has been sent.",
   "contact.error.invalid": "Please check the form fields.",
