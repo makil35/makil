@@ -201,7 +201,7 @@ const Index = () => {
         {/* PRIVATE MANDATES */}
         <section id="mandates" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
-            <Reveal className="max-w-2xl space-y-6 mb-16">
+            <Reveal className="max-w-2xl space-y-6">
               <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
                 <Index_ n="04" />
                 {t("home.mandates.kicker")}
@@ -210,21 +210,9 @@ const Index = () => {
                 {t("home.mandates.title1")} <br />
                 <em className="italic">{t("home.mandates.title2")}</em>
               </h2>
+              <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.mandates.p1")}</p>
+              <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.mandates.p2")}</p>
             </Reveal>
-
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-14 gap-x-10 max-w-6xl">
-              {[
-                ["home.mandates.item1", "home.mandates.item1.desc"],
-                ["home.mandates.item2", "home.mandates.item2.desc"],
-                ["home.mandates.item3", "home.mandates.item3.desc"],
-                ["home.mandates.item4", "home.mandates.item4.desc"],
-              ].map(([k, d], i) => (
-                <Reveal as="li" key={k} delay={i * 120} className="space-y-3">
-                  <h3 className="text-[11px] font-body tracking-[0.3em] uppercase text-foreground">{t(k)}</h3>
-                  <p className="text-xs font-body text-muted-foreground leading-loose max-w-[260px]">{t(d)}</p>
-                </Reveal>
-              ))}
-            </ul>
           </div>
         </section>
 
