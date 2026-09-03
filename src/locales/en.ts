@@ -16,7 +16,7 @@ export default {
   // Navigation
   "nav.profil": "Profile",
   "nav.univers": "Signature",
-  "nav.approche": "Capability",
+  "nav.approche": "Approach",
   "nav.mandates": "Mandates",
   "nav.vision": "Vision",
   "nav.principles": "Principles",
@@ -99,7 +99,7 @@ export default {
   "home.univers.cta": "See the capability",
 
   // Home · Approach
-  "home.approche.kicker": "Capability",
+  "home.approche.kicker": "Approach",
   "home.approche.title1": "Anticipate.",
   "home.approche.title2": "Design.",
   "home.approche.title3": "Accomplish.",
