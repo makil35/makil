@@ -88,7 +88,7 @@ const Index = () => {
       <main>
         {/* PROFILE */}
         <section id="profil" className="scroll-mt-24 py-24 sm:py-32 bg-background">
-          <div className="container mx-auto px-6 lg:px-10">
+          <div className="container mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-16 lg:gap-24 items-start">
             <div className="max-w-2xl space-y-6">
               <Reveal className="space-y-6">
                 <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
