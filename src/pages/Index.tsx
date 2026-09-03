@@ -103,6 +103,7 @@ const Index = () => {
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p1")}</p>
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p2")}</p>
                 <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.profil.p3")}</p>
+                <p className="text-sm font-body text-foreground/80 leading-loose italic font-display">{t("home.profil.p4")}</p>
 
                 <dl className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8">
                   {[
