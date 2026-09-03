@@ -251,6 +251,49 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
   },
+  {
+    slug: "why-a-private-house-does-not-scale",
+    title: "Why a private house does not scale",
+    kicker: "The house",
+    excerpt:
+      "Growth is the usual measure of success. In a private house it is the first thing that has to be refused.",
+    metaTitle: "Why a Private House Does Not Scale · MAKIL · Paris",
+    metaDescription:
+      "Why a private adviser keeps a limited number of mandates: attention, discretion and single-point responsibility cannot be duplicated. Makil-Herrero Richard, Paris.",
+    keywords:
+      "private adviser, private house, limited mandates, discretion, private advisory Paris, Makil-Herrero Richard, MAKIL",
+    date: "2026-09-03",
+    readingTime: "4 min",
+    blocks: [
+      {
+        paragraphs: [
+          "Every structure is eventually offered the same opportunity: do more of what already works, for more people. It is presented as progress. For a private house it is the point where the work stops being what it was.",
+          "What is bought here is not a capability. It is attention, and attention does not multiply.",
+        ],
+      },
+      {
+        heading: "What growth would cost",
+        paragraphs: [
+          "To take on more, a house has to delegate. To delegate, it has to write things down, brief intermediaries and explain contexts that were never meant to be explained twice.",
+          "Each of those steps is a new surface. Nothing is stolen; things simply travel.",
+        ],
+      },
+      {
+        heading: "The limit is the method",
+        paragraphs: [
+          "A restricted number of mandates is not scarcity arranged for effect. It is what allows a single name to read a situation properly, decide without consultation, and answer for the outcome.",
+          "Fewer engagements also means fewer compromises accepted in order to keep a calendar full.",
+        ],
+      },
+      {
+        heading: "What is kept instead",
+        paragraphs: [
+          "Not volume. Continuity. The same person across seasons, who already knows what was declined last year and why it should stay declined.",
+          "Observe. Decide. Deliver. That sequence survives only when the number of people who need it stays small.",
+        ],
+      },
+    ],
+  },
 ];
 
 
