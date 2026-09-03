@@ -198,8 +198,19 @@ const Footer = () => {
                     {t("footer.privacy")}
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/private"
+                    onClick={(e) => goToPage(e, "/private")}
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    Private area
+                  </Link>
+                </li>
               </ul>
             </nav>
+
+
 
             <nav aria-label="Elsewhere" className="space-y-4">
               <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground/70">
