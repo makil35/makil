@@ -3,6 +3,9 @@ import { supabase } from "@/integrations/supabase/client";
 
 const STORAGE_KEY = "makil.access.token";
 
+// Gate paused by request — the site is open for validation.
+const GATE_PAUSED = true;
+
 type Status = "checking" | "locked" | "granted";
 
 const AccessGate = ({ children }: { children: ReactNode }) => {
