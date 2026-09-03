@@ -106,9 +106,13 @@ export const useSeo = ({
   description: rawDescription,
   keywords: rawKeywords,
   jsonLd,
+  breadcrumbs,
   noindex,
   ogType,
+  image,
+  imageAlt,
   article,
+
 }: SeoOptions) => {
   const { t, language } = useLanguage();
   const location = useLocation();
