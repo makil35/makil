@@ -112,7 +112,7 @@ export const journalArticles: JournalArticle[] = [
       "Confidentiality is not a clause added at the end of a conversation. It is the way the conversation is organised from the first minute.",
     metaTitle: "Discretion as a Standard · Confidential Advisory · MAKIL",
     metaDescription:
-      "How confidentiality is organised in a private advisory house: direct contact, minimal traces and no intermediaries. Makil-Herrero Richard, Paris."
+      "How confidentiality is organised in a private advisory house: direct contact, minimal traces and no intermediaries. Makil-Herrero Richard, Paris.",
     keywords:
       "discretion, confidentiality, confidential advisory, private clientele, private adviser Paris",
     date: "2026-08-26",
