@@ -12,6 +12,7 @@ import Unsubscribe from "./pages/Unsubscribe";
 import Journal from "./pages/Journal";
 import JournalArticle from "./pages/JournalArticle";
 import Contact from "./pages/Contact";
+import Search from "./pages/Search";
 import ScrollToTop from "@/components/ScrollToTop";
 
 
@@ -33,6 +34,8 @@ const App = () => (
             <Route path="/journal/:slug" element={<JournalArticle />} />
             <Route path="/blog" element={<Navigate to="/journal" replace />} />
             <Route path="/contact" element={<Contact />} />
+            {/* Unlisted internal search (noindex, not linked in navigation) */}
+            <Route path="/search" element={<Search />} />
 
             {/* Legacy localized links */}
             <Route path="/fr" element={<Navigate to="/" replace />} />
