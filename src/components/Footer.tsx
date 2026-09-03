@@ -103,7 +103,7 @@ const Footer = () => {
 
             <nav aria-label={t("nav.mainAria")} className="space-y-4">
               <p className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground/70">
-                The practice
+                The house
               </p>
               <ul className="space-y-3">
                 {practice.map((l) => (
@@ -160,6 +160,15 @@ const Footer = () => {
                     className="text-[11px] font-body tracking-[0.2em] uppercase text-foreground/80 hover:text-foreground transition-smooth"
                   >
                     {t("contact.kicker")}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/mandates"
+                    onClick={(e) => goToPage(e, "/mandates")}
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    {t("nav.mandates")}
                   </Link>
                 </li>
                 <li>

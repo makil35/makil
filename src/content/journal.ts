@@ -41,8 +41,8 @@ export const journalArticles: JournalArticle[] = [
       {
         heading: "One point of contact",
         paragraphs: [
-          "Most structures multiply intermediaries. Each addition is a new surface where information can travel. A private practice does the opposite: it reduces the chain to a single name who reads, decides and carries the consequence.",
-          "That is why the practice stays deliberately small. Capacity is not a constraint here, it is the condition of the work.",
+          "Most structures multiply intermediaries. Each addition is a new surface where information can travel. A private house does the opposite: it reduces the chain to a single name who reads, decides and carries the consequence.",
+          "That is why the house stays deliberately small. Capacity is not a constraint here, it is the condition of the work.",
         ],
       },
       {
@@ -107,12 +107,12 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: "discretion-as-a-standard",
     title: "Discretion as a standard, not a promise",
-    kicker: "Practice",
+    kicker: "The house",
     excerpt:
       "Confidentiality is not a clause added at the end of a conversation. It is the way the conversation is organised from the first minute.",
     metaTitle: "Discretion as a Standard · Confidential Advisory · MAKIL",
     metaDescription:
-      "How confidentiality is organised in a private advisory practice: direct contact, minimal traces and no intermediaries. Makil-Herrero Richard, Paris.",
+      "How confidentiality is organised in a private advisory house: direct contact, minimal traces and no intermediaries. Makil-Herrero Richard, Paris.",
     keywords:
       "discretion, confidentiality, confidential advisory, private clientele, private adviser Paris",
     date: "2026-08-26",
