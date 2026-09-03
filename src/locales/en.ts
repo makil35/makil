@@ -54,7 +54,7 @@ export default {
   "home.hero.role": "Private adviser · Art of living · Select presence",
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
-  "home.hero.desc": "I am a private adviser to a small circle of individuals who value what cannot be bought: time, trust, and the certainty that nothing is left to chance.",
+  "home.hero.desc": "Private adviser in ultra-luxury, based in Paris. I serve a small circle of individuals who value what cannot be bought: time, trust, and the certainty that nothing is left to chance.",
   "home.hero.cta": "Discover my world",
   
 
@@ -166,7 +166,7 @@ export default {
 
   // Privacy Policy
   "privacy.title": "Privacy Policy",
-  "privacy.intro": "This policy describes how MAKIL collects, uses and protects the personal data of visitors to the site.",
+  "privacy.intro": "This policy describes how MAKIL, the private practice of Makil-Herrero Richard in Paris, collects, uses and protects the personal data of visitors to makil.fr, in compliance with the GDPR and the French Data Protection Act.",
   "privacy.lastUpdate": "Last updated:",
   "privacy.s1.title": "1. Data controller",
   "privacy.s1.p1": "The data controller is Makil-Herrero Richard, based in Paris, France.",
