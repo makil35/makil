@@ -26,6 +26,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/legal-notice" element={<MentionsLegales />} />
             <Route path="/privacy-policy" element={<PolitiqueConfidentialite />} />
+            <Route path="/journal" element={<Journal />} />
+            <Route path="/journal/:slug" element={<JournalArticle />} />
+            <Route path="/blog" element={<Navigate to="/journal" replace />} />
+
             {/* Legacy localized links */}
             <Route path="/fr" element={<Navigate to="/" replace />} />
             <Route path="/en" element={<Navigate to="/" replace />} />
