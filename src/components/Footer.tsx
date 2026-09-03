@@ -19,6 +19,20 @@ const LongArrow = ({ className }: { className?: string }) => (
 const Footer = () => {
   const { t } = useLanguage();
   const home = localizedPath("home");
+  const navigate = useNavigate();
+
+  // Anchor links must land on section content, not on the large editorial
+  // top padding (which reads as a blank/black screen).
+  const goToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    if (window.location.pathname === home) {
+      scrollToSection(id);
+      window.history.replaceState(null, "", `${home}#${id}`);
+    } else {
+      navigate(`${home}#${id}`);
+      setTimeout(() => scrollToSection(id), 150);
+    }
+  };
 
   const practice = [
     { label: t("nav.profil"), to: `${home}#profil` },
