@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import Reveal from "@/components/Reveal";
 import portraitMakil from "@/assets/portrait-makil.png.asset.json";
 import NextStep from "@/components/NextStep";
+import Signature from "@/components/Signature";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { scrollToSection } from "@/lib/scrollToSection";
