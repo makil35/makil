@@ -29,8 +29,8 @@ const Footer = () => {
       scrollToSection(id);
       window.history.replaceState(null, "", `${home}#${id}`);
     } else {
+      // ScrollToTop handles the hash once the home route has mounted.
       navigate(`${home}#${id}`);
-      setTimeout(() => scrollToSection(id), 150);
     }
   };
 

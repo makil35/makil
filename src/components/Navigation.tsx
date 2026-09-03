@@ -1,3 +1,4 @@
+import { scrollToSection } from "@/lib/scrollToSection";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -41,19 +42,11 @@ const Navigation = () => {
   const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     setIsOpen(false);
     if (window.location.pathname !== home) return;
-    const target = document.getElementById(id);
-    if (!target) return;
+    if (!document.getElementById(id)) return;
     e.preventDefault();
-    // Sections carry large editorial padding: land on the content, not on the
-    // empty top padding (which reads as a blank black screen).
-    const padTop = parseFloat(getComputedStyle(target).paddingTop) || 0;
-    const headerOffset = 110;
-    const y = target.getBoundingClientRect().top + window.scrollY + padTop - headerOffset;
-    window.scrollTo({ top: Math.max(y, 0), behavior: "smooth" });
+    scrollToSection(id);
     window.history.replaceState(null, "", `${home}#${id}`);
   };
-
-
 
   return (
     <nav

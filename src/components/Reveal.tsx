@@ -9,7 +9,8 @@ interface RevealProps {
 
 /**
  * Editorial scroll reveal: a restrained fade + rise.
- * Respects prefers-reduced-motion.
+ * Respects prefers-reduced-motion and never leaves content hidden after an
+ * anchor jump (the reveal is opacity-only in that case, so layout never shifts).
  */
 const Reveal = ({ children, delay = 0, className = "", as = "div" }: RevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,35 +26,50 @@ const Reveal = ({ children, delay = 0, className = "", as = "div" }: RevealProps
       return;
     }
 
-    // Already on screen at mount (deep link / anchor jump): show immediately.
-    const rect = node.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
+    let done = false;
+    const show = () => {
+      if (done) return;
+      done = true;
       setVisible(true);
+    };
+
+    // Reveal slightly before the block enters the viewport so anchor jumps
+    // never land on an invisible section.
+    const inRange = () => {
+      const rect = node.getBoundingClientRect();
+      const margin = window.innerHeight * 0.35;
+      return rect.top < window.innerHeight + margin && rect.bottom > -margin;
+    };
+
+    if (inRange()) {
+      show();
       return;
     }
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting || entry.intersectionRatio > 0) {
-            setVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
+        if (entries.some((e) => e.isIntersecting || e.intersectionRatio > 0)) {
+          show();
+          observer.disconnect();
+        }
       },
-      { threshold: 0, rootMargin: "0px 0px -5% 0px" },
+      { threshold: 0, rootMargin: "35% 0px 35% 0px" },
     );
-
     observer.observe(node);
 
-    // Safety net: never leave content invisible (e.g. anchor jumps, tall blocks)
-    const fallback = window.setTimeout(() => setVisible(true), 500);
+    // Anchor navigation and programmatic scrolls ask for a re-check.
+    const onCheck = () => {
+      if (inRange()) {
+        show();
+        observer.disconnect();
+      }
+    };
+    window.addEventListener("makil:reveal-check", onCheck);
 
     return () => {
-      window.clearTimeout(fallback);
+      window.removeEventListener("makil:reveal-check", onCheck);
       observer.disconnect();
     };
-
   }, []);
 
   const Tag = as as "div";
