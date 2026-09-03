@@ -18,10 +18,16 @@ interface SeoOptions {
   keywords?: string;
   /** Replaces the default WebPage JSON-LD payload. */
   jsonLd?: Record<string, unknown>;
+  /** Breadcrumb trail (excluding Home, which is prepended automatically). */
+  breadcrumbs?: { name: string; path: string }[];
   /** Keep utility/error pages out of the index. */
   noindex?: boolean;
   /** og:type override, e.g. "article" for Journal notes. */
   ogType?: string;
+  /** Absolute or root-relative share image path. */
+  image?: string;
+  /** Alternative text for the share image. */
+  imageAlt?: string;
   /** Article-specific Open Graph metadata (Journal notes). */
   article?: {
     publishedTime?: string;
@@ -32,6 +38,7 @@ interface SeoOptions {
   };
 
 }
+
 
 const upsertMeta = (
   matchSelector: string,
