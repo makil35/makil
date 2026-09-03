@@ -35,9 +35,9 @@ const Footer = () => {
   };
 
   const practice = [
-    { label: t("nav.profil"), to: `${home}#profil` },
-    { label: t("nav.univers"), to: `${home}#univers` },
-    { label: t("nav.approche"), to: `${home}#approche` },
+    { label: t("nav.profil"), to: `${home}#profile` },
+    { label: t("nav.univers"), to: `${home}#signature` },
+    { label: t("nav.approche"), to: `${home}#approach` },
     { label: t("nav.vision"), to: `${home}#vision` },
     { label: t("nav.principles"), to: `${home}#principles` },
   ];
@@ -149,8 +149,8 @@ const Footer = () => {
                 </li>
                 <li>
                     <Link
-                      to={`${home}#acces`}
-                      onClick={(e) => goToSection(e, "acces")}
+                      to={`${home}#access`}
+                      onClick={(e) => goToSection(e, "access")}
                       className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
                     >
                       {t("nav.acces")}

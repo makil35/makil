@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { localizedPath } from "@/lib/routes";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 
-const SECTION_IDS = ["profil", "univers", "approche", "vision", "principles", "acces"];
+const SECTION_IDS = ["profile", "signature", "approach", "vision", "principles", "access"];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,13 +29,13 @@ const Navigation = () => {
 
   const home = localizedPath("home");
   const navLinks = [
-    { key: "nav.profil", id: "profil" },
-    { key: "nav.univers", id: "univers" },
-    { key: "nav.approche", id: "approche" },
+    { key: "nav.profil", id: "profile" },
+    { key: "nav.univers", id: "signature" },
+    { key: "nav.approche", id: "approach" },
     { key: "nav.mandates", id: "mandates" },
     { key: "nav.vision", id: "vision" },
     { key: "nav.principles", id: "principles" },
-    { key: "nav.acces", id: "acces" },
+    { key: "nav.acces", id: "access" },
   ];
 
   const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {

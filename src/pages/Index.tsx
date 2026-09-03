@@ -31,7 +31,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <a
-        href="#profil"
+        href="#profile"
         className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:bg-foreground focus:px-4 focus:py-2 focus:text-[11px] focus:uppercase focus:tracking-[0.3em] focus:text-background"
       >
         {t("a11y.skip")}
@@ -69,7 +69,7 @@ const Index = () => {
               {t("home.hero.desc")}
             </p>
             <a
-              href="#acces"
+              href="#access"
               className="animate-rise inline-flex flex-col items-start gap-3 group pt-4"
               style={{ animationDelay: "600ms" }}
             >
@@ -88,7 +88,7 @@ const Index = () => {
 
       <main>
         {/* PROFILE */}
-        <section id="profil" className="scroll-mt-24 py-24 sm:py-32 bg-background">
+        <section id="profile" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-16 lg:gap-24 items-start">
             <div className="max-w-2xl space-y-6">
               <Reveal className="space-y-6">
@@ -149,7 +149,7 @@ const Index = () => {
         </section>
 
         {/* SIGNATURE */}
-        <section id="univers" className="scroll-mt-24 py-24 sm:py-32 bg-background">
+        <section id="signature" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
             <Reveal className="max-w-2xl space-y-6">
               <p className="flex items-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -162,7 +162,7 @@ const Index = () => {
               </h2>
               <p className="text-sm font-body text-muted-foreground leading-loose">{t("home.univers.desc")}</p>
               <a
-                href="#approche"
+                href="#approach"
                 className="link-underline inline-flex items-center gap-3 text-[11px] font-body tracking-[0.3em] uppercase text-foreground/70 hover:text-foreground transition-smooth mt-6"
               >
                 {t("home.univers.cta")} <ArrowRight size={14} />
@@ -172,7 +172,7 @@ const Index = () => {
         </section>
 
         {/* APPROCHE */}
-        <section id="approche" className="scroll-mt-24 py-24 sm:py-32 bg-background">
+        <section id="approach" className="scroll-mt-24 py-24 sm:py-32 bg-background">
           <div className="container mx-auto px-6 lg:px-10">
             <Reveal className="text-center space-y-4 mb-20">
               <p className="flex items-center justify-center gap-4 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
@@ -276,7 +276,7 @@ const Index = () => {
         </section>
 
         {/* ACCÈS */}
-        <section id="acces" className="scroll-mt-24 py-28 sm:py-40 bg-background atmosphere grain relative overflow-hidden">
+        <section id="access" className="scroll-mt-24 py-28 sm:py-40 bg-background atmosphere grain relative overflow-hidden">
           <div className="container relative z-10 mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
               <Reveal className="lg:col-span-4">

@@ -284,7 +284,7 @@ const Contact = () => {
             links={[
               { kicker: "The practice", label: "Back to Makil", to: localizedPath("home") },
               { kicker: "Journal", label: "Notes and perspective", to: "/journal" },
-              { kicker: "Access", label: "By invitation only", to: "/#acces" },
+              { kicker: "Access", label: "By invitation only", to: "/#access" },
             ]}
           />
         </div>
