@@ -51,6 +51,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://makil.fr/journal/why-a-private-house-does-not-scale</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://makil.fr/legal-notice</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

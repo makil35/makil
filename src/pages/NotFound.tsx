@@ -22,7 +22,7 @@ const NotFound = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">{t("notfound.title")}</h1>
+        <h1 className="mb-4 text-4xl font-semibold">{t("notfound.title")}</h1>
         <p className="mb-4 text-xl text-gray-600">{t("notfound.subtitle")}</p>
         <Link to={localizedPath("home")} className="text-blue-500 underline hover:text-blue-700">
           {t("notfound.button")}
