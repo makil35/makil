@@ -20,11 +20,11 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
+    <div className="flex min-h-screen items-center justify-center bg-background px-6 text-foreground">
+      <div className="max-w-md text-center">
         <h1 className="mb-4 text-4xl font-semibold">{t("notfound.title")}</h1>
-        <p className="mb-4 text-xl text-gray-600">{t("notfound.subtitle")}</p>
-        <Link to={localizedPath("home")} className="text-blue-500 underline hover:text-blue-700">
+        <p className="mb-4 text-xl text-muted-foreground">{t("notfound.subtitle")}</p>
+        <Link to={localizedPath("home")} className="text-foreground underline underline-offset-4 hover:text-muted-foreground">
           {t("notfound.button")}
         </Link>
       </div>

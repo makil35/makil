@@ -193,10 +193,7 @@ const Contact = () => {
               ) : (
                 <form onSubmit={onSubmit} className="space-y-10 border-t border-foreground/10 pt-12">
                   {/* Honeypot · hidden from humans, bots tend to fill it */}
-                  <div
-                    className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden"
-                    aria-hidden="true"
-                  >
+                  <div className="sr-only" aria-hidden="true">
                     <label htmlFor="contact-company">Company</label>
                     <input
                       id="contact-company"

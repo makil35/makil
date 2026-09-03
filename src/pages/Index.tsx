@@ -145,7 +145,7 @@ const Index = () => {
                   loading="lazy"
                   width={1024}
                   height={1536}
-                  className="w-full max-w-[320px] lg:max-w-none object-cover grayscale"
+                  className="aspect-[2/3] w-full max-w-[320px] object-cover object-center grayscale lg:max-w-none"
                 />
                 <figcaption className="text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">
                   Makil-Herrero Richard · Paris
