@@ -12,9 +12,8 @@
 - [x] Publish the September note "The first conversation" and add it to the sitemap.
 - [x] Add a `/journal/archive` page listing every note grouped by month.
 - [x] Add Open Graph article tags and Article structured data to each Journal note.
+- [x] Replace the placeholder handwritten signature with the user's real signature.
 
-## In progress
-- [ ] Replace the placeholder handwritten signature with the image the user will send.
 
 ## Journal cadence (one note per month)
 - [ ] October 2026 — "What is declined, and why" (slug: `what-is-declined-and-why`): the refusal as method; keywords: private adviser selection, declined mandates, discretion.
