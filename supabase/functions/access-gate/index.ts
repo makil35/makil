@@ -1,7 +1,10 @@
+import { sendTemplateEmail } from '../_shared/transactional-email-templates/send-email.ts'
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
+
 
 const OWNER_EMAIL = 'richard@makil.fr'
 const TOKEN_TTL_HOURS = 12
