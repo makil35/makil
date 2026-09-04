@@ -163,7 +163,7 @@ const Search = () => {
               htmlFor="site-search"
               className="block text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground mb-3"
             >
-              Your query
+              Query
             </label>
             <div className="flex items-end gap-6">
               <input
@@ -228,7 +228,7 @@ const Search = () => {
                   Write
                 </p>
                 <p className="mt-6 max-w-xl font-display text-2xl sm:text-3xl leading-tight text-foreground">
-                  What you write here is carried, word for word, to a direct line.
+                  What is written here is carried, word for word, to a direct line.
                 </p>
                 <button
                   type="button"

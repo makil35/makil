@@ -52,7 +52,7 @@ const ClientMandates = ({ userId }: { userId: string }) => {
   if (mandates.length === 0) {
     return (
       <p className="mt-16 text-sm leading-relaxed text-muted-foreground">
-        No mandate is open under your name at this time.
+        No mandate is open under this name at this time.
       </p>
     );
   }
