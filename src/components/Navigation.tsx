@@ -88,6 +88,13 @@ const Navigation = () => {
                 {t(link.key)}
               </a>
             ))}
+            <Link
+              to="/journal"
+              onClick={() => setIsOpen(false)}
+              className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+            >
+              {t("nav.journal")}
+            </Link>
           </div>
 
 
@@ -123,6 +130,16 @@ const Navigation = () => {
               {t(link.key)}
             </a>
           ))}
+          <Link
+            to="/journal"
+            onClick={() => setIsOpen(false)}
+            style={{ transitionDelay: isOpen ? `${120 + navLinks.length * 70}ms` : "0ms" }}
+            className={`py-5 font-display text-2xl text-foreground transition-[opacity,transform] duration-700 ${
+              isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+            }`}
+          >
+            {t("nav.journal")}
+          </Link>
         </div>
       </div>
     </nav>
