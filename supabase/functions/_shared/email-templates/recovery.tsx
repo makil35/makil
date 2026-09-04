@@ -26,20 +26,20 @@ export const RecoveryEmail = ({
     <Head>
       <style>{darkModeCss}</style>
     </Head>
-    <Preview>Reset your password for {siteName}</Preview>
+    <Preview>Reset the password for {siteName}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Reset your password</Heading>
+        <Heading style={h1}>Reset the password</Heading>
         <Text style={text}>
-          We received a request to reset your password for {siteName}. Click
+          A request was received to reset the password for {siteName}. Click
           the button below to choose a new password.
         </Text>
         <Button className="dm-btn" style={button} href={confirmationUrl}>
           Reset Password
         </Button>
         <Text style={footer}>
-          If you didn't request a password reset, you can safely ignore this
-          email. Your password will not be changed.
+          If no password reset was requested, this message may safely be ignored
+          . The password will not be changed.
         </Text>
       </Container>
     </Body>

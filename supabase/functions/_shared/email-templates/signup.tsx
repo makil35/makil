@@ -31,10 +31,10 @@ export const SignupEmail = ({
     <Head>
       <style>{darkModeCss}</style>
     </Head>
-    <Preview>Confirm your email for {siteName}</Preview>
+    <Preview>Confirm the email for {siteName}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Confirm your email</Heading>
+        <Heading style={h1}>Confirm the email</Heading>
         <Text style={text}>
           Thanks for signing up for{' '}
           <Link href={siteUrl} style={link}>
@@ -43,7 +43,7 @@ export const SignupEmail = ({
           !
         </Text>
         <Text style={text}>
-          Please confirm your email address (
+          Please confirm this email address (
           <Link href={`mailto:${recipient}`} style={link}>
             {recipient}
           </Link>
@@ -53,7 +53,7 @@ export const SignupEmail = ({
           Verify Email
         </Button>
         <Text style={footer}>
-          If you didn't create an account, you can safely ignore this email.
+          If no account was created, this message may safely be ignored.
         </Text>
       </Container>
     </Body>
