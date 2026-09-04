@@ -136,16 +136,24 @@ const Navigation = () => {
               {t(link.key)}
             </a>
           ))}
-          <Link
-            to="/journal"
-            onClick={() => setIsOpen(false)}
-            style={{ transitionDelay: isOpen ? `${120 + navLinks.length * 70}ms` : "0ms" }}
-            className={`py-5 font-display text-2xl text-foreground transition-[opacity,transform] duration-700 ${
-              isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-            }`}
-          >
-            Journal
-          </Link>
+          {[
+            { to: "/journal", label: "Journal" },
+            { to: "/presence", label: "Presence" },
+            { to: "/mandates", label: "Mandates" },
+            { to: "/contact", label: "Contact" },
+          ].map((l, i) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              onClick={() => setIsOpen(false)}
+              style={{ transitionDelay: isOpen ? `${120 + (navLinks.length + i) * 70}ms` : "0ms" }}
+              className={`py-5 font-display text-2xl text-foreground transition-[opacity,transform] duration-700 ${
+                isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+              }`}
+            >
+              {l.label}
+            </Link>
+          ))}
 
         </div>
       </div>
