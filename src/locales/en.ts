@@ -7,7 +7,7 @@ export default {
   "seo.privacy.title": "Privacy Policy · MAKIL · GDPR & Data Protection",
   "seo.privacy.description": "MAKIL privacy policy: how makil.fr, the house of Makil-Herrero Richard in Paris, collects, uses and protects your personal data. GDPR rights, cookies and discretion.",
   "seo.contact.title": "Contact · MAKIL · Makil-Herrero Richard, Private Adviser",
-  "seo.contact.description": "Contact Makil-Herrero Richard, private adviser based in Paris. A direct exchange — every message is read personally.",
+  "seo.contact.description": "Contact Makil-Herrero Richard, private adviser based in Paris. A direct exchange. Every message is read personally.",
   "seo.unsubscribe.title": "Unsubscribe · MAKIL Private Correspondence",
   "seo.unsubscribe.description": "Confirm the end of MAKIL private correspondence from Makil-Herrero Richard, private adviser in Paris. One click, no questions, and your address is removed.",
   "seo.notfound.title": "Page Not Found · MAKIL",

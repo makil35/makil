@@ -55,7 +55,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-background">
-      {/* Access banner — a single, quiet entry point */}
+      {/* Access banner: a single, quiet entry point */}
       <div className="border-t border-foreground/10">
         <div className="container mx-auto px-6 lg:px-10">
           <Link
