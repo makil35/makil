@@ -27,26 +27,6 @@ const NotFound = () => {
         <Link to={localizedPath("home")} className="text-foreground underline underline-offset-4 hover:text-muted-foreground">
           {t("notfound.button")}
         </Link>
-
-        <nav
-          aria-label="Continue through the house"
-          className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4"
-        >
-          {[
-            { to: "/mandates", label: "Mandates" },
-            { to: "/journal", label: "Journal" },
-            { to: "/presence", label: "Presence" },
-            { to: "/contact", label: "Contact" },
-          ].map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="text-[10px] font-body tracking-[0.35em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
       </div>
     </div>
   );
