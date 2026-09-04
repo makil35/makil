@@ -13,6 +13,8 @@ import JournalArchive from "./pages/JournalArchive";
 import JournalArticle from "./pages/JournalArticle";
 import Contact from "./pages/Contact";
 import Mandates from "./pages/Mandates";
+import Presence from "./pages/Presence";
+import PresenceCity from "./pages/PresenceCity";
 import Search from "./pages/Search";
 import Private from "./pages/Private";
 import ScrollToTop from "@/components/ScrollToTop";
