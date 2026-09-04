@@ -330,7 +330,7 @@ const AdminConsole = () => {
 
       <AdminMessages clients={clients} />
 
-      <section>
+      <section id="clients-section">
         <h2 className="text-[0.6rem] uppercase tracking-[0.5em] text-muted-foreground">
           Clients
         </h2>
