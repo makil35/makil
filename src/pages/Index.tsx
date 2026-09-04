@@ -48,7 +48,7 @@ const Index = () => {
           description:
             "Private adviser in Paris. Reading, judgement and quiet orchestration for a select circle. By introduction only.",
           url: "https://makil.fr/",
-          image: `https://makil.fr/og-image.jpg`,
+          image: "https://makil.fr/og-image.jpg",
           email: "mailto:richard@makil.fr",
           knowsAbout: [
             "Private advisory",
