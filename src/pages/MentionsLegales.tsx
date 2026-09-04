@@ -108,6 +108,8 @@ const MentionsLegales = () => {
             links={[
               { kicker: "The house", label: "Back to Makil", to: localizedPath("home") },
               { kicker: "Journal", label: "Notes and perspective", to: "/journal" },
+              { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
+              { kicker: "Presence", label: "Six cities", to: "/presence" },
               { kicker: "Introductions", label: "Contact", to: "/contact" },
             ]}
           />

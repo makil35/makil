@@ -448,6 +448,7 @@ const Index = () => {
             links={[
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
+              { kicker: "Presence", label: "Six cities", to: "/presence" },
               { kicker: "Correspondence", label: "Write", to: "/contact" },
               { kicker: "Information", label: "Legal notice", to: "/legal-notice" },
             ]}

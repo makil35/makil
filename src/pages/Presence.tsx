@@ -94,6 +94,7 @@ const Presence = () => {
             links={[
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
+              { kicker: "The house", label: "Profile and principles", to: "/#richard" },
               { kicker: "Contact", label: "A direct exchange", to: "/contact" },
             ]}
           />
