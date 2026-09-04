@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { STATUSES, formatDate, type Mandate } from "./ClientMandates";
+import AdminMessages from "./AdminMessages";
 
 type Client = {
   id: string;
@@ -307,6 +308,8 @@ const AdminConsole = () => {
           </ul>
         )}
       </section>
+
+      <AdminMessages clients={clients} />
 
       <section>
         <h2 className="text-[0.6rem] uppercase tracking-[0.5em] text-muted-foreground">
