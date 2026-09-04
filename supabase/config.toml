@@ -9,5 +9,7 @@ project_id = "qbqbnychnbcnuhiyvuaq"
     verify_jwt = true
   [functions.preview-transactional-email]
     verify_jwt = false
+  [functions.reply-contact]
+    verify_jwt = true
   [functions.submit-contact]
     verify_jwt = false
