@@ -92,9 +92,15 @@ const Private = () => {
         ) : !session ? (
           <div className="mt-16 max-w-md">
             <p className="text-sm leading-relaxed text-muted-foreground">
-              This area is reserved for clients of the house. Enter the address known
-              to me and a single-use link will be sent to you.
+              This area is reserved for those already known to the house. You will find
+              here the mandates opened in your name, their state, and the dates that
+              matter — nothing else, and nothing visible to anyone but you.
             </p>
+            <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+              Enter the address known to me and a single-use link will be sent to you.
+              No password is kept, here or elsewhere.
+            </p>
+
             {sent ? (
               <p className="mt-10 text-sm leading-relaxed text-muted-foreground">
                 A link has been sent. It opens this page, once.

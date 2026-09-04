@@ -343,7 +343,51 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
   },
+  {
+    slug: "the-cost-of-being-everywhere",
+    title: "The cost of being everywhere",
+    kicker: "Presence",
+    excerpt:
+      "Visibility is easy to obtain and expensive to carry. A name that appears everywhere is read as available; a name that appears rarely is read as chosen.",
+    metaTitle: "The Cost of Being Everywhere · MAKIL · Paris",
+    metaDescription:
+      "Why constant visibility weakens a name, and how restraint protects authority. Notes by Makil-Herrero Richard, private adviser in Paris.",
+    keywords:
+      "personal branding restraint, discreet visibility, reputation management, private adviser Paris, Makil-Herrero Richard",
+    date: "2026-09-04",
+    readingTime: "4 min",
+    blocks: [
+      {
+        paragraphs: [
+          "Presence is now measured in frequency. The assumption is that a name grows by appearing more often, in more places, before more people. In private matters, the arithmetic runs the other way.",
+          "A name that can be found everywhere is understood to be available to everyone. Availability is the opposite of selection, and selection is what gives a name its weight.",
+        ],
+      },
+      {
+        heading: "What visibility actually buys",
+        paragraphs: [
+          "Exposure produces volume: more requests, more conversations, more situations that were never meant for you. Very little of it is useful, and all of it consumes the one resource that cannot be replaced, which is attention.",
+          "The question is never how many people know the name. It is which people, and in what context they heard it.",
+        ],
+      },
+      {
+        heading: "The discipline of appearing rarely",
+        paragraphs: [
+          "Appearing rarely is not modesty. It is a decision renewed each time an occasion presents itself, and most occasions are declined.",
+          "What remains is read differently. A rare appearance carries the assumption that it was considered, and that assumption is precisely what cannot be bought.",
+        ],
+      },
+      {
+        heading: "Silence is not absence",
+        paragraphs: [
+          "A house that says little is not inactive. The work is continuous; only its traces are withheld.",
+          "Observe. Decide. Deliver. Nothing in that sequence requires an audience.",
+        ],
+      },
+    ],
+  },
 ];
+
 
 
 export const getArticle = (slug?: string) =>
