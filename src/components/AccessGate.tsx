@@ -153,7 +153,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
                 autoComplete="off"
                 value={key}
                 onChange={(e) => setKey(e.target.value)}
-                className="mt-3 w-full border-b border-border bg-transparent py-3 text-sm tracking-[0.25em] outline-none transition-colors focus:border-foreground"
+                className="mt-3 w-full border-b border-border bg-transparent py-3 text-center text-sm tracking-[0.35em] outline-none transition-colors focus:border-foreground"
                 required
               />
             </div>
@@ -220,7 +220,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
                   type={f.type}
                   value={f.value}
                   onChange={(e) => f.set(e.target.value)}
-                  className="mt-3 w-full border-b border-border bg-transparent py-3 text-sm outline-none transition-colors focus:border-foreground"
+                  className="mt-3 w-full border-b border-border bg-transparent py-3 text-center text-sm outline-none transition-colors focus:border-foreground"
                   required
                 />
               </div>
