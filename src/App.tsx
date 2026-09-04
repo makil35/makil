@@ -45,6 +45,8 @@ const App = () => (
             <Route path="/blog" element={<Navigate to="/journal" replace />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mandates" element={<Mandates />} />
+            <Route path="/presence" element={<Presence />} />
+            <Route path="/presence/:city" element={<PresenceCity />} />
             {/* Unlisted internal search (noindex, not linked in navigation) */}
             <Route path="/search" element={<Search />} />
             {/* Private client area (own authentication, noindex) */}
