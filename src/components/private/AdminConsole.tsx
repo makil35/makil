@@ -157,7 +157,7 @@ const AdminConsole = () => {
               onChange={(e) => setDraft({ ...draft, client_id: e.target.value })}
               className={fieldClass}
             >
-              <option value="">—</option>
+              <option value="">Select a client</option>
               {clients.map((c) => (
                 <option key={c.id} value={c.id}>
                   {c.full_name || c.email}

@@ -22,7 +22,7 @@ export const formatDate = (value: string | null) =>
         month: "long",
         year: "numeric",
       })
-    : "—";
+    : "Unspecified";
 
 const ClientMandates = ({ userId }: { userId: string }) => {
   const [mandates, setMandates] = useState<Mandate[]>([]);
