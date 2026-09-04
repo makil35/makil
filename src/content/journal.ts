@@ -55,7 +55,7 @@ export const journalArticles: JournalArticle[] = [
       {
         heading: "Silence as a method",
         paragraphs: [
-          "Silence is often described as a promise. It is more useful as a method: fewer people involved, fewer written traces, fewer requests made on your behalf without your knowledge.",
+          "Silence is often described as a promise. It is more useful as a method: fewer people involved, fewer written traces, fewer requests made on one's behalf without one's knowledge.",
           "What is protected is not only information. It is attention.",
         ],
       },
@@ -92,7 +92,7 @@ export const journalArticles: JournalArticle[] = [
         heading: "Consistency over frequency",
         paragraphs: [
           "One tone, one register, one way of speaking about the work. Consistency is what makes a name legible; frequency only makes it loud.",
-          "The measure is simple: could someone recognise you from a single paragraph, without your name on it?",
+          "The measure is simple: could someone recognise the subject from a single paragraph, without a name on it?",
         ],
       },
       {
@@ -132,7 +132,7 @@ export const journalArticles: JournalArticle[] = [
       {
         heading: "Direct contact",
         paragraphs: [
-          "Requests are answered personally. There is no queue, no account team, and no summary written by someone who never met you.",
+          "Requests are answered personally. There is no queue, no account team, and no summary written by someone who never met the person concerned.",
         ],
       },
       {
@@ -159,7 +159,7 @@ export const journalArticles: JournalArticle[] = [
     blocks: [
       {
         paragraphs: [
-          "The decision is rarely about competence. It is about exposure, temperament and the number of people who will end up knowing your business.",
+          "The decision is rarely about competence. It is about exposure, temperament and the number of people who will end up knowing the matter.",
         ],
       },
       {
@@ -171,7 +171,7 @@ export const journalArticles: JournalArticle[] = [
       {
         heading: "2. How many engagements are running?",
         paragraphs: [
-          "Availability is finite. A practice that cannot tell you its capacity has not thought about yours.",
+          "Availability is finite. A practice that cannot state its capacity has not considered the capacity required.",
         ],
       },
       {
@@ -181,7 +181,7 @@ export const journalArticles: JournalArticle[] = [
         ],
       },
       {
-        heading: "4. What would you decline?",
+        heading: "4. What would be declined?",
         paragraphs: [
           "An adviser who declines nothing is an executor. The value is in the refusal as much as in the delivery.",
         ],
@@ -189,7 +189,7 @@ export const journalArticles: JournalArticle[] = [
       {
         heading: "5. What will never be published?",
         paragraphs: [
-          "The honest answer is: your name, your requests, and the fact that we work together, unless you decide otherwise.",
+          "The honest answer is: the name, the requests, and the fact that we work together, unless decided otherwise.",
         ],
       },
     ],
@@ -232,7 +232,7 @@ export const journalArticles: JournalArticle[] = [
         heading: "Discretion is part of the format",
         paragraphs: [
           "For a private clientele, the value of a dinner is inseparable from what does not leave the room. No published guest list, no images, no supplier who can name the host afterwards.",
-          "At Makil Private, discretion is treated as a working constraint rather than a promise: fewer intermediaries, fewer written traces, fewer requests made on your behalf without your knowledge.",
+          "At Makil Private, discretion is treated as a working constraint rather than a promise: fewer intermediaries, fewer written traces, fewer requests made on one's behalf without one's knowledge.",
         ],
       },
       {
@@ -366,7 +366,7 @@ export const journalArticles: JournalArticle[] = [
       {
         heading: "What visibility actually buys",
         paragraphs: [
-          "Exposure produces volume: more requests, more conversations, more situations that were never meant for you. Very little of it is useful, and all of it consumes the one resource that cannot be replaced, which is attention.",
+          "Exposure produces volume: more requests, more conversations, more situations that were never meant for the person concerned. Very little of it is useful, and all of it consumes the one resource that cannot be replaced, which is attention.",
           "The question is never how many people know the name. It is which people, and in what context they heard it.",
         ],
       },
