@@ -204,7 +204,7 @@ const Footer = () => {
                     onClick={(e) => goToPage(e, "/private")}
                     className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
                   >
-                    Private area
+                    Private access
                   </Link>
                 </li>
               </ul>
