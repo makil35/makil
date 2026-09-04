@@ -88,6 +88,13 @@ const Navigation = () => {
                 {t(link.key)}
               </a>
             ))}
+            <Link
+              to="/journal"
+              onClick={() => setIsOpen(false)}
+              className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+            >
+              {t("nav.journal")}
+            </Link>
           </div>
 
 
