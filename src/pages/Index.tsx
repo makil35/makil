@@ -198,11 +198,10 @@ const Index = () => {
                   <figcaption className="mt-5 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
                     {t("home.profil.sign")}
                   </figcaption>
+                  <div className="pt-4">
+                    <Signature className="h-10 sm:h-12 opacity-70" />
+                  </div>
                 </figure>
-
-                <div className="pt-10">
-                  <Signature className="h-10 sm:h-12 opacity-70" />
-                </div>
 
               </Reveal>
             </div>
