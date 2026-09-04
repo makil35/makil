@@ -96,11 +96,15 @@ const AdminMessages = ({ clients }: { clients: Client[] }) => {
   };
 
   const remove = async (id: string) => {
-    const { error } = await supabase.from("contact_submissions").delete().eq("id", id);
-    if (error) {
-      toast.error("The message could not be removed.");
+    const { data, error } = await supabase.functions.invoke("client-admin", {
+      body: { action: "delete_message", message_id: id },
+    });
+    const failure = error?.message ?? (data as { error?: string } | null)?.error;
+    if (failure) {
+      toast.error(`The message could not be removed. ${failure}`);
       return;
     }
+    setItems((prev) => prev.filter((s) => s.id !== id));
     void load();
   };
 
