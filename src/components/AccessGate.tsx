@@ -126,13 +126,15 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground flex items-center justify-center px-6 py-24">
-      <div className="w-full max-w-md">
-        <p className="text-[0.65rem] uppercase tracking-[0.5em] text-muted-foreground">
+    <main className="relative min-h-screen bg-background text-foreground atmosphere grain flex items-center justify-center px-6 py-24">
+      <div className="w-full max-w-md border border-border/70 bg-background/80 px-8 py-14 text-center sm:px-12 sm:py-16">
+        <p className="text-[0.6rem] uppercase tracking-luxe text-muted-foreground">
           Private
         </p>
-        <h1 className="mt-8 text-4xl font-light tracking-[0.35em]">MAKIL</h1>
-        <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+        <h1 className="mt-8 font-display text-3xl font-light tracking-[0.45em] sm:text-4xl">
+          MAKIL
+        </h1>
+        <p className="mx-auto mt-8 max-w-xs text-sm leading-loose text-muted-foreground">
           This house is entered by key only. Please enter the key received to continue.
         </p>
 
