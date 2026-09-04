@@ -199,7 +199,7 @@ const AdminMessages = ({ clients }: { clients: Client[] }) => {
                     maxLength={5000}
                     value={reply}
                     onChange={(e) => setReply(e.target.value)}
-                    placeholder="Your reply, sent from richard@makil.fr"
+                    placeholder="Reply, sent from richard@makil.fr"
                     className={`${fieldClass} resize-none`}
                   />
                   <button

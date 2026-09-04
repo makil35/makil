@@ -108,7 +108,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
     });
     setSubmitting(false);
     if (err || !data?.success) {
-      setError("Your request could not be sent. Please write to richard@makil.fr.");
+      setError("The request could not be sent. Please write to richard@makil.fr.");
       return;
     }
     setRequestSent(true);
@@ -178,7 +178,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
         ) : requestSent ? (
           <div className="mt-12 space-y-6">
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Your request has been received. If it is a fit, you will hear from me personally.
+              The request has been received. If it is a fit, a reply will follow personally.
             </p>
             <button
               type="button"
