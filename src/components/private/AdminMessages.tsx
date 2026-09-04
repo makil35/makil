@@ -34,6 +34,20 @@ const AdminMessages = ({ clients }: { clients: Client[] }) => {
   const [openId, setOpenId] = useState<string | null>(null);
   const [reply, setReply] = useState("");
   const [sending, setSending] = useState(false);
+  const [granting, setGranting] = useState<string | null>(null);
+
+  const grant = async (s: Submission) => {
+    setGranting(s.id);
+    const { data, error } = await supabase.functions.invoke("client-admin", {
+      body: { action: "grant_access", email: s.email, name: s.name, days: 7 },
+    });
+    setGranting(null);
+    if (error || (data as { error?: string })?.error) {
+      toast.error("The access key could not be sent.");
+      return;
+    }
+    toast.success(`Access link sent to ${s.email}.`);
+  };
 
   const load = async () => {
     const { data } = await supabase
