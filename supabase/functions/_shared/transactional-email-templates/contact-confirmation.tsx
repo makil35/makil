@@ -12,7 +12,7 @@ interface Props {
 const ContactConfirmationEmail = ({ name }: Props) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Your message has been received · MAKIL</Preview>
+    <Preview>Message received · MAKIL</Preview>
     <Body style={main}>
       <Container style={container}>
         <Heading style={h1}>MAKIL</Heading>
@@ -22,15 +22,15 @@ const ContactConfirmationEmail = ({ name }: Props) => (
           {name ? `${name},` : 'Hello,'}
         </Text>
         <Text style={text}>
-          Thank you for writing. Your message has reached me directly, and I have read it
-          myself — no assistant, no intermediary.
+          Thank you for writing. The message has reached me directly, and I have read it
+          myself. No assistant, no intermediary.
         </Text>
         <Text style={text}>
-          I answer personally, generally within two working days. If the matter is
-          time-sensitive, reply to this message and say so in one line.
+          I answer personally, generally within two working days. Should the matter be
+          time-sensitive, a reply to this message saying so in one line is enough.
         </Text>
         <Text style={text}>
-          Whatever you have written stays between us.
+          Whatever has been written stays between us.
         </Text>
 
         <Text style={signature}>Makil-Herrero Richard</Text>
@@ -45,7 +45,7 @@ const ContactConfirmationEmail = ({ name }: Props) => (
 
 export const template = {
   component: ContactConfirmationEmail,
-  subject: 'Your message has been received · MAKIL',
+  subject: 'Message received · MAKIL',
   displayName: 'Contact confirmation (visitor)',
   previewData: { name: 'Jane' },
 } satisfies TemplateEntry
