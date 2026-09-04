@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { journalArticles } from "@/content/journal";
 import ContactSection from "@/components/ContactSection";
 import Reveal from "@/components/Reveal";
-import portraitMakil from "@/assets/portrait-makil.png.asset.json";
+import portraitMakil from "@/assets/richard-portrait.jpg";
 import NextStep from "@/components/NextStep";
 import Signature from "@/components/Signature";
 import { useLanguage } from "@/contexts/LanguageContext";
