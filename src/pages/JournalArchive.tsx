@@ -104,6 +104,7 @@ const JournalArchive = () => {
             links={[
               { kicker: "Journal", label: "Latest notes", to: "/journal" },
               { kicker: "The house", label: "Profile and principles", to: "/#richard" },
+              { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Correspondence", label: "Write", to: "/contact" },
               { kicker: "Access", label: "By introduction", to: "/#access" },
             ]}

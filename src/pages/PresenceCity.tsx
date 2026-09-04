@@ -137,6 +137,8 @@ const PresenceCity = () => {
                 label: c.name,
                 to: `/presence/${citySlug(c.name)}`,
               })),
+              { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
+              { kicker: "Journal", label: "Read the notes", to: "/journal" },
               { kicker: "Contact", label: "A direct exchange", to: "/contact" },
             ]}
           />
