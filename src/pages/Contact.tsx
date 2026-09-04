@@ -69,13 +69,13 @@ const Contact = () => {
         email: "mailto:richard@makil.fr",
         url: "https://makil.fr/",
         address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "Private enquiries",
-          email: "richard@makil.fr",
-          availableLanguage: ["en", "fr"],
-          areaServed: ["FR", "MC", "GB", "CH", "AE"],
-        },
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "Private enquiries",
+            email: "richard@makil.fr",
+            availableLanguage: ["en", "fr"],
+            areaServed: ["FR", "MC", "GB", "CH", "AE", "IT"],
+          },
       },
     },
   });
