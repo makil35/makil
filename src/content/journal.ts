@@ -397,7 +397,7 @@ export const journalArticles: JournalArticle[] = [
       "Why presence for a private clientele is not measured in posts or appearances, but in the right rooms, with the right people, and no trace left behind. Makil-Herrero Richard, Paris.",
     keywords:
       "private presence, discreet visibility, reputation without publicity, private adviser Paris, Makil-Herrero Richard, MAKIL",
-    date: "2026-12-05",
+    date: "2026-09-05",
     readingTime: "4 min",
     blocks: [
       {
