@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { STATUSES, formatDate, type Mandate } from "./ClientMandates";
 import AdminMessages from "./AdminMessages";
+import AdminSignals from "./AdminSignals";
 
 type Client = {
   id: string;
@@ -142,6 +143,7 @@ const AdminConsole = () => {
 
   return (
     <div className="mt-16 space-y-24">
+      <AdminSignals />
       <section>
         <h2 className="text-[0.6rem] uppercase tracking-[0.5em] text-muted-foreground">
           {editingId ? "Edit mandate" : "New mandate"}
