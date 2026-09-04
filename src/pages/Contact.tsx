@@ -57,7 +57,7 @@ const Contact = () => {
       "@type": "ContactPage",
       name: "Contact · MAKIL",
       description:
-        "Contact Makil-Herrero Richard, private adviser based in Paris. A direct exchange — every message is read personally.",
+        "Contact Makil-Herrero Richard, private adviser based in Paris. A direct exchange. Every message is read personally.",
       url: "https://makil.fr/contact",
       inLanguage: "en-GB",
       isPartOf: { "@type": "WebSite", name: "MAKIL", url: "https://makil.fr" },

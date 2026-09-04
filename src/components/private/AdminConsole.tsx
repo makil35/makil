@@ -178,7 +178,7 @@ const AdminConsole = () => {
                 >
                   Invite a client
                 </button>{" "}
-                first — they will then appear in this list.
+                first. They will then appear in this list.
               </p>
             )}
           </div>
@@ -298,7 +298,7 @@ const AdminConsole = () => {
                       {clientName(m.client_id)} · {m.status}
                     </p>
                     <p className="mt-2 text-base font-light tracking-[0.1em]">
-                      {m.reference ? `${m.reference} — ` : ""}
+                      {m.reference ? `${m.reference}. ` : ""}
                       {m.title}
                     </p>
                     <p className="mt-2 text-xs text-muted-foreground">
@@ -370,7 +370,7 @@ const AdminConsole = () => {
         <ul className="mt-10 divide-y divide-border border-t border-border">
           {clients.map((c) => (
             <li key={c.id} className="flex flex-wrap items-baseline justify-between gap-4 py-4">
-              <p className="text-sm tracking-[0.1em]">{c.full_name || "—"}</p>
+              <p className="text-sm tracking-[0.1em]">{c.full_name || "Unnamed"}</p>
               <p className="text-xs tracking-[0.15em] text-muted-foreground">{c.email}</p>
             </li>
           ))}
