@@ -172,6 +172,15 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link
+                    to="/presence"
+                    onClick={(e) => goToPage(e, "/presence")}
+                    className="text-[11px] font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+                  >
+                    Presence
+                  </Link>
+                </li>
+                <li>
                     <Link
                       to={`${home}#access`}
                       onClick={(e) => goToSection(e, "access")}
