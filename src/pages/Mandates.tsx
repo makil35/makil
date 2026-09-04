@@ -4,6 +4,7 @@ import PageIntro from "@/components/PageIntro";
 import NextStep from "@/components/NextStep";
 import Reveal from "@/components/Reveal";
 import { useSeo } from "@/hooks/useSeo";
+import { presenceAreaServed, presenceKeywords } from "@/lib/presence";
 
 const SITE_URL = "https://makil.fr";
 

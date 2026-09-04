@@ -11,6 +11,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
 import { toast } from "sonner";
+import { presenceAreaServed, presenceKeywords } from "@/lib/presence";
 
 const EMAIL = "richard@makil.fr";
 
