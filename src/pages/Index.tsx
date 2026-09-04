@@ -13,6 +13,7 @@ import Signature from "@/components/Signature";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { scrollToSection } from "@/lib/scrollToSection";
+import { presenceAreaServed, presenceCitySentence, presenceKeywords } from "@/lib/presence";
 
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
     routeKey: "home",
     titleKey: "seo.home.title",
     descriptionKey: "seo.home.description",
+    keywords: `private adviser, private advisory, personal branding, confidential advisory, discretion, MAKIL, Makil-Herrero Richard, by introduction only, ${presenceKeywords}`,
     ogType: "profile",
     jsonLd: {
       "@context": "https://schema.org",
@@ -48,7 +50,7 @@ const Index = () => {
           name: "Makil-Herrero Richard",
           jobTitle: "Private Adviser",
           description:
-            "Private adviser in Paris. Reading, judgement and quiet orchestration for a select circle. By introduction only.",
+            `Private adviser in Paris, present in ${presenceCitySentence}. Reading, judgement and quiet orchestration for a select circle. By introduction only.`,
           url: "https://makil.fr/",
           image: "https://makil.fr/og-image.jpg",
           email: "mailto:richard@makil.fr",
@@ -58,7 +60,7 @@ const Index = () => {
             "Discretion and confidentiality",
             "Private orchestration",
           ],
-          areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai", "Rome"],
+          areaServed: presenceAreaServed(),
           address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
           sameAs: [
             "https://www.instagram.com/makilprivate/",
@@ -73,9 +75,9 @@ const Index = () => {
           name: "MAKIL",
           url: "https://makil.fr/",
           description:
-            "A private house: access, private orchestration and discreet execution, carried by a single name.",
+            `A private house: access, private orchestration and discreet execution, carried by a single name, across ${presenceCitySentence}.`,
           founder: { "@id": "https://makil.fr/#person" },
-          areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai", "Rome"],
+          areaServed: presenceAreaServed(),
           email: "mailto:richard@makil.fr",
         },
       ],

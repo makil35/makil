@@ -4,6 +4,7 @@ import PageIntro from "@/components/PageIntro";
 import NextStep from "@/components/NextStep";
 import Reveal from "@/components/Reveal";
 import { useSeo } from "@/hooks/useSeo";
+import { presenceAreaServed, presenceKeywords } from "@/lib/presence";
 
 const SITE_URL = "https://makil.fr";
 
@@ -33,7 +34,7 @@ const Mandates = () => {
     description:
       "Private mandates carried personally by Makil-Herrero Richard, private adviser in Paris: access, private orchestration and discreet execution for a select circle. By introduction only.",
     keywords:
-      "private mandate, private adviser Paris, private orchestration, discreet execution, confidential advisory, access and introductions, Makil-Herrero Richard, MAKIL, Monaco, London, Geneva, Dubai, Rome",
+      `private mandate, private orchestration, discreet execution, confidential advisory, access and introductions, Makil-Herrero Richard, MAKIL, ${presenceKeywords}`,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -46,7 +47,7 @@ const Mandates = () => {
         jobTitle: "Private Adviser",
         url: SITE_URL,
       },
-      areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai", "Rome"],
+      areaServed: presenceAreaServed(),
       url: `${SITE_URL}/mandates`,
       description:
         "Private mandates carried personally: access, orchestration and discreet execution for a select circle. By introduction only.",

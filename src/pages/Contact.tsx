@@ -11,6 +11,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { localizedPath } from "@/lib/routes";
 import { toast } from "sonner";
+import { presenceAreaServed, presenceKeywords } from "@/lib/presence";
 
 const EMAIL = "richard@makil.fr";
 
@@ -51,7 +52,7 @@ const Contact = () => {
     titleKey: "seo.contact.title",
     descriptionKey: "seo.contact.description",
     keywords:
-      "contact private adviser, personal branding adviser Paris, private advisory enquiry, Makil-Herrero Richard, MAKIL contact",
+      `contact private adviser, private advisory enquiry, Makil-Herrero Richard, MAKIL contact, ${presenceKeywords}`,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "ContactPage",
@@ -74,7 +75,7 @@ const Contact = () => {
             contactType: "Private enquiries",
             email: "richard@makil.fr",
             availableLanguage: ["en", "fr"],
-            areaServed: ["FR", "MC", "GB", "CH", "AE", "IT"],
+            areaServed: presenceAreaServed(),
           },
       },
     },
