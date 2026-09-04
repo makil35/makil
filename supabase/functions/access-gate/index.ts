@@ -4,7 +4,7 @@ const corsHeaders = {
 }
 
 const OWNER_EMAIL = 'richard@makil.fr'
-const TOKEN_TTL_HOURS = 24
+const TOKEN_TTL_HOURS = 12
 
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), {
