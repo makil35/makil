@@ -21,6 +21,7 @@ export default {
   "nav.vision": "Vision",
   "nav.principles": "Principles",
   "nav.acces": "Access",
+  "nav.journal": "Journal",
   "nav.openMenu": "Open menu",
   "nav.closeMenu": "Close menu",
   "nav.home": "MAKIL · Home",
