@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { STATUSES, formatDate, type Mandate } from "./ClientMandates";
+import AdminMessages from "./AdminMessages";
 
 type Client = {
   id: string;
