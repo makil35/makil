@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { journalArticles } from "@/content/journal";
 import ContactSection from "@/components/ContactSection";
 import Reveal from "@/components/Reveal";
-import portraitMakil from "@/assets/portrait-makil.png.asset.json";
+import portraitMakil from "@/assets/richard-portrait.jpg";
 import NextStep from "@/components/NextStep";
 import Signature from "@/components/Signature";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -48,7 +48,7 @@ const Index = () => {
           description:
             "Private adviser in Paris. Reading, judgement and quiet orchestration for a select circle. By introduction only.",
           url: "https://makil.fr/",
-          image: `https://makil.fr${portraitMakil.url}`,
+          image: "https://makil.fr/og-image.jpg",
           email: "mailto:richard@makil.fr",
           knowsAbout: [
             "Private advisory",
@@ -209,7 +209,7 @@ const Index = () => {
             <Reveal delay={120} className="min-w-0 lg:sticky lg:top-32">
               <figure className="space-y-4">
                 <img
-                  src={portraitMakil.url}
+                  src={portraitMakil}
                   alt="Portrait of Makil-Herrero Richard, private adviser in Paris"
                   loading="lazy"
                   width={1024}
