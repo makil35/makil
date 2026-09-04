@@ -9,7 +9,7 @@ import portraitAvif from "@/assets/richard-portrait.jpg?w=320;480;640;960&format
 import portraitWebp from "@/assets/richard-portrait.jpg?w=320;480;640;960&format=webp&quality=74&as=srcset";
 import portraitMakil from "@/assets/richard-portrait.jpg?w=640&format=jpg&quality=78";
 import NextStep from "@/components/NextStep";
-import Signature from "@/components/Signature";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useSeo } from "@/hooks/useSeo";
 import { scrollToSection } from "@/lib/scrollToSection";
@@ -202,9 +202,6 @@ const Index = () => {
                   <figcaption className="mt-5 text-[10px] font-body tracking-luxe uppercase text-muted-foreground">
                     {t("home.profil.sign")}
                   </figcaption>
-                  <div className="pt-4">
-                    <Signature className="h-10 sm:h-12 opacity-70" />
-                  </div>
                 </figure>
 
               </Reveal>
