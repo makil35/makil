@@ -386,6 +386,49 @@ export const journalArticles: JournalArticle[] = [
       },
     ],
   },
+  {
+    slug: "presence-without-publication",
+    title: "Presence without publication",
+    kicker: "Presence",
+    excerpt:
+      "A private name can be present in Rome, in London, in Paris, without ever announcing itself. The right people know. That is enough.",
+    metaTitle: "Presence Without Publication · MAKIL · Private Adviser Paris",
+    metaDescription:
+      "Why presence for a private clientele is not measured in posts or appearances, but in the right rooms, with the right people, and no trace left behind. Makil-Herrero Richard, Paris.",
+    keywords:
+      "private presence, discreet visibility, reputation without publicity, private adviser Paris, Makil-Herrero Richard, MAKIL",
+    date: "2026-12-05",
+    readingTime: "4 min",
+    blocks: [
+      {
+        paragraphs: [
+          "There is a way of being present that leaves no record. A table in Rome, a conversation in London, an introduction in Paris. The name travels, but it is not broadcast. It is recognised, remembered, and passed on by the people for whom it matters.",
+          "This is the only kind of visibility that suits a private clientele. Not absence, but discretion. Not secrecy, but selectivity.",
+        ],
+      },
+      {
+        heading: "Rome as a state of mind",
+        paragraphs: [
+          "Rome understands this. The city has always known how to hold power without explaining it. Palaces with unmarked doors. Families whose names mean something in one room and nothing in the next. A long training in appearing only where one is meant to appear.",
+          "For a private adviser, Rome is not a destination. It is a reference: presence without announcement, influence without advertisement.",
+        ],
+      },
+      {
+        heading: "The published name is a borrowed name",
+        paragraphs: [
+          "A name that appears everywhere belongs to the public. It is interpreted, compared, consumed. A name that appears rarely keeps its meaning intact, because the meaning is held by the few people who have actually encountered it.",
+          "Publication borrows authority from the crowd. Presence lends it to the room.",
+        ],
+      },
+      {
+        heading: "What the client sees",
+        paragraphs: [
+          "The client does not need proof of activity. The client needs proof of judgement: the right seat, the right silence, the right word at the right moment. That proof is felt before it is understood.",
+          "A private name moves through cities the way it moves through rooms: deliberately, quietly, and only when the occasion has earned it.",
+        ],
+      },
+    ],
+  },
 ];
 
 
