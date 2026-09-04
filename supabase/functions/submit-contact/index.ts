@@ -94,35 +94,45 @@ Deno.serve(async (req) => {
     })
   }
 
-  // Send emails server-side with the service role key so the email endpoint
-  // is never reachable with the public anon key.
-  const invoke = (body: Record<string, unknown>) =>
-    fetch(`${supabaseUrl}/functions/v1/send-transactional-email`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${serviceKey}`,
-        apikey: serviceKey,
-      },
-      body: JSON.stringify(body),
-    }).catch((err) => {
-      console.error('Email dispatch failed', { err: String(err) })
-      return null
-    })
+  // Send emails server-side through Lovable's managed email API.
+  const send = async (
+    templateName: string,
+    recipient: string,
+    idempotencyKey: string,
+    templateData: Record<string, unknown>,
+  ) => {
+    try {
+      const result = await sendTemplateEmail(templateName, recipient, {
+        templateData,
+        idempotencyKey,
+      })
+      const { error } = await supabase.from('email_send_log').insert({
+        template_name: templateName,
+        recipient_email: recipient,
+        status: result.sent ? 'sent' : 'suppressed',
+        error_message: result.sent ? null : 'Recipient is suppressed',
+      })
+      if (error) console.error('Failed to write email_send_log', { error })
+    } catch (err) {
+      console.error('Email dispatch failed', { templateName, err: String(err) })
+      const { error } = await supabase.from('email_send_log').insert({
+        template_name: templateName,
+        recipient_email: recipient,
+        status: 'failed',
+        error_message: err instanceof Error ? err.message : String(err),
+      })
+      if (error) console.error('Failed to write email_send_log', { error })
+    }
+  }
 
-  await invoke({
-    templateName: 'contact-notification',
-    recipientEmail: OWNER_EMAIL,
-    idempotencyKey: `contact-notify-${submissionId}`,
-    templateData: { name, email, message },
+  await send('contact-notification', OWNER_EMAIL, `contact-notify-${submissionId}`, {
+    name,
+    email,
+    message,
   })
 
-  await invoke({
-    templateName: 'contact-confirmation',
-    recipientEmail: email,
-    idempotencyKey: `contact-confirm-${submissionId}`,
-    templateData: { name },
-  })
+  await send('contact-confirmation', email, `contact-confirm-${submissionId}`, { name })
+
 
   return new Response(JSON.stringify({ success: true }), {
     status: 200,
