@@ -8,7 +8,6 @@ import Index from "./pages/Index";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
-import Unsubscribe from "./pages/Unsubscribe";
 import Journal from "./pages/Journal";
 import JournalArchive from "./pages/JournalArchive";
 import JournalArticle from "./pages/JournalArticle";
@@ -56,7 +55,6 @@ const App = () => (
             <Route path="/fr/politique-confidentialite" element={<Navigate to="/privacy-policy" replace />} />
             <Route path="/politique-confidentialite" element={<Navigate to="/privacy-policy" replace />} />
             <Route path="/en/privacy-policy" element={<Navigate to="/privacy-policy" replace />} />
-            <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieConsent />
