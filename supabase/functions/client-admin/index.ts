@@ -193,7 +193,7 @@ Deno.serve(async (req) => {
         return json({ error: "Invalid client" }, 400);
       }
       if (clientId === user.id) {
-        return json({ error: "You cannot remove your own account" }, 400);
+        return json({ error: "This account cannot remove itself" }, 400);
       }
       const { error } = await admin.auth.admin.deleteUser(clientId);
       if (error) return json({ error: error.message }, 400);

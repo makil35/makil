@@ -15,7 +15,7 @@ interface Props {
 const AccessInvitationEmail = ({ name, url, validUntil, note }: Props) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>Your private access to MAKIL</Preview>
+    <Preview>Private access to MAKIL</Preview>
     <Body style={main}>
       <Container style={container}>
         <Heading style={h1}>MAKIL</Heading>
@@ -25,7 +25,7 @@ const AccessInvitationEmail = ({ name, url, validUntil, note }: Props) => (
           <Text style={value}>{name ? `${name},` : 'Bonjour,'}</Text>
           <Text style={{ ...value, marginTop: '16px' }}>
             {note ||
-              'This house is entered by key only. The link below opens it for you, personally.'}
+              'This house is entered by key only. The link below opens it, personally and once.'}
           </Text>
           <Text style={{ marginTop: '28px' }}>
             <Link href={url ?? 'https://makil.fr'} style={link}>
@@ -46,7 +46,7 @@ const AccessInvitationEmail = ({ name, url, validUntil, note }: Props) => (
 
 export const template = {
   component: AccessInvitationEmail,
-  subject: 'MAKIL · Your private access',
+  subject: 'MAKIL · Private access',
   displayName: 'Invitation — clé d\'accès',
   previewData: {
     name: 'Jane Doe',
