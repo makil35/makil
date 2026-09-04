@@ -88,12 +88,19 @@ const Navigation = () => {
                 {t(link.key)}
               </a>
             ))}
-            <Link
-              to="/journal"
-              className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
-            >
-              Journal
-            </Link>
+            {[
+              { to: "/journal", label: "Journal" },
+              { to: "/presence", label: "Presence" },
+              { to: "/contact", label: "Contact" },
+            ].map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground hover:text-foreground transition-smooth"
+              >
+                {l.label}
+              </Link>
+            ))}
           </div>
 
 
