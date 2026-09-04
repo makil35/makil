@@ -1,7 +1,10 @@
+import { sendTemplateEmail } from '../_shared/transactional-email-templates/send-email.ts'
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
+
 
 const OWNER_EMAIL = 'richard@makil.fr'
 const TOKEN_TTL_HOURS = 12
@@ -102,37 +105,23 @@ Deno.serve(async (req) => {
       return json({ error: 'Invalid input' }, 400)
     }
 
-    if (!supabaseUrl || !serviceKey) return json({ error: 'Server configuration error' }, 500)
-
-    const res = await fetch(`${supabaseUrl}/functions/v1/send-transactional-email`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${serviceKey}`,
-        apikey: serviceKey,
-      },
-      body: JSON.stringify({
-        templateName: 'contact-notification',
-        recipientEmail: OWNER_EMAIL,
+    try {
+      await sendTemplateEmail('contact-notification', OWNER_EMAIL, {
         idempotencyKey: `access-request-${crypto.randomUUID()}`,
+        replyTo: email,
         templateData: {
           name,
           email,
           message: `[Access key request]\n\n${message || 'No message provided.'}`,
         },
-      }),
-    }).catch((err) => {
-      console.error('Email dispatch failed', { err: String(err) })
-      return null
-    })
-
-    if (!res || !res.ok) {
-      const details = res ? await res.text() : 'no response'
-      console.error('Access request email failed', { status: res?.status, details })
+      })
+    } catch (err) {
+      console.error('Access request email failed', { err: String(err) })
       return json({ error: 'Failed to send request' }, 502)
     }
 
     return json({ success: true })
+
   }
 
   return json({ error: 'Unknown action' }, 400)
