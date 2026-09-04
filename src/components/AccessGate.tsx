@@ -4,7 +4,7 @@ import { trackEvent } from "@/lib/analytics";
 
 const STORAGE_KEY = "makil.access.token";
 
-// Gate active — the house is entered by key only.
+// Gate active: the house is entered by key only.
 const GATE_PAUSED = false;
 
 // Search and AI crawlers must be able to read the public pages, otherwise
