@@ -210,14 +210,19 @@ const Index = () => {
 
             <Reveal delay={120} className="min-w-0 lg:sticky lg:top-32">
               <figure className="space-y-4">
-                <img
-                  src={portraitMakil}
-                  alt="Portrait of Makil-Herrero Richard, private adviser in Paris"
-                  loading="lazy"
-                  width={1024}
-                  height={1536}
-                  className="aspect-[2/3] w-full max-w-[320px] object-cover object-center grayscale lg:max-w-none"
-                />
+                <picture>
+                  <source type="image/avif" srcSet={portraitAvif} sizes="(min-width: 1024px) 360px, 320px" />
+                  <source type="image/webp" srcSet={portraitWebp} sizes="(min-width: 1024px) 360px, 320px" />
+                  <img
+                    src={portraitMakil}
+                    alt="Portrait of Makil-Herrero Richard, private adviser in Paris"
+                    loading="lazy"
+                    decoding="async"
+                    width={1024}
+                    height={1536}
+                    className="aspect-[2/3] w-full max-w-[320px] object-cover object-center grayscale lg:max-w-none"
+                  />
+                </picture>
                 <figcaption className="text-[10px] font-body tracking-[0.3em] uppercase text-muted-foreground">
                   Makil-Herrero Richard · Paris
                 </figcaption>
