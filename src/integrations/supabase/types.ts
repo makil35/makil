@@ -16,27 +16,47 @@ export type Database = {
     Tables: {
       contact_submissions: {
         Row: {
+          client_id: string | null
           created_at: string
           email: string
           id: string
           message: string
           name: string
+          replied_at: string | null
+          reply_message: string | null
+          status: string
         }
         Insert: {
+          client_id?: string | null
           created_at?: string
           email: string
           id?: string
           message: string
           name: string
+          replied_at?: string | null
+          reply_message?: string | null
+          status?: string
         }
         Update: {
+          client_id?: string | null
           created_at?: string
           email?: string
           id?: string
           message?: string
           name?: string
+          replied_at?: string | null
+          reply_message?: string | null
+          status?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "contact_submissions_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       email_send_log: {
         Row: {
