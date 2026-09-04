@@ -164,6 +164,23 @@ const AdminConsole = () => {
                 </option>
               ))}
             </select>
+            {clients.length <= 1 && (
+              <p className="mt-3 text-xs text-muted-foreground">
+                No client yet.{" "}
+                <button
+                  type="button"
+                  onClick={() =>
+                    document
+                      .getElementById("clients-section")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="underline underline-offset-4 transition-colors hover:text-foreground"
+                >
+                  Invite a client
+                </button>{" "}
+                first — they will then appear in this list.
+              </p>
+            )}
           </div>
           <div>
             <label className={labelClass} htmlFor="m-ref">Reference</label>
