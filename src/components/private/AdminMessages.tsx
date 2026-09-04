@@ -136,6 +136,14 @@ const AdminMessages = ({ clients }: { clients: Client[] }) => {
                   </button>
                   <button
                     type="button"
+                    disabled={granting === s.id}
+                    onClick={() => grant(s)}
+                    className="text-[0.55rem] uppercase tracking-[0.4em] text-muted-foreground transition-colors hover:text-foreground disabled:opacity-40"
+                  >
+                    {granting === s.id ? "Sending" : "Send access key"}
+                  </button>
+                  <button
+                    type="button"
                     onClick={() => remove(s.id)}
                     className="text-[0.55rem] uppercase tracking-[0.4em] text-muted-foreground transition-colors hover:text-foreground"
                   >
