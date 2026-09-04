@@ -38,7 +38,21 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
       setStatus("granted");
       return;
     }
-    const token = localStorage.getItem(STORAGE_KEY);
+
+    // A personal invitation link carries its own signed token.
+    const params = new URLSearchParams(window.location.search);
+    const invited = params.get("access");
+    if (invited) {
+      params.delete("access");
+      const rest = params.toString();
+      window.history.replaceState(
+        {},
+        "",
+        window.location.pathname + (rest ? `?${rest}` : "") + window.location.hash,
+      );
+    }
+
+    const token = invited || localStorage.getItem(STORAGE_KEY);
     if (!token) {
       setStatus("locked");
       return;
@@ -48,6 +62,8 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
       .then(({ data, error: err }) => {
         if (!active) return;
         if (!err && data?.valid) {
+          localStorage.setItem(STORAGE_KEY, token);
+          if (invited) trackEvent("key_granted");
           setStatus("granted");
         } else {
           localStorage.removeItem(STORAGE_KEY);

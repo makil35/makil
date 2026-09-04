@@ -1,4 +1,6 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.57.4";
+import { mintAccessToken } from "../_shared/access-token.ts";
+import { sendTemplateEmail } from "../_shared/transactional-email-templates/send-email.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -140,6 +142,36 @@ Deno.serve(async (req) => {
       if (profileError) return json({ error: profileError.message }, 400);
 
       return json({ success: true, client_id: target.id });
+    }
+
+    if (action === "grant_access") {
+      const email = String(body.email ?? "").trim().toLowerCase();
+      const name = String(body.name ?? "").trim().slice(0, 120);
+      const note = String(body.note ?? "").trim().slice(0, 1000);
+      const days = Math.min(Math.max(Number(body.days ?? 7) || 7, 1), 30);
+
+      if (!email || email.length > 255 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        return json({ error: "Invalid email" }, 400);
+      }
+
+      const secret = Deno.env.get("ACCESS_TOKEN_SECRET");
+      if (!secret) return json({ error: "Access gate is not configured" }, 500);
+
+      const { token, exp } = await mintAccessToken(secret, days * 24 * 60 * 60 * 1000);
+      const url = `https://makil.fr/?access=${encodeURIComponent(token)}`;
+      const validUntil = new Date(exp).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      });
+
+      await sendTemplateEmail("access-invitation", email, {
+        idempotencyKey: `access-invite-${crypto.randomUUID()}`,
+        replyTo: "richard@makil.fr",
+        templateData: { name, url, validUntil, note },
+      });
+
+      return json({ success: true, url, exp });
     }
 
     if (action === "remove") {
