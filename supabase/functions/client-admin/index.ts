@@ -174,6 +174,19 @@ Deno.serve(async (req) => {
       return json({ success: true, url, exp });
     }
 
+    if (action === "delete_message") {
+      const messageId = String(body.message_id ?? "");
+      if (!/^[0-9a-f-]{36}$/i.test(messageId)) {
+        return json({ error: "Invalid message" }, 400);
+      }
+      const { error } = await admin
+        .from("contact_submissions")
+        .delete()
+        .eq("id", messageId);
+      if (error) return json({ error: error.message }, 400);
+      return json({ success: true });
+    }
+
     if (action === "remove") {
       const clientId = String(body.client_id ?? "");
       if (!/^[0-9a-f-]{36}$/i.test(clientId)) {
