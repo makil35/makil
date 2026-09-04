@@ -148,7 +148,7 @@ export const journalArticles: JournalArticle[] = [
     title: "Choosing a private adviser: five honest questions",
     kicker: "Guide",
     excerpt:
-      "Before entrusting your name to anyone, five questions separate a practice from a pitch.",
+      "Before entrusting a name to anyone, five questions separate a practice from a pitch.",
     metaTitle: "How to Choose a Private Adviser · Five Questions · MAKIL",
     metaDescription:
       "Five questions to ask before choosing a private adviser: who answers, how many clients, what is written down, what is declined, and what stays private.",
