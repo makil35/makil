@@ -18,6 +18,7 @@ import Private from "./pages/Private";
 import ScrollToTop from "@/components/ScrollToTop";
 import AccessGate from "@/components/AccessGate";
 import CookieConsent from "@/components/CookieConsent";
+import Analytics from "@/components/Analytics";
 
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <ScrollToTop />
+          <Analytics />
           <AccessGate>
           <Routes>
             <Route path="/" element={<Index />} />

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { trackEvent } from "@/lib/analytics";
 
 const STORAGE_KEY = "makil.access.token";
 
@@ -71,6 +72,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
       return;
     }
     localStorage.setItem(STORAGE_KEY, data.token);
+    trackEvent("key_granted");
     setStatus("granted");
   };
 
@@ -150,6 +152,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
               onClick={() => {
                 setMode("request");
                 setError(null);
+                trackEvent("key_requested");
               }}
               className="w-full text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground transition-colors hover:text-foreground"
             >

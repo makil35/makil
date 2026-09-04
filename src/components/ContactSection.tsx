@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, FormEvent } from "react";
 import { z } from "zod";
 import { Copy, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { trackEvent } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toast } from "sonner";
 
@@ -56,6 +57,7 @@ const ContactSection = () => {
       });
       if (error || !data?.success) throw error ?? new Error("send_failed");
 
+      trackEvent("contact_form_sent");
       toast.success(t("contact.success"));
       setName(""); setEmail(""); setMessage(""); setCompany(""); setOrg("");
       mountedAt.current = Date.now();
@@ -86,6 +88,7 @@ const ContactSection = () => {
         <div className="flex items-center justify-center gap-3 mb-14">
           <a
             href={`mailto:${EMAIL}`}
+            onClick={() => trackEvent("email_click")}
             className="text-base sm:text-lg font-display tracking-wide text-foreground hover:text-muted-foreground transition-smooth"
           >
             {EMAIL}
