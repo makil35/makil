@@ -164,7 +164,6 @@ const Contact = () => {
                 </p>
                 <a
                   href={`mailto:${EMAIL}`}
-            onClick={() => trackEvent("email_click")}
                   onClick={() => trackEvent("email_click")}
                   className="font-display text-lg sm:text-xl text-foreground underline decoration-foreground/25 decoration-[0.5px] underline-offset-[6px] transition-smooth hover:decoration-foreground/70"
                 >
