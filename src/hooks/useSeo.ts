@@ -193,7 +193,7 @@ export const useSeo = ({
         : "index, follow, max-image-preview:large, max-snippet:-1"
     );
     upsertMetaName("author", "Makil-Herrero Richard");
-    const keywords = rawKeywords ?? "private adviser, private advisory, personal branding, personal brand strategist, confidential advisory, discreet adviser, MAKIL, Makil-Herrero Richard, private client adviser Paris, reputation and image adviser, art of living, high net worth private adviser, by introduction only, Paris, Monaco, London, Geneva, Dubai";
+    const keywords = rawKeywords ?? "private adviser, private advisory, personal branding, personal brand strategist, confidential advisory, discreet adviser, MAKIL, Makil-Herrero Richard, private client adviser Paris, reputation and image adviser, art of living, high net worth private adviser, by introduction only, Paris, Monaco, London, Geneva, Dubai, Rome";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route

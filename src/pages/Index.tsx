@@ -58,7 +58,7 @@ const Index = () => {
             "Discretion and confidentiality",
             "Private orchestration",
           ],
-          areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai"],
+          areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai", "Rome"],
           address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
           sameAs: [
             "https://www.instagram.com/makilprivate/",
@@ -75,7 +75,7 @@ const Index = () => {
           description:
             "A private house: access, private orchestration and discreet execution, carried by a single name.",
           founder: { "@id": "https://makil.fr/#person" },
-          areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai"],
+          areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai", "Rome"],
           email: "mailto:richard@makil.fr",
         },
       ],

@@ -33,7 +33,7 @@ const Mandates = () => {
     description:
       "Private mandates carried personally by Makil-Herrero Richard, private adviser in Paris: access, private orchestration and discreet execution for a select circle. By introduction only.",
     keywords:
-      "private mandate, private adviser Paris, private orchestration, discreet execution, confidential advisory, access and introductions, Makil-Herrero Richard, MAKIL, Monaco, London, Geneva, Dubai",
+      "private mandate, private adviser Paris, private orchestration, discreet execution, confidential advisory, access and introductions, Makil-Herrero Richard, MAKIL, Monaco, London, Geneva, Dubai, Rome",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -46,7 +46,7 @@ const Mandates = () => {
         jobTitle: "Private Adviser",
         url: SITE_URL,
       },
-      areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai"],
+      areaServed: ["Paris", "Monaco", "London", "Geneva", "Dubai", "Rome"],
       url: `${SITE_URL}/mandates`,
       description:
         "Private mandates carried personally: access, orchestration and discreet execution for a select circle. By introduction only.",
