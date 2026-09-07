@@ -68,7 +68,7 @@ const Footer = () => {
                 {t("footer.makilPrivate")}
               </span>
               <span className="text-[10px] font-body tracking-[0.25em] uppercase text-foreground/40 transition-smooth group-hover:text-foreground/60">
-                A House Makil Private. An Orchestration. A Private Dinner.
+                A Private House. An Orchestration. A Private Dinner.
               </span>
             </div>
 
