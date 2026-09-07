@@ -63,9 +63,14 @@ const Footer = () => {
             onClick={(e) => goToPage(e, "/contact")}
             className="group flex flex-col sm:flex-row items-center justify-between gap-6 py-12 sm:py-16"
           >
-            <span className="text-[11px] font-body tracking-[0.4em] uppercase text-foreground/60 transition-smooth group-hover:text-foreground">
-              {t("footer.makilPrivate")}
-            </span>
+            <div className="flex flex-col items-center sm:items-start gap-3">
+              <span className="text-[11px] font-body tracking-[0.4em] uppercase text-foreground/60 transition-smooth group-hover:text-foreground">
+                {t("footer.makilPrivate")}
+              </span>
+              <span className="text-[10px] font-body tracking-[0.25em] uppercase text-foreground/40 transition-smooth group-hover:text-foreground/60">
+                A House Makil Private. An Orchestration. A Private Dinner.
+              </span>
+            </div>
 
             <span className="inline-flex items-center gap-4 text-[10px] font-body tracking-[0.35em] uppercase text-foreground/40 transition-smooth group-hover:text-foreground/80">
               {t("footer.discoverExperiences")}
