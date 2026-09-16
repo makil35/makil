@@ -293,6 +293,14 @@ const Footer = () => {
           <p className="mt-20 border-t border-foreground/10 pt-8 text-[10px] font-body tracking-[0.25em] uppercase text-muted-foreground">
             © {new Date().getFullYear()} MAKIL · {t("footer.rights")}
           </p>
+
+          {/* Website Carbon · discreet monochrome badge */}
+          <div
+            ref={carbonRef}
+            id="wcb"
+            className="carbonbadge mt-6 flex justify-center pb-10 opacity-60 transition-smooth hover:opacity-100"
+            aria-label="Website carbon badge"
+          />
         </div>
       </div>
     </footer>
