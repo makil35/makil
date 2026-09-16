@@ -21,6 +21,20 @@ const Footer = () => {
   const { t } = useLanguage();
   const home = localizedPath("home");
   const navigate = useNavigate();
+  const carbonRef = useRef<HTMLDivElement>(null);
+
+  // Website Carbon badge: loaded once, rendered into the footer placeholder.
+  useEffect(() => {
+    const host = carbonRef.current;
+    if (!host || host.childElementCount > 0) return;
+    if (!document.getElementById("wcb-script")) {
+      const script = document.createElement("script");
+      script.id = "wcb-script";
+      script.src = "https://unpkg.com/website-carbon-badges@1.1.3/b.min.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   // Anchor links must land on section content, not on the large editorial
   // top padding (which reads as a blank/black screen).
