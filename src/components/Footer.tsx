@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { localizedPath } from "@/lib/routes";
@@ -20,6 +21,20 @@ const Footer = () => {
   const { t } = useLanguage();
   const home = localizedPath("home");
   const navigate = useNavigate();
+  const carbonRef = useRef<HTMLDivElement>(null);
+
+  // Website Carbon badge: loaded once, rendered into the footer placeholder.
+  useEffect(() => {
+    const host = carbonRef.current;
+    if (!host || host.childElementCount > 0) return;
+    if (!document.getElementById("wcb-script")) {
+      const script = document.createElement("script");
+      script.id = "wcb-script";
+      script.src = "https://unpkg.com/website-carbon-badges@1.1.3/b.min.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   // Anchor links must land on section content, not on the large editorial
   // top padding (which reads as a blank/black screen).
@@ -278,6 +293,14 @@ const Footer = () => {
           <p className="mt-20 border-t border-foreground/10 pt-8 text-[10px] font-body tracking-[0.25em] uppercase text-muted-foreground">
             © {new Date().getFullYear()} MAKIL · {t("footer.rights")}
           </p>
+
+          {/* Website Carbon · discreet monochrome badge */}
+          <div
+            ref={carbonRef}
+            id="wcb"
+            className="carbonbadge mt-6 flex justify-center pb-10 opacity-60 transition-smooth hover:opacity-100"
+            aria-label="Website carbon badge"
+          />
         </div>
       </div>
     </footer>
