@@ -182,3 +182,35 @@
 .animate-drift {
   animation: makil-drift 2.6s ease-in-out infinite;
 }
+
+/* Website Carbon badge · restyled to the MAKIL monochrome language */
+#wcb,
+#wcb * {
+  font-family: Montserrat, sans-serif !important;
+  color: hsl(var(--muted-foreground)) !important;
+  font-size: 9px !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1.6;
+}
+
+#wcb a {
+  transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#wcb a:hover {
+  color: hsl(var(--foreground)) !important;
+}
+
+#wcb #wcb_g,
+#wcb #wcb_a,
+#wcb #wcb_b {
+  display: inline-block;
+  vertical-align: middle;
+}
