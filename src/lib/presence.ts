@@ -222,6 +222,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Presence here is regular rather than permanent, and always announced to no one.",
     ],
     register: "Verification, personal introductions, and deliberate slowness.",
+    seoTitle: "Private Adviser in Dubai · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Dubai: verification before speed, personal introductions in the Gulf, discreet execution carried by one name. By introduction only.",
+    keywords: [
+      "private adviser Dubai",
+      "private advisory Dubai",
+      "confidential adviser Dubai",
+      "discreet adviser United Arab Emirates",
+      "private introductions Gulf",
+      "personal branding adviser Dubai",
+    ],
   },
   rome: {
     slug: "rome",
