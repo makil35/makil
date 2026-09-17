@@ -153,7 +153,7 @@ export default {
   "contact.page.availability": "Availability",
   "contact.page.availabilityValue": "A limited number of engagements each year. Introductions preferred.",
   "contact.page.locations": "Presence",
-  "contact.page.locationsValue": "Paris · Monaco · London · Geneva · Dubai · Rome",
+  "contact.page.locationsValue": "Paris · Monaco · London · Geneva · Dubai · Rome · Luxembourg · New York",
   "contact.page.discretion": "Nothing written here is shared, published, or discussed. Discretion begins with this form.",
   "contact.send": "Send",
   "contact.sending": "Sending…",
