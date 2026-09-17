@@ -10,6 +10,7 @@ import {
   citySlug,
   editorialFor,
   presenceAreaServed,
+  presenceCityLine,
   presenceCitySentence,
   presenceKeywords,
 } from "@/lib/presence";
@@ -20,7 +21,7 @@ const Presence = () => {
   useSeo({
     path: "/presence",
     breadcrumbs: [{ name: "Presence", path: "/presence" }],
-    title: "Presence · Paris, Monaco, London, Geneva, Dubai, Rome · MAKIL",
+    title: `Presence · ${presenceCityLine} · MAKIL`,
     description: `Makil-Herrero Richard, private adviser, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
     keywords: `presence, private adviser cities, international private advisory, Makil-Herrero Richard, MAKIL, ${presenceKeywords}`,
     jsonLd: {
