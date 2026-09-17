@@ -100,7 +100,7 @@ export const presenceAreaServed = () =>
 /** ISO country codes covered, for contact points. */
 export const presenceCountryCodes = PRESENCE_CITIES.map((c) => c.countryCode);
 
-/** "Paris · Monaco · London · Geneva · Dubai · Rome" */
+/** "Paris · Monaco · London · Geneva · Dubai · Rome · Luxembourg · New York" */
 export const presenceCityLine = PRESENCE_CITIES.map((c) => c.name).join(" · ");
 
 /** "Paris, Monaco, London, Geneva, Dubai and Rome" */
