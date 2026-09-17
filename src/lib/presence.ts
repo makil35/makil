@@ -61,6 +61,22 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     longitude: 12.496366,
     wikidata: "https://www.wikidata.org/wiki/Q220",
   },
+  {
+    name: "Luxembourg",
+    countryName: "Luxembourg",
+    countryCode: "LU",
+    latitude: 49.6116,
+    longitude: 6.1319,
+    wikidata: "https://www.wikidata.org/wiki/Q1842",
+  },
+  {
+    name: "New York",
+    countryName: "United States",
+    countryCode: "US",
+    latitude: 40.7128,
+    longitude: -74.006,
+    wikidata: "https://www.wikidata.org/wiki/Q60",
+  },
 ];
 
 /** schema.org City objects, geo-located and tied to their country. */
@@ -99,8 +115,8 @@ export const presenceKeywords = PRESENCE_CITIES.flatMap((c) => [
   `private advisory ${c.name}`,
 ]).join(", ");
 
-/** URL slug per city, e.g. "paris" → /presence/paris. */
-export const citySlug = (name: string) => name.toLowerCase();
+/** URL slug per city, e.g. "New York" → "new-york" → /presence/new-york. */
+export const citySlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
 export interface CityEditorial {
   slug: string;
