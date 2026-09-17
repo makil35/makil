@@ -1,7 +1,7 @@
 export default {
   // SEO
   "seo.home.title": "Makil-Herrero Richard · Private Adviser · Paris",
-  "seo.home.description": "Makil-Herrero Richard, private adviser in Paris. The MAKIL house is defined by reading, judgement and quiet orchestration for a select circle across Paris, Monaco, London, Geneva, Dubai and Rome. By introduction only.",
+  "seo.home.description": "Makil-Herrero Richard, private adviser in Paris. The MAKIL house is defined by reading, judgement and quiet orchestration for a select circle across Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg, New York, Luxembourg and New York. By introduction only.",
   "seo.legal.title": "Legal Notice · MAKIL · Makil-Herrero Richard, Private Adviser",
   "seo.legal.description": "Legal notice of makil.fr, official site of Makil-Herrero Richard, private adviser based in Paris. Publisher, hosting, intellectual property and contact.",
   "seo.privacy.title": "Privacy Policy · MAKIL · GDPR & Data Protection",
@@ -67,7 +67,7 @@ export default {
   "home.profil.title1": "One name,",
   "home.profil.title2": "one reading.",
   "home.profil.p1": "I work with families, founders and public figures whose time is their rarest asset. I do not run an agency. There is no team to pass through. What reaches me is read by me.",
-  "home.profil.p2": "The house moves between Paris, Monaco, London, Geneva, Dubai and Rome. I go where a situation needs a clear head, a trusted presence and a single point of judgement.",
+  "home.profil.p2": "The house moves between Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg, New York, Luxembourg and New York. I go where a situation needs a clear head, a trusted presence and a single point of judgement.",
   "home.profil.p3": "The name Makil belongs to the Banu Ma'qil, to the Makil. It is not an invented signature. It is a lineage that has crossed centuries, and that I carry forward in my own way.",
   "home.profil.p4": "I am not interested in every request. I am interested in those where reading the situation correctly changes everything else.",
   "home.profil.stat1": "One house",

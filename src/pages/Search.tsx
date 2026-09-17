@@ -247,7 +247,7 @@ const Search = () => {
               { kicker: "Practice", label: "The approach", to: "/#approach" },
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
-              { kicker: "Presence", label: "Six cities", to: "/presence" },
+              { kicker: "Presence", label: "Eight cities", to: "/presence" },
               { kicker: "Contact", label: "Write", to: "/contact" },
             ]}
           />

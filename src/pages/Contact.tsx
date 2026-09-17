@@ -303,7 +303,7 @@ const Contact = () => {
               { kicker: "The house", label: "Makil", to: `${localizedPath("home")}#richard` },
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
-              { kicker: "Presence", label: "Six cities", to: "/presence" },
+              { kicker: "Presence", label: "Eight cities", to: "/presence" },
               { kicker: "Access", label: "By introduction", to: "/#access" },
               { kicker: "Information", label: "Privacy", to: "/privacy-policy" },
             ]}

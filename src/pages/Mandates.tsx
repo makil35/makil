@@ -128,7 +128,7 @@ const Mandates = () => {
             links={[
               { kicker: "Correspondence", label: "Write", to: "/contact" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
-              { kicker: "Presence", label: "Six cities", to: "/presence" },
+              { kicker: "Presence", label: "Eight cities", to: "/presence" },
               { kicker: "The house", label: "Richard", to: "/#richard" },
             ]}
           />

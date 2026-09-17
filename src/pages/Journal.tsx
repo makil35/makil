@@ -97,7 +97,7 @@ const Journal = () => {
               { kicker: "Archive", label: "Every note, by month", to: "/journal/archive" },
               { kicker: "The house", label: "Profile and principles", to: `${localizedPath("home")}#richard` },
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
-              { kicker: "Presence", label: "Six cities", to: "/presence" },
+              { kicker: "Presence", label: "Eight cities", to: "/presence" },
               { kicker: "Correspondence", label: "Write", to: "/contact" },
               { kicker: "Access", label: "By introduction", to: "/#access" },
               { kicker: "Information", label: "Privacy", to: "/privacy-policy" },
