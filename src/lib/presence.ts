@@ -61,6 +61,22 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     longitude: 12.496366,
     wikidata: "https://www.wikidata.org/wiki/Q220",
   },
+  {
+    name: "Luxembourg",
+    countryName: "Luxembourg",
+    countryCode: "LU",
+    latitude: 49.6116,
+    longitude: 6.1319,
+    wikidata: "https://www.wikidata.org/wiki/Q1842",
+  },
+  {
+    name: "New York",
+    countryName: "United States",
+    countryCode: "US",
+    latitude: 40.7128,
+    longitude: -74.006,
+    wikidata: "https://www.wikidata.org/wiki/Q60",
+  },
 ];
 
 /** schema.org City objects, geo-located and tied to their country. */
@@ -84,7 +100,7 @@ export const presenceAreaServed = () =>
 /** ISO country codes covered, for contact points. */
 export const presenceCountryCodes = PRESENCE_CITIES.map((c) => c.countryCode);
 
-/** "Paris · Monaco · London · Geneva · Dubai · Rome" */
+/** "Paris · Monaco · London · Geneva · Dubai · Rome · Luxembourg · New York" */
 export const presenceCityLine = PRESENCE_CITIES.map((c) => c.name).join(" · ");
 
 /** "Paris, Monaco, London, Geneva, Dubai and Rome" */
@@ -99,8 +115,8 @@ export const presenceKeywords = PRESENCE_CITIES.flatMap((c) => [
   `private advisory ${c.name}`,
 ]).join(", ");
 
-/** URL slug per city, e.g. "paris" → /presence/paris. */
-export const citySlug = (name: string) => name.toLowerCase();
+/** URL slug per city, e.g. "New York" → "new-york" → /presence/new-york. */
+export const citySlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
 export interface CityEditorial {
   slug: string;
@@ -255,6 +271,53 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "discreet adviser Italy",
       "private hospitality Rome adviser",
       "personal branding adviser Rome",
+    ],
+  },
+  luxembourg: {
+    slug: "luxembourg",
+    headline: "Private adviser in Luxembourg",
+    standfirst:
+      "Luxembourg is small by design. A name carries further there than anywhere else.",
+    paragraphs: [
+      "Luxembourg is a territory of custodians. Family capital, private structures and quiet continuity are the ordinary subject of conversation, and the same names appear across them all.",
+      "In a place this concentrated, an introduction cannot be corrected afterwards. The house therefore prepares longer, and commits to fewer matters than the city would allow.",
+      "Discretion here is not a preference. It is the condition under which everything else functions.",
+    ],
+    register: "Concentration, continuity, and names that carry.",
+    seoTitle: "Private Adviser in Luxembourg · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Luxembourg: family capital, private structures and quiet continuity, handled with the discretion the city demands. By introduction only.",
+    keywords: [
+      "private adviser Luxembourg",
+      "private advisory Luxembourg",
+      "confidential adviser Luxembourg",
+      "discreet adviser Luxembourg",
+      "family capital adviser Luxembourg",
+      "private banking circles Luxembourg",
+      "personal branding adviser Luxembourg",
+    ],
+  },
+  "new-york": {
+    slug: "new-york",
+    headline: "Private adviser in New York",
+    standfirst:
+      "New York counts loudly. The house counts quietly.",
+    paragraphs: [
+      "New York offers reach beyond any other city on the list, and rewards only those who know which doors are worth opening. Access is abundant; discernment is not.",
+      "Circles of finance, culture and private life are approached separately, never with the same introduction, and never on the strength of a name alone.",
+      "Nothing is committed on a first meeting in New York. The second is where the matter begins.",
+    ],
+    register: "Reach, discernment, and a name used sparingly.",
+    seoTitle: "Private Adviser in New York · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in New York: access abundant and discernment rare, with finance, culture and private circles approached separately. By introduction only.",
+    keywords: [
+      "private adviser New York",
+      "private advisory New York",
+      "confidential adviser New York",
+      "discreet adviser United States",
+      "private introductions Manhattan",
+      "personal branding adviser New York",
     ],
   },
 };

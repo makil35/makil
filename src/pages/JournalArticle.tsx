@@ -140,7 +140,7 @@ const JournalArticle = () => {
               { kicker: "Journal", label: "All notes", to: "/journal" },
               { kicker: "Archive", label: "Every note, by month", to: "/journal/archive" },
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
-              { kicker: "Presence", label: "Six cities", to: "/presence" },
+              { kicker: "Presence", label: "Eight cities", to: "/presence" },
               { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
               { kicker: "The house", label: "Profile and principles", to: "/#richard" },
             ]}
