@@ -129,6 +129,18 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Appointments are held in person, by prior arrangement, and never on a schedule that belongs to someone else.",
     ],
     register: "Address, judgement, and the first conversation.",
+    seoTitle: "Private Adviser in Paris · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Paris: confidential counsel, private introductions and discreet execution, carried personally by Makil-Herrero Richard. By introduction only.",
+    keywords: [
+      "private adviser Paris",
+      "private advisory Paris",
+      "confidential adviser Paris",
+      "personal branding adviser Paris",
+      "discreet adviser France",
+      "private introductions Paris",
+      "high net worth adviser Paris",
+    ],
   },
   monaco: {
     slug: "monaco",
