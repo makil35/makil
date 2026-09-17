@@ -153,6 +153,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "The measure of a good mandate here is that no one is able to reconstruct it afterwards.",
     ],
     register: "Proximity, restraint, and matters that leave no edge.",
+    seoTitle: "Private Adviser in Monaco · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Monaco: residence, private events and quiet transitions arranged without visible trace by Makil-Herrero Richard. By introduction only.",
+    keywords: [
+      "private adviser Monaco",
+      "private advisory Monaco",
+      "confidential adviser Monaco",
+      "discreet adviser Monte-Carlo",
+      "residence Monaco private adviser",
+      "personal branding adviser Monaco",
+    ],
   },
   london: {
     slug: "london",
