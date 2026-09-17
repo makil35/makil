@@ -176,6 +176,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Legal, cultural and private circles are approached separately, never with the same letter.",
     ],
     register: "Timing, preparation, and introductions that hold.",
+    seoTitle: "Private Adviser in London · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in London: introductions prepared and timed, private circles approached separately, matters carried personally. By introduction only.",
+    keywords: [
+      "private adviser London",
+      "private advisory London",
+      "confidential adviser London",
+      "discreet adviser United Kingdom",
+      "private introductions London",
+      "personal branding adviser London",
+    ],
   },
   geneva: {
     slug: "geneva",
