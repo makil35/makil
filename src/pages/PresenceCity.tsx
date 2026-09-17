@@ -22,14 +22,19 @@ const PresenceCity = () => {
       { name: "Presence", path: "/presence" },
       { name: city?.name ?? "Presence", path },
     ],
-    title: city
-      ? `Private Adviser in ${city.name} · Makil-Herrero Richard · MAKIL`
-      : "Presence · MAKIL",
-    description: city
-      ? `Makil-Herrero Richard, private adviser present in ${city.name}, ${city.countryName}: access, private orchestration and discreet execution. By introduction only.`
-      : "Presence of the house.",
+    title: copy?.seoTitle ?? (city ? `Private Adviser in ${city.name} · MAKIL` : "Presence · MAKIL"),
+    description:
+      copy?.seoDescription ??
+      (city
+        ? `Makil-Herrero Richard, private adviser present in ${city.name}, ${city.countryName}: access, private orchestration and discreet execution. By introduction only.`
+        : "Presence of the house."),
     keywords: city
-      ? `private adviser ${city.name}, private advisory ${city.name}, confidential adviser ${city.name}, personal branding adviser ${city.name}, discreet adviser ${city.countryName}, Makil-Herrero Richard, MAKIL`
+      ? [
+          ...(copy?.keywords ?? []),
+          `private adviser ${city.countryName}`,
+          "Makil-Herrero Richard",
+          "MAKIL",
+        ].join(", ")
       : undefined,
     noindex: !city,
     jsonLd: city
