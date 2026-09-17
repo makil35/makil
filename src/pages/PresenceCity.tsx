@@ -86,9 +86,9 @@ const PresenceCity = () => {
           <div className="max-w-3xl mx-auto">
             <h1 className="font-display text-3xl text-foreground">Not a city of the house</h1>
             <p className="mt-6 font-body text-sm text-foreground/70">
-              The house is present in six cities only.
+              {`The house is present in ${PRESENCE_CITIES.length} cities only.`}
             </p>
-            <NextStep links={[{ kicker: "Presence", label: "Six cities", to: "/presence" }]} />
+            <NextStep links={[{ kicker: "Presence", label: `${PRESENCE_CITIES.length} cities`, to: "/presence" }]} />
           </div>
         </main>
         <Footer />
