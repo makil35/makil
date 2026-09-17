@@ -68,9 +68,10 @@ const PresenceCity = () => {
             },
           },
           serviceType: "Private advisory, private orchestration, discreet execution",
-          description: city
-            ? `Private advisory carried personally in ${city.name}, ${city.countryName}. By introduction only.`
-            : undefined,
+          knowsAbout: copy?.keywords,
+          description:
+            copy?.seoDescription ??
+            `Private advisory carried personally in ${city.name}, ${city.countryName}. By introduction only.`,
         }
       : undefined,
   });
