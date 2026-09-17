@@ -273,6 +273,53 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "personal branding adviser Rome",
     ],
   },
+  luxembourg: {
+    slug: "luxembourg",
+    headline: "Private adviser in Luxembourg",
+    standfirst:
+      "Luxembourg is small by design. A name carries further there than anywhere else.",
+    paragraphs: [
+      "Luxembourg is a territory of custodians. Family capital, private structures and quiet continuity are the ordinary subject of conversation, and the same names appear across them all.",
+      "In a place this concentrated, an introduction cannot be corrected afterwards. The house therefore prepares longer, and commits to fewer matters than the city would allow.",
+      "Discretion here is not a preference. It is the condition under which everything else functions.",
+    ],
+    register: "Concentration, continuity, and names that carry.",
+    seoTitle: "Private Adviser in Luxembourg · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Luxembourg: family capital, private structures and quiet continuity, handled with the discretion the city demands. By introduction only.",
+    keywords: [
+      "private adviser Luxembourg",
+      "private advisory Luxembourg",
+      "confidential adviser Luxembourg",
+      "discreet adviser Luxembourg",
+      "family capital adviser Luxembourg",
+      "private banking circles Luxembourg",
+      "personal branding adviser Luxembourg",
+    ],
+  },
+  "new-york": {
+    slug: "new-york",
+    headline: "Private adviser in New York",
+    standfirst:
+      "New York counts loudly. The house counts quietly.",
+    paragraphs: [
+      "New York offers reach beyond any other city on the list, and rewards only those who know which doors are worth opening. Access is abundant; discernment is not.",
+      "Circles of finance, culture and private life are approached separately, never with the same introduction, and never on the strength of a name alone.",
+      "Nothing is committed on a first meeting in New York. The second is where the matter begins.",
+    ],
+    register: "Reach, discernment, and a name used sparingly.",
+    seoTitle: "Private Adviser in New York · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in New York: access abundant and discernment rare, with finance, culture and private circles approached separately. By introduction only.",
+    keywords: [
+      "private adviser New York",
+      "private advisory New York",
+      "confidential adviser New York",
+      "discreet adviser United States",
+      "private introductions Manhattan",
+      "personal branding adviser New York",
+    ],
+  },
 };
 
 export const editorialFor = (city: PresenceCity) => CITY_EDITORIAL[citySlug(city.name)];
