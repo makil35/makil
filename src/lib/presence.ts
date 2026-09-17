@@ -108,6 +108,12 @@ export interface CityEditorial {
   standfirst: string;
   paragraphs: string[];
   register: string;
+  /** <title> for the city page (kept under ~60 characters where possible). */
+  seoTitle: string;
+  /** Meta description, unique per city (~150-160 characters). */
+  seoDescription: string;
+  /** Long-tail keywords specific to the city. */
+  keywords: string[];
 }
 
 /** Editorial copy per city: one page, one register, no repetition. */
