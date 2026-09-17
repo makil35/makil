@@ -108,7 +108,7 @@ const PresenceCity = () => {
             {city.countryName}
           </p>
           <h1 className="text-4xl sm:text-5xl font-display text-foreground mb-6">
-            {copy.headline}
+            {`${copy.headline}, ${city.countryName}`}
           </h1>
           <p className="font-display italic text-lg text-foreground/85 max-w-xl">
             {copy.standfirst}
