@@ -199,6 +199,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Some requests are declined here more often than anywhere else. That is a form of service.",
     ],
     register: "Continuity, custodians, and matters carried to the end.",
+    seoTitle: "Private Adviser in Geneva · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Geneva: continuity of a name, a family or an interest, handled with existing advisers and carried to the end. By introduction only.",
+    keywords: [
+      "private adviser Geneva",
+      "private advisory Geneva",
+      "confidential adviser Geneva",
+      "discreet adviser Switzerland",
+      "family continuity adviser Geneva",
+      "personal branding adviser Geneva",
+    ],
   },
   dubai: {
     slug: "dubai",
