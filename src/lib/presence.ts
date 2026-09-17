@@ -108,6 +108,12 @@ export interface CityEditorial {
   standfirst: string;
   paragraphs: string[];
   register: string;
+  /** <title> for the city page (kept under ~60 characters where possible). */
+  seoTitle: string;
+  /** Meta description, unique per city (~150-160 characters). */
+  seoDescription: string;
+  /** Long-tail keywords specific to the city. */
+  keywords: string[];
 }
 
 /** Editorial copy per city: one page, one register, no repetition. */
@@ -123,6 +129,18 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Appointments are held in person, by prior arrangement, and never on a schedule that belongs to someone else.",
     ],
     register: "Address, judgement, and the first conversation.",
+    seoTitle: "Private Adviser in Paris · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Paris: confidential counsel, private introductions and discreet execution, carried personally by Makil-Herrero Richard. By introduction only.",
+    keywords: [
+      "private adviser Paris",
+      "private advisory Paris",
+      "confidential adviser Paris",
+      "personal branding adviser Paris",
+      "discreet adviser France",
+      "private introductions Paris",
+      "high net worth adviser Paris",
+    ],
   },
   monaco: {
     slug: "monaco",
@@ -135,6 +153,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "The measure of a good mandate here is that no one is able to reconstruct it afterwards.",
     ],
     register: "Proximity, restraint, and matters that leave no edge.",
+    seoTitle: "Private Adviser in Monaco · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Monaco: residence, private events and quiet transitions arranged without visible trace by Makil-Herrero Richard. By introduction only.",
+    keywords: [
+      "private adviser Monaco",
+      "private advisory Monaco",
+      "confidential adviser Monaco",
+      "discreet adviser Monte-Carlo",
+      "residence Monaco private adviser",
+      "personal branding adviser Monaco",
+    ],
   },
   london: {
     slug: "london",
@@ -147,6 +176,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Legal, cultural and private circles are approached separately, never with the same letter.",
     ],
     register: "Timing, preparation, and introductions that hold.",
+    seoTitle: "Private Adviser in London · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in London: introductions prepared and timed, private circles approached separately, matters carried personally. By introduction only.",
+    keywords: [
+      "private adviser London",
+      "private advisory London",
+      "confidential adviser London",
+      "discreet adviser United Kingdom",
+      "private introductions London",
+      "personal branding adviser London",
+    ],
   },
   geneva: {
     slug: "geneva",
@@ -159,6 +199,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Some requests are declined here more often than anywhere else. That is a form of service.",
     ],
     register: "Continuity, custodians, and matters carried to the end.",
+    seoTitle: "Private Adviser in Geneva · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Geneva: continuity of a name, a family or an interest, handled with existing advisers and carried to the end. By introduction only.",
+    keywords: [
+      "private adviser Geneva",
+      "private advisory Geneva",
+      "confidential adviser Geneva",
+      "discreet adviser Switzerland",
+      "family continuity adviser Geneva",
+      "personal branding adviser Geneva",
+    ],
   },
   dubai: {
     slug: "dubai",
@@ -171,6 +222,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Presence here is regular rather than permanent, and always announced to no one.",
     ],
     register: "Verification, personal introductions, and deliberate slowness.",
+    seoTitle: "Private Adviser in Dubai · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Dubai: verification before speed, personal introductions in the Gulf, discreet execution carried by one name. By introduction only.",
+    keywords: [
+      "private adviser Dubai",
+      "private advisory Dubai",
+      "confidential adviser Dubai",
+      "discreet adviser United Arab Emirates",
+      "private introductions Gulf",
+      "personal branding adviser Dubai",
+    ],
   },
   rome: {
     slug: "rome",
@@ -183,6 +245,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Nothing is signed in Rome on a first visit.",
     ],
     register: "Families, patience, and presence without publication.",
+    seoTitle: "Private Adviser in Rome · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Rome: cultural matters, private hospitality and long acquaintances handled at the pace the city imposes. By introduction only.",
+    keywords: [
+      "private adviser Rome",
+      "private advisory Rome",
+      "confidential adviser Rome",
+      "discreet adviser Italy",
+      "private hospitality Rome adviser",
+      "personal branding adviser Rome",
+    ],
   },
 };
 
