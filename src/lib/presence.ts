@@ -245,6 +245,17 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Nothing is signed in Rome on a first visit.",
     ],
     register: "Families, patience, and presence without publication.",
+    seoTitle: "Private Adviser in Rome · Makil-Herrero Richard",
+    seoDescription:
+      "Private adviser in Rome: cultural matters, private hospitality and long acquaintances handled at the pace the city imposes. By introduction only.",
+    keywords: [
+      "private adviser Rome",
+      "private advisory Rome",
+      "confidential adviser Rome",
+      "discreet adviser Italy",
+      "private hospitality Rome adviser",
+      "personal branding adviser Rome",
+    ],
   },
 };
 
