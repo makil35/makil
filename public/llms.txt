@@ -1,0 +1,28 @@
+# MAKIL
+
+> MAKIL is a private house led by Makil-Herrero Richard, Private Adviser based in Paris: one name, one point of contact, one line of responsibility. By introduction only.
+
+Makil-Herrero Richard is a private adviser. Matters are carried in Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York. The house works only by introduction, never by solicitation, and does not publish prices.
+
+## Pages
+
+- [Home](https://makil.fr/): MAKIL and Makil-Herrero Richard, Private Adviser.
+- [Mandates](https://makil.fr/mandates): How mandates are carried by a single name.
+- [Presence](https://makil.fr/presence): The eight cities where matters are carried.
+- [Journal](https://makil.fr/journal): Notes by Makil-Herrero Richard.
+
+## Presence
+
+- [Paris](https://makil.fr/presence/paris): Private adviser in Paris.
+- [Monaco](https://makil.fr/presence/monaco): Private adviser in Monaco.
+- [London](https://makil.fr/presence/london): Private adviser in London.
+- [Geneva](https://makil.fr/presence/geneva): Private adviser in Geneva.
+- [Dubai](https://makil.fr/presence/dubai): Private adviser in Dubai.
+- [Rome](https://makil.fr/presence/rome): Private adviser in Rome.
+- [Luxembourg](https://makil.fr/presence/luxembourg): Private adviser in Luxembourg.
+- [New York](https://makil.fr/presence/new-york): Private adviser in New York.
+
+## Optional
+
+- [Journal archive](https://makil.fr/journal/archive): Every note, by month.
+- [Legal notice](https://makil.fr/legal-notice): Legal information.
