@@ -60,7 +60,7 @@ const Presence = () => {
             {`${PRESENCE_CITIES.length} cities, `}<em className="italic">one house</em>
           </h1>
           <p className="font-body text-sm leading-loose text-foreground/70 max-w-xl">
-            {`Matters are carried in ${presenceCitySentence}. Each city imposes its own manner: a name that opens a door in one place would close it in another. What follows is how the house reads each of them.`}
+            {`Dinners are orchestrated in ${presenceCitySentence}. Each city imposes its own manner: a name that opens a door in one place would close it in another. What follows is how the house reads each of them.`}
           </p>
 
           <ul className="mt-20 space-y-14">
