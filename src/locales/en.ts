@@ -2,14 +2,14 @@ export default {
   // SEO
   "seo.home.title": "Makil-Herrero Richard · Private Dinner Orchestration · Paris",
   "seo.home.description": "Makil-Herrero Richard orchestrates non-replicable private dinners from Paris. The MAKIL house: one name, one table, one evening, for a select circle across Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York. By introduction only.",
-  "seo.legal.title": "Legal Notice · MAKIL · Makil-Herrero Richard, Private Adviser",
-  "seo.legal.description": "Legal notice of makil.fr, official site of Makil-Herrero Richard, private adviser based in Paris. Publisher, hosting, intellectual property and contact.",
+  "seo.legal.title": "Legal Notice · MAKIL · Makil-Herrero Richard",
+  "seo.legal.description": "Legal notice of makil.fr, official site of Makil-Herrero Richard, private dinner orchestrator based in Paris. Publisher, hosting, intellectual property and contact.",
   "seo.privacy.title": "Privacy Policy · MAKIL · GDPR & Data Protection",
   "seo.privacy.description": "MAKIL privacy policy: how makil.fr, the house of Makil-Herrero Richard in Paris, collects, uses and protects personal data. GDPR rights, cookies and discretion.",
-  "seo.contact.title": "Contact · MAKIL · Makil-Herrero Richard, Private Adviser",
-  "seo.contact.description": "Contact Makil-Herrero Richard, private adviser based in Paris. A direct exchange. Every message is read personally.",
+  "seo.contact.title": "Contact · MAKIL · Makil-Herrero Richard",
+  "seo.contact.description": "Contact Makil-Herrero Richard, private dinner orchestrator based in Paris. A direct exchange. Every message is read personally.",
   "seo.unsubscribe.title": "Unsubscribe · MAKIL Private Correspondence",
-  "seo.unsubscribe.description": "Confirm the end of MAKIL private correspondence from Makil-Herrero Richard, private adviser in Paris. One click, no questions, and the address is removed.",
+  "seo.unsubscribe.description": "Confirm the end of MAKIL private correspondence from Makil-Herrero Richard, private dinner orchestrator in Paris. One click, no questions, and the address is removed.",
   "seo.notfound.title": "Page Not Found · MAKIL",
   "seo.notfound.description": "This MAKIL page does not exist or is no longer available. Return to makil.fr.",
 
@@ -59,7 +59,7 @@ export default {
   "home.hero.role": "Observation before action.",
   "home.hero.title1": "Makil-Herrero",
   "home.hero.title2": "Richard.",
-  "home.hero.desc": "Private adviser. A practice of reading situations, choosing the right move, and leaving no trace.",
+  "home.hero.desc": "Private dinner orchestration. A practice of reading rooms, choosing the right seat, and leaving no trace.",
   "home.hero.cta": "Continue",
 
   // Home · Profile
@@ -145,7 +145,7 @@ export default {
   "contact.field.org": "Company / Family office",
   "contact.field.email": "Email",
   "contact.field.message": "Message",
-  "contact.page.kicker": "Private adviser",
+  "contact.page.kicker": "Private dinner orchestration",
   "contact.page.title1": "A direct",
   "contact.page.title2": "line.",
   "contact.page.intro": "Every message is read personally.",
