@@ -22,6 +22,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
   const [status, setStatus] = useState<Status>("checking");
   const [key, setKey] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [denied, setDenied] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
@@ -77,6 +78,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
     setSubmitting(false);
     if (err || !data?.valid) {
       setError("This key is not recognised.");
+      setDenied(true);
       return;
     }
     localStorage.setItem(STORAGE_KEY, data.token);
