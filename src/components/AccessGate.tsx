@@ -1,4 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
+import monogramM from "@/assets/monogram-m.png";
 import { supabase } from "@/integrations/supabase/client";
 import { trackEvent } from "@/lib/analytics";
 
