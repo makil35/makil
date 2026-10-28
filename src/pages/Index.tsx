@@ -2,7 +2,6 @@ import { useSeo } from "@/hooks/useSeo";
 import { presenceAreaServed, presenceCitySentence, presenceKeywords } from "@/lib/presence";
 
 const Index = () => {
-  const { t } = useLanguage();
   useSeo({
     routeKey: "home",
     titleKey: "seo.home.title",
