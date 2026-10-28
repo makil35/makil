@@ -80,7 +80,7 @@ const Index = () => {
 
         <section className="mt-28 sm:mt-40 max-w-xl space-y-8 text-lg sm:text-xl leading-relaxed text-ink-soft">
           <p>MAKIL is a private house: one name, one point of contact, one line of responsibility.</p>
-          <p>Matters are carried in Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York.</p>
+          <p>Dinners are orchestrated in Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York.</p>
           <p className="italic">By introduction only.</p>
         </section>
       </main>
