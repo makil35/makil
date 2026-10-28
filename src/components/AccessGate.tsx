@@ -100,8 +100,11 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
         <p className="text-[0.6rem] uppercase tracking-luxe text-muted-foreground">
           Private
         </p>
-        <h1 className="mt-8 font-display text-3xl font-light tracking-[0.45em] sm:text-4xl">
-          MAKIL
+        <h1 className="mt-6 font-display font-light leading-none">
+          <span className="block text-6xl sm:text-7xl">M</span>
+          <span className="mt-7 block text-[0.55rem] uppercase tracking-[0.65em] text-muted-foreground">
+            Makil
+          </span>
         </h1>
         <p className="mx-auto mt-8 max-w-xs text-sm leading-loose text-muted-foreground">
           This house is entered by key only. Please enter the key received to continue.
