@@ -22,6 +22,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
   const [status, setStatus] = useState<Status>("checking");
   const [key, setKey] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [denied, setDenied] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
@@ -77,6 +78,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
     setSubmitting(false);
     if (err || !data?.valid) {
       setError("This key is not recognised.");
+      setDenied(true);
       return;
     }
     localStorage.setItem(STORAGE_KEY, data.token);
@@ -123,7 +125,9 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
           <div>
             <label
               htmlFor="access-key"
-              className="block text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground"
+              className={`block text-[0.6rem] uppercase tracking-[0.4em] transition-colors ${
+                error ? "text-foreground" : "text-muted-foreground"
+              }`}
             >
               Access key
             </label>
@@ -133,11 +137,24 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
               autoComplete="off"
               value={key}
               onChange={(e) => setKey(e.target.value)}
-              className="mt-3 w-full border-b border-border bg-transparent py-3 text-center text-sm tracking-[0.35em] outline-none transition-colors focus:border-foreground"
+              onAnimationEnd={() => setDenied(false)}
+              aria-invalid={error ? true : undefined}
+              aria-describedby={error ? "access-key-error" : undefined}
+              className={`mt-3 w-full border-b bg-transparent py-3 text-center text-sm tracking-[0.35em] outline-none transition-colors focus:border-foreground ${
+                error ? "border-foreground text-foreground" : "border-border"
+              } ${denied ? "animate-denied" : ""}`}
               required
             />
           </div>
-          {error && <p className="text-xs tracking-wide text-muted-foreground">{error}</p>}
+          {error && (
+            <p
+              id="access-key-error"
+              aria-live="polite"
+              className="animate-fade text-center font-display text-xs italic tracking-wide text-foreground/80"
+            >
+              {error}
+            </p>
+          )}
           <button
             type="submit"
             disabled={submitting}
