@@ -48,7 +48,7 @@ const pages: Page[] = [
       `Makil-Herrero Richard orchestrates non-replicable private dinners from Paris, for a select circle across ${presenceCitySentence}. By introduction only.`,
     heading: "Makil-Herrero Richard, private dinner orchestrator",
     paragraphs: [
-      "MAKIL is a private house: one name, one point of contact, one line of responsibility.",
+      "MAKIL orchestrates private dinners. One name, one point of contact, one line of responsibility. By introduction only.",
       `Dinners are orchestrated in ${presenceCitySentence}.`,
       "By introduction only. Introductions, never solicitation.",
     ],
