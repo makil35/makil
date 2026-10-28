@@ -1,5 +1,6 @@
 import { useSeo } from "@/hooks/useSeo";
 import { presenceAreaServed, presenceCitySentence, presenceKeywords } from "@/lib/presence";
+import monogramM from "@/assets/monogram-m.png";
 
 const Index = () => {
   useSeo({
@@ -72,7 +73,7 @@ const Index = () => {
     <div className="min-h-[100svh] flex flex-col bg-ivory text-ink font-didone antialiased">
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-24 sm:py-32 text-center">
         <h1 className="sr-only">MAKIL · Makil-Herrero Richard, Private Adviser</h1>
-        <div aria-hidden="true" className="text-[7.5rem] sm:text-[11rem] leading-none font-normal">M</div>
+        <img src={monogramM} alt="" aria-hidden="true" draggable={false} className="mx-auto h-28 w-auto sm:h-40" />
         <p className="mt-6 text-[0.7rem] sm:text-xs tracking-[0.7em] pl-[0.7em]">MAKIL</p>
         <p className="mt-16 sm:mt-20 text-2xl sm:text-3xl font-normal">Makil-Herrero Richard</p>
         <p className="mt-4 text-[0.7rem] sm:text-xs tracking-[0.35em] uppercase text-ink-muted">Private Adviser · Paris</p>
