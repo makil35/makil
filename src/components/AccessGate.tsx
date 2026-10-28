@@ -111,9 +111,12 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
           <span className="mt-7 block font-display text-[0.6rem] uppercase tracking-[0.7em] text-muted-foreground">
             Makil
           </span>
+          <span className="mt-3 block font-display text-[0.55rem] uppercase tracking-[0.45em] text-muted-foreground/80">
+            Private Dinner Orchestration · Paris
+          </span>
         </h1>
         <p className="mx-auto mt-8 max-w-xs text-sm leading-loose text-muted-foreground">
-          This house is entered by key only. Please enter the key received to continue.
+          MAKIL orchestrates private dinners. One name, one point of contact, one line of responsibility. By introduction only.
         </p>
 
         <form onSubmit={submitKey} className="mt-12 space-y-6">
