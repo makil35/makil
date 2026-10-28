@@ -118,7 +118,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
           </span>
         </h1>
         <p className="mx-auto mt-8 max-w-xs text-sm leading-loose text-muted-foreground">
-          MAKIL orchestrates private dinners. One name. One line of responsibility. By introduction only.
+          MAKIL orchestrates private dinners. One name. One point of contact. By introduction only.
         </p>
 
         <form onSubmit={submitKey} className="mt-12 space-y-6">
