@@ -102,7 +102,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
         </p>
         <h1 className="mt-6 font-display font-light leading-none">
           <span className="block text-6xl sm:text-7xl">M</span>
-          <span className="mt-7 block text-[0.55rem] uppercase tracking-[0.65em] text-muted-foreground">
+          <span className="mt-7 block font-display text-[0.6rem] uppercase tracking-[0.7em] text-muted-foreground">
             Makil
           </span>
         </h1>
