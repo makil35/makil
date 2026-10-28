@@ -79,7 +79,7 @@ const Index = () => {
         <p className="mt-4 text-[0.7rem] sm:text-xs tracking-[0.35em] uppercase text-ink-muted">Private Dinner Orchestration · Paris</p>
 
         <section className="mt-28 sm:mt-40 max-w-xl space-y-8 text-lg sm:text-xl leading-relaxed text-ink-soft">
-          <p>MAKIL orchestrates private dinners. One name. One line of responsibility. By introduction only.</p>
+          <p>MAKIL orchestrates private dinners. One name. One point of contact. By introduction only.</p>
           <p>Dinners are orchestrated in Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York.</p>
           <p className="italic">By introduction only.</p>
         </section>
