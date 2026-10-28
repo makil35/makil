@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { trackEvent } from "@/lib/analytics";
 
@@ -22,15 +22,6 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
   const [key, setKey] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
-  const [mode, setMode] = useState<"key" | "request">("key");
-
-  // Request form
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [company, setCompany] = useState("");
-  const [requestSent, setRequestSent] = useState(false);
-  const startedAt = useMemo(() => Date.now(), []);
 
   useEffect(() => {
     let active = true;
@@ -92,28 +83,6 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
     setStatus("granted");
   };
 
-  const submitRequest = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    setSubmitting(true);
-    const { data, error: err } = await supabase.functions.invoke("access-gate", {
-      body: {
-        action: "request",
-        name,
-        email,
-        message,
-        company,
-        elapsedMs: Date.now() - startedAt,
-      },
-    });
-    setSubmitting(false);
-    if (err || !data?.success) {
-      setError("The request could not be sent. Please write to richard@makil.fr.");
-      return;
-    }
-    setRequestSent(true);
-  };
-
   // The private client area has its own authentication (single-use email link),
   // so it must not sit behind the house key.
   const onPrivateArea =
@@ -138,133 +107,42 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
           This house is entered by key only. Please enter the key received to continue.
         </p>
 
-        {mode === "key" ? (
-          <form onSubmit={submitKey} className="mt-12 space-y-6">
-            <div>
-              <label
-                htmlFor="access-key"
-                className="block text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground"
-              >
-                Access key
-              </label>
-              <input
-                id="access-key"
-                type="password"
-                autoComplete="off"
-                value={key}
-                onChange={(e) => setKey(e.target.value)}
-                className="mt-3 w-full border-b border-border bg-transparent py-3 text-center text-sm tracking-[0.35em] outline-none transition-colors focus:border-foreground"
-                required
-              />
-            </div>
-            {error && <p className="text-xs tracking-wide text-muted-foreground">{error}</p>}
-            <button
-              type="submit"
-              disabled={submitting}
-              className="w-full border border-foreground py-4 text-[0.65rem] uppercase tracking-[0.4em] transition-colors hover:bg-foreground hover:text-background disabled:opacity-40"
+        <form onSubmit={submitKey} className="mt-12 space-y-6">
+          <div>
+            <label
+              htmlFor="access-key"
+              className="block text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground"
             >
-              {submitting ? "Verifying" : "Enter"}
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                setMode("request");
-                setError(null);
-                trackEvent("key_requested");
-              }}
-              className="w-full text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Request a key
-            </button>
-          </form>
-        ) : requestSent ? (
-          <div className="mt-12 space-y-6">
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              The request has been received. If it is a fit, a reply will follow personally.
-            </p>
-            <button
-              type="button"
-              onClick={() => {
-                setMode("key");
-                setRequestSent(false);
-              }}
-              className="text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Back
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={submitRequest} className="mt-12 space-y-6">
+              Access key
+            </label>
             <input
-              type="text"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              tabIndex={-1}
+              id="access-key"
+              type="password"
               autoComplete="off"
-              aria-hidden="true"
-              className="hidden"
+              value={key}
+              onChange={(e) => setKey(e.target.value)}
+              className="mt-3 w-full border-b border-border bg-transparent py-3 text-center text-sm tracking-[0.35em] outline-none transition-colors focus:border-foreground"
+              required
             />
-            {[
-              { id: "req-name", label: "Name", value: name, set: setName, type: "text" },
-              { id: "req-email", label: "Email", value: email, set: setEmail, type: "email" },
-            ].map((f) => (
-              <div key={f.id}>
-                <label
-                  htmlFor={f.id}
-                  className="block text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground"
-                >
-                  {f.label}
-                </label>
-                <input
-                  id={f.id}
-                  type={f.type}
-                  value={f.value}
-                  onChange={(e) => f.set(e.target.value)}
-                  className="mt-3 w-full border-b border-border bg-transparent py-3 text-center text-sm outline-none transition-colors focus:border-foreground"
-                  required
-                />
-              </div>
-            ))}
-            <div>
-              <label
-                htmlFor="req-message"
-                className="block text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground"
-              >
-                Introduction
-              </label>
-              <textarea
-                id="req-message"
-                rows={4}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="mt-3 w-full resize-none border-b border-border bg-transparent py-3 text-sm outline-none transition-colors focus:border-foreground"
-              />
-            </div>
-            {error && <p className="text-xs tracking-wide text-muted-foreground">{error}</p>}
-            <button
-              type="submit"
-              disabled={submitting}
-              className="w-full border border-foreground py-4 text-[0.65rem] uppercase tracking-[0.4em] transition-colors hover:bg-foreground hover:text-background disabled:opacity-40"
-            >
-              {submitting ? "Sending" : "Send request"}
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                setMode("key");
-                setError(null);
-              }}
-              className="w-full text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground transition-colors hover:text-foreground"
-            >
-              I have a key
-            </button>
-          </form>
-        )}
+          </div>
+          {error && <p className="text-xs tracking-wide text-muted-foreground">{error}</p>}
+          <button
+            type="submit"
+            disabled={submitting}
+            className="w-full border border-foreground py-4 text-[0.65rem] uppercase tracking-[0.4em] transition-colors hover:bg-foreground hover:text-background disabled:opacity-40"
+          >
+            {submitting ? "Verifying" : "Enter"}
+          </button>
+        </form>
 
         <p className="mt-16 text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground">
           By invitation only
         </p>
       </div>
+
+      <p className="absolute bottom-8 left-0 right-0 px-6 text-center font-display text-[0.7rem] font-light italic tracking-wide text-muted-foreground/80">
+        Access is granted by introduction only.
+      </p>
     </main>
   );
 };
