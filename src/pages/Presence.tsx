@@ -22,8 +22,8 @@ const Presence = () => {
     path: "/presence",
     breadcrumbs: [{ name: "Presence", path: "/presence" }],
     title: `Presence · ${presenceCityLine} · MAKIL`,
-    description: `Makil-Herrero Richard, private adviser, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
-    keywords: `presence, private adviser cities, international private advisory, Makil-Herrero Richard, MAKIL, ${presenceKeywords}`,
+    description: `Makil-Herrero Richard, private dinner orchestrator, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
+    keywords: `presence, private dinner orchestration cities, international private dinners, Makil-Herrero Richard, MAKIL, ${presenceKeywords}`,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
@@ -33,13 +33,13 @@ const Presence = () => {
       isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
       about: {
         "@type": "ProfessionalService",
-        name: "MAKIL · Private advisory",
+        name: "MAKIL · Private dinner orchestration",
         url: SITE_URL,
         areaServed: presenceAreaServed(),
       },
       hasPart: PRESENCE_CITIES.map((city) => ({
         "@type": "WebPage",
-        name: `Private adviser in ${city.name}`,
+        name: `Private dinner orchestration in ${city.name}`,
         url: `${SITE_URL}/presence/${citySlug(city.name)}`,
       })),
     },
@@ -60,7 +60,7 @@ const Presence = () => {
             {`${PRESENCE_CITIES.length} cities, `}<em className="italic">one house</em>
           </h1>
           <p className="font-body text-sm leading-loose text-foreground/70 max-w-xl">
-            {`Matters are carried in ${presenceCitySentence}. Each city imposes its own manner: a name that opens a door in one place would close it in another. What follows is how the house reads each of them.`}
+            {`Dinners are orchestrated in ${presenceCitySentence}. Each city imposes its own manner: a name that opens a door in one place would close it in another. What follows is how the house reads each of them.`}
           </p>
 
           <ul className="mt-20 space-y-14">

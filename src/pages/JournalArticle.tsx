@@ -9,6 +9,12 @@ import NextStep from "@/components/NextStep";
 
 const SITE_URL = "https://makil.fr";
 
+/** Slugs used before the house was repositioned; kept so old links still resolve. */
+const LEGACY_SLUGS: Record<string, string> = {
+  "what-a-private-adviser-actually-does": "what-a-private-dinner-orchestrator-does",
+  "choosing-a-private-adviser": "choosing-a-private-house",
+};
+
 const JournalArticle = () => {
   const { slug } = useParams();
   const article = getArticle(slug);
@@ -51,7 +57,7 @@ const JournalArticle = () => {
             "@type": "Person",
             "@id": `${SITE_URL}/#person`,
             name: "Makil-Herrero Richard",
-            jobTitle: "Private Adviser · Personal Branding",
+            jobTitle: "Private Dinner Orchestrator",
             url: SITE_URL,
           },
           publisher: {
@@ -66,7 +72,10 @@ const JournalArticle = () => {
       : undefined,
   });
 
-  if (!article) return <Navigate to="/journal" replace />;
+  if (!article) {
+    const legacy = slug ? LEGACY_SLUGS[slug] : undefined;
+    return <Navigate to={legacy ? `/journal/${legacy}` : "/journal"} replace />;
+  }
 
   const others = journalArticles.filter((a) => a.slug !== article.slug).slice(0, 3);
 

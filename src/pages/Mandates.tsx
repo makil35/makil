@@ -30,21 +30,21 @@ const Mandates = () => {
   useSeo({
     path: "/mandates",
     breadcrumbs: [{ name: "Mandates", path: "/mandates" }],
-    title: "Private Mandates · Makil-Herrero Richard · Private Adviser",
+    title: "Private Mandates · Makil-Herrero Richard · Private Dinner Orchestration",
     description:
-      "Private mandates carried personally by Makil-Herrero Richard, private adviser in Paris: access, private orchestration and discreet execution for a select circle. By introduction only.",
+      "Private mandates carried personally by Makil-Herrero Richard from Paris: dinners that cannot be replicated, access and discreet execution for a select circle. By introduction only.",
     keywords:
-      `private mandate, private orchestration, discreet execution, confidential advisory, access and introductions, Makil-Herrero Richard, MAKIL, ${presenceKeywords}`,
+      `private mandate, private dinner orchestration, non-replicable private dinner, discreet execution, access and introductions, Makil-Herrero Richard, MAKIL, ${presenceKeywords}`,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
       name: "Private mandates",
-      serviceType: "Private advisory and private orchestration",
+      serviceType: "Private dinner orchestration and discreet execution",
       provider: {
         "@type": "Person",
         "@id": `${SITE_URL}/#person`,
         name: "Makil-Herrero Richard",
-        jobTitle: "Private Adviser",
+        jobTitle: "Private Dinner Orchestrator",
         url: SITE_URL,
       },
       areaServed: presenceAreaServed(),

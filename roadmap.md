@@ -16,7 +16,7 @@
 
 
 ## Journal cadence (one note per month)
-- [ ] October 2026 — "What is declined, and why" (slug: `what-is-declined-and-why`): the refusal as method; keywords: private adviser selection, declined mandates, discretion.
+- [ ] October 2026 — "What is declined, and why" (slug: `what-is-declined-and-why`): the refusal as method; keywords: private house selection, declined mandates, discretion.
 - [ ] November 2026 — "A name is an infrastructure" (slug: `a-name-is-an-infrastructure`): reputation as structure rather than image.
 - [x] December 2026 — "Presence without publication" (slug: `presence-without-publication`): visibility for private clients, with Rome as the central reference for discreet presence.
 - Publishing routine: add the entry to `src/content/journal.ts` with metaTitle/metaDescription/keywords, add the URL with `lastmod` to `public/sitemap.xml`, then resubmit the sitemap in Search Console.

@@ -43,30 +43,30 @@ const escape = (s: string) =>
 const pages: Page[] = [
   {
     path: "/",
-    title: "Makil-Herrero Richard · Private Adviser · Paris",
+    title: "Makil-Herrero Richard · Private Dinner Orchestration · Paris",
     description:
-      `Makil-Herrero Richard, private adviser in Paris. Reading, judgement and quiet orchestration for a select circle across ${presenceCitySentence}. By introduction only.`,
-    heading: "Makil-Herrero Richard, private adviser",
+      `Makil-Herrero Richard orchestrates non-replicable private dinners from Paris, for a select circle across ${presenceCitySentence}. By introduction only.`,
+    heading: "Makil-Herrero Richard, private dinner orchestrator",
     paragraphs: [
       "MAKIL is a private house: one name, one point of contact, one line of responsibility.",
-      `Matters are carried in ${presenceCitySentence}.`,
+      `Dinners are orchestrated in ${presenceCitySentence}.`,
       "By introduction only. Introductions, never solicitation.",
     ],
   },
   {
     path: "/presence",
     title: `Presence · ${presenceCityLine} · MAKIL`,
-    description: `Makil-Herrero Richard, private adviser, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
+    description: `Makil-Herrero Richard, private dinner orchestrator, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
     heading: `${PRESENCE_CITIES.length} cities, one house`,
     paragraphs: [
-      `Matters are carried in ${presenceCitySentence}. Each city imposes its own manner.`,
+      `Dinners are orchestrated in ${presenceCitySentence}. Each city imposes its own manner.`,
     ],
   },
   {
     path: "/mandates",
     title: "Mandates · Situations, not services · MAKIL",
     description:
-      "Mandates are accepted by introduction only, limited in number, and never delegated. Makil-Herrero Richard, private adviser, Paris.",
+      "Mandates are accepted by introduction only, limited in number, and never delegated. Makil-Herrero Richard, private dinner orchestrator, Paris.",
     heading: "Situations, not services",
     paragraphs: [
       "Mandates are limited in number, accepted by introduction only, and never delegated.",
@@ -75,27 +75,27 @@ const pages: Page[] = [
   },
   {
     path: "/journal",
-    title: "Journal · Notes on private advisory · MAKIL",
+    title: "Journal · Notes on orchestration and discretion · MAKIL",
     description:
-      "Notes on private advisory, discretion and judgement, written personally by Makil-Herrero Richard, private adviser in Paris.",
+      "Notes on private dinner orchestration, discretion and judgement, written personally by Makil-Herrero Richard, Paris.",
     heading: "Journal",
     paragraphs: [
-      "Notes on private advisory, discretion and judgement. One note at a time.",
+      "Notes on orchestration, discretion and judgement. One note at a time.",
     ],
   },
   {
     path: "/journal/archive",
     title: "Journal archive · MAKIL",
     description:
-      "The complete archive of notes written by Makil-Herrero Richard, private adviser in Paris.",
+      "The complete archive of notes written by Makil-Herrero Richard, Paris.",
     heading: "Journal archive",
     paragraphs: ["Every note of the house, in order."],
   },
   {
     path: "/contact",
-    title: "Contact · Makil-Herrero Richard · Private Adviser",
+    title: "Contact · Makil-Herrero Richard · Private Dinner Orchestrator",
     description:
-      "A direct and confidential exchange with Makil-Herrero Richard, private adviser in Paris. Enquiries are read personally. By introduction only.",
+      "A direct and confidential exchange with Makil-Herrero Richard, private dinner orchestrator in Paris. Enquiries are read personally. By introduction only.",
     heading: "A direct exchange",
     paragraphs: [
       "Enquiries are read personally and answered personally. richard@makil.fr",
@@ -153,7 +153,7 @@ const internalLinks = [
   { path: "/contact", label: "Contact" },
   ...PRESENCE_CITIES.map((c) => ({
     path: `/presence/${citySlug(c.name)}`,
-    label: `Private adviser in ${c.name}`,
+    label: `Private dinner orchestration in ${c.name}`,
   })),
 ];
 

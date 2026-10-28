@@ -30,15 +30,15 @@ const JournalArchive = () => {
     ],
     title: "Journal Archive · Monthly Notes · MAKIL",
     description:
-      "The complete archive of monthly notes by Makil-Herrero Richard, private adviser in Paris: private advisory, personal branding, discretion and private orchestration.",
+      "The complete archive of monthly notes by Makil-Herrero Richard, Paris: private dinner orchestration, discretion and judgement.",
     keywords:
-      "journal archive, private adviser notes, monthly notes, personal branding archive, MAKIL, Makil-Herrero Richard, Paris",
+      "journal archive, monthly notes, private dinner orchestration, MAKIL, Makil-Herrero Richard, Paris",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       name: "MAKIL Journal Archive",
       description:
-        "Complete archive of the monthly notes published by Makil-Herrero Richard, private adviser.",
+        "Complete archive of the monthly notes published by Makil-Herrero Richard, Paris.",
       url: `${SITE_URL}/journal/archive`,
       inLanguage: "en-GB",
       isPartOf: { "@type": "Blog", name: "MAKIL Journal", url: `${SITE_URL}/journal` },

@@ -1,26 +1,26 @@
 # MAKIL
 
-> MAKIL is a private house led by Makil-Herrero Richard, Private Adviser based in Paris: one name, one point of contact, one line of responsibility. By introduction only.
+> MAKIL is a private house led by Makil-Herrero Richard, orchestrator of private dinners that cannot be replicated, based in Paris: one name, one point of contact, one line of responsibility. By introduction only.
 
-Makil-Herrero Richard is a private adviser. Matters are carried in Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York. The house works only by introduction, never by solicitation, and does not publish prices.
+Makil-Herrero Richard orchestrates private dinners that cannot be reproduced: one room, one table, one evening, and a sequence that disappears with the guests. The house is present in Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York. It works only by introduction, never by solicitation, and does not publish prices.
 
 ## Pages
 
-- [Home](https://makil.fr/): MAKIL and Makil-Herrero Richard, Private Adviser.
+- [Home](https://makil.fr/): MAKIL and Makil-Herrero Richard, private dinner orchestration.
 - [Mandates](https://makil.fr/mandates): How mandates are carried by a single name.
-- [Presence](https://makil.fr/presence): The eight cities where matters are carried.
+- [Presence](https://makil.fr/presence): The eight cities where dinners are orchestrated.
 - [Journal](https://makil.fr/journal): Notes by Makil-Herrero Richard.
 
 ## Presence
 
-- [Paris](https://makil.fr/presence/paris): Private adviser in Paris.
-- [Monaco](https://makil.fr/presence/monaco): Private adviser in Monaco.
-- [London](https://makil.fr/presence/london): Private adviser in London.
-- [Geneva](https://makil.fr/presence/geneva): Private adviser in Geneva.
-- [Dubai](https://makil.fr/presence/dubai): Private adviser in Dubai.
-- [Rome](https://makil.fr/presence/rome): Private adviser in Rome.
-- [Luxembourg](https://makil.fr/presence/luxembourg): Private adviser in Luxembourg.
-- [New York](https://makil.fr/presence/new-york): Private adviser in New York.
+- [Paris](https://makil.fr/presence/paris): Private dinner orchestration in Paris.
+- [Monaco](https://makil.fr/presence/monaco): Private dinner orchestration in Monaco.
+- [London](https://makil.fr/presence/london): Private dinner orchestration in London.
+- [Geneva](https://makil.fr/presence/geneva): Private dinner orchestration in Geneva.
+- [Dubai](https://makil.fr/presence/dubai): Private dinner orchestration in Dubai.
+- [Rome](https://makil.fr/presence/rome): Private dinner orchestration in Rome.
+- [Luxembourg](https://makil.fr/presence/luxembourg): Private dinner orchestration in Luxembourg.
+- [New York](https://makil.fr/presence/new-york): Private dinner orchestration in New York.
 
 ## Optional
 

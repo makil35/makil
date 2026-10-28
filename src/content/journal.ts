@@ -19,23 +19,23 @@ export interface JournalArticle {
 
 export const journalArticles: JournalArticle[] = [
   {
-    slug: "what-a-private-adviser-actually-does",
-    title: "What a private adviser actually does",
-    kicker: "Private advisory",
+    slug: "what-a-private-dinner-orchestrator-does",
+    title: "What a private dinner orchestrator actually does",
+    kicker: "Private orchestration",
     excerpt:
-      "A private adviser is not a concierge and not an agency. It is one point of contact, one judgement, and a very short list of people.",
-    metaTitle: "What a Private Adviser Actually Does · MAKIL · Paris",
+      "A private dinner orchestrator is not a caterer and not an agency. It is one point of contact, one judgement, and an evening that cannot be repeated.",
+    metaTitle: "What a Private Dinner Orchestrator Actually Does · MAKIL · Paris",
     metaDescription:
-      "A private adviser explained: one point of contact, direct judgement and decisions made close to the client. By Makil-Herrero Richard, Paris.",
+      "What a private dinner orchestrator does: one point of contact, direct judgement and an evening that cannot be repeated. By Makil-Herrero Richard, Paris.",
     keywords:
-      "private adviser, private advisory, personal adviser Paris, discreet advisory, Makil-Herrero Richard",
+      "private dinner orchestrator, private dinner orchestration, private dinner Paris, discreet orchestration, Makil-Herrero Richard",
     date: "2026-08-12",
     readingTime: "4 min",
     blocks: [
       {
         paragraphs: [
-          "The title is used loosely. It is worth being exact about it, because the difference between a private adviser and everything adjacent to the term is not a matter of vocabulary, it is a matter of exposure.",
-          "A private adviser is the person a family, a founder or a public figure calls before a decision is made public. Not after.",
+          "The title is used loosely. It is worth being exact about it, because the difference between a private dinner orchestrator and everything adjacent to the term is not a matter of vocabulary, it is a matter of exposure.",
+          "A private dinner orchestrator is the person a family, a founder or a public figure calls before an evening that cannot be repeated. Not after.",
         ],
       },
       {
@@ -67,9 +67,9 @@ export const journalArticles: JournalArticle[] = [
     kicker: "Personal branding",
     excerpt:
       "Visibility is easy to buy and difficult to repair. For a private clientele, personal branding is an exercise in subtraction.",
-    metaTitle: "Personal Branding Without Noise · MAKIL · Private Adviser Paris",
+    metaTitle: "Personal Branding Without Noise · MAKIL · Paris",
     metaDescription:
-      "Personal branding for private clients: restraint, consistency and a controlled public surface. Approach of Makil-Herrero Richard, private adviser in Paris.",
+      "Personal branding for private clients: restraint, consistency and a controlled public surface. Approach of Makil-Herrero Richard, Paris.",
     keywords:
       "personal branding, private personal branding, discreet personal branding, executive image, founder branding, personal branding Paris, Makil-Herrero Richard",
     date: "2026-08-19",
@@ -110,11 +110,11 @@ export const journalArticles: JournalArticle[] = [
     kicker: "The house",
     excerpt:
       "Confidentiality is not a clause added at the end of a conversation. It is the way the conversation is organised from the first minute.",
-    metaTitle: "Discretion as a Standard · Confidential Advisory · MAKIL",
+    metaTitle: "Discretion as a Standard · Makil Private · MAKIL",
     metaDescription:
-      "How confidentiality is organised in a private advisory house: direct contact, minimal traces and no intermediaries. Makil-Herrero Richard, Paris.",
+      "How confidentiality is organised in a private orchestration house: direct contact, minimal traces and no intermediaries. Makil-Herrero Richard, Paris.",
     keywords:
-      "discretion, confidentiality, confidential advisory, private clientele, private adviser Paris",
+      "discretion, confidentiality, private clientele, private dinner orchestration Paris",
     date: "2026-08-26",
     readingTime: "3 min",
     blocks: [
@@ -144,16 +144,16 @@ export const journalArticles: JournalArticle[] = [
     ],
   },
   {
-    slug: "choosing-a-private-adviser",
-    title: "Choosing a private adviser: five honest questions",
+    slug: "choosing-a-private-house",
+    title: "Choosing a private house: five honest questions",
     kicker: "Guide",
     excerpt:
-      "Before entrusting a name to anyone, five questions separate a practice from a pitch.",
-    metaTitle: "How to Choose a Private Adviser · Five Questions · MAKIL",
+      "Before entrusting a name to anyone, five questions separate a house from a pitch.",
+    metaTitle: "How to Choose a Private House · Five Questions · MAKIL",
     metaDescription:
-      "Five questions to ask before choosing a private adviser: who answers, how many clients, what is written down, what is declined, and what stays private.",
+      "Five questions to ask before choosing a private house: who answers, how many clients, what is written down, what is declined, and what stays private.",
     keywords:
-      "choosing a private adviser, hire private adviser, private advisory Paris, personal branding adviser",
+      "choosing a private house, private house Paris, private dinner orchestration, Makil-Herrero Richard",
     date: "2026-09-02",
     readingTime: "4 min",
     blocks: [
@@ -183,7 +183,7 @@ export const journalArticles: JournalArticle[] = [
       {
         heading: "4. What would be declined?",
         paragraphs: [
-          "An adviser who declines nothing is an executor. The value is in the refusal as much as in the delivery.",
+          "A house that declines nothing is an executor. The value is in the refusal as much as in the delivery.",
         ],
       },
       {
@@ -204,7 +204,7 @@ export const journalArticles: JournalArticle[] = [
     metaDescription:
       "Makil Private orchestrates non-reproducible private dinners: closed guest lists, single-point orchestration, discretion and execution. Makil-Herrero Richard, Paris.",
     keywords:
-      "Makil Private, private dinner orchestrator, private dinner Paris, non-reproducible dinner, exclusive private dinner, ultra luxury dinner, private table, private adviser, Makil-Herrero Richard",
+      "Makil Private, private dinner orchestrator, private dinner Paris, non-reproducible dinner, exclusive private dinner, ultra luxury dinner, private table, Makil-Herrero Richard",
     date: "2026-09-03",
     readingTime: "5 min",
     blocks: [
@@ -259,9 +259,9 @@ export const journalArticles: JournalArticle[] = [
       "Growth is the usual measure of success. In a private house it is the first thing that has to be refused.",
     metaTitle: "Why a Private House Does Not Scale · MAKIL · Paris",
     metaDescription:
-      "Why a private adviser keeps a limited number of mandates: attention, discretion and single-point responsibility cannot be duplicated. Makil-Herrero Richard, Paris.",
+      "Why a private house keeps a limited number of mandates: attention, discretion and single-point responsibility cannot be duplicated. Makil-Herrero Richard, Paris.",
     keywords:
-      "private adviser, private house, limited mandates, discretion, private advisory Paris, Makil-Herrero Richard, MAKIL",
+      "private house, limited mandates, discretion, private dinner orchestration Paris, Makil-Herrero Richard, MAKIL",
     date: "2026-09-03",
     readingTime: "4 min",
     blocks: [
@@ -300,11 +300,11 @@ export const journalArticles: JournalArticle[] = [
     kicker: "The house",
     excerpt:
       "Before anything is undertaken, there is a conversation. It decides more than any document that follows.",
-    metaTitle: "The First Conversation · Private Adviser · MAKIL · Paris",
+    metaTitle: "The First Conversation · Makil Private · MAKIL · Paris",
     metaDescription:
-      "What happens in a first conversation with a private adviser: reading the situation, defining what is not to be done, and deciding whether the house is the right one. Makil-Herrero Richard, Paris.",
+      "What happens in a first conversation with the house: reading the situation, defining what is not to be done, and deciding whether the house is the right one. Makil-Herrero Richard, Paris.",
     keywords:
-      "private adviser first meeting, private advisory Paris, confidential conversation, discreet adviser, Makil-Herrero Richard, MAKIL",
+      "first conversation, private dinner orchestration Paris, confidential conversation, Makil-Herrero Richard, MAKIL",
     date: "2026-09-03",
     readingTime: "4 min",
     blocks: [
@@ -351,9 +351,9 @@ export const journalArticles: JournalArticle[] = [
       "Visibility is easy to obtain and expensive to carry. A name that appears everywhere is read as available; a name that appears rarely is read as chosen.",
     metaTitle: "The Cost of Being Everywhere · MAKIL · Paris",
     metaDescription:
-      "Why constant visibility weakens a name, and how restraint protects authority. Notes by Makil-Herrero Richard, private adviser in Paris.",
+      "Why constant visibility weakens a name, and how restraint protects authority. Notes by Makil-Herrero Richard, Paris.",
     keywords:
-      "personal branding restraint, discreet visibility, reputation management, private adviser Paris, Makil-Herrero Richard",
+      "personal branding restraint, discreet visibility, reputation management, Makil Private, Makil-Herrero Richard",
     date: "2026-09-04",
     readingTime: "4 min",
     blocks: [
@@ -392,11 +392,11 @@ export const journalArticles: JournalArticle[] = [
     kicker: "Presence",
     excerpt:
       "A private name can be present in Rome, in London, in Paris, without ever announcing itself. The right people know. That is enough.",
-    metaTitle: "Presence Without Publication · MAKIL · Private Adviser Paris",
+    metaTitle: "Presence Without Publication · MAKIL · Paris",
     metaDescription:
       "Why presence for a private clientele is not measured in posts or appearances, but in the right rooms, with the right people, and no trace left behind. Makil-Herrero Richard, Paris.",
     keywords:
-      "private presence, discreet visibility, reputation without publicity, private adviser Paris, Makil-Herrero Richard, MAKIL",
+      "private presence, discreet visibility, reputation without publicity, private dinner Rome, Makil-Herrero Richard, MAKIL",
     date: "2026-09-05",
     readingTime: "4 min",
     blocks: [
@@ -410,7 +410,7 @@ export const journalArticles: JournalArticle[] = [
         heading: "Rome as a state of mind",
         paragraphs: [
           "Rome understands this. The city has always known how to hold power without explaining it. Palaces with unmarked doors. Families whose names mean something in one room and nothing in the next. A long training in appearing only where one is meant to appear.",
-          "For a private adviser, Rome is not a destination. It is a reference: presence without announcement, influence without advertisement.",
+          "For the house, Rome is not a destination. It is a reference: presence without announcement, influence without advertisement.",
         ],
       },
       {

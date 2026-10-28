@@ -22,16 +22,16 @@ const PresenceCity = () => {
       { name: "Presence", path: "/presence" },
       { name: city?.name ?? "Presence", path },
     ],
-    title: copy?.seoTitle ?? (city ? `Private Adviser in ${city.name} · MAKIL` : "Presence · MAKIL"),
+    title: copy?.seoTitle ?? (city ? `Private Dinner Orchestration in ${city.name} · MAKIL` : "Presence · MAKIL"),
     description:
       copy?.seoDescription ??
       (city
-        ? `Makil-Herrero Richard, private adviser present in ${city.name}, ${city.countryName}: access, private orchestration and discreet execution. By introduction only.`
+        ? `Makil-Herrero Richard, private dinner orchestrator present in ${city.name}, ${city.countryName}: dinners that cannot be replicated, access and discreet execution. By introduction only.`
         : "Presence of the house."),
     keywords: city
       ? [
           ...(copy?.keywords ?? []),
-          `private adviser ${city.countryName}`,
+          `private dinner orchestration ${city.countryName}`,
           "Makil-Herrero Richard",
           "MAKIL",
         ].join(", ")
@@ -41,7 +41,7 @@ const PresenceCity = () => {
       ? {
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          name: `MAKIL · Private adviser in ${city.name}`,
+          name: `MAKIL · Private dinner orchestration in ${city.name}`,
           url: `${SITE_URL}${path}`,
           inLanguage: "en-GB",
           priceRange: "By arrangement",
@@ -49,7 +49,7 @@ const PresenceCity = () => {
             "@type": "Person",
             "@id": `${SITE_URL}/#person`,
             name: "Makil-Herrero Richard",
-            jobTitle: "Private Adviser",
+            jobTitle: "Private Dinner Orchestrator",
           },
           email: "richard@makil.fr",
           areaServed: {
@@ -67,11 +67,11 @@ const PresenceCity = () => {
               identifier: city.countryCode,
             },
           },
-          serviceType: "Private advisory, private orchestration, discreet execution",
+          serviceType: "Private dinner orchestration, private orchestration, discreet execution",
           knowsAbout: copy?.keywords,
           description:
             copy?.seoDescription ??
-            `Private advisory carried personally in ${city.name}, ${city.countryName}. By introduction only.`,
+            `Private dinner orchestration carried personally in ${city.name}, ${city.countryName}. By introduction only.`,
         }
       : undefined,
   });

@@ -13,17 +13,17 @@ const Journal = () => {
   useSeo({
     path: "/journal",
     breadcrumbs: [{ name: "Journal", path: "/journal" }],
-    title: "Journal · Private Adviser · MAKIL",
+    title: "Journal · Makil Private · MAKIL",
     description:
-      "Notes on private advisory and personal branding by Makil-Herrero Richard, private adviser in Paris. Discretion, restraint and the house behind a name.",
+      "Notes on orchestration, discretion and judgement by Makil-Herrero Richard, Paris. Restraint and the house behind a name.",
     keywords:
-      "private adviser journal, personal branding notes, discretion, reputation management, Makil-Herrero Richard, MAKIL Paris",
+      "private dinner orchestration notes, discretion, reputation management, Makil-Herrero Richard, MAKIL Paris",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Blog",
       name: "MAKIL Journal",
       description:
-        "Notes on private advisory and personal branding by Makil-Herrero Richard, private adviser in Paris.",
+        "Notes on orchestration, discretion and judgement by Makil-Herrero Richard, Paris.",
       url: `${SITE_URL}/journal`,
       inLanguage: "en-GB",
       author: { "@type": "Person", "@id": `${SITE_URL}/#person`, name: "Makil-Herrero Richard" },
