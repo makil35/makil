@@ -1,7 +1,7 @@
 export default {
   // SEO
-  "seo.home.title": "Makil-Herrero Richard · Private Adviser · Paris",
-  "seo.home.description": "Makil-Herrero Richard, private adviser in Paris. The MAKIL house is defined by reading, judgement and quiet orchestration for a select circle across Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York. By introduction only.",
+  "seo.home.title": "Makil-Herrero Richard · Private Dinner Orchestration · Paris",
+  "seo.home.description": "Makil-Herrero Richard orchestrates non-replicable private dinners from Paris. The MAKIL house: one name, one table, one evening, for a select circle across Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg and New York. By introduction only.",
   "seo.legal.title": "Legal Notice · MAKIL · Makil-Herrero Richard, Private Adviser",
   "seo.legal.description": "Legal notice of makil.fr, official site of Makil-Herrero Richard, private adviser based in Paris. Publisher, hosting, intellectual property and contact.",
   "seo.privacy.title": "Privacy Policy · MAKIL · GDPR & Data Protection",

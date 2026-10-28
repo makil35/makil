@@ -1,4 +1,6 @@
-/**
+// ============= Full file contents =============
+
+1: /**
  * Cities of presence for the house.
  * Single source of truth for metadata and structured data (schema.org City).
  */
@@ -7,7 +9,7 @@ export interface PresenceCity {
   name: string;
   countryName: string;
   countryCode: string;
-  latitude: number;
+10:   latitude: number;
   longitude: number;
   wikidata: string;
 }
@@ -17,7 +19,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     name: "Paris",
     countryName: "France",
     countryCode: "FR",
-    latitude: 48.856614,
+20:     latitude: 48.856614,
     longitude: 2.352222,
     wikidata: "https://www.wikidata.org/wiki/Q90",
   },
@@ -27,7 +29,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     countryCode: "MC",
     latitude: 43.738418,
     longitude: 7.424616,
-    wikidata: "https://www.wikidata.org/wiki/Q235",
+30:     wikidata: "https://www.wikidata.org/wiki/Q235",
   },
   {
     name: "London",
@@ -37,7 +39,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     longitude: -0.127758,
     wikidata: "https://www.wikidata.org/wiki/Q84",
   },
-  {
+40:   {
     name: "Geneva",
     countryName: "Switzerland",
     countryCode: "CH",
@@ -47,7 +49,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
   },
   {
     name: "Dubai",
-    countryName: "United Arab Emirates",
+50:     countryName: "United Arab Emirates",
     countryCode: "AE",
     latitude: 25.204849,
     longitude: 55.270783,
@@ -57,7 +59,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     name: "Rome",
     countryName: "Italy",
     countryCode: "IT",
-    latitude: 41.902782,
+60:     latitude: 41.902782,
     longitude: 12.496366,
     wikidata: "https://www.wikidata.org/wiki/Q220",
   },
@@ -67,7 +69,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     countryCode: "LU",
     latitude: 49.6116,
     longitude: 6.1319,
-    wikidata: "https://www.wikidata.org/wiki/Q1842",
+70:     wikidata: "https://www.wikidata.org/wiki/Q1842",
   },
   {
     name: "New York",
@@ -77,7 +79,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     longitude: -74.006,
     wikidata: "https://www.wikidata.org/wiki/Q60",
   },
-];
+80: ];
 
 /** schema.org City objects, geo-located and tied to their country. */
 export const presenceAreaServed = () =>
@@ -87,7 +89,7 @@ export const presenceAreaServed = () =>
     sameAs: city.wikidata,
     geo: {
       "@type": "GeoCoordinates",
-      latitude: city.latitude,
+90:       latitude: city.latitude,
       longitude: city.longitude,
     },
     containedInPlace: {
@@ -97,7 +99,7 @@ export const presenceAreaServed = () =>
     },
   }));
 
-/** ISO country codes covered, for contact points. */
+100: /** ISO country codes covered, for contact points. */
 export const presenceCountryCodes = PRESENCE_CITIES.map((c) => c.countryCode);
 
 /** "Paris · Monaco · London · Geneva · Dubai · Rome · Luxembourg · New York" */
@@ -107,17 +109,17 @@ export const presenceCityLine = PRESENCE_CITIES.map((c) => c.name).join(" · ");
 export const presenceCitySentence = (() => {
   const names = PRESENCE_CITIES.map((c) => c.name);
   return `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
-})();
+110: })();
 
-/** Long-tail city keywords, e.g. "private adviser Paris". */
+/** Long-tail city keywords, e.g. "private dinner orchestration Paris". */
 export const presenceKeywords = PRESENCE_CITIES.flatMap((c) => [
-  `private adviser ${c.name}`,
-  `private advisory ${c.name}`,
+  `private dinner orchestration ${c.name}`,
+  `private dinner ${c.name}`,
 ]).join(", ");
 
 /** URL slug per city, e.g. "New York" → "new-york" → /presence/new-york. */
 export const citySlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
-
+120: 
 export interface CityEditorial {
   slug: string;
   headline: string;
@@ -127,7 +129,7 @@ export interface CityEditorial {
   /** <title> for the city page (kept under ~60 characters where possible). */
   seoTitle: string;
   /** Meta description, unique per city (~150-160 characters). */
-  seoDescription: string;
+130:   seoDescription: string;
   /** Long-tail keywords specific to the city. */
   keywords: string[];
 }
@@ -136,188 +138,179 @@ export interface CityEditorial {
 export const CITY_EDITORIAL: Record<string, CityEditorial> = {
   paris: {
     slug: "paris",
-    headline: "Private adviser in Paris",
+    headline: "Private dinner orchestration in Paris",
     standfirst:
       "The house is read from Paris. Everything else follows from there.",
     paragraphs: [
-      "Paris is where the house keeps its address and its silence. Conversations begin here, often in a room no one else knows about, and end here when the matter is closed.",
-      "What is asked for in Paris is rarely introduction alone. It is judgement: whom to see, in what order, and what should never be said in writing.",
+      "Paris is where the house keeps its address and its silence. A dinner is imagined here first: the room, the table, and the order in which the evening will unfold.",
+      "What is asked for in Paris is rarely a venue alone. It is a sequence: who arrives first, who is seated next to whom, and what should never be said in writing.",
       "Appointments are held in person, by prior arrangement, and never on a schedule that belongs to someone else.",
     ],
-    register: "Address, judgement, and the first conversation.",
-    seoTitle: "Private Adviser in Paris · Makil-Herrero Richard",
+    register: "Address, judgement, and the first table.",
+    seoTitle: "Private Dinner Orchestration in Paris · Makil-Herrero Richard",
     seoDescription:
-      "Private adviser in Paris: confidential counsel, private introductions and discreet execution, carried personally by Makil-Herrero Richard. By introduction only.",
+      "Private dinner orchestration in Paris: closed guest lists, single-point orchestration and discreet execution, carried personally by Makil-Herrero Richard. By introduction only.",
     keywords: [
-      "private adviser Paris",
-      "private advisory Paris",
-      "confidential adviser Paris",
-      "personal branding adviser Paris",
-      "discreet adviser France",
-      "private introductions Paris",
-      "high net worth adviser Paris",
+      "private dinner orchestration Paris",
+      "private dinner orchestrator Paris",
+      "exclusive private dinner Paris",
+      "ultra luxury private dinner Paris",
+      "private table Paris",
+      "confidential dinner Paris",
     ],
   },
   monaco: {
     slug: "monaco",
-    headline: "Private adviser in Monaco",
+    headline: "Private dinner orchestration in Monaco",
     standfirst:
       "A small territory in which everything is observed. Discretion there is a technical requirement.",
     paragraphs: [
-      "In Monaco, proximity is the difficulty. Everyone can be reached; almost nothing can be done unnoticed. The work consists of arranging matters so that they leave no visible edge.",
-      "Residence, private events and quiet transitions are handled with the fewest people possible, and never through intermediaries who talk.",
-      "The measure of a good mandate here is that no one is able to reconstruct it afterwards.",
+      "In Monaco, proximity is the difficulty. Everyone can be reached; almost nothing can be done unnoticed. A dinner here is arranged so that it leaves no visible edge.",
+      "Private tables, service reduced to the fewest people possible, and never through intermediaries who talk.",
+      "The measure of a good evening here is that no one is able to reconstruct it afterwards.",
     ],
-    register: "Proximity, restraint, and matters that leave no edge.",
-    seoTitle: "Private Adviser in Monaco · Makil-Herrero Richard",
+    register: "Proximity, restraint, and evenings that leave no edge.",
+    seoTitle: "Private Dinner Orchestration in Monaco · Makil-Herrero Richard",
     seoDescription:
-      "Private adviser in Monaco: residence, private events and quiet transitions arranged without visible trace by Makil-Herrero Richard. By introduction only.",
+      "Private dinner orchestration in Monaco: closed tables, quiet service and an evening that leaves no visible trace, carried by Makil-Herrero Richard. By introduction only.",
     keywords: [
-      "private adviser Monaco",
-      "private advisory Monaco",
-      "confidential adviser Monaco",
-      "discreet adviser Monte-Carlo",
-      "residence Monaco private adviser",
-      "personal branding adviser Monaco",
+      "private dinner Monaco",
+      "private dinner orchestration Monaco",
+      "exclusive private dinner Monaco",
+      "private table Monte-Carlo",
+      "ultra luxury dinner Monaco",
     ],
   },
   london: {
     slug: "london",
-    headline: "Private adviser in London",
+    headline: "Private dinner orchestration in London",
     standfirst:
-      "London rewards patience. The right name is found quickly; the right moment is not.",
+      "London rewards patience. The right table is found quickly; the right moment is not.",
     paragraphs: [
-      "London holds the densest concentration of useful people in Europe, and the strongest resistance to being approached badly. An introduction made too early is an introduction spent.",
-      "The house waits, prepares the ground, and presents a matter only when it can be received on its own terms.",
-      "Legal, cultural and private circles are approached separately, never with the same letter.",
+      "London holds the densest concentration of useful people in Europe, and the strongest resistance to being approached badly. A guest list drawn too early is a guest list spent.",
+      "The house waits, prepares the ground, and sets a table only when it can be received on its own terms.",
+      "Finance, culture and private circles are seated separately, never at the same table.",
     ],
-    register: "Timing, preparation, and introductions that hold.",
-    seoTitle: "Private Adviser in London · Makil-Herrero Richard",
+    register: "Timing, preparation, and tables that hold.",
+    seoTitle: "Private Dinner Orchestration in London · Makil-Herrero Richard",
     seoDescription:
-      "Private adviser in London: introductions prepared and timed, private circles approached separately, matters carried personally. By introduction only.",
+      "Private dinner orchestration in London: closed guest lists, careful timing and circles seated separately, carried personally by Makil-Herrero Richard. By introduction only.",
     keywords: [
-      "private adviser London",
-      "private advisory London",
-      "confidential adviser London",
-      "discreet adviser United Kingdom",
-      "private introductions London",
-      "personal branding adviser London",
+      "private dinner London",
+      "private dinner orchestration London",
+      "exclusive private dining London",
+      "private table London",
+      "ultra luxury dinner London",
     ],
   },
   geneva: {
     slug: "geneva",
-    headline: "Private adviser in Geneva",
+    headline: "Private dinner orchestration in Geneva",
     standfirst:
       "Geneva asks fewer questions and expects better answers.",
     paragraphs: [
-      "Geneva is a city of custodians. Matters brought here concern continuity: how a name, a family or an interest is carried into the next decade without noise.",
-      "The house speaks with advisers already in place rather than around them, and takes on only what it can carry to the end.",
+      "Geneva is a city of custodians. Dinners brought here concern continuity: how a name, a family or an interest is carried into the next decade without noise.",
+      "The house speaks with the houses already in place rather than around them, and takes on only what it can carry to the end.",
       "Some requests are declined here more often than anywhere else. That is a form of service.",
     ],
-    register: "Continuity, custodians, and matters carried to the end.",
-    seoTitle: "Private Adviser in Geneva · Makil-Herrero Richard",
+    register: "Continuity, custodians, and tables carried to the end.",
+    seoTitle: "Private Dinner Orchestration in Geneva · Makil-Herrero Richard",
     seoDescription:
-      "Private adviser in Geneva: continuity of a name, a family or an interest, handled with existing advisers and carried to the end. By introduction only.",
+      "Private dinner orchestration in Geneva: quiet tables, continuity of a name or a family, and an evening carried to the end by Makil-Herrero Richard. By introduction only.",
     keywords: [
-      "private adviser Geneva",
-      "private advisory Geneva",
-      "confidential adviser Geneva",
-      "discreet adviser Switzerland",
-      "family continuity adviser Geneva",
-      "personal branding adviser Geneva",
+      "private dinner Geneva",
+      "private dinner orchestration Geneva",
+      "exclusive private dinner Geneva",
+      "private table Geneva",
+      "discreet dinner Switzerland",
     ],
   },
   dubai: {
     slug: "dubai",
-    headline: "Private adviser in Dubai",
+    headline: "Private dinner orchestration in Dubai",
     standfirst:
       "Speed is available to everyone in Dubai. Discernment is not.",
     paragraphs: [
-      "Dubai answers quickly, which is precisely why a matter can go wrong quickly. The house slows the first stage deliberately: who is actually behind a proposition, and what they intend afterwards.",
-      "Introductions in the Gulf are personal before they are institutional. They are made once, by name, and cannot be repeated.",
+      "Dubai answers quickly, which is precisely why an evening can go wrong quickly. The house slows the first stage deliberately: who is actually behind a table, and what they intend afterwards.",
+      "Invitations in the Gulf are personal before they are institutional. They are made once, by name, and cannot be repeated.",
       "Presence here is regular rather than permanent, and always announced to no one.",
     ],
-    register: "Verification, personal introductions, and deliberate slowness.",
-    seoTitle: "Private Adviser in Dubai · Makil-Herrero Richard",
+    register: "Verification, personal invitations, and deliberate slowness.",
+    seoTitle: "Private Dinner Orchestration in Dubai · Makil-Herrero Richard",
     seoDescription:
-      "Private adviser in Dubai: verification before speed, personal introductions in the Gulf, discreet execution carried by one name. By introduction only.",
+      "Private dinner orchestration in Dubai: verification before speed, invitations made by name, and an evening carried by one. By introduction only.",
     keywords: [
-      "private adviser Dubai",
-      "private advisory Dubai",
-      "confidential adviser Dubai",
-      "discreet adviser United Arab Emirates",
-      "private introductions Gulf",
-      "personal branding adviser Dubai",
+      "private dinner Dubai",
+      "private dinner orchestration Dubai",
+      "exclusive private dinner Dubai",
+      "private table Dubai",
+      "ultra luxury dinner Dubai",
     ],
   },
   rome: {
     slug: "rome",
-    headline: "Private adviser in Rome",
+    headline: "Private dinner orchestration in Rome",
     standfirst:
       "Rome teaches that presence does not require publication.",
     paragraphs: [
-      "Rome is the oldest lesson the house keeps: influence that has lasted was almost never announced. Doors here open through families, not through offers.",
+      "Rome is the oldest lesson the house keeps: dinners that lasted were almost never announced. Tables here open through families, not through offers.",
       "Cultural matters, private hospitality and long acquaintances are handled at the pace the city imposes, which is slower and more durable.",
       "Nothing is signed in Rome on a first visit.",
     ],
     register: "Families, patience, and presence without publication.",
-    seoTitle: "Private Adviser in Rome · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in Rome · Makil-Herrero Richard",
     seoDescription:
-      "Private adviser in Rome: cultural matters, private hospitality and long acquaintances handled at the pace the city imposes. By introduction only.",
+      "Private dinner orchestration in Rome: tables that open through families, private hospitality and long acquaintances, carried by Makil-Herrero Richard. By introduction only.",
     keywords: [
-      "private adviser Rome",
-      "private advisory Rome",
-      "confidential adviser Rome",
-      "discreet adviser Italy",
-      "private hospitality Rome adviser",
-      "personal branding adviser Rome",
+      "private dinner Rome",
+      "private dinner orchestration Rome",
+      "exclusive private dinner Rome",
+      "private table Rome",
+      "private hospitality Rome",
     ],
   },
   luxembourg: {
     slug: "luxembourg",
-    headline: "Private adviser in Luxembourg",
+    headline: "Private dinner orchestration in Luxembourg",
     standfirst:
       "Luxembourg is small by design. A name carries further there than anywhere else.",
     paragraphs: [
       "Luxembourg is a territory of custodians. Family capital, private structures and quiet continuity are the ordinary subject of conversation, and the same names appear across them all.",
-      "In a place this concentrated, an introduction cannot be corrected afterwards. The house therefore prepares longer, and commits to fewer matters than the city would allow.",
+      "In a place this concentrated, a guest list cannot be corrected afterwards. The house therefore prepares longer, and sets fewer tables than the city would allow.",
       "Discretion here is not a preference. It is the condition under which everything else functions.",
     ],
-    register: "Concentration, continuity, and names that carry.",
-    seoTitle: "Private Adviser in Luxembourg · Makil-Herrero Richard",
+    register: "Concentration, continuity, and tables that carry.",
+    seoTitle: "Private Dinner Orchestration in Luxembourg · Makil-Herrero Richard",
     seoDescription:
-      "Private adviser in Luxembourg: family capital, private structures and quiet continuity, handled with the discretion the city demands. By introduction only.",
+      "Private dinner orchestration in Luxembourg: quiet tables, family capital and continuity, prepared longer and carried by Makil-Herrero Richard. By introduction only.",
     keywords: [
-      "private adviser Luxembourg",
-      "private advisory Luxembourg",
-      "confidential adviser Luxembourg",
-      "discreet adviser Luxembourg",
-      "family capital adviser Luxembourg",
-      "private banking circles Luxembourg",
-      "personal branding adviser Luxembourg",
+      "private dinner Luxembourg",
+      "private dinner orchestration Luxembourg",
+      "exclusive private dinner Luxembourg",
+      "private table Luxembourg",
+      "discreet dinner Luxembourg",
     ],
   },
   "new-york": {
     slug: "new-york",
-    headline: "Private adviser in New York",
+    headline: "Private dinner orchestration in New York",
     standfirst:
       "New York counts loudly. The house counts quietly.",
     paragraphs: [
-      "New York offers reach beyond any other city on the list, and rewards only those who know which doors are worth opening. Access is abundant; discernment is not.",
-      "Circles of finance, culture and private life are approached separately, never with the same introduction, and never on the strength of a name alone.",
-      "Nothing is committed on a first meeting in New York. The second is where the matter begins.",
+      "New York offers reach beyond any other city on the list, and rewards only those who know which tables are worth setting. Access is abundant; discernment is not.",
+      "Finance, culture and private life are seated separately, never at the same table, and never on the strength of a name alone.",
+      "Nothing is committed on a first meeting in New York. The second is where the evening begins.",
     ],
-    register: "Reach, discernment, and a name used sparingly.",
-    seoTitle: "Private Adviser in New York · Makil-Herrero Richard",
+    register: "Reach, discernment, and a table set sparingly.",
+    seoTitle: "Private Dinner Orchestration in New York · Makil-Herrero Richard",
     seoDescription:
-      "Private adviser in New York: access abundant and discernment rare, with finance, culture and private circles approached separately. By introduction only.",
+      "Private dinner orchestration in New York: access abundant and discernment rare, with finance, culture and private life seated separately. By introduction only.",
     keywords: [
-      "private adviser New York",
-      "private advisory New York",
-      "confidential adviser New York",
-      "discreet adviser United States",
-      "private introductions Manhattan",
-      "personal branding adviser New York",
+      "private dinner New York",
+      "private dinner orchestration New York",
+      "exclusive private dining New York",
+      "private table Manhattan",
+      "ultra luxury dinner New York",
     ],
   },
 };
