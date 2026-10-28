@@ -1,4 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
+import monogramM from "@/assets/monogram-m.png";
 import { supabase } from "@/integrations/supabase/client";
 import { trackEvent } from "@/lib/analytics";
 
@@ -100,8 +101,13 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
         <p className="text-[0.6rem] uppercase tracking-luxe text-muted-foreground">
           Private
         </p>
-        <h1 className="mt-6 font-display font-light leading-none">
-          <span className="block text-6xl sm:text-7xl">M</span>
+        <h1 className="mt-6">
+          <img
+            src={monogramM}
+            alt="M"
+            className="mx-auto h-20 w-auto sm:h-24"
+            draggable={false}
+          />
           <span className="mt-7 block font-display text-[0.6rem] uppercase tracking-[0.7em] text-muted-foreground">
             Makil
           </span>
