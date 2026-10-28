@@ -22,15 +22,6 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
   const [key, setKey] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
-  const [mode, setMode] = useState<"key" | "request">("key");
-
-  // Request form
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [company, setCompany] = useState("");
-  const [requestSent, setRequestSent] = useState(false);
-  const startedAt = useMemo(() => Date.now(), []);
 
   useEffect(() => {
     let active = true;
@@ -90,28 +81,6 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
     localStorage.setItem(STORAGE_KEY, data.token);
     trackEvent("key_granted");
     setStatus("granted");
-  };
-
-  const submitRequest = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    setSubmitting(true);
-    const { data, error: err } = await supabase.functions.invoke("access-gate", {
-      body: {
-        action: "request",
-        name,
-        email,
-        message,
-        company,
-        elapsedMs: Date.now() - startedAt,
-      },
-    });
-    setSubmitting(false);
-    if (err || !data?.success) {
-      setError("The request could not be sent. Please write to richard@makil.fr.");
-      return;
-    }
-    setRequestSent(true);
   };
 
   // The private client area has its own authentication (single-use email link),
