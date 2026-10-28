@@ -1,5 +1,5 @@
 import { useSeo } from "@/hooks/useSeo";
-import { presenceAreaServed, presenceKeywords } from "@/lib/presence";
+import { presenceAreaServed, presenceCitySentence, presenceKeywords } from "@/lib/presence";
 
 const Index = () => {
   const { t } = useLanguage();

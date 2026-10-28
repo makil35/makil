@@ -4,6 +4,10 @@
 
 @layer base {
   :root {
+    --ivory: 36 23% 96%;
+    --ink: 0 0% 4%;
+    --ink-soft: 0 0% 14%;
+    --ink-muted: 0 0% 32%;
     /* MAKIL · Ultra-luxe monochrome (no gold), light by default */
     --background: 0 0% 100%;        /* Pure white */
     --foreground: 0 0% 6%;          /* Near black */

@@ -15,9 +15,12 @@ export default {
     extend: {
       fontFamily: {
         display: ['Playfair Display', 'serif'],
+        didone: ['"Bodoni Moda"', 'Didot', 'serif'],
         body: ['Montserrat', 'sans-serif'],
       },
       colors: {
+        ivory: "hsl(var(--ivory))",
+        ink: { DEFAULT: "hsl(var(--ink))", soft: "hsl(var(--ink-soft))", muted: "hsl(var(--ink-muted))" },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
