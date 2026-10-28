@@ -111,12 +111,12 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
           <span className="mt-7 block font-display text-[0.6rem] uppercase tracking-[0.7em] text-muted-foreground">
             Makil
           </span>
-          <span className="mt-3 block font-display text-[0.55rem] uppercase tracking-[0.45em] text-muted-foreground/80">
+          <span className="mt-2 block font-display text-[0.5rem] uppercase tracking-[0.3em] text-muted-foreground/60">
             Private Dinner Orchestration · Paris
           </span>
         </h1>
         <p className="mx-auto mt-8 max-w-xs text-sm leading-loose text-muted-foreground">
-          MAKIL orchestrates private dinners. One name, one point of contact, one line of responsibility. By introduction only.
+          MAKIL orchestrates private dinners. One name. One line of responsibility. By introduction only.
         </p>
 
         <form onSubmit={submitKey} className="mt-12 space-y-6">
@@ -149,6 +149,9 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
 
         <p className="mt-16 text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground">
           By invitation only
+        </p>
+        <p className="mt-4 font-display text-[0.55rem] uppercase tracking-[0.3em] text-muted-foreground/70">
+          Makil-Herrero Richard
         </p>
       </div>
 
