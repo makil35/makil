@@ -7,7 +7,7 @@ const Index = () => {
     routeKey: "home",
     titleKey: "seo.home.title",
     descriptionKey: "seo.home.description",
-    keywords: `private adviser, private advisory, personal branding, confidential advisory, discretion, MAKIL, Makil-Herrero Richard, by introduction only, ${presenceKeywords}`,
+    keywords: `private dinner orchestration, private dinner orchestrator, non-replicable private dinner, exclusive private dinner, discretion, MAKIL, Makil-Herrero Richard, by introduction only, ${presenceKeywords}`,
     ogType: "profile",
     jsonLd: {
       "@context": "https://schema.org",
@@ -24,7 +24,7 @@ const Index = () => {
           "@type": "ProfilePage",
           "@id": "https://makil.fr/#profilepage",
           url: "https://makil.fr/",
-          name: "Makil-Herrero Richard · Private Adviser · Paris",
+          name: "Makil-Herrero Richard · Private Dinner Orchestration · Paris",
           inLanguage: "en-GB",
           isPartOf: { "@id": "https://makil.fr/#website" },
           mainEntity: { "@id": "https://makil.fr/#person" },
@@ -33,15 +33,15 @@ const Index = () => {
           "@type": "Person",
           "@id": "https://makil.fr/#person",
           name: "Makil-Herrero Richard",
-          jobTitle: "Private Adviser",
+          jobTitle: "Private Dinner Orchestrator",
           description:
-            `Private adviser in Paris, present in ${presenceCitySentence}. Reading, judgement and quiet orchestration for a select circle. By introduction only.`,
+            `Private dinner orchestrator in Paris, present in ${presenceCitySentence}. One name, one table, one evening. By introduction only.`,
           url: "https://makil.fr/",
           image: "https://makil.fr/og-image.jpg",
           email: "mailto:richard@makil.fr",
           knowsAbout: [
-            "Private advisory",
-            "Personal branding",
+            "Private dinner orchestration",
+            "Non-replicable private dinners",
             "Discretion and confidentiality",
             "Private orchestration",
           ],
@@ -60,7 +60,7 @@ const Index = () => {
           name: "MAKIL",
           url: "https://makil.fr/",
           description:
-            `A private house: access, private orchestration and discreet execution, carried by a single name, across ${presenceCitySentence}.`,
+            `A private house: private dinners that cannot be replicated, access and discreet execution, carried by a single name, across ${presenceCitySentence}.`,
           founder: { "@id": "https://makil.fr/#person" },
           areaServed: presenceAreaServed(),
           email: "mailto:richard@makil.fr",
@@ -72,11 +72,11 @@ const Index = () => {
   return (
     <div className="min-h-[100svh] flex flex-col bg-ivory text-ink font-didone antialiased">
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-24 sm:py-32 text-center">
-        <h1 className="sr-only">MAKIL · Makil-Herrero Richard, Private Adviser</h1>
+        <h1 className="sr-only">MAKIL · Makil-Herrero Richard, Private Dinner Orchestrator</h1>
         <img src={monogramM} alt="" aria-hidden="true" draggable={false} className="mx-auto h-28 w-auto sm:h-40" />
         <p className="mt-6 text-[0.7rem] sm:text-xs tracking-[0.7em] pl-[0.7em]">MAKIL</p>
         <p className="mt-16 sm:mt-20 text-2xl sm:text-3xl font-normal">Makil-Herrero Richard</p>
-        <p className="mt-4 text-[0.7rem] sm:text-xs tracking-[0.35em] uppercase text-ink-muted">Private Adviser · Paris</p>
+        <p className="mt-4 text-[0.7rem] sm:text-xs tracking-[0.35em] uppercase text-ink-muted">Private Dinner Orchestration · Paris</p>
 
         <section className="mt-28 sm:mt-40 max-w-xl space-y-8 text-lg sm:text-xl leading-relaxed text-ink-soft">
           <p>MAKIL is a private house: one name, one point of contact, one line of responsibility.</p>

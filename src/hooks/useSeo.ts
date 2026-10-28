@@ -143,7 +143,7 @@ export const useSeo = ({
         ? image
         : `${SITE_URL}${image}`
       : `${SITE_URL}/og-image.jpg`;
-    const shareAlt = imageAlt ?? "MAKIL · Makil-Herrero Richard, private adviser, Paris";
+    const shareAlt = imageAlt ?? "MAKIL · Makil-Herrero Richard, private dinner orchestrator, Paris";
 
     // Open Graph
     upsertMetaProperty("og:type", ogType ?? "website");
@@ -193,7 +193,7 @@ export const useSeo = ({
         : "index, follow, max-image-preview:large, max-snippet:-1"
     );
     upsertMetaName("author", "Makil-Herrero Richard");
-    const keywords = rawKeywords ?? "private adviser, private advisory, personal branding, personal brand strategist, confidential advisory, discreet adviser, MAKIL, Makil-Herrero Richard, private client adviser Paris, reputation and image adviser, art of living, high net worth private adviser, by introduction only, Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg, New York";
+    const keywords = rawKeywords ?? "private dinner orchestration, private dinner orchestrator, non-replicable private dinner, exclusive private dinner, ultra luxury private dinner, private table, MAKIL, Makil-Herrero Richard, art of living, by introduction only, Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg, New York";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route
@@ -214,7 +214,7 @@ export const useSeo = ({
         url: canonical,
         inLanguage: "en-GB",
         isPartOf: { "@type": "WebSite", name: "MAKIL", url: SITE_URL },
-        about: { "@type": "Thing", name: "Private advisory" },
+        about: { "@type": "Thing", name: "Private dinner orchestration" },
         primaryImageOfPage: { "@type": "ImageObject", url: shareImage },
       }
     );
