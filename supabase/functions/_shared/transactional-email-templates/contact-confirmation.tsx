@@ -34,7 +34,7 @@ const ContactConfirmationEmail = ({ name }: Props) => (
         </Text>
 
         <Text style={signature}>Makil-Herrero Richard</Text>
-        <Text style={signatureRole}>Private Adviser · MAKIL</Text>
+        <Text style={signatureRole}>Private Dinner Orchestration · MAKIL</Text>
         <Text style={signatureContact}>richard@makil.fr · makil.fr</Text>
         <Hr style={hr} />
         <Text style={footer}>MAKIL · By invitation only</Text>
