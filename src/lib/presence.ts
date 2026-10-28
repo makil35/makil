@@ -1,6 +1,4 @@
-// ============= Full file contents =============
-
-1: /**
+/**
  * Cities of presence for the house.
  * Single source of truth for metadata and structured data (schema.org City).
  */
@@ -9,7 +7,7 @@ export interface PresenceCity {
   name: string;
   countryName: string;
   countryCode: string;
-10:   latitude: number;
+  latitude: number;
   longitude: number;
   wikidata: string;
 }
@@ -19,7 +17,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     name: "Paris",
     countryName: "France",
     countryCode: "FR",
-20:     latitude: 48.856614,
+    latitude: 48.856614,
     longitude: 2.352222,
     wikidata: "https://www.wikidata.org/wiki/Q90",
   },
@@ -29,7 +27,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     countryCode: "MC",
     latitude: 43.738418,
     longitude: 7.424616,
-30:     wikidata: "https://www.wikidata.org/wiki/Q235",
+    wikidata: "https://www.wikidata.org/wiki/Q235",
   },
   {
     name: "London",
@@ -39,7 +37,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     longitude: -0.127758,
     wikidata: "https://www.wikidata.org/wiki/Q84",
   },
-40:   {
+  {
     name: "Geneva",
     countryName: "Switzerland",
     countryCode: "CH",
@@ -49,7 +47,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
   },
   {
     name: "Dubai",
-50:     countryName: "United Arab Emirates",
+    countryName: "United Arab Emirates",
     countryCode: "AE",
     latitude: 25.204849,
     longitude: 55.270783,
@@ -59,7 +57,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     name: "Rome",
     countryName: "Italy",
     countryCode: "IT",
-60:     latitude: 41.902782,
+    latitude: 41.902782,
     longitude: 12.496366,
     wikidata: "https://www.wikidata.org/wiki/Q220",
   },
@@ -69,7 +67,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     countryCode: "LU",
     latitude: 49.6116,
     longitude: 6.1319,
-70:     wikidata: "https://www.wikidata.org/wiki/Q1842",
+    wikidata: "https://www.wikidata.org/wiki/Q1842",
   },
   {
     name: "New York",
@@ -79,7 +77,7 @@ export const PRESENCE_CITIES: PresenceCity[] = [
     longitude: -74.006,
     wikidata: "https://www.wikidata.org/wiki/Q60",
   },
-80: ];
+];
 
 /** schema.org City objects, geo-located and tied to their country. */
 export const presenceAreaServed = () =>
@@ -89,7 +87,7 @@ export const presenceAreaServed = () =>
     sameAs: city.wikidata,
     geo: {
       "@type": "GeoCoordinates",
-90:       latitude: city.latitude,
+      latitude: city.latitude,
       longitude: city.longitude,
     },
     containedInPlace: {
@@ -99,7 +97,7 @@ export const presenceAreaServed = () =>
     },
   }));
 
-100: /** ISO country codes covered, for contact points. */
+/** ISO country codes covered, for contact points. */
 export const presenceCountryCodes = PRESENCE_CITIES.map((c) => c.countryCode);
 
 /** "Paris · Monaco · London · Geneva · Dubai · Rome · Luxembourg · New York" */
@@ -109,7 +107,7 @@ export const presenceCityLine = PRESENCE_CITIES.map((c) => c.name).join(" · ");
 export const presenceCitySentence = (() => {
   const names = PRESENCE_CITIES.map((c) => c.name);
   return `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
-110: })();
+})();
 
 /** Long-tail city keywords, e.g. "private dinner orchestration Paris". */
 export const presenceKeywords = PRESENCE_CITIES.flatMap((c) => [
@@ -119,7 +117,7 @@ export const presenceKeywords = PRESENCE_CITIES.flatMap((c) => [
 
 /** URL slug per city, e.g. "New York" → "new-york" → /presence/new-york. */
 export const citySlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
-120: 
+
 export interface CityEditorial {
   slug: string;
   headline: string;
@@ -129,7 +127,7 @@ export interface CityEditorial {
   /** <title> for the city page (kept under ~60 characters where possible). */
   seoTitle: string;
   /** Meta description, unique per city (~150-160 characters). */
-130:   seoDescription: string;
+  seoDescription: string;
   /** Long-tail keywords specific to the city. */
   keywords: string[];
 }
