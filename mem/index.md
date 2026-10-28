@@ -9,6 +9,8 @@
 - **Media**: Home hero must be a static portrait image for performance. NO looping video.
 - **Forbidden**: Club and conciergerie features are permanently removed. Do not re-add.
 
+- **Home (Oct 2026)**: Ivory #F7F5F2, single serif (Bodoni Moda), monogram M + MAKIL + name + 'Private Adviser · Paris', one text section, one-line footer. No buttons, forms, socials, CTA, photos on home.
+
 ## Memories
 - [Brand Philosophy & Guidelines](mem://brand/philosophy) — Ultra-luxury positioning, editorial tone, brand pillars, and products
 - [Cookie Consent](mem://compliance/gdpr-cookie-consent) — GDPR banner requirements and preferences for the home page
