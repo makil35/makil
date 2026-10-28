@@ -52,13 +52,13 @@ const Contact = () => {
     titleKey: "seo.contact.title",
     descriptionKey: "seo.contact.description",
     keywords:
-      `contact private adviser, private advisory enquiry, Makil-Herrero Richard, MAKIL contact, ${presenceKeywords}`,
+      `contact private dinner orchestration, private dinner enquiry, Makil-Herrero Richard, MAKIL contact, ${presenceKeywords}`,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "ContactPage",
       name: "Contact · MAKIL",
       description:
-        "Contact Makil-Herrero Richard, private adviser based in Paris. A direct exchange. Every message is read personally.",
+        "Contact Makil-Herrero Richard, private dinner orchestrator based in Paris. A direct exchange. Every message is read personally.",
       url: "https://makil.fr/contact",
       inLanguage: "en-GB",
       isPartOf: { "@type": "WebSite", name: "MAKIL", url: "https://makil.fr" },
@@ -66,7 +66,7 @@ const Contact = () => {
         "@type": "Person",
         "@id": "https://makil.fr/#person",
         name: "Makil-Herrero Richard",
-        jobTitle: "Private Adviser",
+        jobTitle: "Private Dinner Orchestrator",
         email: "mailto:richard@makil.fr",
         url: "https://makil.fr/",
         address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },

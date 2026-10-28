@@ -17,13 +17,13 @@ interface Entry {
 
 const staticEntries: Entry[] = [
   {
-    title: "Private adviser · The house",
+    title: "Private dinner orchestration · The house",
     to: "/#approach",
     kicker: "Practice",
     summary:
-      "One name, one point of contact. Private advisory conducted personally and by introduction only.",
+      "One name, one point of contact. Private dinners that cannot be replicated, conducted personally and by introduction only.",
     terms:
-      "private adviser advisory practice approach method paris confidential discretion reading judgement",
+      "private dinner orchestration practice approach method paris confidential discretion reading judgement",
   },
   {
     title: "Personal branding, without noise",
@@ -103,11 +103,11 @@ const Search = () => {
 
   useSeo({
     path: "/search",
-    title: "Search · MAKIL · Private Adviser",
+    title: "Search · MAKIL · Private Dinner Orchestration",
     description:
-      "Search the MAKIL house of Makil-Herrero Richard: private advisory, personal branding, journal notes and direct correspondence.",
+      "Search the MAKIL house of Makil-Herrero Richard: private dinner orchestration, journal notes and direct correspondence.",
     keywords:
-      "MAKIL search, private adviser search, Makil-Herrero Richard, personal branding Paris",
+      "MAKIL search, private dinner orchestration, Makil-Herrero Richard, Paris",
     noindex: true,
   });
 
@@ -173,7 +173,7 @@ const Search = () => {
                 maxLength={160}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Private adviser, personal branding, discretion…"
+                placeholder="Private dinner, orchestration, discretion…"
                 className="w-full bg-transparent border-b border-foreground/15 focus:border-foreground outline-none py-3 text-lg font-display text-foreground placeholder:text-muted-foreground/40 transition-colors duration-500"
               />
               <button
