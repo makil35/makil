@@ -30,15 +30,15 @@ const JournalArchive = () => {
     ],
     title: "Journal Archive · Monthly Notes · MAKIL",
     description:
-      "The complete archive of monthly notes by Makil-Herrero Richard, Paris: private dinner orchestration, discretion and judgement.",
+      "The complete archive of monthly notes by Makil-Herrero Djamel-Eddine, Paris: private dinner orchestration, discretion and judgement.",
     keywords:
-      "journal archive, monthly notes, private dinner orchestration, MAKIL, Makil-Herrero Richard, Paris",
+      "journal archive, monthly notes, private dinner orchestration, MAKIL, Makil-Herrero Djamel-Eddine, Paris",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       name: "MAKIL Journal Archive",
       description:
-        "Complete archive of the monthly notes published by Makil-Herrero Richard, Paris.",
+        "Complete archive of the monthly notes published by Makil-Herrero Djamel-Eddine, Paris.",
       url: `${SITE_URL}/journal/archive`,
       inLanguage: "en-GB",
       isPartOf: { "@type": "Blog", name: "MAKIL Journal", url: `${SITE_URL}/journal` },
@@ -103,7 +103,7 @@ const JournalArchive = () => {
           <NextStep
             links={[
               { kicker: "Journal", label: "Latest notes", to: "/journal" },
-              { kicker: "The house", label: "Profile and principles", to: "/#richard" },
+              { kicker: "The house", label: "Profile and principles", to: "/#djamel-eddine" },
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Correspondence", label: "Write", to: "/contact" },
               { kicker: "Access", label: "By introduction", to: "/#access" },

@@ -35,7 +35,7 @@ const AccessInvitationEmail = ({ name, url, validUntil, note }: Props) => (
           {validUntil ? (
             <Text style={{ ...quote, marginTop: '20px' }}>Valid until {validUntil}.</Text>
           ) : null}
-          <Text style={{ ...value, marginTop: '28px' }}>Makil-Herrero Richard</Text>
+          <Text style={{ ...value, marginTop: '28px' }}>Makil-Herrero Djamel-Eddine</Text>
         </Section>
         <Hr style={hr} />
         <Text style={footer}>makil.fr · richard@makil.fr</Text>

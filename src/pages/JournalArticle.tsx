@@ -35,7 +35,7 @@ const JournalArticle = () => {
       ? {
           publishedTime: article.date,
           modifiedTime: article.date,
-          author: "Makil-Herrero Richard",
+          author: "Makil-Herrero Djamel-Eddine",
           section: article.kicker,
           tags: article.keywords.split(",").map((k) => k.trim()).filter(Boolean),
         }
@@ -56,7 +56,7 @@ const JournalArticle = () => {
           author: {
             "@type": "Person",
             "@id": `${SITE_URL}/#person`,
-            name: "Makil-Herrero Richard",
+            name: "Makil-Herrero Djamel-Eddine",
             jobTitle: "Private Dinner Orchestrator",
             url: SITE_URL,
           },
@@ -151,7 +151,7 @@ const JournalArticle = () => {
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Presence", label: "Eight cities", to: "/presence" },
               { kicker: "Introductions", label: "Begin a conversation", to: "/contact" },
-              { kicker: "The house", label: "Profile and principles", to: "/#richard" },
+              { kicker: "The house", label: "Profile and principles", to: "/#djamel-eddine" },
             ]}
           />
         </article>

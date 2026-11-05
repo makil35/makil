@@ -14,7 +14,7 @@ interface Props {
 const ContactReplyEmail = ({ name, reply, original }: Props) => (
   <Html lang="fr" dir="ltr">
     <Head />
-    <Preview>Réponse de Makil-Herrero Richard</Preview>
+    <Preview>Réponse de Makil-Herrero Djamel-Eddine</Preview>
     <Body style={main}>
       <Container style={container}>
         <Heading style={h1}>MAKIL</Heading>
@@ -25,7 +25,7 @@ const ContactReplyEmail = ({ name, reply, original }: Props) => (
           <Text style={{ ...value, whiteSpace: 'pre-wrap' as const, marginTop: '16px' }}>
             {reply ?? ''}
           </Text>
-          <Text style={{ ...value, marginTop: '28px' }}>Makil-Herrero Richard</Text>
+          <Text style={{ ...value, marginTop: '28px' }}>Makil-Herrero Djamel-Eddine</Text>
         </Section>
         {original ? (
           <>

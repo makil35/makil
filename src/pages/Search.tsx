@@ -105,9 +105,9 @@ const Search = () => {
     path: "/search",
     title: "Search · MAKIL · Private Dinner Orchestration",
     description:
-      "Search the MAKIL house of Makil-Herrero Richard: private dinner orchestration, journal notes and direct correspondence.",
+      "Search the MAKIL house of Makil-Herrero Djamel-Eddine: private dinner orchestration, journal notes and direct correspondence.",
     keywords:
-      "MAKIL search, private dinner orchestration, Makil-Herrero Richard, Paris",
+      "MAKIL search, private dinner orchestration, Makil-Herrero Djamel-Eddine, Paris",
     noindex: true,
   });
 

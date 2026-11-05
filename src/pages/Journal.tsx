@@ -15,18 +15,18 @@ const Journal = () => {
     breadcrumbs: [{ name: "Journal", path: "/journal" }],
     title: "Journal · Makil Private · MAKIL",
     description:
-      "Notes on orchestration, discretion and judgement by Makil-Herrero Richard, Paris. Restraint and the house behind a name.",
+      "Notes on orchestration, discretion and judgement by Makil-Herrero Djamel-Eddine, Paris. Restraint and the house behind a name.",
     keywords:
-      "private dinner orchestration notes, discretion, reputation management, Makil-Herrero Richard, MAKIL Paris",
+      "private dinner orchestration notes, discretion, reputation management, Makil-Herrero Djamel-Eddine, MAKIL Paris",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Blog",
       name: "MAKIL Journal",
       description:
-        "Notes on orchestration, discretion and judgement by Makil-Herrero Richard, Paris.",
+        "Notes on orchestration, discretion and judgement by Makil-Herrero Djamel-Eddine, Paris.",
       url: `${SITE_URL}/journal`,
       inLanguage: "en-GB",
-      author: { "@type": "Person", "@id": `${SITE_URL}/#person`, name: "Makil-Herrero Richard" },
+      author: { "@type": "Person", "@id": `${SITE_URL}/#person`, name: "Makil-Herrero Djamel-Eddine" },
       publisher: { "@type": "Organization", name: "MAKIL", url: SITE_URL },
       blogPost: journalArticles.map((a) => ({
         "@type": "BlogPosting",
@@ -95,7 +95,7 @@ const Journal = () => {
           <NextStep
             links={[
               { kicker: "Archive", label: "Every note, by month", to: "/journal/archive" },
-              { kicker: "The house", label: "Profile and principles", to: `${localizedPath("home")}#richard` },
+              { kicker: "The house", label: "Profile and principles", to: `${localizedPath("home")}#djamel-eddine` },
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Presence", label: "Eight cities", to: "/presence" },
               { kicker: "Correspondence", label: "Write", to: "/contact" },

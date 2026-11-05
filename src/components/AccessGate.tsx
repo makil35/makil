@@ -168,7 +168,7 @@ const AccessGate = ({ children }: { children: ReactNode }) => {
           By invitation only
         </p>
         <p className="mt-4 font-display text-[0.55rem] uppercase tracking-[0.3em] text-muted-foreground/70">
-          Makil-Herrero Richard
+          Makil-Herrero Djamel-Eddine
         </p>
       </div>
 

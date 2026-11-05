@@ -45,7 +45,7 @@ const Footer = () => {
   };
 
   const practice = [
-    { label: t("nav.profil"), to: `${home}#richard` },
+    { label: t("nav.profil"), to: `${home}#djamel-eddine` },
     { label: t("nav.univers"), to: `${home}#signature` },
     { label: t("nav.approche"), to: `${home}#approach` },
     { label: t("nav.mandates"), to: `${home}#mandates` },

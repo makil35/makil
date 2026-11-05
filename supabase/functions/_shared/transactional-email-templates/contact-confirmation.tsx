@@ -33,7 +33,7 @@ const ContactConfirmationEmail = ({ name }: Props) => (
           Whatever has been written stays between us.
         </Text>
 
-        <Text style={signature}>Makil-Herrero Richard</Text>
+        <Text style={signature}>Makil-Herrero Djamel-Eddine</Text>
         <Text style={signatureRole}>Private Dinner Orchestration · MAKIL</Text>
         <Text style={signatureContact}>richard@makil.fr · makil.fr</Text>
         <Hr style={hr} />

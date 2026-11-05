@@ -30,11 +30,11 @@ const Mandates = () => {
   useSeo({
     path: "/mandates",
     breadcrumbs: [{ name: "Mandates", path: "/mandates" }],
-    title: "Private Mandates · Makil-Herrero Richard · Private Dinner Orchestration",
+    title: "Private Mandates · Makil-Herrero Djamel-Eddine · Private Dinner Orchestration",
     description:
-      "Private mandates carried personally by Makil-Herrero Richard from Paris: dinners that cannot be replicated, access and discreet execution for a select circle. By introduction only.",
+      "Private mandates carried personally by Makil-Herrero Djamel-Eddine from Paris: dinners that cannot be replicated, access and discreet execution for a select circle. By introduction only.",
     keywords:
-      `private mandate, private dinner orchestration, non-replicable private dinner, discreet execution, access and introductions, Makil-Herrero Richard, MAKIL, ${presenceKeywords}`,
+      `private mandate, private dinner orchestration, non-replicable private dinner, discreet execution, access and introductions, Makil-Herrero Djamel-Eddine, MAKIL, ${presenceKeywords}`,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -43,7 +43,7 @@ const Mandates = () => {
       provider: {
         "@type": "Person",
         "@id": `${SITE_URL}/#person`,
-        name: "Makil-Herrero Richard",
+        name: "Makil-Herrero Djamel-Eddine",
         jobTitle: "Private Dinner Orchestrator",
         url: SITE_URL,
       },
@@ -129,7 +129,7 @@ const Mandates = () => {
               { kicker: "Correspondence", label: "Write", to: "/contact" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
               { kicker: "Presence", label: "Eight cities", to: "/presence" },
-              { kicker: "The house", label: "Richard", to: "/#richard" },
+              { kicker: "The house", label: "Djamel-Eddine", to: "/#djamel-eddine" },
             ]}
           />
         </div>
