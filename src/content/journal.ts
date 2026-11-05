@@ -26,9 +26,9 @@ export const journalArticles: JournalArticle[] = [
       "A private dinner orchestrator is not a caterer and not an agency. It is one point of contact, one judgement, and an evening that cannot be repeated.",
     metaTitle: "What a Private Dinner Orchestrator Actually Does · MAKIL · Paris",
     metaDescription:
-      "What a private dinner orchestrator does: one point of contact, direct judgement and an evening that cannot be repeated. By Makil-Herrero Richard, Paris.",
+      "What a private dinner orchestrator does: one point of contact, direct judgement and an evening that cannot be repeated. By Makil-Herrero Djamel-Eddine, Paris.",
     keywords:
-      "private dinner orchestrator, private dinner orchestration, private dinner Paris, discreet orchestration, Makil-Herrero Richard",
+      "private dinner orchestrator, private dinner orchestration, private dinner Paris, discreet orchestration, Makil-Herrero Djamel-Eddine",
     date: "2026-08-12",
     readingTime: "4 min",
     blocks: [
@@ -69,9 +69,9 @@ export const journalArticles: JournalArticle[] = [
       "Visibility is easy to buy and difficult to repair. For a private clientele, personal branding is an exercise in subtraction.",
     metaTitle: "Personal Branding Without Noise · MAKIL · Paris",
     metaDescription:
-      "Personal branding for private clients: restraint, consistency and a controlled public surface. Approach of Makil-Herrero Richard, Paris.",
+      "Personal branding for private clients: restraint, consistency and a controlled public surface. Approach of Makil-Herrero Djamel-Eddine, Paris.",
     keywords:
-      "personal branding, private personal branding, discreet personal branding, executive image, founder branding, personal branding Paris, Makil-Herrero Richard",
+      "personal branding, private personal branding, discreet personal branding, executive image, founder branding, personal branding Paris, Makil-Herrero Djamel-Eddine",
     date: "2026-08-19",
     readingTime: "5 min",
     blocks: [
@@ -112,7 +112,7 @@ export const journalArticles: JournalArticle[] = [
       "Confidentiality is not a clause added at the end of a conversation. It is the way the conversation is organised from the first minute.",
     metaTitle: "Discretion as a Standard · Makil Private · MAKIL",
     metaDescription:
-      "How confidentiality is organised in a private orchestration house: direct contact, minimal traces and no intermediaries. Makil-Herrero Richard, Paris.",
+      "How confidentiality is organised in a private orchestration house: direct contact, minimal traces and no intermediaries. Makil-Herrero Djamel-Eddine, Paris.",
     keywords:
       "discretion, confidentiality, private clientele, private dinner orchestration Paris",
     date: "2026-08-26",
@@ -153,7 +153,7 @@ export const journalArticles: JournalArticle[] = [
     metaDescription:
       "Five questions to ask before choosing a private house: who answers, how many clients, what is written down, what is declined, and what stays private.",
     keywords:
-      "choosing a private house, private house Paris, private dinner orchestration, Makil-Herrero Richard",
+      "choosing a private house, private house Paris, private dinner orchestration, Makil-Herrero Djamel-Eddine",
     date: "2026-09-02",
     readingTime: "4 min",
     blocks: [
@@ -202,9 +202,9 @@ export const journalArticles: JournalArticle[] = [
       "Makil Private exists to orchestrate dinners that cannot be reproduced. One room, one table, one evening, and a sequence that disappears with the guests.",
     metaTitle: "Private Dinner Orchestrator · Makil Private · Paris",
     metaDescription:
-      "Makil Private orchestrates non-reproducible private dinners: closed guest lists, single-point orchestration, discretion and execution. Makil-Herrero Richard, Paris.",
+      "Makil Private orchestrates non-reproducible private dinners: closed guest lists, single-point orchestration, discretion and execution. Makil-Herrero Djamel-Eddine, Paris.",
     keywords:
-      "Makil Private, private dinner orchestrator, private dinner Paris, non-reproducible dinner, exclusive private dinner, ultra luxury dinner, private table, Makil-Herrero Richard",
+      "Makil Private, private dinner orchestrator, private dinner Paris, non-reproducible dinner, exclusive private dinner, ultra luxury dinner, private table, Makil-Herrero Djamel-Eddine",
     date: "2026-09-03",
     readingTime: "5 min",
     blocks: [
@@ -239,7 +239,7 @@ export const journalArticles: JournalArticle[] = [
         heading: "Why one name rather than a structure",
         paragraphs: [
           "A structure distributes responsibility until no one carries it. A private orchestration is the opposite arrangement. One person reads the room, decides, and answers for the evening.",
-          "That is the position Makil-Herrero Richard occupies for the houses, families and founders who work with Makil Private, in Paris and wherever their table happens to be that season.",
+          "That is the position Makil-Herrero Djamel-Eddine occupies for the houses, families and founders who work with Makil Private, in Paris and wherever their table happens to be that season.",
         ],
       },
       {
@@ -259,9 +259,9 @@ export const journalArticles: JournalArticle[] = [
       "Growth is the usual measure of success. In a private house it is the first thing that has to be refused.",
     metaTitle: "Why a Private House Does Not Scale · MAKIL · Paris",
     metaDescription:
-      "Why a private house keeps a limited number of mandates: attention, discretion and single-point responsibility cannot be duplicated. Makil-Herrero Richard, Paris.",
+      "Why a private house keeps a limited number of mandates: attention, discretion and single-point responsibility cannot be duplicated. Makil-Herrero Djamel-Eddine, Paris.",
     keywords:
-      "private house, limited mandates, discretion, private dinner orchestration Paris, Makil-Herrero Richard, MAKIL",
+      "private house, limited mandates, discretion, private dinner orchestration Paris, Makil-Herrero Djamel-Eddine, MAKIL",
     date: "2026-09-03",
     readingTime: "4 min",
     blocks: [
@@ -302,9 +302,9 @@ export const journalArticles: JournalArticle[] = [
       "Before anything is undertaken, there is a conversation. It decides more than any document that follows.",
     metaTitle: "The First Conversation · Makil Private · MAKIL · Paris",
     metaDescription:
-      "What happens in a first conversation with the house: reading the situation, defining what is not to be done, and deciding whether the house is the right one. Makil-Herrero Richard, Paris.",
+      "What happens in a first conversation with the house: reading the situation, defining what is not to be done, and deciding whether the house is the right one. Makil-Herrero Djamel-Eddine, Paris.",
     keywords:
-      "first conversation, private dinner orchestration Paris, confidential conversation, Makil-Herrero Richard, MAKIL",
+      "first conversation, private dinner orchestration Paris, confidential conversation, Makil-Herrero Djamel-Eddine, MAKIL",
     date: "2026-09-03",
     readingTime: "4 min",
     blocks: [
@@ -351,9 +351,9 @@ export const journalArticles: JournalArticle[] = [
       "Visibility is easy to obtain and expensive to carry. A name that appears everywhere is read as available; a name that appears rarely is read as chosen.",
     metaTitle: "The Cost of Being Everywhere · MAKIL · Paris",
     metaDescription:
-      "Why constant visibility weakens a name, and how restraint protects authority. Notes by Makil-Herrero Richard, Paris.",
+      "Why constant visibility weakens a name, and how restraint protects authority. Notes by Makil-Herrero Djamel-Eddine, Paris.",
     keywords:
-      "personal branding restraint, discreet visibility, reputation management, Makil Private, Makil-Herrero Richard",
+      "personal branding restraint, discreet visibility, reputation management, Makil Private, Makil-Herrero Djamel-Eddine",
     date: "2026-09-04",
     readingTime: "4 min",
     blocks: [
@@ -394,9 +394,9 @@ export const journalArticles: JournalArticle[] = [
       "A private name can be present in Rome, in London, in Paris, without ever announcing itself. The right people know. That is enough.",
     metaTitle: "Presence Without Publication · MAKIL · Paris",
     metaDescription:
-      "Why presence for a private clientele is not measured in posts or appearances, but in the right rooms, with the right people, and no trace left behind. Makil-Herrero Richard, Paris.",
+      "Why presence for a private clientele is not measured in posts or appearances, but in the right rooms, with the right people, and no trace left behind. Makil-Herrero Djamel-Eddine, Paris.",
     keywords:
-      "private presence, discreet visibility, reputation without publicity, private dinner Rome, Makil-Herrero Richard, MAKIL",
+      "private presence, discreet visibility, reputation without publicity, private dinner Rome, Makil-Herrero Djamel-Eddine, MAKIL",
     date: "2026-09-05",
     readingTime: "4 min",
     blocks: [

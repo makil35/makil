@@ -43,10 +43,10 @@ const escape = (s: string) =>
 const pages: Page[] = [
   {
     path: "/",
-    title: "Makil-Herrero Richard · Private Dinner Orchestration · Paris",
+    title: "Makil-Herrero Djamel-Eddine · Private Dinner Orchestration · Paris",
     description:
-      `Makil-Herrero Richard orchestrates non-replicable private dinners from Paris, for a select circle across ${presenceCitySentence}. By introduction only.`,
-    heading: "Makil-Herrero Richard, private dinner orchestrator",
+      `Makil-Herrero Djamel-Eddine orchestrates non-replicable private dinners from Paris, for a select circle across ${presenceCitySentence}. By introduction only.`,
+    heading: "Makil-Herrero Djamel-Eddine, private dinner orchestrator",
     paragraphs: [
       "MAKIL orchestrates private dinners. One name. One point of contact. By introduction only.",
       `Dinners are orchestrated in ${presenceCitySentence}.`,
@@ -56,7 +56,7 @@ const pages: Page[] = [
   {
     path: "/presence",
     title: `Presence · ${presenceCityLine} · MAKIL`,
-    description: `Makil-Herrero Richard, private dinner orchestrator, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
+    description: `Makil-Herrero Djamel-Eddine, private dinner orchestrator, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
     heading: `${PRESENCE_CITIES.length} cities, one house`,
     paragraphs: [
       `Dinners are orchestrated in ${presenceCitySentence}. Each city imposes its own manner.`,
@@ -66,7 +66,7 @@ const pages: Page[] = [
     path: "/mandates",
     title: "Mandates · Situations, not services · MAKIL",
     description:
-      "Mandates are accepted by introduction only, limited in number, and never delegated. Makil-Herrero Richard, private dinner orchestrator, Paris.",
+      "Mandates are accepted by introduction only, limited in number, and never delegated. Makil-Herrero Djamel-Eddine, private dinner orchestrator, Paris.",
     heading: "Situations, not services",
     paragraphs: [
       "Mandates are limited in number, accepted by introduction only, and never delegated.",
@@ -77,7 +77,7 @@ const pages: Page[] = [
     path: "/journal",
     title: "Journal · Notes on orchestration and discretion · MAKIL",
     description:
-      "Notes on private dinner orchestration, discretion and judgement, written personally by Makil-Herrero Richard, Paris.",
+      "Notes on private dinner orchestration, discretion and judgement, written personally by Makil-Herrero Djamel-Eddine, Paris.",
     heading: "Journal",
     paragraphs: [
       "Notes on orchestration, discretion and judgement. One note at a time.",
@@ -87,15 +87,15 @@ const pages: Page[] = [
     path: "/journal/archive",
     title: "Journal archive · MAKIL",
     description:
-      "The complete archive of notes written by Makil-Herrero Richard, Paris.",
+      "The complete archive of notes written by Makil-Herrero Djamel-Eddine, Paris.",
     heading: "Journal archive",
     paragraphs: ["Every note of the house, in order."],
   },
   {
     path: "/contact",
-    title: "Contact · Makil-Herrero Richard · Private Dinner Orchestrator",
+    title: "Contact · Makil-Herrero Djamel-Eddine · Private Dinner Orchestrator",
     description:
-      "A direct and confidential exchange with Makil-Herrero Richard, private dinner orchestrator in Paris. Enquiries are read personally. By introduction only.",
+      "A direct and confidential exchange with Makil-Herrero Djamel-Eddine, private dinner orchestrator in Paris. Enquiries are read personally. By introduction only.",
     heading: "A direct exchange",
     paragraphs: [
       "Enquiries are read personally and answered personally. richard@makil.fr",
@@ -104,14 +104,14 @@ const pages: Page[] = [
   {
     path: "/legal-notice",
     title: "Legal notice · MAKIL",
-    description: "Legal notice of MAKIL, the private house of Makil-Herrero Richard.",
+    description: "Legal notice of MAKIL, the private house of Makil-Herrero Djamel-Eddine.",
     heading: "Legal notice",
     paragraphs: ["Legal information of the house."],
   },
   {
     path: "/privacy-policy",
     title: "Privacy policy · MAKIL",
-    description: "Privacy policy of MAKIL, the private house of Makil-Herrero Richard.",
+    description: "Privacy policy of MAKIL, the private house of Makil-Herrero Djamel-Eddine.",
     heading: "Privacy policy",
     paragraphs: ["How enquiries and personal data are handled."],
   },

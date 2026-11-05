@@ -47,7 +47,7 @@ Deno.serve(async (req) => {
     if (!owner) {
       const { data: invited, error: inviteError } =
         await admin0.auth.admin.inviteUserByEmail(OWNER_EMAIL, {
-          data: { full_name: "Makil-Herrero Richard" },
+          data: { full_name: "Makil-Herrero Djamel-Eddine" },
           redirectTo: String(bootstrapBody.redirect_to ?? "") || undefined,
         });
       if (inviteError) return json({ error: inviteError.message }, 400);
@@ -56,7 +56,7 @@ Deno.serve(async (req) => {
     if (!owner) return json({ error: "Bootstrap failed" }, 400);
 
     await admin0.from("profiles").upsert(
-      { id: owner.id, email: OWNER_EMAIL, full_name: "Makil-Herrero Richard" },
+      { id: owner.id, email: OWNER_EMAIL, full_name: "Makil-Herrero Djamel-Eddine" },
       { onConflict: "id" },
     );
     const { error: roleError } = await admin0

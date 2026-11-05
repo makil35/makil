@@ -22,8 +22,8 @@ const Presence = () => {
     path: "/presence",
     breadcrumbs: [{ name: "Presence", path: "/presence" }],
     title: `Presence · ${presenceCityLine} · MAKIL`,
-    description: `Makil-Herrero Richard, private dinner orchestrator, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
-    keywords: `presence, private dinner orchestration cities, international private dinners, Makil-Herrero Richard, MAKIL, ${presenceKeywords}`,
+    description: `Makil-Herrero Djamel-Eddine, private dinner orchestrator, is present in ${presenceCitySentence}. One house, one name, one point of contact. By introduction only.`,
+    keywords: `presence, private dinner orchestration cities, international private dinners, Makil-Herrero Djamel-Eddine, MAKIL, ${presenceKeywords}`,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
@@ -95,7 +95,7 @@ const Presence = () => {
             links={[
               { kicker: "Mandates", label: "Situations, not services", to: "/mandates" },
               { kicker: "Journal", label: "Read the notes", to: "/journal" },
-              { kicker: "The house", label: "Profile and principles", to: "/#richard" },
+              { kicker: "The house", label: "Profile and principles", to: "/#djamel-eddine" },
               { kicker: "Contact", label: "A direct exchange", to: "/contact" },
             ]}
           />

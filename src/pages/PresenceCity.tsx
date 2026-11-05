@@ -26,13 +26,13 @@ const PresenceCity = () => {
     description:
       copy?.seoDescription ??
       (city
-        ? `Makil-Herrero Richard, private dinner orchestrator present in ${city.name}, ${city.countryName}: dinners that cannot be replicated, access and discreet execution. By introduction only.`
+        ? `Makil-Herrero Djamel-Eddine, private dinner orchestrator present in ${city.name}, ${city.countryName}: dinners that cannot be replicated, access and discreet execution. By introduction only.`
         : "Presence of the house."),
     keywords: city
       ? [
           ...(copy?.keywords ?? []),
           `private dinner orchestration ${city.countryName}`,
-          "Makil-Herrero Richard",
+          "Makil-Herrero Djamel-Eddine",
           "MAKIL",
         ].join(", ")
       : undefined,
@@ -48,7 +48,7 @@ const PresenceCity = () => {
           founder: {
             "@type": "Person",
             "@id": `${SITE_URL}/#person`,
-            name: "Makil-Herrero Richard",
+            name: "Makil-Herrero Djamel-Eddine",
             jobTitle: "Private Dinner Orchestrator",
           },
           email: "richard@makil.fr",

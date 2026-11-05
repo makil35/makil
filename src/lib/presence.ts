@@ -145,9 +145,9 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Appointments are held in person, by prior arrangement, and never on a schedule that belongs to someone else.",
     ],
     register: "Address, judgement, and the first table.",
-    seoTitle: "Private Dinner Orchestration in Paris · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in Paris · Makil-Herrero Djamel-Eddine",
     seoDescription:
-      "Private dinner orchestration in Paris: closed guest lists, single-point orchestration and discreet execution, carried personally by Makil-Herrero Richard. By introduction only.",
+      "Private dinner orchestration in Paris: closed guest lists, single-point orchestration and discreet execution, carried personally by Makil-Herrero Djamel-Eddine. By introduction only.",
     keywords: [
       "private dinner orchestration Paris",
       "private dinner orchestrator Paris",
@@ -168,9 +168,9 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "The measure of a good evening here is that no one is able to reconstruct it afterwards.",
     ],
     register: "Proximity, restraint, and evenings that leave no edge.",
-    seoTitle: "Private Dinner Orchestration in Monaco · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in Monaco · Makil-Herrero Djamel-Eddine",
     seoDescription:
-      "Private dinner orchestration in Monaco: closed tables, quiet service and an evening that leaves no visible trace, carried by Makil-Herrero Richard. By introduction only.",
+      "Private dinner orchestration in Monaco: closed tables, quiet service and an evening that leaves no visible trace, carried by Makil-Herrero Djamel-Eddine. By introduction only.",
     keywords: [
       "private dinner Monaco",
       "private dinner orchestration Monaco",
@@ -190,9 +190,9 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Finance, culture and private circles are seated separately, never at the same table.",
     ],
     register: "Timing, preparation, and tables that hold.",
-    seoTitle: "Private Dinner Orchestration in London · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in London · Makil-Herrero Djamel-Eddine",
     seoDescription:
-      "Private dinner orchestration in London: closed guest lists, careful timing and circles seated separately, carried personally by Makil-Herrero Richard. By introduction only.",
+      "Private dinner orchestration in London: closed guest lists, careful timing and circles seated separately, carried personally by Makil-Herrero Djamel-Eddine. By introduction only.",
     keywords: [
       "private dinner London",
       "private dinner orchestration London",
@@ -212,9 +212,9 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Some requests are declined here more often than anywhere else. That is a form of service.",
     ],
     register: "Continuity, custodians, and tables carried to the end.",
-    seoTitle: "Private Dinner Orchestration in Geneva · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in Geneva · Makil-Herrero Djamel-Eddine",
     seoDescription:
-      "Private dinner orchestration in Geneva: quiet tables, continuity of a name or a family, and an evening carried to the end by Makil-Herrero Richard. By introduction only.",
+      "Private dinner orchestration in Geneva: quiet tables, continuity of a name or a family, and an evening carried to the end by Makil-Herrero Djamel-Eddine. By introduction only.",
     keywords: [
       "private dinner Geneva",
       "private dinner orchestration Geneva",
@@ -234,7 +234,7 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Presence here is regular rather than permanent, and always announced to no one.",
     ],
     register: "Verification, personal invitations, and deliberate slowness.",
-    seoTitle: "Private Dinner Orchestration in Dubai · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in Dubai · Makil-Herrero Djamel-Eddine",
     seoDescription:
       "Private dinner orchestration in Dubai: verification before speed, invitations made by name, and an evening carried by one. By introduction only.",
     keywords: [
@@ -256,9 +256,9 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Nothing is signed in Rome on a first visit.",
     ],
     register: "Families, patience, and presence without publication.",
-    seoTitle: "Private Dinner Orchestration in Rome · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in Rome · Makil-Herrero Djamel-Eddine",
     seoDescription:
-      "Private dinner orchestration in Rome: tables that open through families, private hospitality and long acquaintances, carried by Makil-Herrero Richard. By introduction only.",
+      "Private dinner orchestration in Rome: tables that open through families, private hospitality and long acquaintances, carried by Makil-Herrero Djamel-Eddine. By introduction only.",
     keywords: [
       "private dinner Rome",
       "private dinner orchestration Rome",
@@ -278,9 +278,9 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Discretion here is not a preference. It is the condition under which everything else functions.",
     ],
     register: "Concentration, continuity, and tables that carry.",
-    seoTitle: "Private Dinner Orchestration in Luxembourg · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in Luxembourg · Makil-Herrero Djamel-Eddine",
     seoDescription:
-      "Private dinner orchestration in Luxembourg: quiet tables, family capital and continuity, prepared longer and carried by Makil-Herrero Richard. By introduction only.",
+      "Private dinner orchestration in Luxembourg: quiet tables, family capital and continuity, prepared longer and carried by Makil-Herrero Djamel-Eddine. By introduction only.",
     keywords: [
       "private dinner Luxembourg",
       "private dinner orchestration Luxembourg",
@@ -300,7 +300,7 @@ export const CITY_EDITORIAL: Record<string, CityEditorial> = {
       "Nothing is committed on a first meeting in New York. The second is where the evening begins.",
     ],
     register: "Reach, discernment, and a table set sparingly.",
-    seoTitle: "Private Dinner Orchestration in New York · Makil-Herrero Richard",
+    seoTitle: "Private Dinner Orchestration in New York · Makil-Herrero Djamel-Eddine",
     seoDescription:
       "Private dinner orchestration in New York: access abundant and discernment rare, with finance, culture and private life seated separately. By introduction only.",
     keywords: [

@@ -143,7 +143,7 @@ export const useSeo = ({
         ? image
         : `${SITE_URL}${image}`
       : `${SITE_URL}/og-image.jpg`;
-    const shareAlt = imageAlt ?? "MAKIL · Makil-Herrero Richard, private dinner orchestrator, Paris";
+    const shareAlt = imageAlt ?? "MAKIL · Makil-Herrero Djamel-Eddine, private dinner orchestrator, Paris";
 
     // Open Graph
     upsertMetaProperty("og:type", ogType ?? "website");
@@ -183,7 +183,7 @@ export const useSeo = ({
     upsertMetaName("twitter:description", description);
     upsertMetaName("twitter:image", shareImage);
     upsertMetaName("twitter:image:alt", shareAlt);
-    upsertMetaName("twitter:creator", "Makil-Herrero Richard");
+    upsertMetaName("twitter:creator", "Makil-Herrero Djamel-Eddine");
 
     // Robots & ultra-luxe keywords per page
     upsertMetaName(
@@ -192,8 +192,8 @@ export const useSeo = ({
         ? "noindex, follow"
         : "index, follow, max-image-preview:large, max-snippet:-1"
     );
-    upsertMetaName("author", "Makil-Herrero Richard");
-    const keywords = rawKeywords ?? "private dinner orchestration, private dinner orchestrator, non-replicable private dinner, exclusive private dinner, ultra luxury private dinner, private table, MAKIL, Makil-Herrero Richard, art of living, by introduction only, Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg, New York";
+    upsertMetaName("author", "Makil-Herrero Djamel-Eddine");
+    const keywords = rawKeywords ?? "private dinner orchestration, private dinner orchestrator, non-replicable private dinner, exclusive private dinner, ultra luxury private dinner, private table, MAKIL, Makil-Herrero Djamel-Eddine, art of living, by introduction only, Paris, Monaco, London, Geneva, Dubai, Rome, Luxembourg, New York";
     upsertMetaName("keywords", keywords);
 
     // JSON-LD WebPage per route
